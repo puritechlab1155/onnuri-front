@@ -1,0 +1,21 @@
+/* main_visual */
+.main_visual .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.main_visual .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_visual .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
