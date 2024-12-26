@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* pretendard */
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -728,6 +729,14 @@ em {
   font-style: normal;
 }
 /* 엘리스 DX널리체 Ellis DX Nalli */
+/* font-family: "Caveat Brush", serif; */
+/* 리디바탕 */
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .inner {
   width: 100%;
   max-width: 1248px;
@@ -919,12 +928,41 @@ em {
   margin-top: 10px;
 }
 
+.more-button-box {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #DDE6EE;
+  padding: 9px 16px 9px 24px;
+}
+.more-button .button-text {
+  color: #777;
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.more-button img {
+  display: block;
+}
+
 /* section01 */
 .section01 {
-  background: #fff;
-}
-.section01 .content {
+  width: 100%;
+  max-width: 1630px;
+  margin: 0 auto;
   padding: 170px 0 193px;
+  background: #fff url(../img/home/s1-background.png) no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
 }
 .section01 .tabs {
   display: flex;
@@ -1018,6 +1056,148 @@ em {
   font-family: "Pretendard-Regular";
   font-size: 18px;
   font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+
+/* section02 */
+.section02 {
+  background: #fff;
+}
+.section02 .content {
+  padding: 146px 0 170px;
+}
+.section02 .cont-box {
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+  width: 100%;
+  max-width: 949px;
+}
+.section02 .text-area .text {
+  margin-top: 20px;
+  color: #222;
+  font-family: "RIDIBatang";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 180%; /* 28.8px */
+  letter-spacing: -0.32px;
+}
+.section02 .main-text {
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+  color: #222;
+  font-family: "Caveat Brush", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 140%;
+  background: url(../img/home/s2-main-text-bg.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 9px 60px;
+}
+.section02 .img-area {
+  width: 100%;
+  max-width: 310px;
+  text-align: center;
+}
+.section02 .img-area .director-img {
+  width: 100%;
+  box-shadow: -7px 8px 23px rgba(0, 0, 0, 0.2);
+}
+.section02 .img-area .info-text {
+  color: #222;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+  margin-top: 24px;
+}
+.section02 .img-area .info-text span {
+  font-family: "Pretendard-SemiBold";
+}
+.section02 .img-area .name {
+  width: 100%;
+  max-width: 110px;
+  margin: 0 auto;
+}
+.section02 .img-area .name img {
+  width: 100%;
+}
+
+.section-box {
+  background: #fff url(../img/home/section-box-bg.png) no-repeat;
+  background-size: cover;
+  padding: 220px 0;
+}
+
+/* section03 */
+.section03 .calendar-top {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+.section03 .calendar-top .last-month-arrow, .section03 .calendar-top .next-month-arrow {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.section03 .calendar-top .calendar-date {
+  color: #222;
+  font-family: "Pretendard-ExtraBold";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 160%; /* 38.4px */
+  letter-spacing: -0.48px;
+}
+.section03 .calendar-board {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px solid #52ACDB;
+}
+.section03 .calendar-board thead {
+  height: 49px;
+}
+.section03 .calendar-board thead th {
+  background: #1C3C6B;
+  color: #eee;
+  font-family: "Pretendard-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section03 .calendar-board thead .sunday {
+  background: #2A6ACA;
+}
+.section03 .calendar-board tbody td {
+  height: 100px;
+  background: #fff;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px;
+  color: #222;
+  font-family: "Pretendard-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section03 .calendar-board tbody td:first-child {
+  background: #E9F2FF;
+}
+.section03 .calendar-board tbody td.sunday {
+  color: #777;
+}
+.section03 .calendar-board tbody td.today {
+  color: #007AFF;
+  font-family: "Pretendard-ExtraBold";
+  font-size: 18px;
+  font-weight: 800;
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }

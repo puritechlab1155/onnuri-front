@@ -227,14 +227,44 @@
         margin-top: 10px;
     }
 }
+.more-button-box {
+    text-align: center;
+    margin-top: 40px;
+}
+.more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #DDE6EE;
+
+    padding: 9px 16px 9px 24px;
+
+    .button-text {
+        color: #777;
+        font-family: 'Pretendard-Bold';
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 160%; /* 28.8px */
+        letter-spacing: -0.36px;
+    }
+    img {
+        display: block;
+    }
+}
 
 /* section01 */
 .section01 {
-    background: #fff;
+    width: 100%;
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 170px 0 193px;
+    background: #fff url(../img/home/s1-background.png) no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
 
-    .content {
-        padding: 170px 0 193px;
-    }
     .tabs {
         display: flex;
         align-items: center;
@@ -340,5 +370,171 @@
         font-weight: 400;
         line-height: 160%; /* 28.8px */
         letter-spacing: -0.36px;
+    }
+}
+
+/* section02 */
+.section02 {
+    background: #fff;
+
+    .content {
+        padding: 146px 0 170px;
+    }
+
+    .cont-box {
+        margin: 60px auto 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 21px;
+
+        width: 100%;
+        max-width: 949px;
+    }
+    .text-area {
+        .text {
+            margin-top: 20px;
+
+            color: #222;
+            font-family: 'RIDIBatang';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 180%; /* 28.8px */
+            letter-spacing: -0.32px;
+        }
+    }
+    .main-text {
+        width: 100%;
+        max-width: 390px;
+        text-align: center;
+
+        color: #222;
+        font-family: "Caveat Brush", serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 140%;
+
+        background: url(../img/home/s2-main-text-bg.png) no-repeat;
+        background-size: 100% 100%;
+
+        padding: 9px 60px;
+    }
+
+    .img-area {
+        width: 100%;
+        max-width: 310px;
+
+        text-align: center;
+
+        .director-img {
+            width: 100%;
+            box-shadow: -7px 8px 23px rgba($color: #000000, $alpha: 0.2);
+        }
+        .info-text {
+            color: #222;
+            font-family: 'Pretendard-Regular';
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 160%; /* 28.8px */
+            letter-spacing: -0.36px;
+
+            margin-top: 24px;
+
+            span {
+                font-family: 'Pretendard-SemiBold';
+            }
+        }
+        .name {
+            width: 100%;
+            max-width: 110px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.section-box {
+    background: #fff url(../img/home/section-box-bg.png) no-repeat;
+    background-size: cover;
+    padding: 220px 0;
+}
+
+/* section03 */
+.section03 {
+    .calendar-top {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 20px;
+
+        .last-month-arrow, .next-month-arrow {
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+        .calendar-date {
+            color: #222;
+            font-family: 'Pretendard-ExtraBold';
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 160%; /* 38.4px */
+            letter-spacing: -0.48px;
+        }
+    }
+
+    .calendar-board {
+        width: 100%;
+        border-collapse: collapse;
+        border-bottom: 1px solid #52ACDB;
+
+        thead {
+            height: 49px;
+
+            th {
+                background: #1C3C6B;
+                color: #eee;
+                font-family: 'Pretendard-Medium';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+            }
+            .sunday {
+                background: #2A6ACA;
+            }
+        }
+        tbody {
+            td {
+                height: 100px;
+                background: #fff;
+                text-align: center;
+                vertical-align: top;
+                padding: 10px;
+
+                color: #222;
+                font-family: 'Pretendard-Medium';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+            }
+            td:first-child {
+                background: #E9F2FF;
+            }
+            td.sunday {
+                color: #777;
+            }
+            td.today {
+                color: #007AFF;
+                font-family: 'Pretendard-ExtraBold';
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+            }
+        }
     }
 }
