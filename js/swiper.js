@@ -4,4 +4,7 @@ var swiper = new Swiper(".mv-swiper", {
         nextEl: ".mv-swiper-button-next",
         prevEl: ".mv-swiper-button-prev",
     },
+    pagination: {
+        el: ".mv-swiper-pagination",
+    },
 });
