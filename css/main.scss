@@ -535,6 +535,14 @@
                 line-height: 160%; /* 28.8px */
                 letter-spacing: -0.36px;
             }
+            td.prev-month, td.next-month {
+                color: #bbb;
+                font-family: 'Pretendard-Medium';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+            }
         }
     }
 }

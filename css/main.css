@@ -1201,5 +1201,13 @@ em {
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
+.section03 .calendar-board tbody td.prev-month, .section03 .calendar-board tbody td.next-month {
+  color: #bbb;
+  font-family: "Pretendard-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
 
 /*# sourceMappingURL=main.css.map */
