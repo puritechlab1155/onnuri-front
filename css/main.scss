@@ -712,3 +712,26 @@
         display: flex;
     }
 }
+
+/* section05 */
+.section05 {
+    .content {
+        padding: 170px 0;
+    }
+    .feature-list {
+        display: flex;
+        gap: 75px;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            display: block;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 180px;
+            }
+        }
+    }
+}
