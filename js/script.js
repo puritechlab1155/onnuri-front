@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var home = document.querySelector('#home');
     if (home) {
-        // tab control
+        // section01 tab control
         var tabs = home.querySelectorAll('.tabs .tab');
         var noticeAll = home.querySelectorAll('.tab-cont-list .tab-cont');
 
@@ -138,5 +138,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         renderCalendar();
     }
+
+    // section04 tab control
+    var reservTabs = home.querySelectorAll('.reserv-tabs .reserv-tab');
+    var reservInfoLists = home.querySelectorAll('.reserv-info .reserv-info-list');
+
+    reservTabs.forEach((tab, idx) => {
+        tab.addEventListener('click', function() {
+            reservTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            reservInfoLists.forEach(list => list.classList.remove('active'));
+            reservInfoLists[idx].classList.add('active');
+        });
+    });
 
 });

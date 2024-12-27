@@ -1229,5 +1229,122 @@ em {
 }
 
 /* section04 */
+.section04 .content {
+  padding-top: 170px;
+}
+.section04 .content .title-area .title {
+  justify-content: flex-start;
+}
+.section04 .cont-area {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+}
+.section04 .reserv-area {
+  flex: 1;
+}
+.section04 .reserv-tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+}
+.section04 .reserv-tab {
+  background: url(../img/home/reserv-tab-bg.png) no-repeat;
+  background-size: 100% 100%;
+  color: #96A7BD;
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 160%;
+  padding: 6px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.section04 .reserv-tab.active {
+  background: url(../img/home/reserv-tab-bg-active.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+.section04 .reserv-info {
+  margin-top: 18px;
+}
+.section04 .reserv-info-list {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+.section04 .reserv-info-list .card {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+.section04 .reserv-info-list .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section04 .reserv-info-list .card-body .reserv-category {
+  color: #222;
+  font-family: "Pretendard-SemiBold";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section04 .reserv-info-list .card-body .name {
+  color: #222;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section04 .reserv-info-list .card-body .rental-time {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.section04 .reserv-info-list .card-body .rental-time div:not(.line) {
+  color: #222;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section04 .reserv-info-list .card-body .rental-time div:not(.line) span {
+  color: #0A387C;
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+  padding-right: 6px;
+}
+.section04 .reserv-info-list .card-body .rental-time .line {
+  width: 1px;
+  height: 10px;
+  background: #BFCAD4;
+}
+.section04 .reserv-info-list .card-footer {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+.section04 .reserv-info-list .card-footer .date-info {
+  color: #777;
+  font-family: "Pretendard-SemiBold";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.section04 .reserv-info-list.active {
+  display: flex;
+}
 
 /*# sourceMappingURL=main.css.map */
