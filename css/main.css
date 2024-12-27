@@ -1159,6 +1159,9 @@ em {
   border-collapse: collapse;
   border-bottom: 1px solid #52ACDB;
 }
+.section03 .calendar-board colgroup col {
+  width: 14%;
+}
 .section03 .calendar-board thead {
   height: 49px;
 }
@@ -1187,6 +1190,15 @@ em {
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
+.section03 .calendar-board tbody td ul li {
+  color: #222;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.32px;
+  word-break: break-all;
+}
 .section03 .calendar-board tbody td:first-child {
   background: #E9F2FF;
 }
@@ -1201,6 +1213,9 @@ em {
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
+.section03 .calendar-board tbody td.today ul li {
+  font-family: "Pretendard-SemiBold";
+}
 .section03 .calendar-board tbody td.prev-month, .section03 .calendar-board tbody td.next-month {
   color: #bbb;
   font-family: "Pretendard-Medium";
@@ -1209,5 +1224,10 @@ em {
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
+.section03 .calendar-board tbody td.prev-month ul li, .section03 .calendar-board tbody td.next-month ul li {
+  color: #bbb;
+}
+
+/* section04 */
 
 /*# sourceMappingURL=main.css.map */
