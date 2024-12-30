@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    var header = document.querySelector('#header');
+    if (header) {
+        var offcanvasOpen = header.querySelector('.offcanvas-open');
+        var headerLogoImg = header.querySelector('.logo-img');
+
+        offcanvasOpen.addEventListener('click', function() {
+            offcanvasOpen.classList.toggle('active');
+        });
+    }
+
     var home = document.querySelector('#home');
     if (home) {
         // section01 tab control
