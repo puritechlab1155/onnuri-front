@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.about_us{
+
+}
+.about_us .containner{
+    
+}
+.about_us ul.sub_nav{
+    display: flex;
+}
