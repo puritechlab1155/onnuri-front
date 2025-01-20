@@ -121,53 +121,52 @@
     font-weight: 300;
     color: #ccc;
 }
-button.editBtn {
+button.finishBtn {
     border-color: #004BBA;
     background: #004BBA;
     color: #fff;
 }
 
 
-
-
+/*hrml: login >> 내 정보 로그인*/
+.input_wrap .password_container {
+    position: relative;
+}
+.password_container .eyeBtn {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.keep_login {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    color: #999;
+}
+.keep_login span {
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+ul.user_account {
+    background: lightblue;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+ul.user_account {
+    
+}
 
 
 /*resize*/
 @media (max-width: 834px) {
     .myInfo_wrap {
         margin-top: 70px;
-    }
-    .btn_wrap button:not(.editBtn) {
-        background: #FFFFFF;
-        color: #222;
-        border: 1px solid #E9EBED;
-    }
-    .footer {
-        background: #0A387C;
-    }
-    .footer a {
-        color: #c5c5c5;
-    }
-    .footer .content {
-        padding: 38px 0;
-    }
-    .footer .footer-logo {
-        display: none;
-    }
-    .footer .footer-info01 .partner-site .text {
-        color: #c5c5c5;
-    }
-    .footer .footer-info01 .support-links {
-        display: none;
-    }
-    .footer .footer-info01 {
-        margin-top: 0;
-    }
-    .footer .footer-info02 .company-info .info {
-        color: #c5c5c5;
-    }
-    .footer .footer-info02 .copyright {
-        color: #c5c5c5;
     }
 }
 @media (max-width: 390px) {
