@@ -137,7 +137,11 @@ button {
 }
 
 
-
+@media (max-width: 928px) {
+    .header .content .login-link {
+        display: none;
+    }
+}
 @media (max-width: 767px) {
     .pc_display {
         display: none;
