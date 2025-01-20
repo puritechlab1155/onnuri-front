@@ -32,7 +32,15 @@ button {
     padding: 0 24px;
     margin: 0 auto;
 }
-
+.mt-120{ margin-top: 120px; }
+/* 타이틀 */
+.title {
+    color: #222;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+}
 
 /* 모바일 전용 br */
 span.br{
