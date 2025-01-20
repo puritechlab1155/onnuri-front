@@ -205,5 +205,4 @@ document.addEventListener('DOMContentLoaded', function() {
             reservInfoLists[idx].classList.add('active');
         });
     });
-
 });

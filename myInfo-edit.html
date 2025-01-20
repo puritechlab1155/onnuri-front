@@ -163,18 +163,42 @@
 
         <main id="main" class="contact">
             <div class= "inner"> 
-                <!--my info-->
+                <!--my info - edit-->
                 <div class="myInfo_wrap">
-                    <h3>내 정보</h3>
+                    <h3>내 정보 수정</h3>
                     <div class="profile">
                         <div class="my_img">
                             <img src="img/myInfo/profile.png" alt="내 프로필 이미지">
                         </div>
-                        <span class="name">홍길동</span>
+                        <div class="img_changeBtn">
+                            <button>
+                                <img src="img/myInfo/camera.svg" alt="카메라 아이콘">
+                                편집
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input_wrap">
+                        <ul>
+                            <li class="input_title">이름</li>
+                            <li>
+                                <input type="text" placeholder="이름 입력">
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="input_title">이메일</li>
+                            <li>
+                                <input type="email" placeholder="이메일 입력">
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="input_title">비밀번호</li>
+                            <li>
+                                <input type="text" id="password" placeholder="비밀번호 입력" oninput="updatePassword()">
+                            </li>
+                        </ul>
                     </div>
                     <div class="btn_wrap">
-                        <button type="button">내 정보 수정</button>
-                        <button type="button">내 신청 내역</button>
+                        <button type="button" class="editBtn">수정하기</button>
                     </div>
                 </div>
             </div>
@@ -241,58 +265,14 @@
 
     <script src="js/script.js"></script>
 
-    <!--naver map-->
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g9boll7er1"></script>
-    <script id="code">
-        var elluce = new naver.maps.LatLng(37.249768, 127.317257)
-        var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.249768, 127.317257),
-        zoom: 17,
-        minZoom: 8, //지도의 최소 줌 레벨
-        zoomControl: true, //줌 컨트롤의 표시 여부
-        zoomControlOptions: { //줌 컨트롤의 옵션
-            position: naver.maps.Position.TOP_LEFT
-        }});
-        var marker = new naver.maps.Marker({
-            icon: {
-            url: "./img/contact/map.png",
-            scaledSize: new naver.maps.Size(25, 35),
-            origin: new naver.maps.Point(0, 0),
-            },
-            position: elluce,
-            map: map
-        });
-
-        var contentString = [
-        '<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 150px; height: 28px; text-align: center; ">',
-        '   <p style="foint-size: 2rem; margin: 0; font-weight: 600;">Acts29 비전빌리지</p>',
-        '</div>'
-        ].join('');
-
-        var infowindow = new naver.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200,
-            height: 50,
-            backgroundColor: "white",
-            borderColor: "black",
-            borderWidth: 2,
-            disableAnchor: true,
-            textAlign: "center",
-            margin: "auto",
-
-            pixelOffset: new naver.maps.Point(0, -5)
-        });
-
-        naver.maps.Event.addListener(marker, "click", function(e) {
-            if (infowindow.getMap()) {
-                infowindow.close();
-            } else {
-                infowindow.open(map, marker);
-            }
-        });
-
-        infowindow.open(map, marker);
+    <script>
+        //input password >> * 표시
+        function updatePassword() {
+            const input = document.getElementById('password');
+            const password = input.value;
+            const maskedPassword = '*'.repeat(password.length); // 비밀번호 길이에 따라 * 표시
+            input.value = maskedPassword; // 입력 필드에 *로 대체
+        }
     </script>
-
 </body>
 </html>
