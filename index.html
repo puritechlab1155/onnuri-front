@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acts29비전빌리지 / Acts29 Visionvillage</title>
+    
+    <!--Jqurey CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/swiper.css">
@@ -745,5 +749,41 @@
     <script src="js/swiper.js"></script>
 
     <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            //스크롤시 head 스타일 변경
+            let $header = $('.header');
+            let $logoImg = $('.logo > img');
+            let $menuItem = $('.gnb-item > a');
+            let $userBtn = $('.login-link > a')
+            let $line = $('.line');
+
+            function changeHead() {
+                let $scrollTop = $(window).scrollTop();
+
+                if ($scrollTop > 0) {
+                    $header.css({ background: '#fff' });
+                    $logoImg.attr('src', 'img/offcanvas-logo.png');
+                    $menuItem.css({ color: '#222' });
+                    $userBtn.css({ color: '#222' });
+                    $line.css({ background: '#999' });
+                } else {
+                    $header.css({ background: 'transparent' });
+                    $logoImg.attr('src', 'img/avv_logo.png');
+                    $menuItem.css({ color: '#fff' });
+                    $userBtn.css({ color: '#fff' });
+                    $line.css({ background: '#fff' });
+                }
+            }
+
+            changeHead();
+
+            $(window).scroll(function() {
+                changeHead();
+            });
+        });
+    </script>
+
 </body>
 </html>
