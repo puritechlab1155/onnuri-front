@@ -9,9 +9,11 @@
     color: #222;
 }
 .header .content .login-link .line {
+    background: #999;
+}
+.header .offcanvas-open span {
     background: #222;
 }
-
 /*main*/
 #main {
     padding-top: 80px;
@@ -102,16 +104,47 @@
 /*resize*/
 @media (max-width: 1200px) {
     /*contact*/
-    .contact .inner {
-        
-    }
     .element .map {
         width: 100%;
+        height: 364px;
         float: none;
     }
     .element .information {
         width: 100%;
+        height: 364px;
         float: none;
         margin-top: 24px;
+    }
+}
+@media (max-width: 767px) {
+    .channel {
+        padding-top: 16px;
+    }
+}
+@media (max-width: 530px) {
+    .contact_wrap > h3 {
+        font-size: 34px;
+    }
+    .element .information {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 460px) {
+    .element .information {
+        padding: 0 10px;
+    }
+    .information li.info_title {
+        font-size: 1rem;
+    }
+    .information li.info_detail {
+        font-size: 1.125rem;
+    }
+}
+@media (max-width: 374px) {
+    .information li.info_title {
+        font-size: 0.97rem;
+    }
+    .information li.info_detail {
+        font-size: 1rem;
     }
 }

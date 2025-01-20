@@ -17,7 +17,6 @@ button {
     background: transparent;
     cursor: pointer;
 }
-
 .inner {
     width: 100%;
     max-width: 1248px;
@@ -39,6 +38,7 @@ button {
     align-items: center;
     height: 80px;
 }
+/*pc*/
 .header .content .logo {
     width: 100%;
     max-width: 137px;
@@ -48,6 +48,14 @@ button {
     width: 100%;
     height: 100%;
     display: block;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 .header .content .nav .gnb {
     display: flex;
@@ -121,14 +129,6 @@ button {
     background: rgba(255, 255, 255, 0.2);
     margin: 0 14px;
 }
-.blind {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-}
 .pc_display {
     display: block;
 }
@@ -147,9 +147,20 @@ button {
     .header {
         background: #ccc;
     }
+    /*mobile*/
+    .mobile_display {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
     .header .offcanvas-open {
         width: 27px;
         height: 20px;
+        float: right;
+        margin: 24px;
         position: relative;
         z-index: 1005;
     }
@@ -189,17 +200,72 @@ button {
     .header .offcanvas {
         width: 100%;
         height: 100%;
-        background: #fff;
+        padding: 30px 16px;
+        background: rgba(100, 100, 100, 0.445);
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 80px;
         right: 0;
-        transform: translateX(-100%);
+        transform: translateX(100%);
+        /* transform: translateX(0%); */
+        background: #fff;
+        transition: transform 0.5s ease-in-out;
     }
     .header .offcanvas .offcanvas-body {
         width: 100%;
         height: 100%;
         flex-grow: 1;
+
     }
+    .gnb-mobile .gnb-item a {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        padding: 0 8px;
+        height: 61px;
+        line-height: 61px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+    }
+    .gnb-mobile .gnb-sub {
+        display: none;
+    }
+    .gnb-mobile .gnb-training .gnb-sub .gnb-sub-item a{
+        font-size: 16px;
+        font-weight: 400;
+        color: #555555;
+        border-bottom: 1px solid #eaeaea;
+        background: #FAFAFA;
+    }
+    .gnb-training .drop-arrow {
+        float: right;
+        margin-top: 14px;
+        width: 28px;
+        height: 28px;
+        padding: 2px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .gnb-training .drop-arrow span {
+        display: block;
+        width: 10px;
+        height: 3px;
+        background: #777;
+        position: absolute;
+    }
+    .gnb-training .drop-arrow span:nth-child(1) {
+        top: 12px;
+        left: 6px;
+        transform: rotate(-45deg);
+    }
+    .gnb-training .drop-arrow span:nth-child(2) {
+        top: 12px;
+        right: 6px;
+        transform: rotate(45deg);
+    }
+    
 }
