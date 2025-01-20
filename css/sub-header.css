@@ -154,11 +154,10 @@ button {
     /*mobile*/
     .mobile_display {
         width: 100%;
-        height: 100vh;
+        overflow: hidden;
         position: absolute;
         top: 0;
         right: 0;
-        
     }
     .header .offcanvas-open {
         width: 27px;

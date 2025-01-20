@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var header = document.querySelector('#header');
 
     if (header) {
+        var mobileoffcanvas = header.querySelector('.mobile_display');
         var offcanvasOpen = header.querySelector('.offcanvas-open');
         var offcanvas = document.querySelector('.offcanvas');
         var headerLogoImg = header.querySelector('.logo-img');
@@ -14,10 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // offcanvas의 transform 속성 변경
             if (offcanvas.classList.contains('active')) {
+                mobileoffcanvas.style.height = '100vh';
                 offcanvas.style.transform = 'translateX(0%)'; // 메뉴 열기
                 header.style.backgroundColor = '#fff';
                 headerLogoImg.src = 'img/offcanvas-logo.png'; // 활성화 상태의 로고
             } else {
+                mobileoffcanvas.style.height = 'auto';
                 offcanvas.style.transform = 'translateX(100%)'; // 메뉴 닫기
                 header.style.backgroundColor = '#fff';
                 dropIconL.style.transform = 'rotate(-45deg)'; // 드롭 아이콘 원래대로
