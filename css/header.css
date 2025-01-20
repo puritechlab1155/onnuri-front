@@ -266,12 +266,12 @@ button {
     .gnb-training .drop-arrow span:nth-child(1) {
         top: 12px;
         left: 6px;
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
     }
     .gnb-training .drop-arrow span:nth-child(2) {
         top: 12px;
         right: 6px;
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
     }
     
 }

@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 드롭다운 효과를 위해 display 속성을 변경
                 if (gnbSub.classList.contains('active')) {
                     gnbSub.style.display = 'block'; // 드롭다운 표시
-                    dropIconL.style.transform = 'rotate(45deg)';
-                    dropIconR.style.transform = 'rotate(-45deg)';
-                } else {
                     dropIconL.style.transform = 'rotate(-45deg)';
                     dropIconR.style.transform = 'rotate(45deg)';
+                } else {
+                    dropIconL.style.transform = 'rotate(45deg)';
+                    dropIconR.style.transform = 'rotate(-45deg)';
                     gnbSub.style.display = 'none'; // 드롭다운 숨김
                 }
             });
