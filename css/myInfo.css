@@ -3,7 +3,7 @@
     padding-top: 80px;
 }
 
-/*html : my info*/
+/*html : my info >> 내 정보*/
 .myInfo_wrap {
     width: 100%;
     max-width: 400px;
@@ -64,7 +64,7 @@
     border-color: #004BBA;
 }
 
-/*html : my info - edit*/
+/*html : my info - edit >> 내 정보 수정*/
 .profile .img_changeBtn {
     width: 95px;
     position: absolute;
@@ -126,6 +126,8 @@ button.editBtn {
     background: #004BBA;
     color: #fff;
 }
+
+
 
 
 
