@@ -1,13 +1,17 @@
 /*header*/
 .header {
-    background: transparent;
+    background: #fff;
 }
 .header .content .nav .gnb-item a {
     color: #222;
 }
-.userBtn {
-    visibility: hidden;
+.header .content .login-link a {
+    color: #222;
 }
+.header .content .login-link .line {
+    background: #222;
+}
+
 /*main*/
 #main {
     padding-top: 80px;
@@ -28,7 +32,6 @@
 .channel a.home_icon img{
     float: left;
 }
-
 /*contact*/
 .contact_wrap {
     padding-top: 24px;

@@ -145,7 +145,7 @@ button {
         display: block;
     }
     .header {
-        background: transparent;
+        background: #ccc;
     }
     .header .offcanvas-open {
         width: 27px;
