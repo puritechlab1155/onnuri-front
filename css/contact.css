@@ -1,3 +1,13 @@
+/*header*/
+.header {
+    background: transparent;
+}
+.header .content .nav .gnb-item a {
+    color: #222;
+}
+.userBtn {
+    visibility: hidden;
+}
 /*main*/
 #main {
     padding-top: 80px;
@@ -84,4 +94,21 @@
 }
 .information li button.copy img {
     float: left;
+}
+
+/*resize*/
+@media (max-width: 1200px) {
+    /*contact*/
+    .contact .inner {
+        
+    }
+    .element .map {
+        width: 100%;
+        float: none;
+    }
+    .element .information {
+        width: 100%;
+        float: none;
+        margin-top: 24px;
+    }
 }
