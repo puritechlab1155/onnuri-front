@@ -5,10 +5,11 @@
 
 /*my info*/
 .myInfo_wrap {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
     margin-top: 6vw;
-    margin-bottom: 10vw;
+    margin-bottom: 238px;
     text-align: center;
 }
 .myInfo_wrap > h3 {
@@ -54,6 +55,7 @@
     border-radius: 7px;
     letter-spacing: -0.36px;
     transition: all 0.1s linear;
+    box-shadow: 1px 1px 6px #00000010;
 }
 .btn_wrap button:hover {
     background: #004BBA;
@@ -61,3 +63,44 @@
     border-color: #004BBA;
 }
 /*resize*/
+@media (max-width: 834px) {
+    .myInfo_wrap {
+        margin-top: 70px;
+    }
+    .btn_wrap button {
+        background: #FFFFFF;
+        border: 1px solid #E9EBED;
+    }
+    .footer {
+        background: #0A387C;
+    }
+    .footer a {
+        color: #c5c5c5;
+    }
+    .footer .content {
+        padding: 38px 0;
+    }
+    .footer .footer-logo {
+        display: none;
+    }
+    .footer .footer-info01 .partner-site .text {
+        color: #c5c5c5;
+    }
+    .footer .footer-info01 .support-links {
+        display: none;
+    }
+    .footer .footer-info01 {
+        margin-top: 0;
+    }
+    .footer .footer-info02 .company-info .info {
+        color: #c5c5c5;
+    }
+    .footer .footer-info02 .copyright {
+        color: #c5c5c5;
+    }
+}
+@media (max-width: 390px) {
+    .myInfo_wrap {
+        margin-bottom: 120px;
+    }
+}
