@@ -32,7 +32,7 @@ button {
     padding: 0 24px;
     margin: 0 auto;
 }
-.mt-120{ margin-top: 120px; }
+.mt-120{ margin-top: 120px !important;}
 /* 타이틀 */
 .title {
     color: #222;

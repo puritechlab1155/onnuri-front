@@ -29,6 +29,7 @@
     font-weight: 600;
     line-height: 160%; /* 22.4px */
     letter-spacing: -0.28px;
+    flex-wrap: wrap;
 }
 .footer .footer-info01 .partner-site .text {
     padding-right: 10px;
@@ -51,6 +52,7 @@
 .footer .footer-info01 .support-links {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .footer .footer-info01 .support-links .link {
     color: #777;

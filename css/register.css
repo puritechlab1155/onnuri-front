@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.mt-15 { margin-top: 15px; }
+.mt-50 { margin-top: 50px; }
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.red { color: #E72929;}
+
+
+main.register {
+    width: 100%;
+    max-width: 792px;
+    padding: 0 24px;
+    margin: 0 auto;
+
+}
+.tabs {
+    max-width: 792px;
+    margin: 50px 0 150px auto;
+    /* padding: 20px; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    /* background-color: #f9f9f9; */
+}
+.tab-titles {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-titles li {
+    flex: 1;
+    text-align: center;
+    /* padding: 10px; */
+    cursor: pointer;
+
+    width: 56px;
+    height: 5px;
+    background: #EAEAEA;
+    
+
+}
+.tab-titles li.active {
+    background-color: #007AFF;
+}
+
+
+/* 여기서부터 탭 컨텐츠 부분 */
+.tab-content {
+    padding: 20px;
+}
+.tab-pane {
+    display: none;
+}
+.tab-pane>p {
+    font-size: 16px;
+    color: #777;
+    letter-spacing: -2%;
+    line-height: 1.6;
+    margin-top: 8px;
+    text-align: center;
+}
+.tab-pane.active {
+    display: block;
+}
+.terms-content {
+    max-height: 746px;
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    background: #F3F5F6;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+label input {
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+.terms-content p {
+    color: #444;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

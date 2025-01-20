@@ -30,7 +30,7 @@ button {
     left: 0;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.2);
+    background: #fff;
 }
 .header .content {
     display: flex;
@@ -64,7 +64,7 @@ button {
     align-items: center;
 }
 .header .content .nav .gnb-item a {
-    color: #fff;
+    color: #222;
     font-family: "Pretendard-SemiBold";
     font-size: 15px;
     font-weight: 600;
@@ -116,7 +116,7 @@ button {
     align-items: center;
 }
 .header .content .login-link a {
-    color: #fff;
+    color: #222;
     font-family: "Pretendard-SemiBold";
     font-size: 16px;
     font-weight: 600;
@@ -126,7 +126,7 @@ button {
 .header .content .login-link .line {
     width: 1px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #999;
     margin: 0 14px;
 }
 .pc_display {
@@ -135,7 +135,6 @@ button {
 .mobile_display {
     display: none;
 }
-
 
 
 @media (max-width: 767px) {
