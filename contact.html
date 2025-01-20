@@ -8,17 +8,16 @@
     
     <title>Acts29비전빌리지 / Acts29 Visionvillage_About Us</title>
 
-    <!-- 공통css -->
+    <!-- 공통 css -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- 해당html 연결css -->
-    <link rel="stylesheet" href="css/about-us.css">
+    <!-- 해당html css -->
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 <body>
-    <!-- <section id="home"> 안에 header,main, footer/ footer여백 유지할때는 헤더에common.css 링크연결(class명 inner)) -->
     <section id="home">
         <header id="header" class="header">
             <div class="inner">
@@ -153,9 +152,63 @@
             </div>
         </header>
 
-        <!-- ?? main id="main" 혹시 몰라서 유지 ?? -->
-        <main id="main" class="해당페이지명">
+        <main id="main" class="contact">
+            <div class= "inner"> 
+                <!--channel-->
+                <ul class="channel">
+                    <a href="#" class="home_icon">
+                        <img src="img/home/home.png" alt="홈 아이콘">
+                    </a>
+                    <img src="img/contact/channel-arrow.png" alt="화살표">
+                    <li>
+                        <a href="#">예약</a>
+                    </li>
+                </ul>
 
+                <!--contact-->
+                <div class="contact_wrap">
+                    <h3>문의</h3>
+                    <div class="element">
+                        <!--지도-->
+                        <div class="map">
+                            <div id="map" style="width: 100%; height: 100%; margin:auto"></div>
+                            <code id="snippet" class="snippet"></code>
+                        </div>
+                        <!--정보-->
+                        <div class="information">
+                            <div class="info_wrap">
+                                <ul>
+                                    <li class="info_title">이메일</li>
+                                    <li class="info_detail">
+                                        school@visionvillage.org
+                                        <button class="copy">
+                                            <img src="img/contact/Copy.svg" alt="복사 아이콘">
+                                        </button>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="info_title">전화번호</li>
+                                    <li class="info_detail">
+                                        (+82) 031-331-8100
+                                        <button class="copy">
+                                            <img src="img/contact/Copy.svg" alt="복사 아이콘">
+                                        </button>
+                                    </li> 
+                                </ul>
+                                <ul>
+                                    <li class="info_title">주소</li>
+                                    <li class="info_detail">
+                                        경기도 용인시 처인구 양지면 추계로 62
+                                        <button class="copy">
+                                            <img src="img/contact/Copy.svg" alt="복사 아이콘">
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer id="footer" class="footer">
@@ -218,5 +271,59 @@
     </section>
 
     <script src="js/script.js"></script>
+
+    <!--naver map-->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g9boll7er1"></script>
+    <script id="code">
+        var elluce = new naver.maps.LatLng(37.249768, 127.317257)
+        var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(37.249768, 127.317257),
+        zoom: 17,
+        minZoom: 8, //지도의 최소 줌 레벨
+        zoomControl: true, //줌 컨트롤의 표시 여부
+        zoomControlOptions: { //줌 컨트롤의 옵션
+            position: naver.maps.Position.TOP_LEFT
+        }});
+        var marker = new naver.maps.Marker({
+            icon: {
+            url: "./img/contact/map.png",
+            scaledSize: new naver.maps.Size(25, 35),
+            origin: new naver.maps.Point(0, 0),
+            },
+            position: elluce,
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 150px; height: 28px; text-align: center; ">',
+        '   <p style="foint-size: 2rem; margin: 0; font-weight: 600;">Acts29 비전빌리지</p>',
+        '</div>'
+        ].join('');
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200,
+            height: 50,
+            backgroundColor: "white",
+            borderColor: "black",
+            borderWidth: 2,
+            disableAnchor: true,
+            textAlign: "center",
+            margin: "auto",
+
+            pixelOffset: new naver.maps.Point(0, -5)
+        });
+
+        naver.maps.Event.addListener(marker, "click", function(e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+
+        infowindow.open(map, marker);
+    </script>
+
 </body>
 </html>
