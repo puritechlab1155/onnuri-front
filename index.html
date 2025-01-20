@@ -760,37 +760,52 @@
 
     <script>
         $(document).ready(function() {
-            //스크롤시 head 스타일 변경
+            // 스크롤 시 헤더 스타일 변경
             let $header = $('.header');
             let $logoImg = $('.logo > img');
             let $menuItem = $('.gnb-item > a');
-            let $userBtn = $('.login-link > a')
+            let $userBtn = $('.login-link > a');
             let $line = $('.line');
+            let $hamIcon = $('.offcanvas-open span');
+            let $offcanvas = $('.offcanvas');
 
             function changeHead() {
                 let $scrollTop = $(window).scrollTop();
 
-                if ($scrollTop > 0) {
+                if ($scrollTop > 0) { //스크롤 탑이 0 이상일때,
                     $header.css({ background: '#fff' });
                     $logoImg.attr('src', 'img/offcanvas-logo.png');
                     $menuItem.css({ color: '#222' });
                     $userBtn.css({ color: '#222' });
                     $line.css({ background: '#999' });
-                } else {
+                    $hamIcon.css({ background: '#222' });
+
+                } else { //스크롤 탑이 0 일때,
                     $header.css({ background: 'transparent' });
                     $logoImg.attr('src', 'img/avv_logo.png');
                     $menuItem.css({ color: '#fff' });
                     $userBtn.css({ color: '#fff' });
                     $line.css({ background: '#fff' });
+                    $hamIcon.css({ background: '#fff' });
+
+                    //변경 안되는 오류 ?????
+                    if ($offcanvas.hasClass('active')) {
+                        $hamIcon.css({ background: '#222' });
+                    } else {
+                        $hamIcon.css({ background: '#fff' }); // 기본 배경색으로 설정
+                    }
                 }
             }
 
+            // 초기 헤더 스타일 설정
             changeHead();
 
+            // 스크롤 이벤트
             $(window).scroll(function() {
                 changeHead();
             });
         });
+
     </script>
 
 </body>
