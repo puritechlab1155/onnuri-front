@@ -1,0 +1,161 @@
+/*예배 소개*/
+.worship {
+    margin-top: 10px;
+}
+.worship > h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    color: #222;
+}
+.worship .photo_container {
+    margin-top: 40px;
+}
+.photo_container > .ImgBox {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.photo_container > .ImgBox img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: right;
+}
+.photo_container .worship_informate {
+    width: 100%;
+    height: 470px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: url(../img/worship/worship_img02.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    margin-top: 32px;
+}
+.worship_informate .text_area {
+    width: 100%;
+    max-width: 895px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: -0.36px;
+}
+.text_area .informate {
+    width: 55%;
+    text-align: center;
+}
+.informate > h3 {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 6px 18px;
+    background: #FF9000;
+    color: #fff;
+    font-weight: 700;
+}
+.informate p {
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: #222;
+    line-height: 160%;
+}
+.informate span {
+    font-size: 16px;
+    color: #FF9000;
+}
+.text_area .shuttle {
+    width: 45%;
+    padding-left: 5vw;
+}
+.text_area .shuttle > h3 {
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+    background: #FF9000;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+.shuttle ul {
+    border: 1px solid #E7DAB3;
+    border-top: none;
+    border-bottom: none;
+}
+.shuttle ul:first-child {
+    border-right: none;
+}
+.shuttle ul li {
+    width: 50%;
+    height: 69px;
+    line-height: 69px;
+    padding: 0 16px;
+    float: left;
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1px solid #E7DAB3;
+    position: relative;
+}
+.shuttle ul li:first-child {
+    text-align: right;
+}
+.shuttle ul li:first-child::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 25%;
+    background: #DDDDDD;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*section-box >> 달력*/
+#home .section03 {
+    background: none;
+}
+.title-area h3 {
+    padding: 24px 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    border-top: 2px solid #222;
+    border-bottom: 1px solid #777;
+}
+#home .section03 .calendar-top {
+    justify-content: center;
+}
+#home .section03 .calendar-bottom {
+    padding-top: 40px;
+}
+/*resize*/
+@media (max-width: 1000px) {
+    .worship_informate .text_area {
+        display: block;
+        transform: translateY(-60%);
+    }
+    .text_area .informate {
+        width: 100%;
+    }
+    .text_area .shuttle {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .shuttle ul {
+        width: calc(100% / 3);
+        float: left;
+    }
+}
+@media (max-width: 524px) {
+    br.d-none {
+        display: block;
+    }
+}
