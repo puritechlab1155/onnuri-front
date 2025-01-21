@@ -205,6 +205,7 @@ ul.user_account a{
 /*hrml: my info - history  >> 내 신청 내역*/
 .myHistory_wrap {
     max-width: 588px !important;
+    padding-bottom: 442px;
 }
 /*탭 부분*/
 .tabBtn_wrap {
@@ -268,6 +269,8 @@ h4.historyName {
 .history_element li {
     height: 48px;
     line-height: 48px;
+    padding: 0 4px;
+    box-sizing: border-box;
     background: #FAFAFA;
     font-size: 16px;
     color: #222;
@@ -283,6 +286,9 @@ h4.historyName {
     .myInfo_wrap {
         margin-top: 70px;
     }
+    .myHistory_wrap {
+        padding-bottom: 356px;
+    }
 }
 @media (max-width: 522px) {
     /*html : myInfo - history*/
@@ -296,10 +302,11 @@ h4.historyName {
         width: 24%;
     }
     .plant_element > .reservation {
-        width: 52%;
+        width: 56%;
+        box-sizing: border-box;
     }
     .plant_element > .step {
-        width: 24%;
+        width: 20%;
     }
     .plant_element > .status {
         width: 24%;
@@ -308,5 +315,8 @@ h4.historyName {
 @media (max-width: 390px) {
     .myInfo_wrap {
         margin-bottom: 120px;
+    }
+    .history_element li {
+        font-size: 14px;
     }
 }
