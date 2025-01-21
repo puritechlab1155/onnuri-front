@@ -211,13 +211,13 @@
                                 </label>
                             </div>
                             <div class="btn-box mt-50">
-                                <button id="" class="l-btn">취소</button>
-                                <button id="next-btn" class="r-btn w-486" disabled>가입하기</button>
+                                <button id="" class="l-btn" type="submit">취소</button>
+                                <button id="next-btn" class="r-btn" type="submit" disabled>가입하기</button>
                             </div>
                         </div>
             
                         <!-- 두 번째 탭 -->
-                        <div class="tab-pane">
+                        <!-- <div class="tab-pane">
                             <p>약관 동의</p>
                             <h3 class="mt-25">회원 정보 작성</h3>
                             <form id="personal-info-form">
@@ -232,11 +232,69 @@
                 
                                 <label for="address">주소:</label>
                                 <input type="text" id="address" name="address" required><br>
-                
+
                                 <button type="next-btn" id="next-btn-second" class="r-btn" disabled>가입하기</button>
                             </form>
+                        </div> -->
+                        <div class="tab-pane">
+                            <p>약관 동의</p>
+                            <h3 class="mt-25">회원 정보 작성</h3>
+                            <form id="personal-info-form" action="/signup" method="POST">
+                                <!-- <form action="/signup" method="POST"> -->
+                                    <!-- 이메일 입력 -->
+                                    <label for="email">이메일</label>
+                                    <input class="border" type="email" id="email" name="email" required placeholder="abcd@naver.com">
+                                
+                                    <!-- 비밀번호 입력 -->
+                                    <label class="mt-16" for="password">비밀번호</label>
+                                    <input class="border" type="password" id="password" name="password" required placeholder="**********">
+                                
+                                    <!-- 비밀번호 확인 -->
+                                    <label class="mt-16" for="password_confirm">비밀번호 확인</label>
+                                    <input class="border" type="password" id="password_confirm" name="password_confirm" required placeholder="**********">
+                                
+                                    <!-- 이름 입력 -->
+                                    <label class="mt-16" for="name">이름</label>
+                                    <input class="border" type="text" id="name" name="name" required placeholder="홍길동">
+                                
+                                    <!-- 성별 선택 -->
+                                    <label class="mt-16" for="gender">성별</label><br>
+                                    <label>
+                                        <input type="radio" name="gender" value="남성">남 <span class="mr-40"></span>
+                                        <input type="radio" name="gender" value="여성">여
+                                    </label>
+                                
+                                    <!-- 연락처 입력 -->
+                                    <label class="mt-16" for="phone">연락처</label>
+                                    <input class="border" type="tel" id="phone" name="phone" required placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" title="010-1234-5678 형식으로 입력하세요">
+                                
+                                    <!-- 주소 입력 -->
+                                    <label class="mt-16" for="address">주소</label>
+                                    <input class="border" type="text" id="address" name="address" required placeholder="주소">
+                                    <input class="border mt-4" type="text" id="detail_address" name="detail_address" required placeholder="상세주소">
+
+                                    <!-- 생년월일 선택 -->
+                                    <label class="mt-16" for="birthdate">생년월일</label>
+                                    <!-- <input type="date" id="birthdate" name="birthdate" required> -->
+                                    <div class="info" id="info__birth">
+                                        <select class="box" id="birth-year">
+                                          <option disabled selected>출생 연도</option>
+                                        </select>
+                                        <select class="box" id="birth-month">
+                                          <option disabled selected>월</option>
+                                        </select>
+                                        <select class="box" id="birth-day">
+                                          <option disabled selected>일</option>
+                                        </select>
+                                    </div>
+                                
+                                    <!-- 가입하기 버튼 -->
+                                    <!-- <button type="submit">가입하기</button> -->
+                              
+                                    <button type="submit" id="next-btn-second" class="r-btn w-486" disabled>가입하기</button>
+                            </form>
                         </div>
-            
+
                         <!-- 세 번째 탭 -->
                         <div class="tab-pane">
                             <p>가입완료</p>
@@ -245,7 +303,7 @@
                             <p>홍길동님의 회원가입이 완료되었습니다.<br>
                                 감사합니다.</p>
                             <!-- <button id="next-btn" class="r-btn w-180" disabled>로그인</button> -->
-                            <button id="next-btn-third" class="r-btn" disabled>로그인</button>
+                            <button id="next-btn-third" class="r-btn w-180" disabled>로그인</button>
                         </div>
                     </div>
                 </div>
@@ -378,13 +436,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 세 번째 탭: '다음' 버튼 비활성화 (클릭해도 아무 동작도 하지 않음).........................이게 아닌데에ㅔㅔㅔㅔㅔ
-    const nextBtnThird = document.getElementById('next-btn-third');
-    if (nextBtnThird) {
-        nextBtnThird.disabled = true; // '다음' 버튼 비활성화
-        nextBtnThird.addEventListener('click', function(event) {
-            event.preventDefault(); // 클릭 이벤트 무효화
-        });
+    // const nextBtnThird = document.getElementById('next-btn-third');
+    // if (nextBtnThird) {
+    //     nextBtnThird.disabled = true; // '다음' 버튼 비활성화
+    //     nextBtnThird.addEventListener('click', function(event) {
+    //         event.preventDefault(); // 클릭 이벤트 무효화
+    //     });
+    // }
+
+
+
+
+
+// 두번째 탭: 생년월일
+// '출생 연도', '출생 월', '출생 일' 셀렉트 박스 option 목록 동적 생성
+
+const birthYearEl = document.querySelector('#birth-year');
+const birthMonthEl = document.querySelector('#birth-month');
+const birthDayEl = document.querySelector('#birth-day');
+
+// 각 option 목록 생성 여부 확인
+let isYearOptionExisted = false;
+let isMonthOptionExisted = false;
+let isDayOptionExisted = false;
+
+// '출생 연도' 셀렉트 박스
+birthYearEl.addEventListener('focus', function () {
+  if (!isYearOptionExisted) {
+    isYearOptionExisted = true;
+    for (let i = 1940; i <= 2022; i++) {
+      const yearOption = document.createElement('option');
+      yearOption.setAttribute('value', i);
+      yearOption.innerText = i;
+      this.appendChild(yearOption);
     }
+  }
+});
+
+// '출생 월' 셀렉트 박스
+birthMonthEl.addEventListener('focus', function () {
+  if (!isMonthOptionExisted) {
+    isMonthOptionExisted = true;
+    for (let i = 1; i <= 12; i++) {
+      const monthOption = document.createElement('option');
+      monthOption.setAttribute('value', i);
+      monthOption.innerText = i < 10 ? `0${i}` : i;  // 두 자릿수로 표시
+      this.appendChild(monthOption);
+    }
+  }
+});
+
+// '출생 일' 셀렉트 박스
+birthDayEl.addEventListener('focus', function () {
+  if (!isDayOptionExisted) {
+    isDayOptionExisted = true;
+    for (let i = 1; i <= 31; i++) {
+      const dayOption = document.createElement('option');
+      dayOption.setAttribute('value', i);
+      dayOption.innerText = i < 10 ? `0${i}` : i;  // 두 자릿수로 표시
+      this.appendChild(dayOption);
+    }
+  }
+});
+
+// 각 셀렉트 박스에서 변경이 일어날 때, 다른 셀렉트 박스를 갱신하도록 할 수도 있습니다.
+// 예를 들어, 연도나 월을 선택했을 때 일 수를 업데이트하는 등의 추가적인 로직을 추가할 수 있습니다.
+
+
 });
 
     </script>
