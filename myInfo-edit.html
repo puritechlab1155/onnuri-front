@@ -6,7 +6,7 @@
     <!-- 사파리폰트적용 (프리텐다드) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
     
-    <title>Acts29비전빌리지 / Acts29 Visionvillage_About Us</title>
+    <title>Acts29비전빌리지 / 내 정보 수정</title>
 
     <!--Jqurey CDN-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -180,24 +180,23 @@
                     </div>
                     <form>
                         <div class="input_wrap">
-                            <div class="input_container">
+                            <fieldset class="input_container">
                                 <label for="name" class="input_title">이름</label>
                                 <input type="text" id="name" placeholder="이름을 입력해주세요." required>
-                            </div>
-                            <div class="input_container">
+                            </fieldset>
+                            <fieldset class="input_container">
                                 <label for="email" class="input_title">이메일</label>
                                 <input type="email" id="email" placeholder="이메일을 입력해주세요." required>
-                            </div>
-                            <div class="input_container">
+                            </fieldset>
+                            <fieldset class="input_container">
                                 <label for="password" class="input_title">비밀번호</label>
-                                <input type="password" id="password" placeholder="비밀번호를 입력해주세요." oninput="updatePassword()" required>
-                            </div>
+                                <input type="password" id="password" placeholder="비밀 번호를 입력해주세요." oninput="updatePassword()" required>
+                            </fieldset>
+                        </div>
+                        <div class="btn_wrap">
+                            <button type="button" class="finishBtn">수정하기</button>
                         </div>
                     </form>
-                    
-                    <div class="btn_wrap">
-                        <button type="button" class="finishBtn">수정하기</button>
-                    </div>
                 </div>
             </div>
         </main>
@@ -272,7 +271,7 @@
             input.value = maskedPassword; // 입력 필드에 *로 대체
         }
 
-        //내 정보 수정 프로필 이미지 편집 클릭시 파일 로드
+        // 내 정보 수정 프로필 이미지 편집 클릭 시 파일 로드
         document.getElementById('editButton').addEventListener('click', function() {
             document.getElementById('fileInput').click(); // 파일 입력 클릭
         });
@@ -285,8 +284,9 @@
                 reader.onload = function(e) {
                     // 이미지 미리보기 또는 다른 작업을 여기에 추가
                     console.log(e.target.result); // 선택한 이미지의 데이터 URL
-                    // 예: 이미지 요소를 업데이트
-                    // document.getElementById('imagePreview').src = e.target.result;
+                    
+                    // .my_img > img 요소의 src 속성을 선택한 이미지의 데이터 URL로 업데이트
+                    document.querySelector('.my_img > img').src = e.target.result;
                 }
                 reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
             }

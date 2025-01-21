@@ -2,6 +2,12 @@
 #main {
     padding-top: 80px;
 }
+
+fieldset {
+    border: none;  /* 테두리 제거 */
+    padding: 0;    /* 패딩 제거 */
+    margin: 0;     /* 마진 제거 */
+}
 /*html : my info >> 내 정보*/
 .myInfo_wrap {
     width: 100%;
@@ -193,10 +199,107 @@ ul.user_account a{
 }
 
 
+/*hrml: my info - history  >> 내 신청 내역*/
+.myHistory_wrap {
+    max-width: 588px !important;
+}
+/*탭 부분*/
+.tabBtn_wrap {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 66px;
+}
+.tabBtn_wrap > button {
+    width: 50%;
+    padding: 12px 0;
+    float: left;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.36px;
+    color: #222;
+}
+.historyFocus {
+    border-bottom: 2px solid #000;
+}
+.historyNone {
+    border: none;
+}
+/*프로그램 신청 내역*/
+.element_wrap {
+    width: 100%;
+    height: 144px;
+    position: relative;
+}
+.history_element {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.history_element > div {
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.program_element > div {
+    width: calc(100% / 3);
+}
+.plant_element > .reservation{
+    width: 46%;
+}
+.plant_element > .step,.status{
+    width: 27%;
+}
+h4.historyName {
+    height: 48px;
+    line-height: 48px;
+    color: #224F5B;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    background: #ddd;
+}
+.history_element li {
+    height: 48px;
+    line-height: 48px;
+    background: #FAFAFA;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: -0.36px;
+}
+.status li {
+    color: #007AFF;
+}
+
+
 /*resize*/
 @media (max-width: 834px) {
     .myInfo_wrap {
         margin-top: 70px;
+    }
+}
+@media (max-width: 522px) {
+    /*html : myInfo - history*/
+    .program_element > .program {
+        width: 52%;
+    }
+    .program_element > .generation {
+        width: 24%;
+    }
+    .program_element > .status {
+        width: 24%;
+    }
+    .plant_element > .reservation {
+        width: 52%;
+    }
+    .plant_element > .step {
+        width: 24%;
+    }
+    .plant_element > .status {
+        width: 24%;
     }
 }
 @media (max-width: 390px) {
