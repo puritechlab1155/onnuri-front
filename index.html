@@ -866,6 +866,26 @@
             $(window).scroll(function() {
                 changeHead();
             });
+
+
+            //섹션5 이미지 뜨기
+            $('.feature-list img').css('opacity', 0);
+
+            // 스크롤 이벤트
+            $(window).on('scroll', function() {
+                var scrollTop = $(this).scrollTop();
+                var documentHeight = $(document).height();
+                var windowHeight = $(this).height();
+                
+                if (documentHeight - scrollTop - windowHeight <= 500) { // 페이지 하단에서 500px 떨어진 위치
+                    // 각 이미지에 대해 0.3초 간격으로 나타나게 하기
+                    $('.feature-list img').each(function(index) {
+                        $(this).delay(index * 300).animate({ opacity: 1 }, 500);
+                    });
+                    
+                    $(window).off('scroll'); // 스크롤 이벤트를 한 번만 실행하도록 제거
+                }
+            });
         });
 
     </script>
