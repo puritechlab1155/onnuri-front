@@ -170,33 +170,31 @@
                         <div class="my_img">
                             <img src="img/myInfo/profile.png" alt="내 프로필 이미지">
                         </div>
-                        <div class="img_changeBtn">
-                            <button>
+                        <div class="editBtn">
+                            <button type="button" id="editButton">
                                 <img src="img/myInfo/camera.svg" alt="카메라 아이콘">
                                 편집
                             </button>
+                            <input type="file" id="fileInput" accept="image/*">
                         </div>
                     </div>
-                    <div class="input_wrap">
-                        <ul>
-                            <li class="input_title">이름</li>
-                            <li>
-                                <input type="text" placeholder="이름을 입력해주세요.">
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="input_title">이메일</li>
-                            <li>
-                                <input type="email" placeholder="이메일을 입력해주세요.">
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="input_title">비밀번호</li>
-                            <li>
-                                <input type="text" id="password" placeholder="비밀번호를 입력해주세요." oninput="updatePassword()">
-                            </li>
-                        </ul>
-                    </div>
+                    <form>
+                        <div class="input_wrap">
+                            <div class="input_container">
+                                <label for="name" class="input_title">이름</label>
+                                <input type="text" id="name" placeholder="이름을 입력해주세요." required>
+                            </div>
+                            <div class="input_container">
+                                <label for="email" class="input_title">이메일</label>
+                                <input type="email" id="email" placeholder="이메일을 입력해주세요." required>
+                            </div>
+                            <div class="input_container">
+                                <label for="password" class="input_title">비밀번호</label>
+                                <input type="password" id="password" placeholder="비밀번호를 입력해주세요." oninput="updatePassword()" required>
+                            </div>
+                        </div>
+                    </form>
+                    
                     <div class="btn_wrap">
                         <button type="button" class="finishBtn">수정하기</button>
                     </div>
@@ -273,6 +271,26 @@
             const maskedPassword = '*'.repeat(password.length); // 비밀번호 길이에 따라 * 표시
             input.value = maskedPassword; // 입력 필드에 *로 대체
         }
+
+        //내 정보 수정 프로필 이미지 편집 클릭시 파일 로드
+        document.getElementById('editButton').addEventListener('click', function() {
+            document.getElementById('fileInput').click(); // 파일 입력 클릭
+        });
+
+        // 파일이 선택되었을 때의 이벤트 처리
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0]; // 선택된 파일
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // 이미지 미리보기 또는 다른 작업을 여기에 추가
+                    console.log(e.target.result); // 선택한 이미지의 데이터 URL
+                    // 예: 이미지 요소를 업데이트
+                    // document.getElementById('imagePreview').src = e.target.result;
+                }
+                reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
+            }
+        });
     </script>
 </body>
 </html>
