@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 offcanvas.style.transform = 'translateX(0%)'; // 메뉴 열기
                 header.style.backgroundColor = '#fff';
                 headerLogoImg.src = 'img/offcanvas-logo.png'; // 활성화 상태의 로고
+                if(scrollY = 0) {
+                    header.style.backgroundColor = 'transparent';
+                }
             } else {
                 mobileoffcanvas.style.height = 'auto';
                 offcanvas.style.transform = 'translateX(100%)'; // 메뉴 닫기
@@ -132,10 +135,58 @@ document.addEventListener('DOMContentLoaded', function() {
                         // 이번 달 날짜
                         const formattedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
                         cell.textContent = date;
-        
+                        
+                        // 오늘 날짜와 비교하여 텍스트 추가
+                        if (new Date(currentYear, currentMonth, date) >= today) {
+                            const scheduleText = document.createElement('div'); // 스케줄 텍스트 박스 생성
+                            scheduleText.textContent = '시안채플'; // 스케줄 텍스트 추가
+                            scheduleText.classList.add('schedule-text'); // 클래스 추가
+
+                            cell.appendChild(scheduleText); // 셀에 추가
+                        }
+
+
                         if (currentYear === today.getFullYear() && currentMonth === today.getMonth() && date === today.getDate()) {
                             cell.classList.add('today');
+                            cell.classList.add('focusDay');
+
+                            // 오늘 날짜의 텍스트를 detail에 추가
+                            const detailElements = document.querySelectorAll('.scheduleBox');
+                            detailElements.forEach((box) => {
+                                const detailElement = box.querySelector('li.detail');
+                                detailElement.textContent = '시안채플'; // 오늘 날짜의 텍스트 추가
+                            });
                         }
+
+                        // focusDay에도 텍스트 추가
+                        if (cell.classList.contains('focusDay')) {
+                            const scheduleText = document.createElement('div'); // 스케줄 텍스트 박스 생성
+                            scheduleText.textContent = '시안채플'; // 스케줄 텍스트 추가
+                            scheduleText.classList.add('schedule-text'); // 클래스 추가
+
+                            cell.appendChild(scheduleText); // 셀에 추가
+                        }
+
+                        // 날짜 클릭 이벤트 추가
+                        cell.addEventListener('click', function() {
+                            // 오늘 날짜의 focusDay 제거
+                            const todayCell = document.querySelector('td.focusDay');
+                            if (todayCell) {
+                                todayCell.classList.remove('focusDay');
+                            }
+
+                            cell.classList.add('focusDay'); // 클릭한 날짜에 focusDay 추가
+
+                            // 클릭한 날짜에 "시안채플" 추가
+                            const newScheduleText = '시안채플'; // 스케줄 텍스트
+                            const detailElements = document.querySelectorAll('ul.scheduleBox'); // 모든 scheduleBox 선택
+
+                            // 클릭한 날짜의 detail에 텍스트 추가
+                            detailElements.forEach((box, index) => {
+                                const detailElement = box.querySelector('li.detail');
+                                detailElement.textContent = newScheduleText; // 텍스트 추가
+                            });
+                        });
         
                         renderSchedules(cell, formattedDate);
                         date++;
@@ -169,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        //달력 이전, 다음 버튼
         lastMonthBtn.addEventListener('click', () => {
             currentMonth--;
             if (currentMonth < 0) {
@@ -192,17 +244,17 @@ document.addEventListener('DOMContentLoaded', function() {
         renderCalendar();
     }
 
-    // section04 tab control
-    var reservTabs = home.querySelectorAll('.reserv-tabs .reserv-tab');
-    var reservInfoLists = home.querySelectorAll('.reserv-info .reserv-info-list');
+    // section04 tab control >> 디자인 변경으로 주석 처리
+    // var reservTabs = home.querySelectorAll('.reserv-tabs .reserv-tab');
+    // var reservInfoLists = home.querySelectorAll('.reserv-info .reserv-info-list');
 
-    reservTabs.forEach((tab, idx) => {
-        tab.addEventListener('click', function() {
-            reservTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+    // reservTabs.forEach((tab, idx) => {
+    //     tab.addEventListener('click', function() {
+    //         reservTabs.forEach(t => t.classList.remove('active'));
+    //         tab.classList.add('active');
 
-            reservInfoLists.forEach(list => list.classList.remove('active'));
-            reservInfoLists[idx].classList.add('active');
-        });
-    });
+    //         reservInfoLists.forEach(list => list.classList.remove('active'));
+    //         reservInfoLists[idx].classList.add('active');
+    //     });
+    // });
 });

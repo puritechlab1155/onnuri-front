@@ -1029,16 +1029,16 @@ em {
 #home .section02 .img-area .name img {
   width: 100%;
 }
-#home .section-box {
+#home .section03 {
+  padding: 220px 0;
   background: #fff url(../img/home/section-box-bg.png) no-repeat;
   background-size: cover;
-  padding: 220px 0;
+  background-position: right center;
 }
 #home .section03 .calendar-top {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
   margin: 40px 0 20px;
 }
 #home .section03 .calendar-top .last-month-arrow, #home .section03 .calendar-top .next-month-arrow {
@@ -1054,10 +1054,18 @@ em {
   line-height: 160%; /* 38.4px */
   letter-spacing: -0.48px;
 }
-#home .section03 .calendar-board {
+#home .section03 .calendar-bottom {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+}
+#home .section03 .calendar-board {
+  width: 65%;
+  box-sizing: border-box;
   border-collapse: collapse;
-  border-bottom: 1px solid #52ACDB;
+  border: 1px solid #ddd;
 }
 #home .section03 .calendar-board colgroup col {
   width: 14%;
@@ -1089,6 +1097,20 @@ em {
   font-weight: 500;
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
+  cursor: pointer;
+}
+.schedule-text { /*현재 일정에 추가*/
+  color: #222;
+  font-size: 16px;
+  font-weight: 300 !important;
+  font-family: "Pretendard-Regular";
+}
+.focusDay { /*일정 클릭시 추가되는 포커스 스타일*/
+  background: #1C3C6B !important;
+  color: #fff !important;
+}
+.focusDay .schedule-text { /*포커스 시 모든 텍스트 색상 변경*/
+  color: #fff !important;
 }
 #home .section03 .calendar-board tbody td ul li {
   color: #222;
@@ -1126,6 +1148,35 @@ em {
 }
 #home .section03 .calendar-board tbody td.prev-month ul li, #home .section03 .calendar-board tbody td.next-month ul li {
   color: #bbb;
+}
+#home .section03 .schedule {
+  width: 35%;
+}
+#home .section03 .schedule ul {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #1C3C6B;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+}
+#home .section03 .schedule ul li.time {
+  padding: 13px 16px;
+  background: #1C3C6B;
+  color: #fff;
+}
+#home .section03 .schedule ul li.time img {
+  vertical-align: -7px;
+  margin-right: 10px;
+}
+#home .section03 .schedule ul li.detail {
+  height: 77px;
+  line-height: 77px;
+  padding: 0 16px;
+  background: #fff;
+  color: #222;
+  font-weight: 600;
 }
 #home .section04 .content {
   padding-top: 170px;

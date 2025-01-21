@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/swiper.css">
 
     <!-- 메인공통 -->
-     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -409,84 +409,104 @@
 
                             <div class="calendar-area">
                                 <div class="calendar-top">
-                                    <button type="button" class="last-month-arrow"><img src="img/home/calendar-prev.png" alt="이전 달 보기"></button>
+                                    <button type="button" class="last-month-arrow">
+                                        <img src="img/home/calendar-prev.png" alt="이전 달 보기">
+                                    </button>
                                     <div class="calendar-date" id="current-month"></div>
-                                    <button type="button" class="next-month-arrow"><img src="img/home/calendar-next.png" alt="다음 달 보기"></button>
+                                    <button type="button" class="next-month-arrow">
+                                        <img src="img/home/calendar-next.png" alt="다음 달 보기">
+                                    </button>
                                 </div>
-
-                                <table class="calendar-board">
-                                    <caption class="blind">월별 일정</caption>
-
-                                    <colgroup>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                    </colgroup>
-
-                                    <thead>
-                                        <tr>
-                                            <th class="sunday">일</th>
-                                            <th>월</th>
-                                            <th>화</th>
-                                            <th>수</th>
-                                            <th>목</th>
-                                            <th>금</th>
-                                            <th>토</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="calendar-bottom">
+                                    <table class="calendar-board">
+                                        <caption class="blind">월별 일정</caption>
+    
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+    
+                                        <thead>
+                                            <tr>
+                                                <th class="sunday">일</th>
+                                                <th>월</th>
+                                                <th>화</th>
+                                                <th>수</th>
+                                                <th>목</th>
+                                                <th>금</th>
+                                                <th>토</th>
+                                            </tr>
+                                        </thead>
+    
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+    
+                                    <div class="schedule">
+                                        <ul class="scheduleBox">
+                                            <li class="time">
+                                                <img src="img/home/time-circle.png" alt="시계 아이콘"> 00:00 - 00:00
+                                            </li>
+                                            <li class="detail"></li>
+                                        </ul>
+                                        <ul class="scheduleBox">
+                                            <li class="time">
+                                                <img src="img/home/time-circle.png" alt="시계 아이콘"> 00:00 - 00:00
+                                            </li>
+                                            <li class="detail"></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div><!-- //calendar-area -->
 
                             <div class="more-button-box">
@@ -499,7 +519,8 @@
                     </div>
                 </div><!-- //section03 -->
 
-                <div class="section04">
+                <!--section04 디자인 변경으로 제거-->
+                <!-- <div class="section04">
                     <div class="inner">
                         <div class="content">
                             <div class="title-area">
@@ -507,7 +528,7 @@
                                     <img src="img/home/section_title_logo.png" alt="Acts29비전빌리지">
                                     <span>예약</span>
                                 </h3>
-                            </div><!-- //title-area -->
+                            </div>
 
                             <div class="cont-area">
                                 <div class="swiper s4-swiper">
@@ -551,12 +572,12 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
                                         </li>
 
                                         <li class="reserv-info-list">
@@ -569,12 +590,12 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
 
                                             <div class="card">
                                                 <div class="card-body">
@@ -585,12 +606,12 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
                                         </li>
 
                                         <li class="reserv-info-list">
@@ -603,12 +624,12 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
                                         </li>
 
                                         <li class="reserv-info-list">
@@ -621,12 +642,12 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
 
                                             <div class="card">
                                                 <div class="card-body">
@@ -637,16 +658,16 @@
                                                         <div class="line"></div>
                                                         <div class="checkout"><span>퇴실</span>11:00</div>
                                                     </div>
-                                                </div><!-- //card-body -->
+                                                </div>
 
                                                 <div class="card-footer">
                                                     <div class="date-info">12.26 - 12.28</div>
                                                 </div>
-                                            </div><!-- //card -->
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
-                            </div><!-- //cont-area -->
+                            </div>
 
                             <div class="more-button-box">
                                 <a href="#" class="more-button">
@@ -656,7 +677,7 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- //section04 -->
+                </div> -->
             </div><!-- //section-box -->
 
             <div class="section05">
@@ -760,7 +781,7 @@
 
     <script>
         $(document).ready(function() {
-            // 스크롤 시 헤더 스타일 변경
+            // 스크롤 시 헤더 스타일 변경 및 모바일 메뉴 클릭 이벤트
             let $header = $('.header');
             let $logoImg = $('.logo > img');
             let $menuItem = $('.gnb-item > a');
@@ -769,10 +790,17 @@
             let $hamIcon = $('.offcanvas-open span');
             let $offcanvas = $('.offcanvas');
 
+            // 햄버거 아이콘 클릭 이벤트
+            $hamIcon.click(function() {
+                if ($(window).scrollTop() === 0) { // 스크롤 탑이 0일 때
+                    $hamIcon.css({ background: '#222' }); // 컬러 변경
+                }
+            });
+
             function changeHead() {
                 let $scrollTop = $(window).scrollTop();
 
-                if ($scrollTop > 0) { //스크롤 탑이 0 이상일때,
+                if ($scrollTop > 0) { // 스크롤 탑이 0 이상일 때
                     $header.css({ background: '#fff' });
                     $logoImg.attr('src', 'img/offcanvas-logo.png');
                     $menuItem.css({ color: '#222' });
@@ -780,20 +808,13 @@
                     $line.css({ background: '#999' });
                     $hamIcon.css({ background: '#222' });
 
-                } else { //스크롤 탑이 0 일때,
+                } else { // 스크롤 탑이 0일 때
                     $header.css({ background: 'transparent' });
                     $logoImg.attr('src', 'img/avv_logo.png');
                     $menuItem.css({ color: '#fff' });
                     $userBtn.css({ color: '#fff' });
                     $line.css({ background: '#fff' });
                     $hamIcon.css({ background: '#fff' });
-
-                    //변경 안되는 오류 ?????
-                    if ($offcanvas.hasClass('active')) {
-                        $hamIcon.css({ background: '#222' });
-                    } else {
-                        $hamIcon.css({ background: '#fff' }); // 기본 배경색으로 설정
-                    }
                 }
             }
 
