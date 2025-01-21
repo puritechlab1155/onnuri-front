@@ -133,6 +133,7 @@ button {
     display: block;
 }
 .mobile_display {
+    height: auto !important;
     display: none;
 }
 
@@ -159,7 +160,6 @@ button {
         position: absolute;
         top: 0;
         right: 0;
-        
     }
     .header .offcanvas-open {
         width: 27px;
@@ -204,7 +204,7 @@ button {
     }
     .header .offcanvas {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         padding: 30px 16px;
         background: rgba(100, 100, 100, 0.445);
         display: flex;
