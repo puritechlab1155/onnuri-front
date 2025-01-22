@@ -443,13 +443,6 @@
                     nextBtnSecond.disabled = true; // '다음' 버튼 비활성화
                 }
             }
-    
-            // 두 번째 탭: '다음' 버튼 클릭 시 세 번째 탭으로 이동
-            // nextBtnSecond.addEventListener('click', function() {
-            //     tabPanes[1].classList.remove('active');
-            //     tabPanes[2].classList.add('active');
-            //     tabs[2].classList.add('active');
-            // });
 
             // 두 번째 탭: '다음' 버튼 클릭 시 register-complete.html로 이동
             nextBtnSecond.addEventListener('click', function() {
@@ -528,7 +521,7 @@
             const birthYearEl = document.querySelector('#birth-year');
             const birthMonthEl = document.querySelector('#birth-month');
             const birthDayEl = document.querySelector('#birth-day');
-    
+      
             // 옵션 목록을 생성하는 함수
             const createOptions = (el, start, end, formatter) => {
                 for (let i = start; i <= end; i++) {
@@ -543,11 +536,7 @@
             createOptions(birthYearEl, 1940, 2022);
             createOptions(birthMonthEl, 1, 12, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
             createOptions(birthDayEl, 1, 31, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
-    
-            // 월 변경 시 일수 조정
-            birthYearEl.addEventListener('change', updateDays);
-            birthMonthEl.addEventListener('change', updateDays);
-    
+
             function updateDays() {
                 const selectedYear = birthYearEl.value;
                 const selectedMonth = birthMonthEl.value;

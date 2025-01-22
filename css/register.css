@@ -56,7 +56,7 @@ main.register .register-containner {
 
 }
 .tab-pane {
-    display: none;
+    /* display: none; */
 }
 .tab-pane>p {
     font-size: 16px;
