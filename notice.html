@@ -267,7 +267,7 @@
                                                     <div class="notice-appliDate">~ 0000-00-00</div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-focus">즉시 신청</button>
+                                                        <span class="apply apply-focus">즉시 신청</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -305,13 +305,12 @@
                                                     <!--제목-->
                                                     <div class="notice-title">
                                                         <p class="text">오늘 훈련 내용입니다.</p>
-                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
                                                     </div>
                                                     <!--신청일-->
                                                     <div class="notice-appliDate"> - </div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-finish">신청 마감</button>
+                                                        <span class="apply apply-finish">신청 마감</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -327,13 +326,12 @@
                                                     <!--제목-->
                                                     <div class="notice-title">
                                                         <p class="text">오늘 훈련 내용입니다.</p>
-                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
                                                     </div>
                                                     <!--신청일-->
                                                     <div class="notice-appliDate"> - </div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-finish">신청 마감</button>
+                                                        <span class="apply apply-finish">신청 마감</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -349,13 +347,12 @@
                                                     <!--제목-->
                                                     <div class="notice-title">
                                                         <p class="text">오늘 훈련 내용입니다.</p>
-                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
                                                     </div>
                                                     <!--신청일-->
                                                     <div class="notice-appliDate"> - </div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-finish">신청 마감</button>
+                                                        <span class="apply apply-finish">신청 마감</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -371,13 +368,12 @@
                                                     <!--제목-->
                                                     <div class="notice-title">
                                                         <p class="text">오늘 훈련 내용입니다.</p>
-                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
                                                     </div>
                                                     <!--신청일-->
                                                     <div class="notice-appliDate"> - </div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-finish">신청 마감</button>
+                                                        <span class="apply apply-finish">신청 마감</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -403,7 +399,7 @@
                                                     <div class="notice-appliDate">~ 0000-00-00</div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-focus">즉시 신청</button>
+                                                        <span class="apply apply-focus">즉시 신청</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -419,13 +415,12 @@
                                                     <!--제목-->
                                                     <div class="notice-title">
                                                         <p class="text">오늘 훈련 내용입니다.</p>
-                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
                                                     </div>
                                                     <!--신청일-->
                                                     <div class="notice-appliDate"> - </div>
                                                     <!--신청 바로가기-->
                                                     <div class="notice-appliGo">
-                                                        <button class="apply apply-finish">신청 마감</button>
+                                                        <span class="apply apply-finish">신청 마감</span>
                                                     </div>
                                                     <!--작성일-->
                                                     <div class="notice-date">0000-00-00</div>
@@ -663,6 +658,41 @@
                     $commonList.css({ display : 'block'});
                 }
             });
+
+            //------ 신청마감 버튼 비활성화
+            document.querySelector('.apply-finish').disabled = true; // 버튼을 비활성화
+
+            // ------ 페이지 버튼
+            let currentPage = 1; // 현재 페이지 번호
+            const totalPages = 10; // 총 페이지 수 (예시)
+
+            $('.pre').on('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePageCount();
+                }
+            });
+
+            $('.next').on('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePageCount();
+                }
+            });
+
+            $('.first_pre').on('click', function() {
+                currentPage = 1;
+                updatePageCount();
+            });
+
+            $('.last_next').on('click', function() {
+                currentPage = totalPages;
+                updatePageCount();
+            });
+
+            function updatePageCount() {
+                $('.page_count').text(currentPage);
+            }
         });
     </script>
 </body>

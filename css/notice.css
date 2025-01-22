@@ -211,26 +211,28 @@ div.notice-date {
 }
 
 /* -------신청 바로가기 각각 버튼 스타일 */ 
-button.apply {
+span.apply {
+    display: block;
     padding: 6px 8px 4px;
     color: #777;
     font-size: 16px;
     border-radius: 5px;
 }
-button.apply.apply-focus {
+span.apply.apply-focus {
     background: #FF9B01;
     color: #fff;
 }
-button.apply.apply-finish {
+span.apply.apply-finish {
     background: #EBEBEB;
     color: #777;
+    cursor: default;
 }
-/*뉴 뱃지 비활성화 스타일*/
+/* ------ 뉴 뱃지 비활성화 숨김처리 */
 .notice-badge.badge-none {
     display: none;
 }
 
-/* 페이지 카운트 스타일 */
+/* ------ 페이지 카운트 스타일 */
 .page_numb {
     width: 100%;
     height: 40px;
@@ -312,6 +314,17 @@ button.apply.apply-finish {
     }
 }
 @media (max-width: 767px) {
+    #home .section01 .content {
+        padding: 0;
+        padding-bottom: 10vw;
+    }
+    .section01 .search_wrap {
+        display: none;
+    }
+    #home .section01 .tabs {
+        justify-content: center;
+        margin-top: 60px;
+    }
     .content ul.table-title {
         display: none;
     }
@@ -325,4 +338,27 @@ button.apply.apply-finish {
         color: #fff;
         border-radius: 4px;
     }
+    div.notice-title {
+        padding-left: 0;
+    }
+    #home .section01 .notice-list-item:not(:first-child) {
+        margin-top: 0;
+    }
+    #home .section01 .notice-list-link {
+        padding: 16px 0;
+    }
+    #home .section01 .notice-title .text {
+        margin: 6px 0;
+        margin-top: 12px;
+    }
+    #home .section01 .notice-date {
+        width: fit-content;
+        position: relative;
+        font-size: 14px !important;
+        color: #777 !important;
+    }
+    div.notice-title img {
+        margin-top: 4px;
+    }
 }
+
