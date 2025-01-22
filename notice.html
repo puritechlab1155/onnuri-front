@@ -618,7 +618,7 @@
         $(document).ready(function(){
             // ------ 검색 카테고리 드롭다운
             $('.selected').on('click', function() {
-                $('.options').stop(true, true).fadeToggle(200); // 0.2초 동안 서서히 나타나고 사라짐
+                $('.options').stop(true, true).fadeToggle(100); // 0.2초 동안 서서히 나타나고 사라짐
             });
 
             $('.option').on('click', function() {
@@ -630,13 +630,13 @@
                 $('.selected').prepend(selectedText + ' '); // 텍스트 업데이트
 
                 // 드롭다운을 서서히 사라지게 함
-                $('.options').stop(true, true).fadeOut(200); // 0.2초 동안 서서히 사라짐
+                $('.options').stop(true, true).fadeOut(100); // 0.2초 동안 서서히 사라짐
             });
 
             // 드롭다운 외부 클릭 시 닫기
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.custom-dropdown').length) {
-                    $('.options').stop(true, true).fadeOut(200); // 0.2초 동안 서서히 사라짐
+                    $('.options').stop(true, true).fadeOut(100); // 0.2초 동안 서서히 사라짐
                 }
             });
 
