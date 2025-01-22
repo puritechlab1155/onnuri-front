@@ -154,8 +154,50 @@
         float: left;
     }
 }
-@media (max-width: 524px) {
+@media (max-width: 767px) {
+    .photo_container .worship_informate {
+        height: 540px;
+    }
+    .worship_informate .text_area {
+        transform: translateY(-63%);
+    }
     br.d-none {
         display: block;
     }
+    .shuttle ul:nth-child(3) {
+        border-left: none;
+        border-right: none;
+    }
+    .shuttle ul li {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        float: none;
+        text-align: center !important;
+    }
+    .shuttle ul li:first-child::after {
+        display: none;
+    }
+}
+@media (max-width: 524px) {
+    .informate p {
+        font-size: 14px;
+    }
+    .informate span {
+        font-size: 14px;
+    }
+    .shuttle ul li {
+        font-size: 14px;
+    }
+}
+@media (max-width: 428px) {
+    /* .informate p {
+        font-size: 14px;
+    }
+    .informate span {
+        font-size: 14px;
+    }
+    .shuttle ul li {
+        font-size: 2.9vw;
+    } */
 }
