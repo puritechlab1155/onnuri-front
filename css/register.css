@@ -2,7 +2,7 @@
 .fs-18 { font-size: 18px !important; }
 .fw-6 { font-weight: 600px; }
 .mt-4 { margin-top: 4px !important; }
-.mt-16 { margin-top: 16px; }
+.mt-18 { margin-top: 18px; }
 .mt-25 { margin-top: 25px !important; }
 .mt-50 { margin-top: 50px; }
 .mt-65 { margin-top: 65px !important; }
@@ -11,6 +11,7 @@
 .w-486 { max-width: 486px !important; width: 100%; }
 .w-180 { max-width: 180px; width: 100%; }
 .t-c { text-align: center; }
+div.br { display: inline; }
 h2 {
     font-size: 32px;
     font-weight: 600;
@@ -55,7 +56,7 @@ main.register .register-containner {
 
 }
 .tab-pane {
-    /* display: none; */
+    display: none;
 }
 .tab-pane>p {
     font-size: 16px;
@@ -155,6 +156,13 @@ fieldset {
     object-position: center;
     float: left;
 }
+.profile .name {
+    display: block;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.36px;
+}
 .profile .editBtn {
     width: 95px;
     position: absolute;
@@ -164,9 +172,8 @@ fieldset {
     box-sizing: border-box;
 }
 .editBtn button {
-    max-width: 95px;
-    max-height: 40px;
     width: 100%;
+    height: 40px;
     padding: 8px 0;
     background: #fff;
     border-radius: 80px;
@@ -174,6 +181,7 @@ fieldset {
     font-weight: 500;
     letter-spacing: -0.36px;
     box-shadow: 0px 2px 5px #00000025;
+    color: #222;
 }
 .editBtn button img {
     vertical-align: -4px;
@@ -181,12 +189,7 @@ fieldset {
 }
 .editBtn input[type="file"] {
     display: none;
-}
-
-    /* 여기까지 이미지 편집 */
-
-
-
+} /* 여기까지 이미지 편집 */
 
 #personal-info-form {
     max-width: 486px;
@@ -213,45 +216,113 @@ fieldset {
 input[type='radio'] {
     margin-right: 8px;
 }
+    /* 기본스타일 제거, 버튼 모양 재설정 */
+input[type='radio'] {
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ccc; 
+  border-radius: 50%;
+  outline: none; 
+  cursor: pointer;
+}
+
+    /* 체크 시 버튼 모양 스타일 */
+input[type='radio']:checked {
+  background-color: #004BBA; /* 체크 시 내부 원 색상 */
+  border: 3px solid #fff; /* 라인이 아닌, 라인과 원 사이 색상 */
+  box-shadow: 0 0 0 1px #004BBA; /* 라인 */
+}
+    /* 주소 */
+.el_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: unset;
+    border: unset;
+
+    padding: 10px;
+    background: #333333;
+    border-radius: 5px;
+    color: #ffffff;
+
+
+    width: fit-content;
+
+    word-break: keep-all;
+  }
+.el_input {
+  }
+.el_input::placeholder {
+    color: #d4d4d4;
+  }
+.el_input:disabled {
+    background-color: #f0f0f0;
+  }
+.bl_stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+.bl_stack--row {
+    flex-direction: row;
+  }
+.hp_shrink-0 {
+    /* flex-shrink: 0; */
+  }
+.bl_stack button {
+    max-width: 150px;
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    border-color: #222;
+}
+.bl_stack button img {
+    margin-left: 10px;
+}
     /* 생년월일 */
 .info#info__birth {
     display: flex;
     gap: 4px;
   }
 .info#info__birth select {
-width: 159px;
-height: 50px;
-border-radius: 7px;
-border-radius: 7px;
-border: 1px solid #E9EBED;
-font-size: 18px;
-color: #777;
-font-weight: 400;
-padding: 10px;
-margin-top: 10px;
+    width: 159px;
+    height: 50px;
+    border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #E9EBED;
+    font-size: 18px;
+    color: #777;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 10px;
 }
 .info#info__birth select:first-child {
-margin-left : 0px;
+    margin-left : 0px;
 }
 /* select의 스크롤 바 커스텀 */
 .info#info__birth select::-webkit-scrollbar {
-width: 10px;
+    width: 10px;
 }
 .info#info__birth select::-webkit-scrollbar-thumb {
-background-color: #b6b6b6;
-border-radius: 3px;
+    background-color: #b6b6b6;
+    border-radius: 3px;
 }
 .info#info__birth select::-webkit-scrollbar-track {
-background-color: #ebe9e9;
-border-radius: 6px;
-}
-  /* 생년월일 끝 */
-
+    background-color: #ebe9e9;
+    border-radius: 6px;
+}  /* 생년월일 끝 */
 
 #next-btn-second {
 
 }
-
 
 /* 세번째 탭 컨텐츠 */
 .tab-content div.t-c img {
@@ -263,9 +334,6 @@ border-radius: 6px;
 #next-btn-third {
    padding: 0; 
 }
-
-
-
 
 @media (max-width: 424px) {
     span.br{
