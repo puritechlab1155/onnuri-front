@@ -1,0 +1,207 @@
+#home .section01 {
+    padding-top: 40px;
+    background: none;
+}
+
+/*검색 랩핑*/
+.section01 .search_wrap {
+    width: 100%;
+    height: 75px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: #F7F8FA;
+}
+/*검색 카테고리*/
+form.search_categoty label {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5E5E5E;
+}
+form.search_categoty select.custom-select {
+    width: 96px;
+    height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    border: 1px solid #E8E8E8;
+    font-size: 16px;
+    color: #222;
+    -webkit-appearance: none; /* Safari 및 Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+    background: url('../img/notice/custom-arrow.png') #fff no-repeat right 10px center;
+}
+.custom-select:focus {
+    outline: none;
+}
+/*검색창*/
+form.search input[type="text"]{
+    max-width: 434px;
+    height: 40px;
+    box-sizing: border-box;
+    float: left;
+    background: #fff;
+    font-size: 16px;
+    color: #222;
+    padding: 0 8px;
+    border: 1px solid #E8E8E8;
+}
+form.search input[type="text"]::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+form.search input[type="text"]:focus {
+    outline: none;
+} 
+form.search button.searchBtn {
+    width: 55px;
+    height: 40px;
+    text-align: center;
+    background: #09377B;
+}
+form.search button.searchBtn > img {
+    vertical-align: -4px;
+}
+
+/*탭*/
+#home .section01 .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 16px;
+    margin: 26px 0;
+}
+#home .section01 .tab {
+    max-width: 62px;
+    padding: 8px 6px 6px;
+    line-height: normal;
+    border-radius: 4px;
+    background: #EFEFEF;
+    color: #777;
+    font-family: 'pretendad-Regular';
+    font-size: 16px;
+    font-weight: 400;
+}
+#home .section01 .tab.active {
+    background: #2A6ACA;
+    color: #fff;
+}
+
+/*공지*/
+/*목록 타이틀*/
+.content ul.table-title {
+    width: 100%;
+    padding: 12px 10px;
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    border-color: #777;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+.table-title li {
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #222;
+    font-weight: 700;
+}
+
+li.list-numb {
+    flex: 0 0 77px; 
+}
+li.list-division {
+    flex: 0 0 72px;
+}
+li.list-title {
+    flex: 1; /* 남은 공간을 모두 차지 */
+}
+li.list-appliDate {
+    flex: 0 0 146px; 
+}
+li.list-appliGo {
+    flex: 0 0 92px; 
+}
+
+li.list-date {
+    flex: 0 0 162px;
+}
+/*공지 목록 랩핑*/
+#home .section01 .notice-area {
+    padding: 0px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    position: relative;
+}
+ul.notice-list {
+    width: 100%;
+    /* display: none; */
+}
+.notice-list.training-list, .notice-list.common-list {
+    display: none;
+}
+#home .section01 .notice-list-link {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 24px 0;
+}
+#home .section01 .notice-list-link div {
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+}
+div.notice-numb {
+    flex: 0 0 77px; 
+}
+div.notice-division {
+    flex: 0 0 72px; 
+}
+div.notice-title {
+    flex: 1;
+    padding-left: 26px;
+}
+div.notice-appliDate {
+    flex: 0 0 146px;
+    color: #777;
+}
+div.notice-appliGo {
+    flex: 0 0 92px;
+}
+div.notice-date {
+    flex: 0 0 162px;
+    color: #222 !important;
+}
+
+/* -------신청 바로가기 각각 버튼 스타일 */ 
+button.apply {
+    padding: 6px 8px 4px;
+    color: #777;
+    font-size: 16px;
+    border-radius: 5px;
+}
+button.apply.apply-focus {
+    background: #FF9B01;
+    color: #fff;
+}
+button.apply.apply-finish {
+    background: #EBEBEB;
+    color: #777;
+}
+/*뉴 뱃지 비활성화 스타일*/
+.notice-badge.badge-none {
+    display: none;
+}
+
+/* 페이지 카운트 스타일 */
+.page_numb {
+    background: lightblue;
+}

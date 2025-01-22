@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acts29비전빌리지 / Acts29 Visionvillage</title>
+    
+    <!--Jqurey CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- 공통 -->
+    <link rel="stylesheet" href="css/sub-header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- 해당html css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/notice.css">
+</head>
+<body>
+    <section id="home">
+        <header id="header" class="header">
+            <div class="inner">
+                <div class="content">
+                    <h1 class="logo">
+                        <img src="img/offcanvas-logo.png" alt="Acts29비전빌리지 / Acts29 Visionvillage" class="logo-img">
+                        <span class="blind">Acts29비전빌리지 / Acts29 Visionvillage</span>
+                    </h1>
+
+                    <div class="pc_display">
+                        <nav id="nav" class="nav">
+                            <ul class="gnb">
+                                <li class="gnb-item">
+                                    <a href="#">홈</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">공지</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">소개</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">채플</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">예배</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">예약</a>
+                                </li>
+                                <li class="gnb-item gnb-training">
+                                    <a href="#">교육</a>
+
+                                    <ul class="gnb-sub">
+                                        <li class="gnb-sub-item">
+                                            <a href="#">TP</a>
+                                        </li>
+                                        <li class="gnb-sub-item">
+                                            <a href="#">OSUM</a>
+                                        </li>
+                                        <li class="gnb-sub-item">
+                                            <a href="#">H2H</a>
+                                        </li>
+                                        <li class="gnb-sub-item">
+                                            <a href="#">H2K</a>
+                                        </li>
+                                        <li class="gnb-sub-item">
+                                            <a href="#">H2R</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">도서관</a>
+                                </li>
+                                <li class="gnb-item">
+                                    <a href="#">문의</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="pc_display">
+                        <div class="login-link">
+                            <a href="#" class="login">로그인</a>
+                            <div class="line"></div>
+                            <a href="#" class="join">회원가입</a>
+                        </div>
+                    </div>
+
+                    <div class="mobile_display">
+                        <button type="button" class="offcanvas-open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <div class="offcanvas">
+                            <div class="offcanvas-body">
+                                <nav id="nav" class="nav-mobile">
+                                    <ul class="gnb-mobile">
+                                        <li class="gnb-item">
+                                            <a href="#">홈</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">공지</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">소개</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">채플</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">예배</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">예약</a>
+                                        </li>
+                                        <li class="gnb-item gnb-training">
+                                            <a href="#">
+                                                교육
+                                                <div class="drop-arrow">
+                                                    <span class="drop-left"></span>
+                                                    <span class="drop-right"></span>
+                                                </div>
+                                            </a>
+        
+                                            <ul class="gnb-sub">
+                                                <li class="gnb-sub-item">
+                                                    <a href="#">TP</a>
+                                                </li>
+                                                <li class="gnb-sub-item">
+                                                    <a href="#">OSUM</a>
+                                                </li>
+                                                <li class="gnb-sub-item">
+                                                    <a href="#">H2H</a>
+                                                </li>
+                                                <li class="gnb-sub-item">
+                                                    <a href="#">H2K</a>
+                                                </li>
+                                                <li class="gnb-sub-item">
+                                                    <a href="#">H2R</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">도서관</a>
+                                        </li>
+                                        <li class="gnb-item">
+                                            <a href="#">문의</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main id="main" class="main">
+            <div class= "inner">
+                <!--channel-->
+                <ul class="channel">
+                    <a href="#" class="home_icon">
+                        <img src="img/home/home.png" alt="홈 아이콘">
+                    </a>
+                    <img src="img/contact/channel-arrow.png" alt="화살표">
+                    <li>
+                        <a href="#">공지</a>
+                    </li>
+                </ul>
+
+                <!--공지 랩핑-->
+                <div class="section01">
+                    <div class="inner">
+                        <div class="content">
+                            <!--공지 타이틀-->
+                            <div class="title-area">
+                                <h3 class="title">
+                                    <span>공지</span>
+                                </h3>
+                            </div>
+                            <!--검색 랩핑-->
+                            <div class="search_wrap">
+                                <!--검색 카테고리-->
+                                <form class="search_categoty">
+                                    <label>검색 카테고리</label>
+                                    <select id="category" name="category" class="custom-select">
+                                        <option value="all">전체</option>
+                                        <option value="training">훈련</option>
+                                        <option value="notice">공지</option>
+                                    </select>
+                                </form>
+                                <!--검색창-->
+                                <form class="search">
+                                    <label class="d-none">검색</label>
+                                    <input type="text" placeholder="검색어 입력">
+                                    <button type="button" class="searchBtn">
+                                        <img src="img/notice/search-icon.png" alt="검색 아이콘">
+                                    </button>
+                                </form>
+                            </div>
+                            <!--탭-->
+                            <ul class="tabs">
+                                <li class="tab active">전체</li>
+                                <li class="tab">훈련</li>
+                                <li class="tab">일반</li>
+                            </ul>
+
+                            <!--공지-->
+                            <div class="tab-cont-list">
+                                    <!--목록 타이틀-->
+                                    <ul class="table-title">
+                                        <li class="list-numb">번호</li>
+                                        <li class="list-division">구분</li>
+                                        <li class="list-title">제목</li>
+                                        <li class="list-appliDate">신청일</li>
+                                        <li class="list-appliGo">신청 바로가기</li>
+                                        <li class="list-date">작성일</li>
+                                    </ul>
+                                    <!--공지 목록 랩핑-->
+                                    <div class="notice-area">
+                                        <!--전체-->
+                                        <ul class="notice-list all-list">
+                                            <!--목록01-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록02-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">선교사 신청시 참조 서류입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">~ 0000-00-00</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-focus">즉시 신청</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록03-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge badge-none" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록04-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">오늘 훈련 내용입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate"> - </div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-finish">신청 마감</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록04-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">오늘 훈련 내용입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate"> - </div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-finish">신청 마감</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록04-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">오늘 훈련 내용입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate"> - </div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-finish">신청 마감</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록04-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">오늘 훈련 내용입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate"> - </div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-finish">신청 마감</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!-- ~ 추가되는 부분-->
+                                        </ul>
+                                        <!--훈련-->
+                                        <ul class="notice-list training-list">
+                                            <!--목록01-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">선교사 신청시 참조 서류입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">~ 0000-00-00</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-focus">즉시 신청</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록02-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">훈련</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">오늘 훈련 내용입니다.</p>
+                                                        <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate"> - </div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply apply-finish">신청 마감</button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!--일반-->
+                                        <ul class="notice-list common-list">
+                                            <!--목록01-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록02-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge badge-none" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록03-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge badge-none" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!--목록04-->
+                                            <li class="notice-list-item">
+                                                <a href="#" class="notice-list-link">
+                                                    <!--번호-->
+                                                    <div class="notice-numb">0000</div>
+                                                    <!--구분-->
+                                                    <div class="notice-division">일반</div>
+                                                    <!--제목-->
+                                                    <div class="notice-title">
+                                                        <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                                        <img src="img/home/notice-badge.svg" class="notice-badge badge-none" alt="new">
+                                                    </div>
+                                                    <!--신청일-->
+                                                    <div class="notice-appliDate">-</div>
+                                                    <!--신청 바로가기-->
+                                                    <div class="notice-appliGo">
+                                                        <button class="apply noneBtn"> - </button>
+                                                    </div>
+                                                    <!--작성일-->
+                                                    <div class="notice-date">0000-00-00</div>
+                                                </a>
+                                            </li>
+                                            <!-- ~ 추가되는 부분-->
+                                        </ul>
+                                    </div>
+                            </div>
+
+                            <!--페이지 카운트-->
+                            <div class="page_numb">
+                                <div class="double_arrow">
+                                    <span class="first_pre">
+                                        <img src="" alt="첫 페이지 이동">
+                                    </span>
+                                    <span class="last_next">
+                                        <img src="" alt="마지막 페이지 이동">
+                                    </span>
+                                </div>
+                                <div class="solid_arrow">
+                                    <span class="pre">
+                                        <img src="" alt="이전 페이지 이동">
+                                    </span>
+                                    <span class="next">
+                                        <img src="" alt="다음 페이지 이동">
+                                    </span>
+                                </div>
+                                <span class="page_count">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //section01 -->
+            </div>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="inner">
+                <div class="content">
+                    <div class="footer-logo"><img src="img/footer-logo.png" alt="Acts29비전빌리지"></div>
+
+                    <div class="footer-info01">
+                        <div class="partner-site">
+                            <span class="text">협력사이트 :</span>
+
+                            <div class="site site01">
+                                <a href="https://www.onnuri.org/" target="_blank">온누리교회</a>
+                            </div>
+                            <div class="site site02">
+                                <a href="https://www.cgntv.net/" target="_blank">CGNTV</a>
+                            </div>
+                            <div class="site site03">
+                                <a href="https://www.duranno.com/" target="_blank">두란노해외선교회</a>
+                            </div>
+                            <div class="site site04">
+                                <a href="https://www.2000mission.org/" target="_blank">온누리2000선</a>
+                            </div>
+                        </div><!-- //partner-site -->
+
+                        <div class="support-links">
+                            <div class="link">
+                                <a href="#">자주하는 질문</a>
+                            </div>
+                            <div class="link">
+                                <a href="#">사이트맵</a>
+                            </div>
+                            <div class="link">
+                                <a href="#">이용약관</a>
+                            </div>
+                            <div class="link">
+                                <a href="#">아동 및 성인 보호 정책</a>
+                            </div>
+                            <div class="link">
+                                <a href="#">개인정보처리방침</a>
+                            </div>
+                        </div><!-- //support-links -->
+                    </div><!-- //footer-info01 -->
+
+                    <div class="line"></div>
+
+                    <div class="footer-info02">
+                        <div class="company-info">
+                            <div class="info info01"><span>TEL</span>031-331-8100</div>
+                            <div class="info info01"><span>FAX</span>031-331-8189</div>
+                            <div class="info"><span>E-MAIL</span>school@visionvillage.org</div>
+                            <div class="info">경기도 용인시 처인구 양지면 추계로 62</div>
+                        </div>
+
+                        <div class="copyright">Copyright © 2024 Acts29비전빌리지/Acts29Visionvillage Allright reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //탭 버튼 클릭시 공지사항 목록 변경
+            let $tabBtn = $('.tabs li');
+            let $allList = $('.all-list');
+            let $trainingList = $('.training-list');
+            let $commonList = $('.common-list');
+
+            $tabBtn.click(function(){
+                if($(this).index() === 0) {
+                    $allList.css({ display : 'block'});
+                    $trainingList.css({ display : 'none'});
+                    $commonList.css({ display : 'none'});
+
+                } else if($(this).index() === 1){
+                    $allList.css({ display : 'none'});
+                    $trainingList.css({ display : 'block'});
+                    $commonList.css({ display : 'none'});
+
+                } else if($(this).index() === 2){
+                    $allList.css({ display : 'none'});
+                    $trainingList.css({ display : 'none'});
+                    $commonList.css({ display : 'block'});
+                }
+            });
+        });
+    </script>
+</body>
+</html>
