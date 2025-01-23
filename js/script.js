@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         const detailText = textElement.textContent; // 텍스트 값 가져오기
                                         if (detailText) {
                                             currentDetail.textContent = detailText; // detail 텍스트로 변경
+                                            currentDetail.style.color = '#222';
                                         }
                                     }
                                 });
