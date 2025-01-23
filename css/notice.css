@@ -111,9 +111,9 @@ form.search button.searchBtn > img {
     border-radius: 4px;
     background: #EFEFEF;
     color: #777;
-    font-family: 'pretendad-Regular';
     font-size: 16px;
-    font-weight: 400;
+    font-family: 'Pretendard Variable';
+    font-weight: 400 !important;
 }
 #home .section01 .tab.active {
     background: #2A6ACA;
@@ -211,18 +211,19 @@ div.notice-date {
 }
 
 /* -------신청 바로가기 각각 버튼 스타일 */ 
-span.apply {
+button.apply {
     display: block;
     padding: 6px 8px 4px;
+    margin: 0 auto;
     color: #777;
     font-size: 16px;
     border-radius: 5px;
 }
-span.apply.apply-focus {
+button.apply.apply-focus {
     background: #FF9B01;
     color: #fff;
 }
-span.apply.apply-finish {
+button.apply.apply-finish {
     background: #EBEBEB;
     color: #777;
     cursor: default;
@@ -233,27 +234,26 @@ span.apply.apply-finish {
 }
 
 /* ------ 페이지 카운트 스타일 */
-.page_numb {
+.pagenation_wrap {
     width: 100%;
     height: 40px;
     margin-top: 16vw;
     overflow: hidden;
     position: relative;
 }
-.page_numb span {
+.pagenation_wrap span {
     padding: 0 8px;
     cursor: pointer;
     text-align: center;
 }
-.page_numb .double_arrow {
-    max-width: 264px;
+.pagenation_wrap .double_arrow {
+    max-width: 488px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    /* background: lightcoral; */
     position: relative;
 }
-.page_numb .double_arrow span {
+.pagenation_wrap .double_arrow span {
     width: fit-content;
     position: absolute;
     top: 50%;
@@ -265,8 +265,8 @@ span.apply.apply-finish {
 .double_arrow span.last_next {
     right: 0;
 }
-.page_numb .solid_arrow {
-    max-width: 152px;
+.pagenation_wrap .solid_arrow {
+    max-width: 376px;
     width: 100%;
     height: 40px;
     position: absolute;
@@ -274,7 +274,7 @@ span.apply.apply-finish {
     left: 50%;
     transform: translateX(-50%);
 }
-.page_numb .solid_arrow span {
+.pagenation_wrap .solid_arrow span {
     width: fit-content;
     position: absolute;
     top: 50%;
@@ -286,15 +286,27 @@ span.apply.apply-finish {
 .solid_arrow span.next {
     right: 0;
 }
-.page_numb .page_count {
-    width: fit-content;
-    color: #0095D9;
-    font-size: 14px;
-    font-weight: 800;
+.pagenation_wrap .page_count {
+    width: 100%;
+    max-width: 264px;
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.page_count span.pageNumb {
+    display: block;
+    padding: 6px 12px;
+    margin: 0 6px;
+    color: #222;
+    font-weight: 400;
+    font-size: 14px;
+}
+span.focusNumb {
+    color: #0095D9 !important;
+    font-weight: 800 !important;
 }
 
 
@@ -303,17 +315,20 @@ span.apply.apply-finish {
     li.list-numb {
         display: none;
     }
-    li.list-appliGo {
+    /* li.list-appliGo {
         display: none;
-    }
+    } */
     div.notice-numb {
         display: none;
     }
-    div.notice-appliGo {
+    /* div.notice-appliGo {
         display: none;
-    }
+    } */
 }
 @media (max-width: 767px) {
+    .inner {
+        padding: 0 4px;
+    }
     #home .section01 .content {
         padding: 0;
         padding-bottom: 10vw;
@@ -339,7 +354,14 @@ span.apply.apply-finish {
         border-radius: 4px;
     }
     div.notice-title {
+        width: fit-content !important;
+        float: left;
         padding-left: 0;
+    }
+    div.notice-appliGo {
+        width: fit-content;
+        float: right;
+        margin-top: 10px;
     }
     #home .section01 .notice-list-item:not(:first-child) {
         margin-top: 0;
@@ -359,6 +381,32 @@ span.apply.apply-finish {
     }
     div.notice-title img {
         margin-top: 4px;
+    }
+}
+@media (max-width: 456px) {
+    #home .section01 .tab {
+        font-size: 14px;
+    }
+    div.notice-division {
+        font-size: 14px !important;
+    }
+    #home .section01 .notice-title .text {
+        font-size: 15px;
+    }
+    button.apply {
+        font-size: 14px;
+    }
+    .pagenation_wrap .double_arrow {
+        max-width: 85vw;
+    }
+    .pagenation_wrap .solid_arrow {
+        max-width: 70vw;
+    }
+    .pagenation_wrap .page_count {
+        max-width: 50vw;
+    }
+    .page_count span.pageNumb {
+        margin: 0 2px;
     }
 }
 
