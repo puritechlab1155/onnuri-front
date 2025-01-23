@@ -1,0 +1,61 @@
+/*탭 부분*/
+.step-tab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.step-tab ul {
+    width: calc(100% / 9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+}
+.step-tab ul li {
+    color: #767676;
+}
+ul.focus-step {
+    border-bottom: 3px solid #555;
+}
+ul.focus-step li {
+    color: #222 !important;
+    font-weight: 600;
+}
+
+/* resize */
+@media (max-width: 767px) {
+    .step-tab ul {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        overflow: hiddens;
+        padding: 0;
+        padding-top: 1px;
+        background: #D9D9D9;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+    .step-tab ul:not(.focus-step){
+        display: block;
+        border-radius: 50%;
+    }
+    ul.focus-step {
+        width: 54px;
+        border: none;
+        justify-content: center;
+        background: #21A5C8;
+        border-radius: 20px;
+    }
+    ul.focus-step li{
+        color: #fff !important;
+    }
+    li.stepKo {
+        display: none;
+    }
+}
