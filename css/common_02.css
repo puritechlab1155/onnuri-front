@@ -16,14 +16,28 @@ a{
     color: inherit;
     text-decoration: none;  
 }
-button {
-    background: transparent;
-    cursor: pointer;
+.mt-120{ margin-top: 120px !important;}
+h2,h3,h4,li,p,span { color: #222; }
+
+
+form {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
 }
-.btn_700 {
-    font-size: 18px;
+button.next {
+    width: 120px;     
+    height: 47px;
+    background: #33B9DC;
+    border: 1px solid #2AA6C6;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 15px;
+    color: #fff;
     font-weight: 700;
+    font-size: 18px;
     letter-spacing: -0.36px;
+    margin: 50px 0;
 }
 
 /* 섹션별 내부 메인 설정값 */
@@ -33,7 +47,7 @@ button {
     padding: 0 24px;
     margin: 0 auto;
 }
-.mt-120{ margin-top: 120px !important;}
+
 /* 타이틀 */
 .title {
     color: #222;
@@ -41,8 +55,8 @@ button {
     font-weight: 700;
     line-height: 140%;
     letter-spacing: -0.8px;
+    text-align: center;
 }
-
 /* 셀렉트박스 초기화설정 */
 select { /* select 기본 스타일 제거 */
     -webkit-appearance: none; 
@@ -84,3 +98,4 @@ span.br{
 }
 
 
+/* 선교사 지원신청 박스 */
