@@ -141,15 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             cell.classList.add('focusDay');
                         }
 
-                        // focusDay에도 텍스트 추가
-                        if (cell.classList.contains('focusDay')) {
-                            const scheduleText = document.createElement('div'); // 스케줄 텍스트 박스 생성
-                            scheduleText.textContent = '시안채플1'; // 스케줄 텍스트 추가
-                            scheduleText.classList.add('schedule-text'); // 클래스 추가
-
-                            cell.appendChild(scheduleText); // 셀에 추가
-                        }
-
                         // 이번 달에만 시안채플 텍스트 추가
                         if (currentYear === today.getFullYear() && currentMonth === today.getMonth()) {
                             if (date === today.getDate() + 1) {
@@ -170,6 +161,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
                         }
 
+                        // 각 날짜에 대한 scheduleText 추가 (렌더링 중)
+                        if (cell.classList.contains('focusDay')) {
+                            const scheduleText = document.createElement('div'); 
+                            scheduleText.textContent = '시안채플1'; 
+                            scheduleText.classList.add('schedule-text'); 
+                            cell.appendChild(scheduleText); 
+                        }
+
 
                         // 날짜 클릭 이벤트 추가
                         cell.addEventListener('click', function() {
@@ -178,26 +177,32 @@ document.addEventListener('DOMContentLoaded', function() {
                             if (todayCell) {
                                 todayCell.classList.remove('focusDay');
                             }
-
+                        
                             cell.classList.add('focusDay'); // 클릭한 날짜에 focusDay 추가
-
+                        
                             // 현재 detail 텍스트 제거
                             const currentDetail = document.querySelector('.schedule .scheduleBox .detail');
                             if (currentDetail) {
                                 currentDetail.textContent = ''; // 기존 텍스트 제거
                             }
-
+                        
                             // 해당 날짜의 schedule-text에서 텍스트 가져오기
                             const scheduleTexts = cell.querySelectorAll('.schedule-text');
-                            scheduleTexts.forEach((textElement, index) => {
-                                if (index === 0) { // 첫 번째 텍스트만 가져오기
-                                    const detailText = textElement.textContent; // 텍스트 값 가져오기
-                                    if (detailText) {
-                                        currentDetail.textContent = detailText; // detail 텍스트로 변경
+                            if (scheduleTexts.length > 0) {
+                                scheduleTexts.forEach((textElement, index) => {
+                                    if (index === 0) { // 첫 번째 텍스트만 가져오기
+                                        const detailText = textElement.textContent; // 텍스트 값 가져오기
+                                        if (detailText) {
+                                            currentDetail.textContent = detailText; // detail 텍스트로 변경
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            } else {
+                                currentDetail.textContent = '일정 없음'; // 일정이 없을 경우 메시지 추가
+                                currentDetail.style.color = '#777'; // 텍스트 색상 변경
+                            }
                         });
+                        
         
                         renderSchedules(cell, formattedDate);
                         date++;
