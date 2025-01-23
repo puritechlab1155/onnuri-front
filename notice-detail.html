@@ -161,29 +161,161 @@
             <div class= "inner">
                 <!--channel-->
                 <ul class="channel">
-                    <a href="#" class="home_icon">
+                    <a href="index.html" class="home_icon">
                         <img src="img/home/home.png" alt="홈 아이콘">
                     </a>
                     <img src="img/contact/channel-arrow.png" alt="화살표">
                     <li>
-                        <a href="#">공지</a>
+                        <a href="notice.html">공지</a>
                     </li>
                 </ul>
 
-                <!--공지 내용-->
-                <div class="notice_detail">
+                <!--공지 내용 랩핑-->
+                <div class="notice-detail">
                     <div class="inner">
                         <div class="content">
                             <!--공지 타이틀-->
                             <div class="title-area">
                                 <h3 class="title">
-                                    <span>공지</span>
-                                    <span></span>
+                                    <span class="notice-main-title">훈련 공지</span> <!-- 공지 / 훈련공지 나뉨 >> 카테고리에 따라 텍스트 변경 -->
+                                    <span class="cap-text">Acts29비전빌리지의 공지사항을 확인하세요.</span>
                                 </h3>
+                            </div>
+                            <!--공지 세부내용-->
+                            <div class="notice-content">
+                                <!-- 공지 제목 영역 -->
+                                <div class="notice-title">
+                                    <h4 class="text">선교사 신청시 참조 서류입니다.</h4><!-- notice.html과 동일한 텍스트 내용 들어감 (같은 클래스 부여) -->
+                                    <ul class="appliDate-wrap"> <!-- 신청일 박스 >> 훈련공지에만 나타남 -->
+                                        <li class="list-appliDate">신청일</li> <!-- notice.html과 동일한 텍스트 내용 들어감 (같은 클래스 부여) -->
+                                        <li class="notice-appliDate">0000-00-00 ~ 0000-00-00</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 공지 보드 영역-->
+                                <div class="attachment-area">
+                                    <!--첨부파일 영역-->
+                                    <div class="attachment-header">
+                                        <ul class="file-title">
+                                            <li class="file-drop">
+                                                <img src="img/notice/detail/folder-drop.png" alt="파일 드롭다운">
+                                            </li>
+                                            <li class="forder">
+                                                <img src="img/notice/detail/folder.png" alt="첨부파일 아이콘">
+                                                <span>첨부파일</span>
+                                            </li>
+                                            <li class="file-count">
+                                                <span class="file-numb">4</span> <!-- .attachment-item 개수와 동일한 숫자-->
+                                                <span class="count-text none-file">개</span><!-- 첨부파일이 0개 일 때, '첨부파일이 없습니다'로 텍스트 변경 및 .none-file 클래스 추가(텍스트 컬러 변경) -->
+                                            </li>
+                                        </ul>
+                                        <!-- 첨부파일 드롭다운 -->
+                                        <div class="attachment-list">
+                                            <ul class="item-container">
+                                                <li class="attachment-item">
+                                                    <a href="#" download=""> <!-- 관리자 페이지에 업로드한 파일이 a링크에 연결되어야함 -->
+                                                        <span class="paper-title">
+                                                            <img src="img/notice/detail/paper.png" alt="문서 아이콘">
+                                                            sample.pdf <!-- 업로드한 파일명으로 변경되어야함 -->
+                                                        </span>
+                                                        <span class="download">
+                                                            다운로드 <img src="img/notice/detail/download.png" alt="다운로드 아이콘">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="attachment-item">
+                                                    <a href="#" download=""> <!-- 관리자 페이지에 업로드한 파일이 a링크에 연결되어야함 -->
+                                                        <span class="paper-title">
+                                                            <img src="img/notice/detail/paper.png" alt="문서 아이콘">
+                                                            sample.pdf <!-- 업로드한 파일명으로 변경되어야함 -->
+                                                        </span>
+                                                        <span class="download">
+                                                            다운로드 <img src="img/notice/detail/download.png" alt="다운로드 아이콘">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="attachment-item"> <!-- 관리자 페이지에 업로드한 파일이 a링크에 연결되어야함 -->
+                                                    <a href="#" download="">
+                                                        <span class="paper-title">
+                                                            <img src="img/notice/detail/paper.png" alt="문서 아이콘">
+                                                            sample.pdf <!-- 업로드한 파일명으로 변경되어야함 -->
+                                                        </span>
+                                                        <span class="download">
+                                                            다운로드 <img src="img/notice/detail/download.png" alt="다운로드 아이콘">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="attachment-item"> <!-- 관리자 페이지에 업로드한 파일이 a링크에 연결되어야함 -->
+                                                    <a href="#" download="">
+                                                        <span class="paper-title">
+                                                            <img src="img/notice/detail/paper.png" alt="문서 아이콘">
+                                                            sample.pdf <!-- 업로드한 파일명으로 변경되어야함 -->
+                                                        </span>
+                                                        <span class="download">
+                                                            다운로드 <img src="img/notice/detail/download.png" alt="다운로드 아이콘">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- 공지 정보 영역 -->
+                                    <div class="notice-information">
+                                        <div class="information-posit">
+                                            <ul class="views">
+                                                <li>조회</li>
+                                                <li>0000</li> <!--페이지를 클릭한 수 만큼 카운트 되어야함-->
+                                            </ul>
+                                            <ul class="writer">
+                                                <li class="">작성자</li>
+                                                <li>관리자</li>
+                                            </ul>
+                                            <ul class="write-date">
+                                                <li class="list-date">작성일</li>
+                                                <li class="notice-date">0000-00-00</li> <!--notice.html 작성일자와 동일한 일자 들어감 (같은 클래스명)-->
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--공지 텍스트 영역-->
+                                    <div class="notice-text-wrap">
+                                        <p> <!--업로드 시 입력한 텍스트로 변경되어야 함 // height 값은 텍스트 길이에 맞춰서 늘어나야함-->
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다.
+                                        </p>
+                                    </div>
+                                    <!--신청하기 버튼 >> 훈련 공지에만 나타남, 일반 공지에는 X-->
+                                    <div class="apply">
+                                        <button class="apply-orange">신청하기</button>
+                                        <!-- 
+                                        .apply-orange: 신청하기 / .apply-gray: 마감 / apply-stroke: 0000-00-00 오픈
+                                            >> 훈련공지 신청기간에 맞춰 버튼 스타일 변경 및 텍스트 변경 되어야함
+                                        -->
+                                    </div>
+                                </div>
+                                <!-- 세부내용 변경 페이지네이션-->
+                                <div class="notice-detail-change">
+                                    <a class="detail-pre" href="#">
+                                        이전
+                                        <span>
+                                            <img src="img/notice/detail/detail-pre.png" alt="이전 화살표">
+                                        </span>
+                                    </a>
+                                    <a class="detail-next" href="#">
+                                        다음
+                                        <span>
+                                            <img src="img/notice/detail/detail-next.png" alt="다음 화살표">
+                                        </span>
+                                    </a>
+                                    <a class="notice-page" href="notice.html">목록</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- //section01 -->
+                </div>
             </div>
         </main>
 
@@ -250,7 +382,9 @@
 
     <script>
         $(document).ready(function(){
-            
+            $('.file-title').click(function() {
+                $('.attachment-list').slideToggle(200);
+            });
         });
     </script>
 </body>

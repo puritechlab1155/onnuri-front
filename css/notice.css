@@ -2,7 +2,10 @@
     padding-top: 40px;
     background: none;
 }
-
+#home .section01 .inner {
+    max-width: 1275px;
+    padding: 0;
+}
 /*검색 랩핑*/
 .section01 .search_wrap {
     width: 100%;
