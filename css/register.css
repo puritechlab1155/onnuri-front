@@ -292,6 +292,22 @@ input[type='radio']:checked {
     display: flex;
     gap: 4px;
   }
+  /* select 커스텀 */
+/* 아이폰 select 기본 스타일 제거 */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none;
+    
+    /*화살표 배경 넣기*/
+    background: #fff url('../img/home/register-arrow.png') no-repeat 98% center;
+    }
+    
+    /* 익스플로러 select 화살표 제거 */
+    select::-ms-expand{
+    /* 화살표 없애기 for IE10, 11*/ 
+    display:none;
+    }
 .info#info__birth select {
     width: 159px;
     height: 50px;
@@ -304,21 +320,9 @@ input[type='radio']:checked {
     padding: 10px;
     margin-top: 10px;
 }
-.info#info__birth select:first-child {
-    margin-left : 0px;
-}
-/* select의 스크롤 바 커스텀 */
-.info#info__birth select::-webkit-scrollbar {
-    width: 10px;
-}
-.info#info__birth select::-webkit-scrollbar-thumb {
-    background-color: #b6b6b6;
-    border-radius: 3px;
-}
-.info#info__birth select::-webkit-scrollbar-track {
-    background-color: #ebe9e9;
-    border-radius: 6px;
-}  /* 생년월일 끝 */
+
+
+/* 생년월일 끝 */
 
 #next-btn-second {
 
