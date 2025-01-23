@@ -444,7 +444,7 @@
 
             // 두 번째 탭: '다음' 버튼 클릭 시 register-complete.html로 이동
             nextBtnSecond.addEventListener('click', function() {
-                window.location.href = 'https://puritechlab1155.github.io/onnuri-front/register.html'; // 해당 URL로 페이지 이동
+                window.location.href = 'https://puritechlab1155.github.io/onnuri-front/register-complete.html'; // 해당 URL로 페이지 이동
             });
             // 두번째 탭 시작
             document.getElementById('editButton').addEventListener('click', function() {
@@ -531,7 +531,7 @@
             };
     
             // 생년월일 셀렉트 박스 초기화
-            createOptions(birthYearEl, 1940, 2022);
+            createOptions(birthYearEl, 1940, 2024);
             createOptions(birthMonthEl, 1, 12, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
             createOptions(birthDayEl, 1, 31, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
 
