@@ -730,6 +730,40 @@
                     $(window).off('scroll'); // 스크롤 이벤트를 한 번만 실행하도록 제거
                 }
             });
+
+
+            const featureList = document.querySelector('#home .section05 .feature-list');
+
+            function cloneFeatureList() {
+                // 이미 복제된 리스트가 있는지 체크 >> 복제된 리스트가 뒤로 계속 나와야함 *******
+                if (!document.querySelector('.cloned-feature-list')) {
+                    const clonedList = featureList.cloneNode(true);
+                    clonedList.classList.add('cloned-feature-list'); // 복제된 리스트에 클래스를 추가
+                    featureList.parentNode.appendChild(clonedList);
+                }
+            }
+
+            function removeClonedFeatureList() {
+                const clonedList = document.querySelector('.cloned-feature-list');
+                if (clonedList) {
+                    clonedList.remove(); // 복제된 리스트 제거
+                }
+            }
+
+            function adjustFeatureList() {
+                if (window.innerWidth <= 767) {
+                    cloneFeatureList();
+                } else {
+                    removeClonedFeatureList();
+                }
+            }
+
+            // 초기 체크
+            adjustFeatureList();
+
+            window.addEventListener('resize', adjustFeatureList);
+
+            
         });
 
     </script>
