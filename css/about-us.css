@@ -12,10 +12,10 @@
 .about_us .containner {
     position: relative;
 }
-.about_us ul.channel {
+.channel {
     display: flex;
 }
-.about_us ul.channel li {
+.channel li {
     color: #777;
     line-height: 1.5;
 }
