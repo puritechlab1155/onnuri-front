@@ -165,12 +165,12 @@
             <div class= "inner"> 
                 <!--channel-->
                 <ul class="channel">
-                    <a href="#" class="home_icon">
+                    <a href="https://puritechlab1155.github.io/onnuri-front/index.html" class="home_icon">
                         <img src="img/home/home.png" alt="홈 아이콘">
                     </a>
                     <img src="img/contact/channel-arrow.png" alt="화살표">
                     <li>
-                        <a href="#">문의</a>
+                        <a href="https://puritechlab1155.github.io/onnuri-front/contact.html">문의</a>
                     </li>
                 </ul>
 
@@ -188,27 +188,27 @@
                             <div class="info_wrap">
                                 <ul>
                                     <li class="info_title">이메일</li>
-                                    <li class="info_detail">
+                                    <li class="info_detail" id="email">
                                         school@visionvillage.org
-                                        <button class="copy">
+                                        <button class="copy" data-copy-target="#email">
                                             <img src="img/contact/Copy.svg" alt="복사 아이콘">
                                         </button>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li class="info_title">전화번호</li>
-                                    <li class="info_detail">
+                                    <li class="info_detail" id="phone">
                                         (+82) 031-331-8100
-                                        <button class="copy">
+                                        <button class="copy" data-copy-target="#phone">
                                             <img src="img/contact/Copy.svg" alt="복사 아이콘">
                                         </button>
                                     </li> 
                                 </ul>
                                 <ul>
                                     <li class="info_title">주소</li>
-                                    <li class="info_detail">
+                                    <li class="info_detail" id="address">
                                         경기도 용인시 처인구 양지면 추계로 62
-                                        <button class="copy">
+                                        <button class="copy" data-copy-target="#address">
                                             <img src="img/contact/Copy.svg" alt="복사 아이콘">
                                         </button>
                                     </li>
@@ -332,6 +332,28 @@
         });
 
         infowindow.open(map, marker);
+    </script>
+    <script>
+        //텍스트 복사기능
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 복사 버튼에 이벤트 리스너 추가
+            const copyButtons = document.querySelectorAll('.copy');
+
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 복사할 대상 요소를 선택
+                    const targetElement = document.querySelector(button.getAttribute('data-copy-target'));
+                    
+                    // 선택한 요소의 텍스트를 클립보드에 복사
+                    const textToCopy = targetElement.innerText || targetElement.textContent;
+
+                    // 클립보드에 복사하는 작업
+                    navigator.clipboard.writeText(textToCopy)
+
+                });
+            });
+        });
+
     </script>
 
 </body>
