@@ -11,7 +11,7 @@
 }
 ul, ol {
     list-style: none;
-    padding-inline-start: 0;
+    padding-inline-start: 0; 
 }
 a{
     color: inherit;
@@ -26,6 +26,10 @@ form {
     width: 100%;
     margin: 0 auto;
 }
+.next-container {
+    width: 100%;
+    text-align: center;
+}
 button.next {
     width: 120px;     
     height: 47px;
@@ -39,6 +43,7 @@ button.next {
     font-size: 18px;
     letter-spacing: -0.36px;
     margin: 50px 0;
+    line-height: 0;
 }
 
 /* 섹션별 내부 메인 설정값 */
@@ -92,6 +97,35 @@ input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
   box-shadow: 0 0 0 1px #004BBA; /* 라인 */
 }
 
+/*탭 부분*/
+.step-tab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.step-tab ul {
+    width: calc(100% / 9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+}
+.step-tab ul li {
+    color: #767676;
+}
+ul.focus-step {
+    border-bottom: 3px solid #555;
+}
+ul.focus-step li {
+    color: #222 !important;
+    font-weight: 600;
+}
 
 /* 모바일 전용 br */
 span.br{
@@ -100,3 +134,40 @@ span.br{
 
 
 /* 선교사 지원신청 박스 */
+
+
+
+
+
+/* resize */
+@media (max-width: 767px) {
+    .step-tab ul {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        overflow: hiddens;
+        padding: 0;
+        background: #D9D9D9;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+    .step-tab ul:not(.focus-step){
+        display: block;
+        border-radius: 50%;
+        padding-top: 4px;
+        text-align: center;
+    }
+    ul.focus-step {
+        width: 54px;
+        border: none;
+        justify-content: center;
+        background: #21A5C8;
+        border-radius: 20px;
+    }
+    ul.focus-step li{
+        color: #fff !important;
+    }
+    li.stepKo {
+        display: none;
+    }
+}
