@@ -244,8 +244,4 @@ details p {
         display: block;
     }
 }
-@media (max-width: 402px) {
-    span.s-br {
-        display: block;
-    }
-}
+
