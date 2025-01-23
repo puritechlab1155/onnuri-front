@@ -1,0 +1,21 @@
+
+/*공지 내용*/
+#home .notice_detail {
+    padding-top: 40px;
+    background: none;
+}
+/*공지 타이틀*/
+#home .notice_detail .title-area {
+    width: 100%;
+    height: 210px;
+    background: lightblue;
+    text-align: center;
+}
+#home .title-area .title span {
+color: #222;
+font-family: "Pretendard-Bold";
+font-size: 40px;
+font-weight: 700;
+line-height: 140%; /* 56px */
+letter-spacing: -0.8px;
+}
