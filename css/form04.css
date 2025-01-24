@@ -8,7 +8,11 @@ h4.list-title{
     margin-top: 16px;
     font-size: 18px;
     font-weight: 700;
-    background: lightblue;
+}
+h4.list-title span {
+    display: block;
+    float: left;
+    margin-top: 6px;
 }
 button.add-field {
     float: right;
