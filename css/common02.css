@@ -43,6 +43,12 @@ a{
 }
 .mt-120{ margin-top: 120px !important;}
 h2,h3,h4,li,p,span { color: #222; }
+legend.step {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 42px;
+}
 
 
 form {
@@ -127,6 +133,7 @@ input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
+    border-bottom: 1px solid #ddd;
 }
 .step-tab ul {
     width: calc(100% / 9);
@@ -247,6 +254,9 @@ details p {
     }
 }
 @media (max-width: 767px) {
+    div.step-tab {
+        border-bottom: none !important;
+    }
     .step-tab ul {
         width: 32px;
         height: 32px;
