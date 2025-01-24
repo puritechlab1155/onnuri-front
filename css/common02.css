@@ -160,6 +160,22 @@ ul.focus-step li {
     font-weight: 600;
 }
 
+/*작성칸 추가 버튼 스타일*/
+button.add-field {
+    width: 100%;
+    max-width: 108px;
+    padding: 6px 0;
+    background: #F7F7F8;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #777;
+    font-weight: 400;
+    border-radius: 4px;
+}
+button.add-field img {
+    margin-left: 4px;
+}
+
 /* 모바일 전용 br */
 span.br{
     /* display: block; */

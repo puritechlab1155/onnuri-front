@@ -1,0 +1,15 @@
+fieldset {
+    border: none;
+    margin-top: 32px;
+}
+h4.list-title{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    background: lightblue;
+}
+button.add-field {
+    float: right;
+}
