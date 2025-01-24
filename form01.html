@@ -6,7 +6,7 @@
     <!-- 사파리폰트적용 (프리텐다드) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
     
-    <title>Acts29비전빌리지 / 0단계</title>
+    <title>Acts29비전빌리지 / 1단계</title>
 
     <!-- 공통css -->
     <link rel="stylesheet" href="css/sub-header.css">
@@ -180,11 +180,11 @@
                             </div>
                         </details>
                 </div>
-                <!--탭 부분-->
+                <!-- 탭 부분(****** 단계별 focus-step 수정필요****) -->
                 <div class="step-tab">
-                    <ul  class="focus-step">
-                        <li class="stepNumb">1</li>
-                        <li class="stepKo">단계</li>
+                    <ul class="focus-step">
+                        <li>1</li>
+                        <li>단계</li>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
@@ -215,13 +215,40 @@
                         <li class="stepKo">단계</li>
                     </ul>
                     <ul>
-                        <li>9</li>
-                        <li>단계</li>
+                        <li class="stepNumb">9</li>
+                        <li class="stepKo">단계</li>
                     </ul>
                 </div>
 <!-- ********** form id="form01" 해당 폼 넘버로 변경 / JS에서도 변경필요 ************************** -->
                 <form id="form01" action="" class="">
                     <!-- 단계 신청서  -->
+                    <legend class="step">1. 일반사항</legend>
+
+                    <!-- 여기서부터 -->
+                    <div class="input_containner">
+                        <!-- 1. 상단왼쪽 -->
+                        <div class="top_left">
+
+                        </div>
+
+                        <!-- 2. 상단오른쪽 -->
+                        <div class="top_right">
+                        
+                        </div>
+
+                        <!-- 3. 하단 -->
+                        <div class="bottom">
+                            <div class="emergency">
+                                <label for="emergency" class="emergency border_b">비상연락처</label>
+                                <div class="border_b bl_n">비상연락처 내용<input class="border_g" type="text"></div>
+                            </div>
+                            <div class="photo">
+                                <label for="photo" class="photo border_b">사진</label>
+                                <div class="border_b bl_n"><input class="border_g" type="text">파일선택</div>
+                            </div>
+                        </div>
+
+                    </div>
 
 
                     <!-- 확인 버튼  -->
@@ -319,7 +346,7 @@
             submitBtn.addEventListener('click', function () {
                 if (!submitBtn.disabled) {
                     // 폼이 모두 채워졌을 때만 이동
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form02.html';
+                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form01.html';
                 }
             });
         });

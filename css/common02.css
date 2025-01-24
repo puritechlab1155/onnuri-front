@@ -24,9 +24,6 @@ input::-webkit-credentials-auto-fill-button {
 	position:absolute !important;
 	right:0 !important;
 }
-input:focus {
-    outline: none;
-}
 
 *{
     font-family: 'Pretendard Variable' !important;
@@ -58,6 +55,28 @@ form {
     width: 100%;
     margin: 0 auto;
 }
+/* border 공통 */
+.border_b {
+    border: 1px solid #ACC7D4;
+}
+.border_g {
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+}
+.bl_n {
+    border-left: none !important;
+}
+.br_n {
+    border-right: none !important;
+}
+.bt_n {
+    border-top: none !important;
+}
+.bb_n {
+    border-bottom: none !important;
+}
+
+/* 버튼 */
 .next-container {
     width: 100%;
     text-align: center;
@@ -74,7 +93,7 @@ button.next {
     font-weight: 700;
     font-size: 18px;
     letter-spacing: -0.36px;
-    margin: 50px 0;
+    margin: 50px 0 200px;
     line-height: 0;
 }
 
@@ -158,22 +177,6 @@ ul.focus-step {
 ul.focus-step li {
     color: #222 !important;
     font-weight: 600;
-}
-
-/*작성칸 추가 버튼 스타일*/
-button.add-field {
-    width: 100%;
-    max-width: 108px;
-    padding: 6px 0;
-    background: #F7F7F8;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    color: #777;
-    font-weight: 400;
-    border-radius: 4px;
-}
-button.add-field img {
-    margin-left: 4px;
 }
 
 /* 모바일 전용 br */

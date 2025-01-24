@@ -1,0 +1,29 @@
+form {
+
+}
+
+
+
+div.emergency, div.photo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 0; */
+    padding: 24px 0;
+}
+label.emergency, label.photo {
+    flex: 0 0 180px;
+    background: #E0EBF0;
+    text-align: center; 
+    color: #222;
+    font-weight: 600;
+    padding: 14px;
+    font-size: 18px;
+}
+div.bottom>div>div {
+    flex: 1;
+    padding: 14px;
+    font-size: 18px;
+
+}
