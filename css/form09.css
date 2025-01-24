@@ -174,7 +174,23 @@ fieldset legend span.foldBtn {
     margin-top: 8px;
 }
 
-/*8단계 신청서 영역*/
+/*7단계, 8단계 신청서 영역*/
+#form07 .input-wrap {
+    border: none; 
+    padding: 16px 0;
+}
+#form07 .step-n label {
+    color: #00A8D3;
+}
+#form07 .step-n label span {
+    display: contents;
+}
+#form07 .step-n textarea {
+    height: 150px;
+}
+#form07 .step-n textarea:focus {
+    height: 300px;
+}
 #form08 .input-wrap {
     border: none; 
     padding: 16px 0;
@@ -184,8 +200,11 @@ fieldset legend span.foldBtn {
 }
 #form08 .step-n textarea {
     height: 150px;
-    resize: none;
 }
+#form08 .step-n textarea:focus {
+    height: 300px;
+}
+
 
 /*resize*/
 @media (max-width: 482px) {
