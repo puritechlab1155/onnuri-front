@@ -156,7 +156,7 @@ span.br{
 }
 
 
-/* 선교사 지원신청 박스 */
+/* 상단 지원신청 박스 */
 
 details {
     width: 100%;
@@ -172,7 +172,6 @@ summary {
     display: flex;
     align-items: center;
     position: relative;
-    padding-right: 40px;
     font-size: 30px;
     justify-content: center;
     font-weight: 600;
@@ -187,7 +186,7 @@ summary .toggle-icon {
     background-size: contain; /* 이미지가 비율에 맞게 조정 */
     background-repeat: no-repeat;
     position: absolute;
-    right: 10px; /* 오른쪽 끝으로 위치 */
+    right: 400px; /* 오른쪽 끝으로 위치 */
     transition: transform 0.3s ease;
     background-image: url('../img/home/form-toggle1.png'); /* 펼쳤을 때 사용할 이미지 */
 }
