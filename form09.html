@@ -812,39 +812,5 @@
     </section>
 
     <script src="js/script.js"></script>
-    <script>
-        // 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
-        document.addEventListener('DOMContentLoaded', function () {
-// ********** form id="form01" 해당 폼 넘버로 변경 ************************** 
-            const form = document.getElementById('form01');
-            const submitBtn = document.getElementById('submit-btn');
-            
-            // 모든 input입력 필드를 가져오기
-            const inputs = form.querySelectorAll('input[required]');
-
-            // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
-            function checkFormCompletion() {
-                // 모든 input입력 필드가 채워졌는지 확인
-                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-                
-                // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
-                submitBtn.disabled = !allFilled;
-            }
-
-            // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
-            inputs.forEach(input => {
-                input.addEventListener('input', checkFormCompletion);
-            });
-
-            // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
-            submitBtn.addEventListener('click', function () {
-                if (!submitBtn.disabled) {
-                    // 폼이 모두 채워졌을 때만 이동
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form01.html';
-                }
-            });
-        });
-
-    </script>
 </body>
 </html>

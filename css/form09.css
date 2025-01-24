@@ -176,6 +176,19 @@ fieldset:not(:first-child) .input-wrap{
     margin-top: 8px;
 }
 
+/*8단계 신청서 영역*/
+#form08 .input-wrap {
+    border: none; 
+    padding: 16px 0;
+}
+#form08 .step-n label {
+    color: #00A8D3;
+}
+#form08 .step-n textarea {
+    height: 150px;
+    resize: none;
+}
+
 /*resize*/
 @media (max-width: 482px) {
     fieldset legend {
