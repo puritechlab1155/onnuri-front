@@ -24,6 +24,9 @@ input::-webkit-credentials-auto-fill-button {
 	position:absolute !important;
 	right:0 !important;
 }
+input:focus {
+    outline: none;
+}
 
 *{
     font-family: 'Pretendard Variable' !important;
