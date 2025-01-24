@@ -1,3 +1,11 @@
+/* 사파리 input아이콘 초기화 */
+@supports (-webkit-appearance:none) {
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
 /*main*/
 #main {
     padding-top: 80px;
