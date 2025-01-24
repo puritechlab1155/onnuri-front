@@ -86,7 +86,8 @@ letter-spacing: -0.8px;
     height: 14px;
     background: #D1D1D1;
     position: absolute;
-    right: 0;
+    right: -6px;
+    top: 13px
 }
 .appliDate-wrap li.notice-appliDate {
     flex: 1;
