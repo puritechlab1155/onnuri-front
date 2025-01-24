@@ -8,6 +8,9 @@
     
     <title>Acts29비전빌리지 / 9단계</title>
 
+    <!--Jqurey CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <!-- 공통css -->
     <link rel="stylesheet" href="css/sub-header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -162,16 +165,15 @@
                 <!-- 상단 부분 -->
                 <div class="text-box">
                     <h2 class="title">훈련신청</h2>
-                        <details>
+                        <details open>
                             <summary>
                                 선교사 지원신청
                                 <span class="toggle-icon"></span>
                             </summary>
                             <div class="text-wrap">
-                                <p>이 지원서는 단기/장기 선교후보지원자가 <span class="br"></span>선교사로서 스스로를 진단하고, <br>면접 인사위원회가 지원자를 이해하기 위한 <span class="br"></span>목적 외 다른 용도로 사용치 않으며,<br> 개인 정보에 대해 절대적으로 비밀을 보장하오니,<br> 성실하고 정직하게 기술하신 후 <span class="br"></span> 제출하여 주시기 바랍니다.</p>
+                                <p>이 지원서는 단기/장기 선교후보지원자가 <span class="br"></span>선교사로서 스스로를 진단하고, <br>면접 인사위원회가 지원자를 이해하기 위한 <span class="br"></span>목적 외 다른 용도로 사용치 않으며,<br> 개인 정보에 대해 절대적으로<span class="br"></span> 비밀을 보장하오니,<br> 성실하고 정직하게 기술하신 후 <span class="br"></span> 제출하여 주시기 바랍니다.</p>
                                 <ul>
                                     <h4>작성 요령</h4>
-                                <p>이 지원서는 단기/장기 선교후보지원자가 <span class="br"></span>선교사로서 스스로를 진단하고, <br>면접 인사위원회가 지원자를 이해하기 위한 <span class="br"></span>목적 외 다른 용도로 사용치 않으며,<br> 개인 정보에 대해 절대적으로 비밀을 보장하오니,<br> 성실하고 정직하게 기술하신 후 행정담당에게 제출하여 주시기 바랍니다.</p>
                                     <li>1. 모든 질문에 대해 기도하는 마음으로 <span class="br"></span>성실하고 상세하게 답변하여 주십시오.</li>
                                     <li>2. 지원서 제출 시 반명함(3X4cm)사이즈의 <span class="br"></span>증명사진 파일을 첨부하여 주십시오.</li>
                                     <li>3. 간증문은 구체적으로(A4용지 1장 이상) <span class="br"></span>기술하여 주십시오.(OSOM/TP 지원자만 해당)</li>
@@ -221,10 +223,13 @@
                     </ul>
                 </div>
 
-                <form action="" class="form-wrap form09-wrap">
+                <form id="form09" action="" class="form-wrap form09-wrap">
                     <!-- 9단계 신청서 영역  -->
                     <fieldset>
-                        <legend>I.단/장기 선교 부르심</legend>
+                        <legend>
+                            I.단/장기 선교 부르심 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
                         <div class="input-wrap"> 
                             <div class="n1-sub01 step-n">
                                 <label>1. 선교사로의 부르심은 언제, 어떻게 이루어졌습니까?</label>
@@ -241,7 +246,7 @@
                                 <textarea></textarea>
                             </div>
 
-                            <div class="n1-sub04 step-n">
+                            <div class="n1-sub04 step-n mult-q">
                                 <label>4. 희망 선교지와 사역분야에 대해 기술해 주십시오.</label>
                                 <div>
                                     <span>(1) 지역 :</span>
@@ -257,7 +262,7 @@
                                 </div>
                             </div>
 
-                            <div class="n1-sub05 step-n">
+                            <div class="n1-sub05 step-n mult-q">
                                 <label>5. 은사와 사역에 관한 아래의 질문입니다.</label>
                                 <div>
                                     <span>(1) 사역자로서 하나님께서 주신 은사는 무엇입니까?</span>
@@ -273,7 +278,7 @@
                                 </div>
                             </div>
 
-                            <div class="n1-sub06 step-n">
+                            <div class="n1-sub06 step-n mult-q">
                                 <label>6. 전도 관련 질문입니다.</label>
                                 <div>
                                     <span>(1) 전도훈련을 받은 경험이 있으십니까? 훈련명과 훈련기간, 훈련자명을 써 주시기 바랍니다.</span>
@@ -293,7 +298,7 @@
                                 </div>
                             </div>
 
-                            <div class="n1-sub07 step-n">
+                            <div class="n1-sub07 step-n mult-q"">
                                 <label>7. 다음의 가치들에 대해 개인적 정의를 내려주시기 바랍니다.</label>
                                 <div>
                                     <span>(1) 복음</span>
@@ -323,6 +328,422 @@
                         </div>
                     </fieldset>
 
+                    <fieldset>
+                        <legend>
+                            II.자신에 대하여 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n2-sub01 step-n">
+                                <label>
+                                    1. 본인의 어린 시절은 행복하셨습니까?
+                                    <span class="caption m-top">‘예'로 답하신 경우, 간단하게 소개해 주십시오.</span>
+                                    <span class="caption minus-top">‘아니오'로 답하신 경우, 어린 시절이 행복하지 않았다고 여기는 이유는 무엇입니까?</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub02 step-n">
+                                <label>
+                                    2. 본인의 성격 또는 기질 중 변화되길 바라는 부분이 있으십니까? <br>
+                                    변화를 소망하는 이유는 무엇이며, 변화를 위해 어떠한 구체적으로 어떻게 노력하고 계십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub03 step-n">
+                                <label>
+                                    3. 본인이 생각하는 본인의 장점은 무엇입니까? <br>
+                                    타인이 말하는 본인의 장점은 무엇입니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub04 step-n">
+                                <label>
+                                    4. 본인이 생각하는 본인의 단점은 무엇입니까? <br>
+                                    타인이 말하는 본인의 단점은 무엇입니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub05 step-n">
+                                <label>
+                                    5. 성취감 또는 만족감을 느끼게 하는 일에는 어떤 것이 있습니까? <br>
+                                    실패/좌절감을 느낄 경우, 어떻게 극복하십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub06 step-n mult-q">
+                                <label>6. 생활영성
+                                    <div>
+                                        <span>(1) 하나님과의 교제는 어떻 게 갖고 계십니까? 시간, 장소, 교제 방법 등을 구체적으로 기술해 주십시오.</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(2) 삶 속에서 하나님의 인도하심을 어떻게 받고 있으며, 이를 확신하는 방법은 무엇입니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(3) 현재 선교사적 삶을 구체적으로 어떻게 실천하고 계십니까?</span>
+                                        <span class="caption">(음식, 건강관리, 외국인과의 접촉을 통한 문화훈련, 물질 사용 등)</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub07 step-n mult-q">
+                                <label>
+                                    7. 다음의 가치들에 대해 개인적 정의를 내려주시기 바랍니다.
+                                    <div>
+                                        <span>
+                                            (1) 일상생활 중 심각한 죄책감을 자주 느끼는 경험이 있으셨습니까? <br>
+                                            ‘예'로 답하신 경우, 그 원인이 되는 문제는 무엇이었으며, 어떻게 극복하셨습니까?
+                                        </span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(2) 일상생활 중 우울감을 느끼게 되는 원인은 무엇이며, 이를 어떻게 해결하십니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            (3) 일상생활 중 스트레스를 받을 때 주로 어떤 반응을 보이십니까? <br>
+                                            스트레스를 해소하기 위해 개인적으로 활용하고 있는 방법은 무엇입니까?
+                                        </span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub08 step-n mult-q">
+                                <label>8. 관계적 측면
+                                    <div>
+                                        <span>
+                                            (1) 지금까지 알고 지낸 사람들 중 자신과 가장 마음이 통한 사람에 대해 서술하되 특별히 어떤 면에서 그랬는지 잘 설명하십시오.
+                                        </span>
+                                        <span class="caption">(학교, 직장, 교회 친구들)</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(2) 대인관계에서의 심리적 상처에 대해 어떻게 반응/해결하십니까? 구체적인 예를 들어 주세요.</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub09 step-n mult-q">
+                                <label>9. 권위의 측면
+                                    <div>
+                                        <span>
+                                            (1) 특별히 심각한 갈등관계를 경험하신 적이 있습니까? <br>
+                                            ‘예'로 답하신 경우, 그러한 갈등관계의 대상과 상황에 대해 간단히 설명해 주십시오.
+                                        </span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(2) 갈등 형성 요인 중 본인의 문제점은 무엇이었습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(3) 그 문제를 어떻게 해결하셨습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="n2-sub10 step-n mult-q">
+                                <label>
+                                    10. 기타
+                                    <div>
+                                        <span>
+                                            (1) 대중매체(TV, 신문, 라디오, 도서, 인터넷 등) 중 정보를 획등하는 주된 채널은 무엇입니까?
+                                        </span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(2) 관심분야 정보에는 어떤 것들이 있습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(3) 자신의 정서 및 교양 함양을 위한 취미활동이 있으십니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div>
+                                        <span>(4) 신체 단련 또는 건강 증진을 위한 개인적 방법은 무엇입니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            III.-1 결혼관 - 미혼 작성 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n3-sub01 step-n">
+                                <label>
+                                    (1) 현재 교제중인 사람이 있습니까? <br>
+                                    <span class="inline-cap">‘예'로 답하신 경우 교제 중인 분에 대해 자세히 기술해 주십시오.</span>
+                                    <span class="caption inline-cap">(성명, 교제 기간, 결혼 계획 등)</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n3-sub02 step-n">
+                                <label>
+                                    (2) 결혼에 대해 어떻게 생각하십니까? <br>
+                                    본인이 생각하는 결혼의 정의, 결혼과 사역과의 관계 등에 대해 간략하게 써 주시기 바랍니다.
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n3-sub03 step-n">
+                                <label>
+                                    (3) 결혼하지 않고 독신으로 선교지에서 사역하게 되실 경우, 정서적 고독감 등 정서적 어려움을 겪을 수 있습니다.<br>
+                                    이에 대해 어떠한 각오를 하고 계십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n3-sub04 step-n">
+                                <label>(4) 관계적 측면
+                                    <div class="en-list">
+                                        <span>a. 지금까지 알고 지낸 사람들 중 자신과 가장 마음이 통한 사람에 대해 서술하되 특별히 어떤 면에서 그랬는지 잘 설명하십시오.</span>
+                                        <textarea></textarea>
+                                    </div>
+                                    <div class="en-list">
+                                        <span>b. 대인관계에서의 심리적 상처에 대해 어떻게 반응/해결하십니까? 구체적인 예를 들어 주세요.</span>
+                                        <span class="caption">(학교, 직장, 교회 친구들)</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            III.-2 결혼관 - 기혼 작성 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n4-sub01 step-n">
+                                <label>
+                                    <span>(1) 선교에 대한 부부의 소명, 사역방향, 사역지 등이 일치하십니까?</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub02 step-n">
+                                <label>
+                                    <span>(2) 부부와 가족을 위한 경건 생활은 어떻게 이루고 계십니까?</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub03 step-n mult-q">
+                                <span>(3) 부부관계</span>
+                                <label>
+                                    <div class="en-list">
+                                        <span>a. 부부간의 의견 충돌이 발생하는 문제에는 어떤 것들이 있습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                                <label>
+                                    <div class="en-list">
+                                        <span>b. 결혼생활 중 심각한 갈등에 처한 적이 있었습니까? ‘예'로 답하신 경우, 갈등의 원인이 무엇이었습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                                <label>
+                                    <div class="en-list">
+                                        <span>c. 갈등상황을 어떻게 해결하셨습니까?</span>
+                                        <textarea></textarea>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub04 step-n">
+                                <label>(4) 부부 중 자녀 양육에 적극적이고 주도적이셨던 분은 어느 분이십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub04 step-n">
+                                <label>(5) 자녀 양육에 대한 부부의 원칙이 있다면 소개해 주십시오.
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub04 step-n">
+                                <label>(6) 선교지에서의 자녀 양육 또는 교육에 대해 어떠한 계획을 세우셨습니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n4-sub04 step-n">
+                                <label>(7) 가족(배우자, 자녀)을 위한 시간을 따로 구별하여 보내고 계십니까? 어떠한 활동을 하고 계십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            IV. 가족 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n5-sub01 step-n">
+                                <label>
+                                    1. 부모님의 신앙 성숙정도(신앙 훈련 및 경험 내용 포함), 교회 사역 활동 내용 및 정도, 선교 관심도는 어떠하십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n5-sub02 step-n">
+                                <label>
+                                    2. 선교사가 되는 것에 대하여 가족들은 어떻게 생각하십니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n5-sub02 step-n">
+                                <label>
+                                    3. 부정적인 경우, 그 이유는 무엇입니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                            
+                            <div class="n5-sub02 step-n">
+                                <label>
+                                    4. 파송 이후 부모님의 부양은 어떻게 이루어집니까?
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            V. 재정 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n6-sub01 step-n check">
+                                <span>1. 신청인은 금전적 채무가 있으십니까?</span>
+                                <div class="checkBox">
+                                    <label>
+                                        <input class="yes" type="radio" name="yesNo" value="yes"> 예
+                                    </label>
+                                    <label>
+                                        <input class="no" type="radio" name="yesNo" value="no"> 아니오
+                                    </label>
+                                </div>
+                                <label class="en-list">
+                                    <span>‘예'로 답하신 경우, <br> (1) 채무의 사유는 무엇이며, 금액은 얼마입니까?</span>
+                                    <textarea></textarea>
+                                </label>
+                                <label class="en-list">
+                                    <span>(2) 어떻게 변제하실 계획입니까?</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+
+                            <div class="n6-sub02 step-n">
+                                <div class="n6-sub01 step-n check">
+                                    <span>2. 신청인은 정기적 재정 후원자가 있으십니까?</span>
+                                    <div class="checkBox">
+                                        <label>
+                                            <input class="yes" type="radio" name="yesNo" value="yes"> 예
+                                        </label>
+                                        <label>
+                                            <input class="no" type="radio" name="yesNo" value="no"> 아니오
+                                        </label>
+                                    </div>
+                                    <label class="en-list">
+                                        <span>‘예'로 답하신 경우, <br> (1) 재정 후원자가 총 몇 명입니까?</span>
+                                        <textarea></textarea>
+                                    </label>
+                                    <label class="en-list">
+                                        <span>(2) 재정 후원금은 총 얼마입니까?</span>
+                                        <textarea></textarea>
+                                    </label>
+                                    <label class="en-list">
+                                        <span>‘아니오'로 답하신 경우, <br>(1) 선교사 허입 후 어떻게 필요 재정을 충당실 계획이십니까? 구체적으로 기술하여 주십시오.</span>
+                                        <textarea></textarea>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="n6-sub03 step-n">
+                                <div class="n6-sub01 step-n">
+                                    <label>
+                                        3. 선교사로의 부르심 이전, 신청자의 재정 원칙을 무엇이었습니까?
+                                        <textarea></textarea>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="n6-sub04 step-n">
+                                <div class="n6-sub01 step-n">
+                                    <label>
+                                        4. 선교사로서 본인이 직접 수립하고 실천하실 재정 원칙에는 어떤 것이 있으십니까?
+                                        <textarea></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            VI. 기타 <!-- 문항 숨기기 토글 버튼 -->
+                            <button class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></button>
+                        </legend>
+                        <div class="input-wrap"> 
+                            <div class="n7-sub01 step-n check">
+                                <span>1. 과거 또는 현재에 약물, 알코올, 니코틴 등에 의한 중독 경험이 있으십니까?</span>
+                                <div class="checkBox">
+                                    <label>
+                                        <input class="yes" type="radio" name="yesNo" value="yes"> 예
+                                    </label>
+                                    <label>
+                                        <input class="no" type="radio" name="yesNo" value="no"> 아니오
+                                    </label>
+                                </div>
+                                <label class="en-list">
+                                    <span>‘예'로 답하신 경우, 아래에 대해 자세히 기술하여 주십시오.</span>
+                                    <span>(1) 중독물질</span>
+                                    <textarea></textarea>
+                                </label>
+                                <label class="en-list">
+                                    <span>(2) 증상</span>
+                                    <textarea></textarea>
+                                </label>
+                                <label class="en-list">
+                                    <span>(3) 치료 기간</span>
+                                    <textarea></textarea>
+                                </label><label class="en-list">
+                                    <span>(4) 완치 여부</span>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                            <div class="n7-sub01 step-n">
+                                <span>
+                                    2. 질문에는 언급되지는 않았지만 본인의 삶에 심각한 영향을 주었던 일/사건이 있었으면 기술해 주십시오.<br>
+                                    (영적, 신체적, 정서적, 정신적 영역 모두 포함)
+                                </span>
+                                <label>
+                                    <textarea></textarea>
+                                </label>
+                            </div>
+                    </fieldset>
 
                     <!-- 확인 버튼  -->
                     <div class="next-container">
@@ -391,5 +812,39 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script>
+        // 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
+        document.addEventListener('DOMContentLoaded', function () {
+// ********** form id="form01" 해당 폼 넘버로 변경 ************************** 
+            const form = document.getElementById('form01');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            // 모든 input입력 필드를 가져오기
+            const inputs = form.querySelectorAll('input[required]');
+
+            // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
+            function checkFormCompletion() {
+                // 모든 input입력 필드가 채워졌는지 확인
+                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+                
+                // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
+                submitBtn.disabled = !allFilled;
+            }
+
+            // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
+            inputs.forEach(input => {
+                input.addEventListener('input', checkFormCompletion);
+            });
+
+            // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
+            submitBtn.addEventListener('click', function () {
+                if (!submitBtn.disabled) {
+                    // 폼이 모두 채워졌을 때만 이동
+                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form01.html';
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
