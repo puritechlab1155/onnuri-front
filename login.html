@@ -302,14 +302,13 @@
         let $keepLogin = $('.keep_login');
 
         $keepLogin.click(function(){
-            // let $checkBox = $('.checkBox');
             let $rect = $(this).find('svg > rect');
             let rectColor = $rect.css('fill');
 
-            if (rectColor === 'rgb(211, 211, 211)') {
+            if (rectColor === 'rgb(211, 211, 211)') { /* d3d3d3 */
+                $(this).css({color : '#999'});
+            } else if (rectColor === 'rgb(10, 56, 124)') {
                 $(this).css({color : '#222'});
-            } else {
-                $(this).css({color : 's#999'});
             }
         });
     </script>

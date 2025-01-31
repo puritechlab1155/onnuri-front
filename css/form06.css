@@ -1,0 +1,110 @@
+br.space_m {
+    display: none;
+}
+
+fieldset {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    margin-top: 32px;
+}
+h4.list-title{
+    width: 100%;
+    overflow: hidden;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+h4.list-title > span {
+    margin-top: 6px;
+}
+input {
+    width: 100%;
+    height: 34px;
+    margin: 0 10px;
+    padding: 8px 16px;
+    line-height: normal !important;
+    border: 1px solid #BABABA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*목록 타이틀 및 목록*/
+.input-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 0;
+}
+/* 목록 */
+.list_box:not(:first-of-type) {
+    margin-top: 30px;
+}
+label.list {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-top: none;
+    font-size: 18px;
+}
+label.list > span {
+    flex: 0 0 210px;
+    padding: 12px 0;
+    box-sizing: border-box;
+    background: #E0EBF0;
+    font-size: 18px;
+    font-weight: 500;
+    border-right: 1px solid #ACC7D4;
+}
+.item01 , .item02 {
+    border-bottom: 1px solid #ACC7D4;
+}
+.item01 , .item03 {
+    border-right: 1px solid #ACC7D4;
+}
+/* resize */
+@media (max-width: 1014px) {
+    label.list > span {
+        flex: 0 0 160px;
+    }
+}
+@media (max-width: 767px) {
+    br.space_m {
+        display: block;
+    }
+    .item03 , .item04 {
+        flex: 1 1 100% !important;
+    }
+    .item03 {
+        border-right: none;
+        border-bottom: 1px solid #ACC7D4;
+    }
+    label.list > span {
+        flex: 0 0 110px;
+        padding: 12px 6px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 482px) {
+    input {
+        font-size: 15px;
+        padding: 8px;
+    }
+    legend.step {
+        font-size: 22px;
+    }
+    label.list > span {
+        flex: 0 0 70px;
+        padding: 12px 0;
+        font-size: 15px;
+    }
+}

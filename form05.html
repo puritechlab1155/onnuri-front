@@ -6,7 +6,7 @@
     <!-- 사파리폰트적용 (프리텐다드) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
     
-    <title>Acts29비전빌리지 / 4단계</title>
+    <title>Acts29비전빌리지 / 5단계</title>
 
     <!--Jqurey CDN-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/common02.css">
 
     <!-- 해당html 연결css -->
-    <link rel="stylesheet" href="css/form04.css">
+    <link rel="stylesheet" href="css/form05.css">
 </head>
 <body>
     <section id="home">
@@ -197,13 +197,13 @@
                         <li class="stepNumb">3</li>
                         <li class="stepKo">단계</li>
                     </ul>
-                    <ul class="focus-step">
-                        <li>4</li>
-                        <li>단계</li>
-                    </ul>
                     <ul>
-                        <li class="stepNumb">5</li>
+                        <li class="stepNumb">4</li>
                         <li class="stepKo">단계</li>
+                    </ul>
+                    <ul class="focus-step">
+                        <li>5</li>
+                        <li>단계</li>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
@@ -223,110 +223,124 @@
                     </ul>
                 </div>
 
-                <form id="form04">
+                <form id="form05">
                     <!-- 단계 신청서  -->
                     <fieldset>
-                        <legend class="step">4. 가족관련</legend>
+                        <legend class="step">5. 건강관련</legend>
                         <div class="input-wrap"> 
-                            <!-- 타이틀 및 작성칸 추가 버튼 -->
+                            <!-- 타이틀 -->
                             <h4 class="list-title">
-                                <span>가족 사항</span>
-                                <button class="add-field">
-                                    <span>작성칸 추가</span> <img src="img/form/add-field.png" alt="작성칸 추가 아이콘">
-                                </button>
+                                <span>건강 사항</span>
                             </h4>
-                            <!--목록 타이틀-->
-                            <ul class="item-title">
-                                <li class="item01 item">관계</li>
-                                <li class="item02 item">성명</li>
-                                <li class="item03 item">생년월일</li>
-                                <li class="item04 item">최종학력</li>
-                                <li class="item05 item">직업</li>
-                                <li class="item06 item">종교</li>
-                                <li class="item07 item">출석교회</li>
-                                <li class="item08 item">직분</li>
-                                <li class="item09 item">동반<span class="br">입소</span></li>
-                                <li class="item10 item">삭제</li>
-                            </ul>
-                            <!-- 첫번 째 줄 -->
                             <div class="list_box">
                                 <!-- 목록 -->
-                                <div class="input-container">
-                                    <label for="relation" class="list item01 border_b b_none_r">
-                                        <span>관계</span>
-                                        <input id="relation" type="text" placeholder=" - " required>
-                                    </label>
+                                <div class="input-container border_b">
+                                    <div class="list item01">
+                                        <span class="item-title">현재 건강상태</span>
+                                        <ul class="radio-container">
+                                            <li>
+                                                <label for="health-excellent">
+                                                    <input id="health-excellent" name="health-status" type="radio" required> 아주좋음
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="health-good">
+                                                    <input id="health-good" name="health-status" type="radio" required> 좋음
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="health-average">
+                                                    <input id="health-average" name="health-status" type="radio" required> 보통
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="health-poor">
+                                                    <input id="health-poor" name="health-status" type="radio" required> 좋지않음
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="health-very-poor">
+                                                    <input id="health-very-poor" name="health-status" type="radio" required> 아주좋지않음
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     
-                                    <label for="name" class="list item02 border_b">
-                                        <span>성명</span>
-                                        <input id="name" type="text" placeholder=" - " required>
-                                    </label>
-                                    
-                                    <label for="birthdate" class="list item03 border_b">
-                                        <span>생년월일</span>
-                                        <div class="calendar-wrap">
-                                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="1.33398" y="2.5" width="18" height="18" rx="5" stroke="#1E7196" stroke-width="1.5"/>
-                                                <path d="M1.33398 7.5H19.334" stroke="#1E7196" stroke-width="1.5" stroke-linejoin="round"/>
-                                                <path d="M14.834 1L14.834 4" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M5.83398 1L5.83398 4" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M4.83398 11.5H5.83398" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M9.83398 11.5H10.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M14.834 11.5H15.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M4.83398 15.5H5.83398" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M9.83398 15.5H10.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M14.834 15.5H15.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <input id="birthdate" type="date" required>
+                                    <div class="list item02">
+                                        <span class="item-title">병력</span>
+                                        <div class="sub-wrap">
+                                            <div class="sub-box past-box">
+                                                <span>과거</span>
+                                                <div class="past-input input-box">
+                                                    <label for="past-disease">
+                                                        <span>병명: </span>
+                                                        <input id="past-disease" type="text" placeholder=" - ">
+                                                    </label>
+                                                    <label for="past-treatment">
+                                                        <span>치료방법: </span>
+                                                        <input id="past-treatment" type="text" placeholder=" - ">
+                                                    </label>
+                                                    <label for="past-condition">
+                                                        <span>완치 여부 및 현재상태: </span>
+                                                        <input id="past-condition" type="text" placeholder=" - ">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="sub-box current-box">
+                                                <span>현재</span>
+                                                <div class="past-input input-box">
+                                                    <label for="current-disease">
+                                                        <span>병명: </span>
+                                                        <input id="current-disease" type="text" placeholder=" - ">
+                                                    </label>
+                                                    <label for="current-treatment">
+                                                        <span>치료방법: </span>
+                                                        <input id="current-treatment" type="text" placeholder=" - ">
+                                                    </label>
+                                                    <label for="current-condition">
+                                                        <span>완치 여부 및 현재상태: </span>
+                                                        <input id="current-condition" type="text" placeholder=" - ">
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </label>
+                                    </div>
                                     
-                                    <label for="educate" class="list item04 border_b">
-                                        <span>최종학력</span>
-                                        <input id="educate" type="text" placeholder=" - " required>
-                                    </label>
-                                    
-                                    <label for="job" class="list item05 border_b">
-                                        <span>직업</span>
-                                        <input id="job" type="text" placeholder=" - ">
-                                    </label>
-                                    
-                                    <label for="religion" class="list item06 border_b b_none_r">
-                                        <span>종교</span>
-                                        <input id="religion" type="text" placeholder=" - " required>
-                                    </label>
-                                    
-                                    <label for="church" class="list item07 border_b">
-                                        <span>출석교회</span>
-                                        <input id="church" type="text" placeholder=" - " required>
-                                    </label>
-                                    
-                                    <label for="position" class="list item08 border_b b_none_r">
-                                        <span>직분</span>
-                                        <input id="position" type="text" placeholder=" - " required>
-                                    </label>
-                                    
-                                    <label for="admission" class="list item09 border_b">
-                                        <span>동반입소</span>
-                                        <div class="checkBox-wrap">
-                                            <span class="checkBox">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="20" height="20" rx="4" fill="#d3d3d3"></rect>
-                                                    <path d="M6 9.4L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                </svg>
-                                            </span>
-                                            <input id="admission" type="checkbox" required style="display: none;">
+                                    <div class="list item03">
+                                        <span class="item-title">건강 관리방법</span>
+                                        <label for="health-management">
+                                            <span style="display: none;">건강 관리방법</span>
+                                            <input id="health-management" type="text" placeholder=" - ">
+                                        </label>
+                                    </div>
+
+                                    <div class="list item04">
+                                        <span class="item-title">종합 건강검진</span>
+                                        <div class="sub-wrap">
+                                            <div class="sub-box">
+                                                <label for="final-checkup">
+                                                    <span>최종 종합검진<br> 연월/병원명</span>
+                                                    <input id="final-checkup" type="text" placeholder=" - ">
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="sub-box">
+                                                <label for="special-notes">
+                                                    <span>특이사항 <br> (의사 소견 참조)</span>
+                                                    <input id="special-notes" type="text" placeholder=" - ">
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="sub-box">
+                                                <label for="scheduled-checkup">
+                                                    <span>종합<br class="space_mob">검진<br>예정일/병원명</span>
+                                                    <input id="scheduled-checkup" type="text" placeholder=" - ">
+                                                </label>
+                                            </div>
                                         </div>
-                                    </label>
-                                    <!-- 삭제 버튼 -->
-                                    <span class="list item10 border_b">
-                                        <button class="n-delete">
-                                            <span>삭제</span>
-                                        </button>
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- ~ 작성칸 추가 시 추가됨 -->
                         </div>
                     </fieldset>
                 </form>
@@ -394,81 +408,38 @@
             </div>
         </footer>
     </section>
+
     <script src="js/script.js"></script>
     <script>
-        $(document).ready(function() {
-            // -- 체크박스 아이콘 클릭 --
-            $(document).on('click', '.checkBox', function() {
-                let $rect = $(this).find('svg > rect');
-                let $input = $(this).closest('label').find('input[type="checkbox"]'); // 체크박스 찾기
-                let rectColor = $rect.css('fill');
-
-                // 체크박스 상태 토글
-                $input.prop('checked', !$input.prop('checked'));
-
-                if (rectColor === 'rgb(211, 211, 211)') { // '#d3d3d3'의 RGB 값
-                    $rect.css({ fill: '#0A387C' }); 
-                } else {
-                    $rect.css({ fill: '#d3d3d3' });
-                }
-            });
-            // -- 작성칸 추가 버튼 --
-            let $addField = $('.add-field');
-
-            $addField.on('click', function(e) {
-                e.preventDefault();
-                var newField = $('.list_box').first().clone(); 
-                
-                // 복제된 필드의 모든 입력값 리셋
-                newField.find('input').val(''); 
-                newField.find('textarea').val(''); 
-
-                newField.find('.n-delete').removeClass('n-delete').addClass('delete'); 
-                $(this).closest('.input-wrap').append(newField);
-                newField.css({'position': 'relative'}); 
-                newField.find('label , .item10').css({'border-top': 'none'}); 
-            });
-
-            // 삭제 버튼 클릭 시 해당 부모 박스 삭제
-            $(document).on('click', '.delete', function(e) {
-                e.preventDefault();
-                $(this).closest('.list_box').remove();
-            });
-        });
-
-        // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
+        // -- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
         document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('form04');
+            const form = document.getElementById('form05');
             const submitBtn = document.getElementById('submit-btn');
             
-            // 모든 필수 input과 복제된 박스의 input 가져오기
-            const getAllInputs = () => form.querySelectorAll('input[required], .n1-sub01.step-n input');
+            // 모든 input입력 필드를 가져오기
+            const inputs = form.querySelectorAll('input[required]');
 
-            // 각 input 입력 필드에 변화가 있을 때마다 체크하는 함수
+            // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
             function checkFormCompletion() {
-                const inputs = getAllInputs(); 
-                const allFilled = Array.from(inputs).every(input => input.value.trim() !== ''); 
-                submitBtn.disabled = !allFilled; // 모든 입력이 채워지면 버튼 활성화
+                // 모든 input입력 필드가 채워졌는지 확인
+                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+                
+                // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
+                submitBtn.disabled = !allFilled;
             }
 
-            // 초기 입력 필드에 이벤트 리스너 추가
-            const inputs = getAllInputs(); 
+            // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
             inputs.forEach(input => {
                 input.addEventListener('input', checkFormCompletion);
             });
 
-            // 확인 버튼 클릭 시 다음 HTML로 넘어가도록 설정
+            // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
             submitBtn.addEventListener('click', function () {
-                const allInputs = getAllInputs(); 
-                const allFilled = Array.from(allInputs).every(input => input.value.trim() !== '');
-                
-                if (allFilled) { 
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form08.html';
+                if (!submitBtn.disabled) {
+                    // 폼이 모두 채워졌을 때만 이동
+                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form06.html';
                 }
             });
-
-            // 페이지 로드 시 초기 상태 체크 (버튼 활성화 상태 초기화)
-            checkFormCompletion(); // 페이지가 로드될 때 입력 필드의 상태를 체크하여 버튼 활성화 여부 결정
         });
 
     </script>
