@@ -59,9 +59,16 @@ form {
 .border_b {
     border: 1px solid #ACC7D4;
 }
+.b_l {
+    border-left: 1px solid #ACC7D4;
+}
+.b_r {
+    border-right: 1px solid #ACC7D4;
+}
 .border_g {
     border: 1px solid #BABABA;
     border-radius: 8px;
+    width: 100%;
 }
 .bl_n {
     border-left: none !important;
@@ -361,4 +368,3 @@ details p {
         display: block;
     }
 }
-
