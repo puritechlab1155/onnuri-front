@@ -168,6 +168,9 @@ input {
     border: 1px solid #ACC7D4;
     border-top: none;
 }
+.item04 .sub-box:last-child span {
+    border-bottom: none;
+}
 .item04 .sub-box:last-child label span {
     border-bottom: none;
 }
@@ -243,6 +246,9 @@ input {
         border-top: 1px solid #ACC7D4;
     }
     .item04 .sub-box label span {
+        border-left: none;
+    }
+    .item04 .sub-box span {
         border-left: none;
     }
 }

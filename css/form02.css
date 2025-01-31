@@ -132,6 +132,9 @@ span.br {
     flex: 0.5;
 }
 /* 외국어능력 */
+.ft-400 {
+    font-weight: 400;
+}
 .out-box02 .item-title {
     border-left: 1px solid #ACC7D4;
     align-items: stretch;
@@ -152,11 +155,11 @@ span.br {
     padding: 4px 0;
 }
 .out-box02 .item01 {
-    flex: 1.5;
+    flex: 1;
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box02 .item02 {
-    flex: 2;
+    flex: 2.5;
     border-right: 1px solid #ACC7D4;
 }
 .out-box02 .item03 {
@@ -182,8 +185,20 @@ span.br {
 .out-box02 .select {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: lightblue;
+}
+.out-box02 .select li {
+    flex: 1;
+    padding: 10px 8px;
+}
+.out-box02 .select li:not(:last-child) {
+    border-right: 1px solid #ACC7D4;
+}
+.out-box02 .select li select {
+    width: 100%;
+    padding: 6px 16px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    font-size: 16px;
 }
 /* 경력사항 */
 .out-box03 .item01 {
@@ -353,7 +368,7 @@ button.n-delete {
         display: block;
         padding: 6px 0;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         background: #E0EBF0;
         border-bottom: 1px solid #ACC7D4;
     }
