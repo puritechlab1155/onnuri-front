@@ -71,8 +71,11 @@ span.br {
     margin-top: -8px;
 }
 /* 목록 */
-.list {
-    box-sizing: border-box;
+.item-title .item {
+    border-bottom: 1px solid #ACC7D4;
+}
+.list_box .list {
+    border-top: none;
 }
 .input-container label{
     padding: 8px 0;
@@ -108,7 +111,10 @@ span.br {
 .out-box01 .item01 {
     flex: 2;
 }
-
+.list_box .item01 {
+    border-bottom: none;
+    border-top: none;
+}
 .out-box01 .item02 {
     flex: 1;
     border-right: 1px solid #ACC7D4;
@@ -147,6 +153,7 @@ span.br {
 }
 .out-box02 .item01 {
     flex: 1.5;
+    border-bottom: 1px solid #ACC7D4;
 }
 .out-box02 .item02 {
     flex: 2;
@@ -175,9 +182,13 @@ span.br {
 /* 경력사항 */
 .out-box03 .item01 {
     flex: 1;
+    border-bottom: 1px solid #ACC7D4;
 }
 .out-box03 .item02 {
-    flex: 2; 
+    flex: 2;
+}
+.out-box03 .item02:not(.item-title .item02){
+    border-bottom: none;
 }
 .out-box03 .item03 {
     flex: 0.8; 
@@ -191,9 +202,13 @@ span.br {
 /* 전문기술・자격증 */
 .out-box04 .item01 {
     flex: 1;
+    border-bottom: 1px solid #ACC7D4;
 }
 .out-box04 .item02 {
     flex: 1; 
+}
+.out-box04 .item02:not(.item-title .item02) {
+    border-bottom: none;
 }
 .out-box04 .item03 {
     flex: 1; 
@@ -228,6 +243,9 @@ input[type='radio'] {
     padding: 0;
 }
 /* 병역 */
+.out-box05 .list_box .item01 {
+    border-bottom: 1px solid #ACC7D4;
+}
 .out-box05 .item01 {
     flex: 0.8;
 }
@@ -241,6 +259,9 @@ input[type='radio'] {
 .out-box05 .item04 {
     flex: 2;
 }
+.out-box05 .list_box .item04 {
+    border-bottom: none;
+}
 .out-box05 .item05 {
     flex: 1;
 }
@@ -253,6 +274,7 @@ input[type='radio'] {
 .list .calendar-area {
     display: flex;
     flex-wrap: nowrap;
+    border-bottom: 1px solid #ACC7D4;
 }
 .list .calendar-wrap  {
     display: flex;
@@ -306,6 +328,9 @@ button.n-delete {
 /* 두 번째 박스 ~ */
 .add-box label, .add-box .list.item06{
     border-top: none;
+}
+.no-border-top {
+    border-top: none !important;
 }
 
 /* resize */

@@ -246,11 +246,10 @@
                                     <li class="item05 item">비고</li>
                                     <li class="delete-item item">삭제</li>
                                 </ul>
-                                <!-- 첫번 째 줄 -->
-                                <div class="list_box">
-                                    <!-- 목록 -->
+                                <!-- 목록 -->
+                                <div class="list_box">  
                                     <div class="input-container">
-                                        <div class="list item01 border_b b_none_r">
+                                        <div class="list item01 border_b">
                                             <span class="mob-title">기간</span>
                                             <div class="calendar-area">
                                                 <label for="start-date01" class="calendar-wrap">
@@ -288,13 +287,13 @@
                                         
                                         <!-- 삭제 버튼 -->
                                         <span class="list delete-item border_b">
-                                            <button class="n-delete">
+                                            <button class="n-delete" type="button">
                                                 <span>삭제</span>
                                             </button>
                                         </span>
                                     </div>
+                                    <!-- ~ 작성칸 추가 시 추가됨 -->
                                 </div>
-                                <!-- ~ 작성칸 추가 시 추가됨 -->
                             </div>
                             <!--  외국어능력 -->
                             <div class="out-box out-box02">
@@ -321,9 +320,8 @@
                                     <li class="item04 item">비고</li>
                                     <li class="item delete-item">삭제</li>
                                 </ul>
-                                <!-- 첫번 째 줄 -->
+                                <!-- 목록 -->
                                 <div class="list_box">
-                                    <!-- 목록 -->
                                     <div class="input-container">
                                         <label for="language" class="list item01 border_b b_none_r">
                                             <span class="mob-title">외국어 명</span>
@@ -355,14 +353,13 @@
                                         
                                         <!-- 삭제 버튼 -->
                                         <span class="list delete-item border_b">
-                                            <button class="n-delete">
+                                            <button class="n-delete" type="button">
                                                 <span>삭제</span>
                                             </button>
                                         </span>
                                     </div>
                                     <!-- ~ 작성칸 추가 시 추가됨 -->
                                 </div>
-                                <!-- ~ 작성칸 추가 시 추가됨 -->
                             </div>
                             <!--  경력사항 -->
                             <div class="out-box out-box03">
@@ -382,9 +379,8 @@
                                     <li class="item05 item">비고</li>
                                     <li class="delete-item item">삭제</li>
                                 </ul>
-                                <!-- 첫번 째 줄 -->
+                                <!-- 목록 -->
                                 <div class="list_box">
-                                    <!-- 목록 -->
                                     <div class="input-container">
                                         <label for="workplace" class="list item01 border_b b_none_r">
                                             <span class="mob-title">근무처</span>
@@ -424,13 +420,13 @@
                                         
                                         <!-- 삭제 버튼 -->
                                         <span class="list delete-item border_b">
-                                            <button class="n-delete">
+                                            <button class="n-delete" type="button">
                                                 <span>삭제</span>
                                             </button>
                                         </span>
                                     </div>
+                                    <!-- ~ 작성칸 추가 시 추가됨 -->
                                 </div>
-                                <!-- ~ 작성칸 추가 시 추가됨 -->
                             </div>
                             <!--  전문기술・자격증 -->
                             <div class="out-box out-box04">
@@ -449,9 +445,8 @@
                                     <li class="item04 item">증명서사본첨부여부</li>
                                     <li class="delete-item item">삭제</li>
                                 </ul>
-                                <!-- 첫번 째 줄 -->
+                                <!-- 목록 -->
                                 <div class="list_box">
-                                    <!-- 목록 -->
                                     <div class="input-container">
                                         <label for="certificate-name" class="list item01 border_b b_none_r">
                                             <span class="mob-title">기술/자격증명</span>
@@ -488,13 +483,13 @@
                                         
                                         <!-- 삭제 버튼 -->
                                         <span class="list delete-item border_b">
-                                            <button class="n-delete">
+                                            <button class="n-delete" type="button">
                                                 <span>삭제</span>
                                             </button>
                                         </span>
                                     </div>
+                                    <!-- ~ 작성칸 추가 시 추가됨 -->
                                 </div>
-                                <!-- ~ 작성칸 추가 시 추가됨 -->
                             </div>
                             <!--  병역 -->
                             <div class="out-box out-box05">
@@ -515,9 +510,8 @@
                                     <li class="item06 item">비고</li>
                                     <li class="delete-item item">삭제</li>
                                 </ul>
-                                <!-- 첫번 째 줄 -->
+                                <!-- 목록 -->
                                 <div class="list_box">
-                                    <!-- 목록 -->
                                     <div class="input-container">
                                         <label for="military-type" class="list item01 border_b b_none_r">
                                             <span class="mob-title">군별</span>
@@ -562,13 +556,13 @@
                                         
                                         <!-- 삭제 버튼 -->
                                         <span class="list delete-item border_b">
-                                            <button class="n-delete">
+                                            <button class="n-delete" type="button">
                                                 <span>삭제</span>
                                             </button>
                                         </span>
                                     </div>
+                                    <!-- ~ 작성칸 추가 시 추가됨 -->
                                 </div>
-                                <!-- ~ 작성칸 추가 시 추가됨 -->
                             </div>
                         </div>
                     </fieldset>
@@ -639,29 +633,51 @@
     </section>
     <script src="js/script.js"></script>
     <script>
-        $(document).ready(function() {
-            // -- 작성칸 추가 버튼 --
-            let $addField = $('.add-field');
+        // 작성칸 추가 버튼 클릭 시
+        document.querySelectorAll('.add-field').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // 기본 동작 방지
 
-            $addField.on('click', function(e) {
-                e.preventDefault();
-                var newField = $('.list_box').first().clone(); 
+                // 부모 div 선택
+                const parentBox = this.closest('.out-box');
+                // 기존 input-container 선택
+                const inputContainer = parentBox.querySelector('.input-container');
+                // input-container 복제
+                const newContainer = inputContainer.cloneNode(true);
                 
-                // 복제된 필드의 모든 입력값 리셋
-                newField.find('input').val(''); 
-                newField.find('textarea').val(''); 
+                // 모든 input 요소의 값을 리셋
+                newContainer.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
 
-                newField.find('.n-delete').removeClass('n-delete').addClass('delete'); 
-                $(this).closest('.input-wrap').append(newField);
-                newField.css({'position': 'relative'}); 
-                newField.find('label , .item01').css({'border-top': 'none'}); 
-                newField.find('label , .item06').css({'border-top': 'none'}); 
+                // 삭제 버튼 클래스를 변경
+                const deleteButton = newContainer.querySelector('.n-delete');
+                deleteButton.classList.remove('n-delete');
+                deleteButton.classList.add('delete');
+
+                // 복제된 박스의 .item01의 border-top을 none으로 설정
+                const item01 = newContainer.querySelector('.item01');
+                if (item01) {
+                    item01.style.borderTop = 'none';
+                }
+
+                // 새로운 input-container를 list_box에 추가
+                parentBox.querySelector('.list_box').appendChild(newContainer);
             });
+        });
 
-            // 삭제 버튼 클릭 시 해당 부모 박스 삭제
-            $(document).on('click', '.delete', function(e) {
-                e.preventDefault();
-                $(this).closest('.list_box').remove();
+        // 삭제 버튼 클릭 시 해당 input-container 삭제
+        document.querySelectorAll('.list_box').forEach(listBox => {
+            listBox.addEventListener('click', function(event) {
+                const deleteButton = event.target.closest('.delete');
+                if (deleteButton) {
+                    event.preventDefault(); // 기본 동작 방지
+                    
+                    const inputContainer = deleteButton.closest('.input-container');
+                    if (inputContainer) {
+                        inputContainer.remove();
+                    }
+                }
             });
         });
 
