@@ -186,13 +186,17 @@ ul.user_account {
 ul.user_account li {
     display: inline-block;
 }
-ul.user_account li:first-child::after {
+ul.user_account li::after {
     content: "";
     display: inline-block;
     width: 1px;
     height: 12px;
     background: #EEEEEE;
     margin: 0 10px;
+}
+ul.user_account li:last-child::after {
+    content: "";
+    display: none;
 }
 ul.user_account a{
     font-size: 16px;
