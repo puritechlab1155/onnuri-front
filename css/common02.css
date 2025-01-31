@@ -190,6 +190,10 @@ ul.focus-step li {
 button.add-field {
     width: 100%;
     max-width: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
     padding: 6px 0;
     background: #F7F7F8;
     border: 1px solid #ddd;
@@ -198,8 +202,12 @@ button.add-field {
     font-weight: 400;
     border-radius: 4px;
 }
+button.add-field > span {
+    display: inline-block;
+    color: #777;
+}
 button.add-field img {
-    margin-left: 4px;
+    margin-left: 6px;
 }
 
 /* 모바일 전용 br */
@@ -331,6 +339,17 @@ details p {
     li.stepKo {
         display: none;
     }
+
+    /*작성칸 추가 버튼*/
+    button.add-field {
+        max-width: 32px;
+    }
+    button.add-field > span {
+        display: none !important;
+    }
+    button.add-field img {
+        margin: 0;
+    }
 }
 @media (max-width: 740px) {
     summary .toggle-icon {
@@ -361,6 +380,14 @@ details p {
     }
 }
 @media (max-width: 430px) {
+    .step-tab ul {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    ul.focus-step {
+        width: 48px;
+    }
     details { 
         padding: 20px; 
     }
