@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <main id="main" class="contact">
+        <div class="inner">
+            <!-- id -->
+            <div class="pw_wrap">
+                <h3>비밀번호 찾기</h3>
+                <form id="password-reset-form" class="bg">
+                    <div class="input_wrap">
+                        <h4>비밀번호를 변경해 주세요. <span class="red">특수문자를 포함하여 8자리 이상<span class="br"></span> 비밀번호를 새로 만들어 주세요.</span></h4>
+                        <fieldset class="input_container">
+                            <input type="password" id="password" name="password" required placeholder="새 비밀번호 (특수문자를 포함한 8자리 이상)">
+                            <input type="password" id="password_confirm" name="password_confirm" required placeholder="새 비밀번호와 동일하게 입력해주세요" class="mt-10">
+                        </fieldset>
+                    </div>
+                    <div class="btn_wrap">
+                        <button type="submit" id="nextBtn" class="nextBtn" disabled>다음</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        // 비밀번호와 비밀번호 확인 input 요소
+        const passwordInput = document.getElementById('password');
+        const passwordConfirmInput = document.getElementById('password_confirm');
+        const nextButton = document.getElementById('nextBtn');
+    
+        // 비밀번호가 일치하는지 확인하는 함수
+        function checkPasswordMatch() {
+            if (passwordInput.value === passwordConfirmInput.value && passwordInput.value.length >= 8) {
+                nextButton.disabled = false;  // 버튼 활성화
+            } else {
+                nextButton.disabled = true;   // 버튼 비활성화
+            }
+        }
+    
+        // 입력이 바뀔 때마다 checkPasswordMatch 함수 실행
+        passwordInput.addEventListener('input', checkPasswordMatch);
+        passwordConfirmInput.addEventListener('input', checkPasswordMatch);
+    
+        // 버튼 클릭 시 페이지 이동
+        nextButton.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 폼 제출 방지
+            window.location.href = 'https://puritechlab1155.github.io/onnuri-front/password-reset03.html';  // 새 페이지로 이동
+        });
+    </script>
+
+</body>
+</html>
