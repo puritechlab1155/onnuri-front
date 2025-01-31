@@ -74,6 +74,7 @@ input {
     flex-wrap: wrap;
     gap: 1vw;
     align-items: center;
+    justify-content: flex-start;
 }
 .item01 > ul li label{
     cursor: pointer;
@@ -209,7 +210,7 @@ input {
     }
     .item01 > ul {
         padding: 16px 10px;
-        justify-content: center;
+        gap: 0.6vw;
     }
     .item02 > .item-title, .item04 > .item-title {
         padding: 16px 0;
@@ -254,6 +255,9 @@ input {
     .item02 .sub-box > span {
         padding: 4px 0;
     }
+    .item02 .sub-box:nth-child(2) > span {
+        border-bottom: 1px solid #ACC7D4;
+    }
     .item04 .sub-box {
         display: block;
     }
@@ -275,5 +279,31 @@ input {
     }
 }
 @media (max-width: 482px) {
-
+    input {
+        font-size: 15px !important;
+    }
+    legend.step {
+        font-size: 22px;
+    }
+    .list .item-title {
+        font-size: 16px;
+    }
+    .item01 > ul {
+        gap: 0;
+    }
+    .item01 > ul li label {
+        font-size: 15px;
+    }
+    .item02 .sub-box > span {
+        font-size: 15px;
+    }
+    .item02 .sub-box label span {
+        font-size: 15px;
+    }
+    .item04 .sub-box span {
+        font-size: 15px;
+    }
+    input {
+        padding: 8px;
+    }
 }
