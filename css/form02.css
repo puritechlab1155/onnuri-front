@@ -125,11 +125,11 @@ span.br {
 }
 
 .out-box01 .item04 {
-    flex: 0.8;
+    flex: 0.5;
 }
 
 .out-box01 .item05 {
-    flex: 0.6;
+    flex: 0.5;
 }
 /* 외국어능력 */
 .out-box02 .item-title {
@@ -179,6 +179,12 @@ span.br {
 .item02-sub-title li:not(:last-child) {
     border-right: 1px solid #ACC7D4;
 }
+.out-box02 .select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+}
 /* 경력사항 */
 .out-box03 .item01 {
     flex: 1;
@@ -191,13 +197,13 @@ span.br {
     border-bottom: none;
 }
 .out-box03 .item03 {
-    flex: 0.8; 
+    flex: 0.5; 
 }
 .out-box03 .item04 {
     flex: 1;
 }
 .out-box03 .item05 {
-    flex: 0.6;
+    flex: 0.5;
 }
 /* 전문기술・자격증 */
 .out-box04 .item01 {
@@ -247,14 +253,14 @@ input[type='radio'] {
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box05 .item01 {
-    flex: 0.8;
+    flex: 0.5;
 }
 .out-box05 .item02 {
-    flex: 0.8;
+    flex: 0.5;
     border-right: 1px solid #ACC7D4;
 }
 .out-box05 .item03 {
-    flex: 0.8;
+    flex: 0.5;
 }
 .out-box05 .item04 {
     flex: 2;
@@ -334,3 +340,153 @@ button.n-delete {
 }
 
 /* resize */
+@media (max-width: 976px) {
+    input {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+    }
+    /* 목록 타이틀 */
+    .item-title {
+        display: none;
+    }
+    .input-container span.mob-title {
+        display: block;
+        padding: 6px 0;
+        font-size: 18px;
+        font-weight: 600;
+        background: #E0EBF0;
+        border-bottom: 1px solid #ACC7D4;
+    }
+    /* 목록 공통 */
+    .input-container {
+        display: block;
+        margin-bottom: 52px;
+        border-bottom: 1px solid #ACC7D4;
+        position: relative;
+    }
+    .list_box .list {
+        border: none !important;
+    }
+    .input-container label {
+        display: block;
+        padding: 0;
+    }
+    /* 학력사항 */
+    .out-box01 .list:not(.out-box01 .item01) {
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+    /* 외국어능력 */
+    .out-box02 .input-container span.mob-title {
+        padding-top: 6px;
+        line-height: 140%;
+    }
+    .out-box02 .list_box .mob-sub-title {
+        display: flex;
+        padding-top: 6px;
+        margin-top: 6px;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid #ACC7D4;
+    }
+    .out-box02 .item03 , .out-box02 .item04 {
+        width: 50%;
+        float: left;
+    }
+    /* 경력사항 */
+    .out-box03 .item01 , .out-box03 .item03 {
+        width: 30%;
+        float: left;
+    }
+    .out-box03 .item02 , .out-box03 .item04{
+        width: 70%;
+        float: left;
+    }
+    .out-box03 .item05 {
+        clear: both;
+    }
+    /* 전문기술・자격증 */
+    .out-box04 .list {
+        width: 50%;
+        float: left;
+    }
+    .out-box04 .list .calendar-wrap {
+        width: 100%;
+    }
+    .out-box04 .item04 .radio-container {
+        transform: none;
+        margin-top: 15px;
+    }
+    .out-box04 .item04 .radio-container {
+        gap: 30px;
+    }
+    /* 병역 */
+    .out-box05 .item01, .out-box05 .item02, .out-box05 .item03 {
+        width: calc(100% / 3);
+        float: left;
+    }
+    .out-box05 .item04 {
+        clear: both;
+    }
+    .out-box05 .item05 , .out-box05 .item06 {
+        width: 50%;
+        float: left;
+    }
+    .out-box05 .item06 {
+        display: block !important;
+    }
+    /* 달력 */
+    .list .calendar-area {
+        padding: 10px 0;
+    }
+    .calendar-wrap input::-webkit-calendar-picker-indicator, .list input::-webkit-inner-spin-button {  
+        left: 1.5%;
+    }
+    .list .calendar-wrap:first-child::after {
+        right: -1%;
+    }
+    .calendar-wrap input {
+        width: calc(100% - 50px) !important;
+    }
+    /* 삭제 버튼 */
+    .delete-item {
+        width: fit-content !important;
+        border: none;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        border-right: none !important;
+    }
+    .delete-item button {
+        position: static;
+        transform: none;
+    }
+    /* border 스타일 */
+
+}
+@media (max-width: 767px) {
+    /* 모바일 버튼 스타일 */
+    button.add-field {
+        margin-top: 10px;
+    }
+    button.delete {
+        padding: 9px;
+    }
+    button.delete > span{
+        display: block;
+        width: 12px;
+        height: 3px;
+        background: #EF2626;
+        text-indent: -9999px;
+    }
+}
+@media (max-width: 482px) {
+    legend.step {
+        font-size: 22px;
+    }
+    input {
+        padding: 8px;
+        font-size: 15px;
+    }
+}

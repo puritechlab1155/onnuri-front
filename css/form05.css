@@ -209,6 +209,7 @@ input {
         border-right: none;
     }
     .item01 > ul {
+        justify-content: space-around;
         padding: 16px 10px;
         gap: 0.6vw;
     }
@@ -290,6 +291,10 @@ input {
     }
     .item01 > ul {
         gap: 0;
+        justify-content: space-evenly;
+    }
+    input[type='radio'] {
+        margin-right: 2px;
     }
     .item01 > ul li label {
         font-size: 15px;

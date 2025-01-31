@@ -6,7 +6,7 @@
     <!-- 사파리폰트적용 (프리텐다드) -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
     
-    <title>Acts29비전빌리지 / 4단계</title>
+    <title>Acts29비전빌리지 / 2단계</title>
 
     <!--Jqurey CDN-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -328,7 +328,7 @@
                                             <input id="language" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <label for="self-assessment" class="list item02 border_b">
+                                        <div for="self-assessment" class="list item02 border_b">
                                             <span class="mob-title">
                                                 영역별 자가진단<br>(매우잘함 5-4-3-2-1 매우못함)
                                                 <ul class="mob-sub-title">
@@ -338,8 +338,57 @@
                                                     <li>쓰기</li>
                                                 </ul>
                                             </span>
-                                            <input id="self-assessment" type="text" placeholder=" - " required>
-                                        </label>
+                                            <ul class="select">
+                                                <li>
+                                                    <label for="speaking">
+                                                        <span style="display: none;">말하기</span>
+                                                        <select id="speaking">
+                                                            <option value="5">5</option>
+                                                            <option value="4">4</option>
+                                                            <option value="3">3</option>
+                                                            <option value="2">2</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="listening">
+                                                        <span style="display: none;">듣기</span>
+                                                        <select id="listening">
+                                                            <option value="5">5</option>
+                                                            <option value="4">4</option>
+                                                            <option value="3">3</option>
+                                                            <option value="2">2</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="reading">
+                                                        <span style="display: none;">읽기</span>
+                                                        <select id="reading">
+                                                            <option value="5">5</option>
+                                                            <option value="4">4</option>
+                                                            <option value="3">3</option>
+                                                            <option value="2">2</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="writing">
+                                                        <span style="display: none;">쓰기</span>
+                                                        <select id="writing">
+                                                            <option value="5">5</option>
+                                                            <option value="4">4</option>
+                                                            <option value="3">3</option>
+                                                            <option value="2">2</option>
+                                                            <option value="1">1</option>
+                                                        </select>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         
                                         <label for="exam-score" class="list item03 border_b">
                                             <span class="mob-title">공인 시험 점수</span>
