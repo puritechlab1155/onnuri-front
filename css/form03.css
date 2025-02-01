@@ -91,24 +91,6 @@ span.br {
 .delete-item { /* 삭제 버튼 비율 */
     flex: 0.31;
 }
-.item01 {
-    border-right: none;
-}
-.item02 {
-    border-right: 1px solid #ACC7D4;
-}
-.item03 { 
-    border-left: none;
-}
-.item04 {
-    border-right: none;
-}
-.item05 {
-    border-right: none;
-}
-.item06 {
-    border-right: none;
-}
 .list_box .item01 {
     border-bottom: none;
     border-top: none;
@@ -231,7 +213,7 @@ input[type='radio'] {
     align-items: stretch;
     justify-content: center;
 }
-.top-container .list .box03-title {
+.out-box03 .list .box03-title {
     flex: 0 0 160px;
     display: flex;
     flex-direction: column;
@@ -245,7 +227,7 @@ input[type='radio'] {
 .out-box03 .top-container .sub-box {
     flex: 1;
 }
-.out-box03 .top-container .sub-box label{
+.out-box03 label{
     display: flex;
     align-items: center;
     padding: 0;
@@ -259,7 +241,7 @@ input[type='radio'] {
 .out-box03 .top-container .sub-box label:nth-child(1) {
     border-bottom: 1px solid #ACC7D4;
 }
-.out-box03 .top-container .sub-box input {
+.out-box03 input {
     margin: 0 10px;
 }
 .out-box03 .item02:not(.item-title .item02){
@@ -272,19 +254,14 @@ input[type='radio'] {
     border-right: 1px solid #ACC7D4;
     border-left: 1px solid #ACC7D4;
 }
+.out-box03 .bottom-container .list {
+    align-items: center;
+}
 .bottom-container .list .box03-title {
     flex: 0 0 260px;
-    background : lightblue;
+    padding: 14px 0;
+    background : #E0EBF0;
 }
-/* .out-box03 .item03 {
-    flex: 0.5; 
-}
-.out-box03 .item04 {
-    flex: 1;
-}
-.out-box03 .item05 {
-    flex: 0.5;
-} */
 /* 전문기술・자격증 */
 .out-box04 .item01 {
     flex: 1;
