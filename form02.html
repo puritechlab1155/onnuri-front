@@ -689,7 +689,6 @@
     </section>
     <script src="js/script.js"></script>
     <script>
-        // -- 작성칸 추가 버튼 클릭 시
         let counter = 1; // 초기 카운터 설정
 
         document.querySelectorAll('.add-field').forEach(button => {
@@ -713,14 +712,13 @@
                 deleteButton.classList.remove('n-delete');
                 deleteButton.classList.add('delete');
 
-                // 복제된 박스의 .item01의 border-top을 none으로 설정
-                const item01 = newContainer.querySelector('.item01');
-                if (item01) {
-                    item01.style.borderTop = 'none';
-                }
+                // 현재 윈도우 너비 확인
+                const windowWidth = window.innerWidth;
 
-                // 새로운 input-container의 패딩 탑을 40px로 설정
-                newContainer.style.paddingTop = '40px';
+                // 윈도우 너비가 976px 이하일 때만 패딩 설정
+                if (windowWidth <= 976) {
+                    newContainer.style.paddingTop = '40px';
+                }
 
                 // label의 for 값과 input, select의 id 값을 수정
                 newContainer.querySelectorAll('label').forEach(label => {
@@ -748,6 +746,18 @@
 
                 // 새로운 input-container를 list_box에 추가
                 parentBox.querySelector('.list_box').appendChild(newContainer);
+            });
+        });
+
+        // 윈도우 리사이즈 이벤트 핸들러
+        window.addEventListener('resize', function() {
+            const newContainers = document.querySelectorAll('.list_box .input-container:not(:first-child)'); // 첫 번째 컨테이너 제외
+            newContainers.forEach(container => {
+                if (window.innerWidth <= 976) {
+                    container.style.paddingTop = '40px';
+                } else {
+                    container.style.paddingTop = ''; // 기본값으로 되돌리기
+                }
             });
         });
 

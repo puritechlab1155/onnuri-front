@@ -382,9 +382,6 @@ button.n-delete {
         border-bottom: 1px solid #ACC7D4;
         position: relative;
     }
-    .list_box .list {
-        border: none !important;
-    }
     .input-container label {
         display: block;
         padding: 0;
@@ -398,15 +395,24 @@ button.n-delete {
     /* 외국어능력 */
     .out-box02 .input-container span.mob-title {
         padding-top: 6px;
+        padding-bottom: 0;
         line-height: 140%;
+    }
+    .out-box02 .input-container .item01 span.mob-title {
+        padding-bottom: 6px;
     }
     .out-box02 .list_box .mob-sub-title {
         display: flex;
-        padding-top: 6px;
         margin-top: 6px;
         justify-content: space-around;
         align-items: center;
-        border-top: 1px solid #ACC7D4;
+    }
+    .out-box02 .list_box .mob-sub-title li {
+        width: 100%;
+        padding: 6px 0;
+    }
+    .out-box02 .list_box .mob-sub-title li:not(:last-child) {
+        border-right: 1px solid #ACC7D4;
     }
     .out-box02 .item03 , .out-box02 .item04 {
         width: 50%;
@@ -433,8 +439,8 @@ button.n-delete {
         width: 100%;
     }
     .out-box04 .item04 .radio-container {
+        padding: 15px 0;
         transform: none;
-        margin-top: 15px;
     }
     .out-box04 .item04 .radio-container {
         gap: 30px;
@@ -470,18 +476,37 @@ button.n-delete {
     /* 삭제 버튼 */
     .delete-item {
         width: fit-content !important;
-        border: none;
+        border: none !important;
         position: absolute;
         top: 0px;
         right: 0;
-        border-right: none !important;
     }
     .delete-item button {
         position: static;
         transform: none;
     }
     /* border 스타일 */
-
+    .list_box .list:not(.delete-item) {
+        border: none;
+        border-left: 1px solid #ACC7D4 !important;
+    }
+    .out-box01 .item01 , .out-box02 .item01 ,
+    .out-box02 .item02 , .out-box02 .list_box .mob-sub-title ,
+    .out-box03 .item01 , .out-box03 .item02 , 
+    .out-box03 .item03 , .out-box03 .item05 ,
+    .out-box04 .item01 , .out-box04 .item02 , .out-box04 .item03 ,
+    .out-box05 .item01 , .out-box05 .item02 , 
+    .out-box05 .item03 , .out-box05 .item04 {
+        border-top: 1px solid #ACC7D4 !important;
+    }
+    .out-box01 .item01 , .out-box02 .item01 ,
+    .out-box01 .item03 , .out-box01 .item05 , 
+    .out-box02 .item02 , .out-box02 .item04 ,
+    .out-box03 .item02 , .out-box03 .item04 , .out-box03 .item05 ,
+    .out-box04 .item02 , .out-box04 .item04 , 
+    .out-box05 .item03 , .out-box05 .item04 , .out-box05 .item06 {
+        border-right: 1px solid #ACC7D4 !important;
+    }
 }
 @media (max-width: 767px) {
     /* 경력사항 */
@@ -516,7 +541,10 @@ button.n-delete {
     .out-box04 .list.item01 , .out-box04 .list.item02 {
         width: 100%;
     }
-
+    /* bordee 스타일 */
+    .out-box04 .item03 {
+        border-top: none !important;
+    }
     /* 폰트 사이즈 */
     .input-container span.mob-title {
         font-size: 15px;
