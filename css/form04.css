@@ -184,7 +184,8 @@ button.n-delete {
 /* resize */
 @media (max-width: 1120px) {
     .list_box {
-        margin-bottom: 60px;
+        margin-bottom: 20px;
+        position: relative;
     }
     .border_b {
         border: none;
@@ -250,7 +251,7 @@ button.n-delete {
         display: block;
         text-align: right;
         position: absolute;
-        top: -40px;
+        top: 0;
         right: 0;
     }
 
