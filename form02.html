@@ -689,7 +689,9 @@
     </section>
     <script src="js/script.js"></script>
     <script>
-        // 작성칸 추가 버튼 클릭 시
+        // -- 작성칸 추가 버튼 클릭 시
+        let counter = 1; // 초기 카운터 설정
+
         document.querySelectorAll('.add-field').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.preventDefault(); // 기본 동작 방지
@@ -717,12 +719,39 @@
                     item01.style.borderTop = 'none';
                 }
 
+                // 새로운 input-container의 패딩 탑을 40px로 설정
+                newContainer.style.paddingTop = '40px';
+
+                // label의 for 값과 input, select의 id 값을 수정
+                newContainer.querySelectorAll('label').forEach(label => {
+                    const inputId = label.getAttribute('for');
+                    if (inputId) {
+                        label.setAttribute('for', `${inputId}-${counter}`);
+                    }
+                });
+
+                newContainer.querySelectorAll('input').forEach(input => {
+                    const inputId = input.id;
+                    if (inputId) {
+                        input.id = `${inputId}-${counter}`;
+                    }
+                });
+
+                newContainer.querySelectorAll('select').forEach(select => {
+                    const selectId = select.id;
+                    if (selectId) {
+                        select.id = `${selectId}-${counter}`;
+                    }
+                });
+
+                counter++; // 카운터 증가
+
                 // 새로운 input-container를 list_box에 추가
                 parentBox.querySelector('.list_box').appendChild(newContainer);
             });
         });
 
-        // 삭제 버튼 클릭 시 해당 input-container 삭제
+        // -- 삭제 버튼 클릭 시 해당 input-container 삭제
         document.querySelectorAll('.list_box').forEach(listBox => {
             listBox.addEventListener('click', function(event) {
                 const deleteButton = event.target.closest('.delete');

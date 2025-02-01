@@ -7,6 +7,9 @@ fieldset {
 h4.list-title{
     width: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 16px 0;
     font-size: 18px;
     font-weight: 700;
@@ -318,7 +321,7 @@ input[type='radio'] {
     margin-right: 8px;
 }
 .calendar-wrap input::-webkit-calendar-picker-indicator, .list.item03 input::-webkit-inner-spin-button {  
-    /* opacity: 0; */
+    opacity: 0;
     width: 24px;
     height: 24px;
     position: absolute;
@@ -375,7 +378,7 @@ button.n-delete {
     /* 목록 공통 */
     .input-container {
         display: block;
-        margin-bottom: 52px;
+        margin-bottom: 20px;
         border-bottom: 1px solid #ACC7D4;
         position: relative;
     }
@@ -481,10 +484,11 @@ button.n-delete {
 
 }
 @media (max-width: 767px) {
-    /* 모바일 버튼 스타일 */
-    button.add-field {
-        margin-top: 10px;
+    /* 경력사항 */
+    .out-box03 .item01 , .out-box03 .item02{
+        width: 100%;
     }
+    /* 모바일 버튼 스타일 */
     button.delete {
         padding: 9px;
     }
@@ -497,11 +501,27 @@ button.n-delete {
     }
 }
 @media (max-width: 482px) {
+    input {
+        padding: 8px;
+        font-size: 15px;
+    }
     legend.step {
         font-size: 22px;
     }
-    input {
+    /* 외국어 능력 */
+    .out-box02 .select li select {
         padding: 8px;
+    }
+    /* 전문기술・자격증 */
+    .out-box04 .list.item01 , .out-box04 .list.item02 {
+        width: 100%;
+    }
+
+    /* 폰트 사이즈 */
+    .input-container span.mob-title {
+        font-size: 15px;
+    }
+    .out-box02 .select li select {
         font-size: 15px;
     }
 }
