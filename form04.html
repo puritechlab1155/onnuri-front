@@ -417,7 +417,7 @@
             const form = document.getElementById('form04');
             const submitBtn = document.getElementById('submit-btn');
 
-            const getAllInputs = () => form.querySelectorAll('input[required], input');
+            const getAllInputs = () => form.querySelectorAll('input[required], .list_box input');
 
             function checkFormCompletion() {
                 const inputs = getAllInputs(); 
@@ -479,7 +479,7 @@
                 // 윈도우의 너비 확인 후 스타일 설정
                 setStyles(newField);
 
-                // 새로 추가된 입력 필드에 이벤트 리스너 추가 >> 버튼 활성화 안되는 오류 ******************
+                // 새로 추가된 입력 필드에 이벤트 리스너 추가 >> 버튼 활성화 안되는 오류 *******************************
                 newField.find('input[required]').on('input', function() {
                     checkFormCompletion(); // 새 입력 필드 체크
                 });

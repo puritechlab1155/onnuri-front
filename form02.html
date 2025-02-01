@@ -689,6 +689,7 @@
     </section>
     <script src="js/script.js"></script>
     <script>
+        // -- 작성칸 추가 버튼
         let counter = 1; // 초기 카운터 설정
 
         document.querySelectorAll('.add-field').forEach(button => {
@@ -777,12 +778,13 @@
         });
 
         // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
+        // >> 복제된 박스 경우 값이 존재해도 버튼 활성화 안되는 오류 *******************************
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('form02');
             const submitBtn = document.getElementById('submit-btn');
             
             // 모든 필수 input과 복제된 박스의 input 가져오기
-            const getAllInputs = () => form.querySelectorAll('input[required], .n1-sub01.step-n input');
+            const getAllInputs = () => form.querySelectorAll('input[required], .input-container input');
 
             // 각 input 입력 필드에 변화가 있을 때마다 체크하는 함수
             function checkFormCompletion() {
@@ -803,7 +805,7 @@
                 const allFilled = Array.from(allInputs).every(input => input.value.trim() !== '');
                 
                 if (allFilled) { 
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form03.html';
+                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form04.html';
                 }
             });
 
