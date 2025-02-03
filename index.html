@@ -677,11 +677,19 @@
             
             // 초기 헤더 스타일 설정
             changeHead();
-            $hamIcon.css({ background: '#fff' });
 
             // 햄버거 아이콘 클릭 이벤트
             $hamIcon.click(function() {
                 changeHead();
+
+                // 스크롤 탑이 0이고, 닫혔을때
+                if ($scrollTop === 0 && !$offcanvas.hasClass('active')) { 
+                    $logoImg.attr('src', 'img/avv_logo.png');
+                    $hamIcon.css({ background: '#fff' });
+                    
+                } else if ($offcanvas.hasClass('active')) {
+                    $hamIcon.css({ background: '#222' });
+                }
             });
 
             function changeHead() {
@@ -701,15 +709,7 @@
                     $menuItem.css({ color: '#fff' });
                     $userBtn.css({ color: '#fff' });
                     $line.css({ background: '#fff' });
-
-                    if ($scrollTop === 0 && $offcanvas.not().hasClass('active')) {
-                        $logoImg.attr('src', 'img/avv_logo.png');
-                        $hamIcon.css({ background: '#fff' });
-                    } else {
-                        $hamIcon.css({ background: '#222' });
-                    }
-                } else if ($offcanvas.hasClass('active')) {
-                    $hamIcon.css({ background: '#222' });
+                    $hamIcon.css({ background: '#fff' });
                 }
             }
 
