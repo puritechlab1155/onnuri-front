@@ -678,6 +678,10 @@
             // 초기 헤더 스타일 설정
             changeHead();
 
+            $menuItem.mouseenter (function(){
+                $(this).css({ color: '#E5FF00' });
+            });
+
             // 햄버거 아이콘 클릭 이벤트
             $hamIcon.click(function() {
                 changeHead();
@@ -700,6 +704,9 @@
                     $header.css({ background: '#fff' });
                     $logoImg.attr('src', 'img/offcanvas-logo.png');
                     $menuItem.css({ color: '#222' });
+                    $menuItem.mouseleave (function(){
+                        $(this).css({ color: '#222' });
+                    });
                     $userBtn.css({ color: '#222' });
                     $line.css({ background: '#999' });
                     $hamIcon.css({ background: '#222' });
@@ -708,6 +715,9 @@
                     $header.css({ background: 'transparent' });
                     $logoImg.attr('src', 'img/avv_logo.png');
                     $menuItem.css({ color: '#fff' });
+                    $menuItem.mouseleave (function(){
+                        $(this).css({ color: '#fff' });
+                    });
                     $userBtn.css({ color: '#fff' });
                     $line.css({ background: '#fff' });
                     $hamIcon.css({ background: '#fff' });
