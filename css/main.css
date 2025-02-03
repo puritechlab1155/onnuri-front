@@ -1494,11 +1494,11 @@ em {
     width: calc(1126px * 2);
     overflow: hidden;
     padding: 42px 0;
+    animation: roll 15s linear infinite;
   }
   #home .section05 .feature-list {
     width: calc(100% / 2) !important;
     float: left;
-    animation: roll 13s linear infinite;
   }
 }
 @media (max-width: 524px) { /*모바일 폰트 사이즈로 줄기*/
