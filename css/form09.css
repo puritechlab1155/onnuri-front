@@ -1,48 +1,48 @@
 /*9단계 신청서 영역*/
-input {
+main.form_09 input {
     border: 1px solid #BABABA;
     font-size: 16px;
 }
-form {
+main.form_09 form {
     width: 100%;
     margin: 0 auto;
     color: #222;
 }
 /*인풋 박스 및 캡션 초기값*/
-input::placeholder {
+main.form_09 input::placeholder {
     color: #777;
 }
-input:focus {
+main.form_09 input:focus {
     outline: none;
 }
-span.caption {
+main.form_09 span.caption {
     display: block;
     font-weight: 400 !important;
     color: #777;
     margin-top: -4px;
     margin-bottom: 8px;
 }
-.caption.m-top {
+main.form_09 .caption.m-top {
     display: block;
     margin-top: 8px;
 }
-.caption.minus-top {
+main.form_09 .caption.minus-top {
     display: block;
     margin-top: -12px;
 }
-.inline-cap {
+main.form_09 .inline-cap {
     display: inline-block;
 }
 
 
 /*전체 문항 스타일*/
-fieldset {
+main.form_09 fieldset {
     border: none;
     padding: 0;
     margin: 0;
     margin-top: 42px; 
 }
-fieldset legend {
+main.form_09 fieldset legend {
     display: block;
     width: 100%;
     font-size: 30px;
@@ -50,7 +50,7 @@ fieldset legend {
     color: #222;
     position: relative;
 }
-fieldset legend span.foldBtn {
+main.form_09 fieldset legend span.foldBtn {
     padding: 7px 6px;
     position: absolute;
     top: 50%;
@@ -61,24 +61,24 @@ fieldset legend span.foldBtn {
     line-height: 0;
     cursor: pointer;
 }
-.input-wrap {
+main.form_09 .input-wrap {
     width: 100%;
     padding: 16px;
     margin-top: 16px;
     border: 1px solid #ddd;
 }
-.input-wrap  .step-n {
+main.form_09 .input-wrap  .step-n {
     width: 100%;
     margin-bottom: 34px;
 }
-.step-n label {
+main.form_09 .step-n label {
     display: block;
     margin-bottom: 8px;
     width: 100%;
     font-size: 16px;
     font-weight: 600;
 }
-.step-n textarea {
+main.form_09 .step-n textarea {
     display: block;
     width: 100%;
     height: 94px;
@@ -90,12 +90,12 @@ fieldset legend span.foldBtn {
     border: 1px solid #B1B1B1;
     resize: none;
 }
-.step-n textarea:focus {
+main.form_09 .step-n textarea:focus {
     outline: none;
     height: 200px;
     text-overflow: scroll;
 }
-.step-n span {
+main.form_09 .step-n span {
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -103,47 +103,46 @@ fieldset legend span.foldBtn {
 
 
 /* 공통 클래스 스타일 */
-.mult-q div input {
+main.form_09 .mult-q div input {
     flex: 1;
     padding: 6px 16px;
     border-radius: 8px;
 }
-.mult-q {
+main.form_09 .mult-q {
     margin: 40px 0;
 }
-.mult-q span {
+main.form_09 .mult-q span {
     display: block;
     margin-bottom: 8px;
 }
-.mult-q div {
+main.form_09 .mult-q div {
     margin-bottom: 34px;
 }
-.mult-q div:first-child {
+main.form_09 .mult-q div:first-child {
     margin-top: 16px;
 }
-.en-list {
+main.form_09 .en-list {
     margin-bottom: 8px;
 }
-.en-list span {
+main.form_09 .en-list span {
     display: block;
 }
-.check > span {
+main.form_09 .check > span {
     float: left;
     margin-right: 16px;
 }
-.step-n .checkBox {
+main.form_09 .step-n .checkBox {
     width: 145px;
-    
     display: flex;
     gap: 8px;
     align-items: center;
     position: relative;
 }
-.step-n .checkBox label {
+main.form_09 .step-n .checkBox label {
     margin: 0;
     font-weight: 400;
 }
-.step-n .checkBox input::before {
+main.form_09 .step-n .checkBox input::before {
     content: '/';
     width: 10px;
     display: block;
@@ -154,70 +153,70 @@ fieldset legend span.foldBtn {
     color: #777;
     font-weight: 200;
 }
-.check > label:first-child {
+main.form_09 .check > label:first-child {
     margin-top: 16px;
 }
 
 /*문항 개별 스타일*/
-.n1-sub04 div {
+main.form_09 .n1-sub04 div {
     margin-bottom: 8px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
 }
-.n1-sub05 label, .n1-sub06 label, .n1-sub07 label{
+main.form_09 .n1-sub05 label, .n1-sub06 label, .n1-sub07 label{
     margin-bottom: 12px;
 }
 /*n3*/
-.n3-sub04 span {
+main.form_09 .n3-sub04 span {
     margin-top: 8px;
 }
 
 /*7단계, 8단계 신청서 영역*/
-#form07 .input-wrap {
+main.form_09 #form07 .input-wrap {
     border: none; 
     padding: 16px 0;
 }
-#form07 .step-n label {
+main.form_09 #form07 .step-n label {
     color: #00A8D3;
 }
-#form07 .step-n label span {
+main.form_09 #form07 .step-n label span {
     display: contents;
 }
-#form07 .step-n textarea {
+main.form_09 #form07 .step-n textarea {
     height: 150px;
 }
-#form07 .step-n textarea:focus {
+main.form_09 #form07 .step-n textarea:focus {
     height: 300px;
 }
-#form08 .input-wrap {
+main.form_09 #form08 .input-wrap {
     border: none; 
     padding: 16px 0;
 }
-#form08 .step-n label {
+main.form_09 #form08 .step-n label {
     color: #00A8D3;
 }
-#form08 .step-n textarea {
+main.form_09 #form08 .step-n textarea {
     height: 150px;
 }
-#form08 .step-n textarea:focus {
+main.form_09 #form08 .step-n textarea:focus {
     height: 300px;
 }
 
 
 /*resize*/
 @media (max-width: 482px) {
-    fieldset legend {
+    main.form_09 fieldset legend {
         font-size: 22px;
     }
-    .step-n label {
+    main.form_09 .step-n label {
         font-size: 15px;
     }
-    .step-n span {
+    main.form_09 .step-n span {
         font-size: 15px;
     }
-    .step-n textarea {
+    main.form_09 .step-n textarea {
         font-size: 15px;
     }
 }
