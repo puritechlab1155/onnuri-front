@@ -137,11 +137,24 @@ button {
     height: auto !important;
     display: none;
 }
-
+.header .content .login-pre { /* 로그인 완료시 사라짐 */
+    display: none;
+}
+.header .content .login-next { /* 로그인 완료시 나타남 */
+    /* display: none; */
+}
+.mobile_display .login-pre {
+    display: flex;
+    gap: 16px;
+    background: lightblue;
+}
 
 @media (max-width: 928px) {
     .header .content .nav .gnb {
-        gap: 24px;
+        gap: 18px;
+    }
+    .header .content .login-link .line {
+        margin: 0 8px;
     }
 }
 @media (max-width: 767px) {
