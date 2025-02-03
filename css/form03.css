@@ -97,6 +97,7 @@ span.br {
 }
 .out-box01 .list_box .item02 {
     border-bottom: none;
+    border-right: none;
 }
 .out-box01 .list_box .item05 {
     border-right: 1px solid #ACC7D4;
@@ -110,22 +111,24 @@ span.br {
 }
 .out-box03 .item02 {
     border-right: none;
+    border-left: none;
 }
 /* 각 항목에 대해 비율을 다르게 설정 */
 /* 교회등록 */
 .out-box01 .item01 {
     flex: 2;
+    border-right: none;
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box01 .item02 {
-    flex: 1;
-    border-right: 1px solid #ACC7D4;
+    flex: 2;
 }
 .out-box01 .item03 {
     flex: 1; 
 }
 .out-box01 .item04 {
     flex: 2;
+    border-right: none;
 }
 .out-box01 .item05 {
     flex: 0.8;
@@ -138,15 +141,11 @@ span.br {
     flex: 1;
     position: relative;
 }
-.out-box01 .list .text-area .text-wrap:first-child::after {
-    content: ' / ';
-    position: absolute;
-    top: 50%;
-    right: -2px;
-    transform: translateY(-50%);
-}
 .out-box01 .item02 .calendar-wrap:first-child::after {
     content: none !important;
+}
+.out-box01 .calendar-wrap input::-webkit-calendar-picker-indicator, .list.item03 input::-webkit-inner-spin-button {  
+    left: 8%;
 }
 /* 사역활동 */
 .out-box02 .item-title {
@@ -167,14 +166,13 @@ span.br {
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box02 .item02 {
-    flex: 1.5;
-    border-right: 1px solid #ACC7D4;
+    flex: 1;
 }
 .out-box02 .item03 {
     flex: 2; 
 }
 .out-box02 .item04 {
-    flex: 0.5;
+    flex: 0.8;
 }
 /* 1:1 제자양육 */
 .out-box03 .list-title {
@@ -252,7 +250,6 @@ input[type='radio'] {
     display: flex;
     flex-wrap: wrap;
     border-right: 1px solid #ACC7D4;
-    border-left: 1px solid #ACC7D4;
 }
 .out-box03 .bottom-container .list {
     align-items: center;
@@ -262,13 +259,14 @@ input[type='radio'] {
     padding: 14px 0;
     background : #E0EBF0;
 }
-/* 전문기술・자격증 */
+/* 신앙 훈련 (교회 내・외부 각종 훈련 포함) */
 .out-box04 .item01 {
-    flex: 1;
+    flex: 0.8;
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box04 .item02 {
-    flex: 1; 
+    flex: 2; 
+    border-right: none;
 }
 .out-box04 .item02:not(.item-title .item02) {
     border-bottom: none;
@@ -277,54 +275,93 @@ input[type='radio'] {
     flex: 1; 
 }
 .out-box04 .item04 {
-    flex: 1.2;
-}
-.out-box04 .list .calendar-wrap {
-    display: flexbox;
     flex: 1;
 }
-.out-box04 .calendar-wrap:first-child::after {
-    content: none !important;
+.out-box04 .item05 {
+    flex: 0.7;
 }
-.out-box04 .calendar-wrap input {
-    width: 75%;
-}
-.out-box04 .item04 .radio-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 56px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-/* 병역 */
+/* 단기 선교・아웃리치 경험 */
 .out-box05 .list_box .item01 {
     border-bottom: 1px solid #ACC7D4;
 }
 .out-box05 .item01 {
-    flex: 0.5;
+    flex: 0.8;
 }
 .out-box05 .item02 {
-    flex: 0.5;
-    border-right: 1px solid #ACC7D4;
-}
-.out-box05 .item03 {
-    flex: 0.5;
-}
-.out-box05 .item04 {
     flex: 2;
 }
-.out-box05 .list_box .item04 {
-    border-bottom: none;
-}
-.out-box05 .item05 {
+.out-box05 .item03 {
     flex: 1;
 }
-.out-box05 .item06 {
-    flex: 0.5;
+.out-box05 .item04 {
+    flex: 1;
+}
+.out-box05 .item05 {
+    flex: 0.7;
+}
+.out-box05 .list_box .item02 {
+    border-bottom: none;
+    border-right: none;
 }
 
+/* 파송 희망 지역 (택1) */
+.out-box06 .input-container {
+    display: block;
+}
+.out-box06 .item01 {
+    padding: 6px 0;
+    border: 1px solid #ACC7D4;
+}
+.out-box06 .item01 .radio-container {
+    padding: 0 16px;
+}
+.out-box06 .item01 .radio-area {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.radio-etc label{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.radio-etc label input[type='text'] {
+    width: fit-content;
+    margin: 0;
+    margin-left: 16px
+}
+.out-box06 .item01 .radio-area label {
+    cursor: pointer;
+}
+.out-box06 .bottom-container {
+    display: flex;
+}
+.out-box06 .bottom-container label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0;
+}
+.out-box06 .bottom-container label .box06-title {
+    padding: 14px 0;
+    flex: 0 0 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E0EBF0;
+    border-right: 1px solid #ACC7D4;
+    font-size: 18px;
+    font-weight: 500;
+}
+.out-box06 .bottom-container label input {
+    margin: 0 10px;
+}
+.out-box06 .item04 {
+    border-right: 1px solid #ACC7D4;
+}
 
 /* 달력 */
 .list .calendar-area {
@@ -384,3 +421,4 @@ button.n-delete {
 }
 
 /* resize */
+

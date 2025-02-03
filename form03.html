@@ -278,50 +278,50 @@
                                         <div class="list item01 border_b">
                                             <span class="mob-title">현출석교회(담임목사명)</span>
                                             <div class="text-area">
-                                                <label for="" class="text-wrap">
+                                                <label for="church-name01" class="text-wrap">
                                                     <span style="display: none;">교회 이름</span>
-                                                    <input id="" type="text" placeholder=" - " required>                                         
+                                                    <input id="church-name01" type="text" placeholder=" - " required>                                         
                                                 </label>
-                                                <label for="" class="text-wrap">
+                                                <label for="pastor-name01" class="text-wrap">
                                                     <span style="display: none;">담임목사명</span>
-                                                    <input id="" type="text" placeholder=" - " required>
+                                                    <input id="pastor-name01" type="text" placeholder=" - " required>
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div class="list item02 border_b b_none_r">
+                                        <div class="list item02 border_b">
                                             <span class="mob-title">교적등록 연월일</span>
                                             <div class="calendar-area">
                                                 <label for="start-date01" class="calendar-wrap">
                                                     <span style="display: none;">교적등록 연월일</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date01" type="date" required>                                         
+                                                    <input id="date01" type="date" required>                                         
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <label for="" class="list item03 border_b">
+                                        <label for="position01" class="list item03 border_b">
                                             <span class="mob-title">직분</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="position01" type="text" placeholder=" - " required>
                                         </label>
 
                                         <div class="list item04 border_b">
                                             <span class="mob-title">세례받은 교회/연도</span>
                                             <div class="text-area">
-                                                <label for="" class="text-wrap">
+                                                <label for="church-name02" class="text-wrap">
                                                     <span style="display: none;">교회 이름</span>
-                                                    <input id="" type="text" placeholder=" - " required>                                         
+                                                    <input id="church-name02" type="text" placeholder=" - " required>                                         
                                                 </label>
-                                                <label for="finish-date" class="text-wrap">
-                                                    <span style="display: none;">담임목사명</span>
-                                                    <input id="finish-date" type="text" placeholder=" - "  required>
+                                                <label for="year" class="text-wrap">
+                                                    <span style="display: none;">연도</span>
+                                                    <input id="year" type="text" placeholder=" - "  required>
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <label for="remarks01" class="list item05 border_b">
+                                        <label for="officiating-pastor" class="list item05 border_b">
                                             <span class="mob-title">집례목사</span>
-                                            <input id="remarks01" type="text" placeholder=" - " required>
+                                            <input id="officiating-pastor" type="text" placeholder=" - " required>
                                         </label>
                                     </div>
                                 </div>
@@ -346,35 +346,35 @@
                                 <!-- 목록 -->
                                 <div class="list_box">
                                     <div class="input-container">
-                                        <label for="" class="list item01 border_b b_none_r">
+                                        <label for="department" class="list item01 border_b b_none_r">
                                             <span class="mob-title">소속기관(부서)</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="department" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <label for="" class="list item02 border_b">
+                                        <label for="detail01" class="list item02 border_b">
                                             <span class="mob-title">내용</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="detail01" type="text" placeholder=" - " required>
                                         </label>
                                         
                                         <div class="list item03 border_b b_none_r">
                                             <span class="mob-title">기간</span>
                                             <div class="calendar-area">
-                                                <label for="start-date02" class="calendar-wrap">
+                                                <label for="start-date01" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date02" type="date" required>                                         
+                                                    <input id="start-date01" type="date" required>                                         
                                                 </label>
-                                                <label for="finish-date02" class="calendar-wrap">
+                                                <label for="finish-date01" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date02" type="date" required>
+                                                    <input id="finish-date01" type="date" required>
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <label for="" class="list item04 border_b">
+                                        <label for="note01" class="list item04 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="note01" type="text" placeholder=" - " required>
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -393,7 +393,7 @@
                                 <h4 class="list-title">
                                     <span>1:1 제자양육</span>
                                     <label class="radio-container">
-                                        <input type="radio">해당없음
+                                        <input type="radio" name="not">해당없음
                                     </label>
                                 </h4>
                                 <!-- 목록 -->
@@ -407,13 +407,13 @@
                                                     <span class="ft-400">(양육자이름)</span>
                                                 </span>
                                                 <div class="sub-box">
-                                                    <label for="">
+                                                    <label for="completion-date01">
                                                         <span class="sub-title">수료연월</span>
-                                                        <input id="" type="text" placeholder=" - " required>
+                                                        <input id="completion-date01" type="text" placeholder=" - " required>
                                                     </label>
-                                                    <label for="">
+                                                    <label for="rearer01">
                                                         <span class="sub-title">양육자</span>
-                                                        <input id="" type="text" placeholder=" - " required>
+                                                        <input id="rearer01" type="text" placeholder=" - " required>
                                                     </label>
                                                 </div>
                                             </div>
@@ -423,27 +423,27 @@
                                                     동반자반 수료연월<br>(양육자이름)
                                                 </span>
                                                 <div class="sub-box">
-                                                    <label for="">
+                                                    <label for="completion-date02">
                                                         <span class="sub-title">수료연월</span>
-                                                        <input id="" type="text" placeholder=" - " required>
+                                                        <input id="completion-date02" type="text" placeholder=" - " required>
                                                     </label>
-                                                    <label for="">
+                                                    <label for="rearer02">
                                                         <span class="sub-title">양육자</span>
-                                                        <input id="" type="text" placeholder=" - " required>
+                                                        <input id="rearer02" type="text" placeholder=" - " required>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- 하단 컨테이너 -->
                                         <div class="bottom-container">
-                                            <label for="" class="list item03 border_b">
+                                            <label for="bible-count" class="list item03 border_b">
                                                 <span class="box03-title">성경통독 횟수 (구약, 신약)</span>
-                                                <input id="" type="text" placeholder=" - " required>
+                                                <input id="bible-count" type="text" placeholder=" - " required>
                                             </label>
                                             
-                                            <label for="" class="list item04 border_b">
+                                            <label for="foster-children-count" class="list item04 border_b">
                                                 <span class="box03-title">양육명수</span>
-                                                <input id="" type="text" placeholder=" - " required>
+                                                <input id="foster-children-count" type="text" placeholder=" - " required>
                                             </label>
                                         </div>
                                     </div>
@@ -470,40 +470,40 @@
                                 <!-- 목록 -->
                                 <div class="list_box">
                                     <div class="input-container">
-                                        <label for="" class="list item01 border_b b_none_r">
+                                        <label for="training-name" class="list item01 border_b">
                                             <span class="mob-title">훈련명</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="training-name" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <div class="list item02 border_b b_none_r">
+                                        <div class="list item02 border_b">
                                             <span class="mob-title">기간</span>
                                             <div class="calendar-area">
-                                                <label for="start-date03" class="calendar-wrap">
+                                                <label for="start-date02" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date03" type="date" required>                                         
+                                                    <input id="start-date02" type="date" required>                                         
                                                 </label>
-                                                <label for="finish-date03" class="calendar-wrap">
+                                                <label for="finish-date02" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date03" type="date" required>
+                                                    <input id="finish-date02" type="date" required>
                                                 </label>
                                             </div>
                                         </div>
                                     
-                                        <label for="" class="list item03 border_b">
+                                        <label for="organ01" class="list item03 border_b">
                                             <span class="mob-title">담당기관</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="organ01" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <label for="" class="list item04 border_b">
+                                        <label for="detail02" class="list item04 border_b">
                                             <span class="mob-title">훈련내용</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="detail02" type="text" placeholder=" - " required>
                                         </label>
 
-                                        <label for="" class="list item05 border_b">
+                                        <label for="note02" class="list item05 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="note02" type="text" placeholder=" - " required>
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -537,40 +537,40 @@
                                 <!-- 목록 -->
                                 <div class="list_box">
                                     <div class="input-container">
-                                        <label for="" class="list item01 border_b b_none_r">
+                                        <label for="nation" class="list item01 border_b">
                                             <span class="mob-title">국가</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="nation" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <div class="list item02 border_b b_none_r">
+                                        <div class="list item02 border_b">
                                             <span class="mob-title">기간</span>
                                             <div class="calendar-area">
-                                                <label for="start-date04" class="calendar-wrap">
+                                                <label for="start-date03" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date04" type="date" required>                                         
+                                                    <input id="start-date03" type="date" required>                                         
                                                 </label>
-                                                <label for="finish-date04" class="calendar-wrap">
+                                                <label for="finish-date03" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date04" type="date" required>
+                                                    <input id="finish-date03" type="date" required>
                                                 </label>
                                             </div>
                                         </div>
                                     
-                                        <label for="" class="list item03 border_b">
+                                        <label for="organ02" class="list item03 border_b">
                                             <span class="mob-title">담당기관</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="organ02" type="text" placeholder=" - " required>
                                         </label>
                                         
-                                        <label for="" class="list item04 border_b">
+                                        <label for="ministry-detail" class="list item04 border_b">
                                             <span class="mob-title">사역내용</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="ministry-detail" type="text" placeholder=" - " required>
                                         </label>
 
-                                        <label for="" class="list item05 border_b">
+                                        <label for="note03" class="list item05 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="" type="text" placeholder=" - " required>
+                                            <input id="note03" type="text" placeholder=" - " required>
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -594,41 +594,38 @@
                                     <div class="input-container">
                                         <div class="list item01 border_b">
                                             <div class="radio-container">
-                                                <label>
-                                                    <input id="" type="radio" name="area" required> 동북아권역 (중국/몽골)
-                                                </label>
-                                                <label>
-                                                    <input id="" type="radio" name="area" required> 중앙아시아/소아시아권역
-                                                </label>
-                                                <label>
-                                                    <input id="" type="radio" name="area" required> 남아시아 권역
-                                                </label>
-                                                <label>
-                                                    <input id="" type="radio" name="area" required> 중동/아프리카권역
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="list item02 border_b">
-                                            <div class="radio-container">
-                                                <label>
-                                                    <input id="" type="radio" name="area" required> 기타 희망 지역
-                                                </label>
-                                                <label for="">
-                                                    <input id="" type="text" placeholder=" - " required>
-                                                </label>
+                                                <div class="radio-area">
+                                                    <label>
+                                                        <input id="northeast-asia" type="radio" name="area" required> 동북아권역 (중국/몽골)
+                                                    </label>
+                                                    <label>
+                                                        <input id="central-asia" type="radio" name="area" required> 중앙아시아/소아시아권역
+                                                    </label>
+                                                    <label>
+                                                        <input id="south-asia" type="radio" name="area" required> 남아시아 권역
+                                                    </label>
+                                                    <label>
+                                                        <input id="middle-east" type="radio" name="area" required> 중동/아프리카권역
+                                                    </label>
+                                                </div>
+                                                <div class="radio-etc">
+                                                    <label>
+                                                        <input id="other-regions" type="radio" name="area" required> 기타 희망 지역
+                                                        <input type="text" placeholder=" - " required>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         
                                         <div class="bottom-container">
-                                            <label for="" class="list item03 border_b b_none_r">
+                                            <label for="sending-organization" class="list item03 border_b b_none_r">
                                                 <span class="box06-title">파송선교단체</span>
-                                                <input id="" type="text" placeholder=" - " required>
+                                                <input id="sending-organization" type="text" placeholder=" - " required>
                                             </label>
 
-                                            <label for="" class="list item04 border_b b_none_r">
+                                            <label for="sending-church" class="list item04 border_b b_none_r">
                                                 <span class="box06-title">파송교회</span>
-                                                <input id="" type="text" placeholder=" - " required>
+                                                <input id="sending-church" type="text" placeholder=" - " required>
                                             </label>
                                         </div>
                                     </div>
