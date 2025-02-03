@@ -662,9 +662,6 @@
                                 <a href="#">이용약관</a>
                             </div>
                             <div class="link">
-                                <a href="#">아동 및 성인 보호 정책</a>
-                            </div>
-                            <div class="link">
                                 <a href="#">개인정보처리방침</a>
                             </div>
                         </div><!-- //support-links -->
@@ -693,8 +690,6 @@
     <script src="js/script.js"></script>
 
     <script>
-        AOS.init();
-
         $(document).ready(function() {
             // 스크롤 시 헤더 스타일 변경 및 모바일 메뉴 클릭 이벤트
             let $header = $('.header');
@@ -704,9 +699,14 @@
             let $line = $('.line');
             let $hamIcon = $('.offcanvas-open span');
             let $offcanvas = $('.offcanvas');
-            
+
             // 초기 헤더 스타일 설정
             changeHead();
+
+
+            $(window).scroll(function() {
+                changeHead();
+            });
 
             $menuItem.mouseenter (function(){
                 $(this).css({ color: '#E5FF00' });
@@ -730,7 +730,7 @@
             function changeHead() {
                 let $scrollTop = $(window).scrollTop();
 
-                if ($scrollTop > 0) { // 스크롤 탑이 0 이상일 때
+                if ($scrollTop > 0) { // 스크롤 탑이 0 이상
                     $header.css({ background: '#fff' });
                     $logoImg.attr('src', 'img/offcanvas-logo.png');
                     $menuItem.css({ color: '#222' });
@@ -741,7 +741,8 @@
                     $line.css({ background: '#999' });
                     $hamIcon.css({ background: '#222' });
 
-                } else if ($scrollTop === 0) { // 스크롤 탑이 0일 때
+                }
+                else { // 스크롤 탑이 0
                     $header.css({ background: 'transparent' });
                     $logoImg.attr('src', 'img/avv_logo.png');
                     $menuItem.css({ color: '#fff' });
@@ -752,12 +753,15 @@
                     $line.css({ background: '#fff' });
                     $hamIcon.css({ background: '#fff' });
                 }
+                
+                // if ($scrollTop === 0 && $offcanvas.hasClass('active')) {  // 스크롤 탑이 0dlrh, 메뉴가 열렸을 때
+                //     $header.css({ background: '#fff' });
+                //     $hamIcon.css({ background: '#222' });
+                //     $logoImg.attr('src', 'img/offcanvas-logo.png');
+                // }
             }
 
-            // 스크롤 이벤트
-            $(window).scroll(function() {
-                changeHead();
-            });
+            
 
 
             // ------ 섹션5
@@ -814,6 +818,10 @@
             
         });
 
+    </script>
+
+    <script>
+        AOS.init();
     </script>
 
 </body>
