@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var offcanvasOpen = header.querySelector('.offcanvas-open');
         var offcanvas = document.querySelector('.offcanvas');
         var headerLogoImg = header.querySelector('.logo-img');
+        var hamIcon = document.querySelectorAll('.offcanvas-open span');
 
         // 오프캔버스 토글 이벤트 추가
         offcanvasOpen.addEventListener('click', function() {
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 offcanvas.style.transform = 'translateX(0%)'; // 메뉴 열기
                 header.style.backgroundColor = '#fff';
                 headerLogoImg.src = 'img/offcanvas-logo.png'; // 활성화 상태의 로고
+                hamIcon.forEach(function(span) {
+                    span.style.backgroundColor = '#222';
+                });
             } else {
                 mobileoffcanvas.style.height = 'auto';
                 offcanvas.style.transform = 'translateX(100%)'; // 메뉴 닫기
