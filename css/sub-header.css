@@ -132,6 +132,38 @@ button {
     background: #999;
     margin: 0 14px;
 }
+/* 로그인, 로그아윳 상태 시 나타나는 스타일 */
+.header .content .login-before { /* 로그아웃 상태 시 나타남 */
+    /* display: none; */
+}
+.header .content .login-complete { /* 로그인 상태 시 나타남 */
+    display: none;
+}
+.mobile_display .login-link-m {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.mobile_display .login-link-m li {
+    position: relative;
+}
+.mobile_display .login-link-m li:first-child::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #999;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+}
+.mobile_display .login-link-m a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
 .pc_display {
     display: block;
 }
