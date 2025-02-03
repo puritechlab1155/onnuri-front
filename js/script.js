@@ -19,13 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 offcanvas.style.transform = 'translateX(0%)'; // 메뉴 열기
                 header.style.backgroundColor = '#fff';
                 headerLogoImg.src = 'img/offcanvas-logo.png'; // 활성화 상태의 로고
-                if(scrollY = 0) {
-                    header.style.backgroundColor = 'transparent';
-                }
             } else {
                 mobileoffcanvas.style.height = 'auto';
                 offcanvas.style.transform = 'translateX(100%)'; // 메뉴 닫기
-                header.style.backgroundColor = '#fff';
                 dropIconL.style.transform = 'rotate(-45deg)'; // 드롭 아이콘 원래대로
                 dropIconR.style.transform = 'rotate(45deg)';
                 gnbSub.style.display = 'none'; // 드롭다운 숨김

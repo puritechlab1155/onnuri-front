@@ -669,17 +669,19 @@
             // 스크롤 시 헤더 스타일 변경 및 모바일 메뉴 클릭 이벤트
             let $header = $('.header');
             let $logoImg = $('.logo > img');
-            let $menuItem = $('.gnb-item > a');
+            let $menuItem = $('.pc_display .gnb-item > a');
             let $userBtn = $('.login-link > a');
             let $line = $('.line');
             let $hamIcon = $('.offcanvas-open span');
             let $offcanvas = $('.offcanvas');
+            
+            // 초기 헤더 스타일 설정
+            changeHead();
+            $hamIcon.css({ background: '#fff' });
 
             // 햄버거 아이콘 클릭 이벤트
             $hamIcon.click(function() {
-                if ($(window).scrollTop() === 0) { // 스크롤 탑이 0일 때
-                    $hamIcon.css({ background: '#222' }); // 컬러 변경
-                }
+                changeHead();
             });
 
             function changeHead() {
@@ -693,18 +695,23 @@
                     $line.css({ background: '#999' });
                     $hamIcon.css({ background: '#222' });
 
-                } else { // 스크롤 탑이 0일 때
+                } else if ($scrollTop === 0) { // 스크롤 탑이 0일 때
                     $header.css({ background: 'transparent' });
                     $logoImg.attr('src', 'img/avv_logo.png');
                     $menuItem.css({ color: '#fff' });
                     $userBtn.css({ color: '#fff' });
                     $line.css({ background: '#fff' });
-                    $hamIcon.css({ background: '#fff' });
+
+                    if ($scrollTop === 0 && $offcanvas.not().hasClass('active')) {
+                        $logoImg.attr('src', 'img/avv_logo.png');
+                        $hamIcon.css({ background: '#fff' });
+                    } else {
+                        $hamIcon.css({ background: '#222' });
+                    }
+                } else if ($offcanvas.hasClass('active')) {
+                    $hamIcon.css({ background: '#222' });
                 }
             }
-
-            // 초기 헤더 스타일 설정
-            changeHead();
 
             // 스크롤 이벤트
             $(window).scroll(function() {
