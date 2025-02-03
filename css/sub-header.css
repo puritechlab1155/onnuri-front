@@ -140,8 +140,8 @@ button {
 }
 
 @media (max-width: 928px) {
-    .header .content .login-link {
-        display: none;
+    .header .content .nav .gnb {
+        gap: 24px;
     }
 }
 @media (max-width: 767px) {
