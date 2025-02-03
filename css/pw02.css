@@ -101,6 +101,9 @@ button.nextBtn {
     }
 }
 @media (max-width: 576px) {
+    form {
+        padding: 50px 20px;
+    }
     .input_wrap h4 {
         text-align: center;
     }

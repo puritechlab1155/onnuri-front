@@ -178,7 +178,7 @@
                             </fieldset>
                         </div>
                         <div class="btn_wrap">
-                            <button type="button" class="nextBtn" onclick="location.href='https://puritechlab1155.github.io/onnuri-front/id-reset02.html'">다음</button>
+                            <button type="button" class="nextBtn" id="nextBtn" disabled>다음</button>
                         </div>
                         <ul class="user_account">
                             <li>
@@ -297,6 +297,31 @@
                 }
             }, 1000); // 1초 간격으로 카운트다운
         });    
+
+
+        // 모든 input값 입력후 버튼 클릭시 활성화
+        const phoneInput = document.getElementById('phone');
+        const codeInput = document.getElementById('code');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function toggleNextButton() {
+            if (phoneInput.value.trim() !== '' && codeInput.value.trim() !== '') {
+                nextBtn.disabled = false;
+            } else {
+                nextBtn.disabled = true;
+            }
+        }
+
+        function handleNextButtonClick() {
+            if (!nextBtn.disabled) {
+                window.location.href = 'https://puritechlab1155.github.io/onnuri-front/id-reset02.html';
+            }
+        }
+
+        phoneInput.addEventListener('input', toggleNextButton);
+        codeInput.addEventListener('input', toggleNextButton);
+        nextBtn.addEventListener('click', handleNextButtonClick);
+    
     </script>
 </body>
 </html>

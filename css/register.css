@@ -52,9 +52,6 @@ main.register .register-containner {
 }
 
 /* 여기서부터 탭 컨텐츠 부분 */
-.tab-content {
-
-}
 .tab-pane {
     display: none;
 }
@@ -228,7 +225,6 @@ input[type='radio'] {
   outline: none; 
   cursor: pointer;
 }
-
     /* 체크 시 버튼 모양 스타일 */
 input[type='radio']:checked {
   background-color: #004BBA; /* 체크 시 내부 원 색상 */
@@ -242,18 +238,12 @@ input[type='radio']:checked {
     justify-content: center;
     outline: unset;
     border: unset;
-
     padding: 10px;
     background: #333333;
     border-radius: 5px;
     color: #ffffff;
-
-
     width: fit-content;
-
     word-break: keep-all;
-  }
-.el_input {
   }
 .el_input::placeholder {
     color: #d4d4d4;
@@ -268,9 +258,6 @@ input[type='radio']:checked {
   }
 .bl_stack--row {
     flex-direction: row;
-  }
-.hp_shrink-0 {
-    /* flex-shrink: 0; */
   }
 .bl_stack button {
     max-width: 150px;
@@ -317,21 +304,11 @@ select {
     font-weight: 400;
     padding: 10px;
     margin-top: 10px;
-}
-
-
-/* 생년월일 끝 */
-
-#next-btn-second {
-
-}
+}/* 생년월일 끝 */
 
 /* 세번째 탭 컨텐츠 */
 .tab-content div.t-c img {
     margin: 50px 0;
-}
-.tab-content div.t-c p {
-
 }
 #next-btn-third {
    padding: 0; 
