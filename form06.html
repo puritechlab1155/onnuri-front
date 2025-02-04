@@ -303,7 +303,7 @@
                                     
                                     <label for="tel01" class="list item04">
                                         <span>교회 <br class="space_m"> 전화번호</span>
-                                        <input id="tel01" type="tel" placeholder=" 000-000-0000 " required class="input-field" oninput="updateProgress()">
+                                        <input id="tel01" type="tel" placeholder=" ' - ' 없이 숫자만 입력하세요 " required class="input-field" oninput="updateProgress()">
                                     </label>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@
                                     
                                     <label for="tel02" class="list item04">
                                         <span>교회 <br class="space_m">전화번호</span>
-                                        <input id="tel02" type="tel" placeholder=" 000-000-0000 " required class="input-field" oninput="updateProgress()">
+                                        <input id="tel02" type="tel" placeholder=" ' - ' 없이 숫자만 입력하세요 " required class="input-field" oninput="updateProgress()">
                                     </label>
                                 </div>
                             </div>
@@ -361,7 +361,7 @@
                                     
                                     <label for="tel03" class="list item04">
                                         <span>교회 <br class="space_m">전화번호</span>
-                                        <input id="tel03" type="tel" placeholder=" 000-000-0000 " required class="input-field" oninput="updateProgress()">
+                                        <input id="tel03" type="tel" placeholder=" ' - ' 없이 숫자만 입력하세요 " required class="input-field" oninput="updateProgress()">
                                     </label>
                                 </div>
                             </div>
@@ -390,7 +390,7 @@
                                     
                                     <label for="tel04" class="list item04">
                                         <span>교회 <br class="space_m">전화번호</span>
-                                        <input id="tel04" type="tel" placeholder=" 000-000-0000 " required class="input-field" oninput="updateProgress()">
+                                        <input id="tel04" type="tel" placeholder=" ' - ' 없이 숫자만 입력하세요 " required class="input-field" oninput="updateProgress()">
                                     </label>
                                 </div>
                             </div>
@@ -419,7 +419,7 @@
                                     
                                     <label for="tel05" class="list item04">
                                         <span>교회 <br class="space_m">전화번호</span>
-                                        <input id="tel05" type="tel" placeholder=" 000-000-0000 " required class="input-field" oninput="updateProgress()">
+                                        <input id="tel05" type="tel" placeholder=" ' - ' 없이 숫자만 입력하세요 " required class="input-field" oninput="updateProgress()">
                                     </label>
                                 </div>
                             </div>
@@ -764,41 +764,32 @@
 
     <script src="js/script.js"></script>
     <script>
-        // -- 전화번호 입력시 자동 하이픈 생성
-        document.addEventListener('DOMContentLoaded', function () {
-            // 모든 전화번호 입력 필드를 선택
-            const telInputs = document.querySelectorAll('input[id^="tel"]');
+document.addEventListener('DOMContentLoaded', function () {
+    // 모든 전화번호 입력 필드를 선택
+    const telInputs = document.querySelectorAll('input[id^="tel"]');
 
-            telInputs.forEach(telInput => {
-                telInput.addEventListener('input', function () {
-                    // 입력 값에서 하이픈을 제거
-                    let inputValue = telInput.value.replace(/-/g, '');
+    telInputs.forEach(telInput => {
+        telInput.addEventListener('input', function () {
+            // 입력 값에서 하이픈을 제거
+            let inputValue = telInput.value.replace(/-/g, '');
 
-                    // 전화번호 형식에 맞게 하이픈 추가
-                    if (inputValue.length === 11) {
-                        // 010-xxxx-xxxx 형식으로 변환
-                        inputValue = inputValue.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
-                    } else if (inputValue.length === 10) {
-                        // 0xx-xxxx-xxxx 형식으로 변환
-                        inputValue = inputValue.replace(/^(\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
-                    } else if (inputValue.length === 9) {
-                        // 00-xxxx-xxxx 형식으로 변환
-                        inputValue = inputValue.replace(/^(\d{2})(\d{4})(\d{3})$/, '$1-$2-$3');
-                    } else if (inputValue.length >= 9) {
-                        // 000-0000 형식으로 변환
-                        inputValue = inputValue.replace(/^(\d{3})(\d{4})$/, '$1-$2');
-                    } else if (inputValue.length > 3) {
-                        // 000 형식으로 변환
-                        inputValue = inputValue.replace(/^(\d{3})(\d+)$/, '$1-$2');
-                    }
-                    
-                    // 수정된 값을 입력 필드에 설정
-                    telInput.value = inputValue;
-                });
-            });
+            // 전화번호 형식에 맞게 하이픈 추가
+            if (inputValue.length === 11) {
+                // 010-xxxx-xxxx 형식으로 변환 (휴대전화)
+                inputValue = inputValue.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
+            } else if (inputValue.length === 10) {
+                // 0xx-xxx-xxxx 형식으로 변환 (서울 외 지역)
+                inputValue = inputValue.replace(/^(\d{3})(\d{3})(\d{4})$/, '$1-$2-$3');
+            } else if (inputValue.length === 9) {
+                // 0x-xxx-xxxx 형식으로 변환 (서울 지역)
+                inputValue = inputValue.replace(/^(\d{2})(\d{3})(\d{})$/, '$1-$2-$3');
+            }
+
+            // 수정된 값을 입력 필드에 설정
+            telInput.value = inputValue;
         });
-
-        // -- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
+    });
+});        // -- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('form06');
             const submitBtn = document.getElementById('submit-btn');
