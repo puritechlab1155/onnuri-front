@@ -351,6 +351,10 @@
     #home li.stepKo {
         display: none;
     }
+    #home .step-tab ul .progress-indicator {
+        font-size: 10px;
+        top: -24px;
+    }
 
     /*작성칸 추가 버튼*/
     #home button.add-field {
