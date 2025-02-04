@@ -283,7 +283,9 @@ h4.historyName {
 .status li {
     color: #007AFF;
 }
-
+.status li.history-red {
+    color: #E72929;
+}
 
 /*resize*/
 @media (max-width: 834px) {
