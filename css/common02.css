@@ -1,30 +1,6 @@
 @charset "UTF-8";
 /* 프리텐다드 폰트 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
-
-/* 사파리 input아이콘 초기화 */
-@supports (-webkit-appearance:none) {
-    input {
-      -webkit-appearance: none !important;
-      -moz-appearance: none !important;
-      appearance: none !important;
-    }
-}
-input::-webkit-contacts-auto-fill-button {
-	visibility:hidden !important;
-	display:none !important;
-	pointer-events:none !important;
-	position:absolute !important;
-	right:0 !important;
-}
-input::-webkit-credentials-auto-fill-button {
-	visibility:hidden !important;
-	display:none !important;
-	pointer-events:none !important;
-	position:absolute !important;
-	right:0 !important;
-}
-
 *{
     font-family: 'Pretendard Variable' !important;
     box-sizing: border-box;
@@ -33,17 +9,39 @@ input::-webkit-credentials-auto-fill-button {
     letter-spacing: -0.36px;
     line-height: 1.6;
 }
-ul, ol {
+/* 사파리 input아이콘 초기화 */
+@supports (-webkit-appearance:none) {
+    input {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+    }
+}
+#home input::-webkit-contacts-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home input::-webkit-credentials-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home ul, ol {
     list-style: none;
     padding-inline-start: 0; 
 }
-a{
+#home a{
     color: inherit;
     text-decoration: none;  
 }
-.mt-120{ margin-top: 120px !important;}
-h2,h3,h4,li,p,span { color: #222; }
-legend.step {
+#home .mt-120{ margin-top: 120px !important;}
+#home h2,h3,h4,li,p,span { color: #222; }
+#home legend.step {
     font-size: 30px;
     font-weight: 600;
     color: #222;
@@ -51,44 +49,44 @@ legend.step {
 }
 
 
-form {
+#home form {
     width: 100%;
     margin: 0 auto;
 }
 /* border 공통 */
-.border_b {
+#home .border_b {
     border: 1px solid #ACC7D4;
 }
-.b_l {
+#home .b_l {
     border-left: 1px solid #ACC7D4;
 }
-.b_r {
+#home .b_r {
     border-right: 1px solid #ACC7D4;
 }
-.border_g {
+#home .border_g {
     border: 1px solid #BABABA;
     border-radius: 8px;
     width: 100%;
 }
-.bl_n {
+#home .bl_n {
     border-left: none !important;
 }
-.br_n {
+#home .br_n {
     border-right: none !important;
 }
-.bt_n {
+#home .bt_n {
     border-top: none !important;
 }
-.bb_n {
+#home .bb_n {
     border-bottom: none !important;
 }
 
 /* 버튼 */
-.next-container {
+#home .next-container {
     width: 100%;
     text-align: center;
 }
-button.next {
+#home button.next {
     width: 120px;     
     height: 47px;
     background: #33B9DC;
@@ -105,7 +103,7 @@ button.next {
 }
 
 /* 섹션별 내부 메인 설정값 */
-.inner {
+#home .inner {
     width: 100%;
     max-width: 1248px;
     padding: 0 24px;
@@ -113,7 +111,7 @@ button.next {
 }
 
 /* 타이틀 */
-.title {
+#home .title {
     color: #222;
     font-size: 40px;
     font-weight: 700;
@@ -122,23 +120,23 @@ button.next {
     text-align: center;
 }
 /* 셀렉트박스 초기화설정 */
-select { /* select 기본 스타일 제거 */
+#home select { /* select 기본 스타일 제거 */
     -webkit-appearance: none; 
     -moz-appearance: none; 
     appearance: none;
     /*화살표 배경 넣기*/
     background: #fff url('../img/home/register-arrow.png') no-repeat 95% center;
 }
-select::-ms-expand{ /* 익스플로러 select 화살표 제거 */
+#home select::-ms-expand{ /* 익스플로러 select 화살표 제거 */
     display:none;  /* 화살표 없애기 for IE10, 11*/ 
 }
 
 
 /* 여기부터 라디오 설정(공통) */
-input[type='radio'] {
+#home input[type='radio'] {
     margin-right: 8px;
 }
-input[type='radio'] { /* 기본스타일 제거, 버튼 모양 재설정 */
+#home input[type='radio'] { /* 기본스타일 제거, 버튼 모양 재설정 */
   -webkit-appearance: none; 
   -moz-appearance: none; 
   appearance: none; 
@@ -149,14 +147,14 @@ input[type='radio'] { /* 기본스타일 제거, 버튼 모양 재설정 */
   outline: none; 
   cursor: pointer;
 }
-input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
+#home input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
   background-color: #004BBA; /* 체크 시 내부 원 색상 */
   border: 3px solid #fff; /* 라인이 아닌, 라인과 원 사이 색상 */
   box-shadow: 0 0 0 1px #004BBA; /* 라인 */
 }
 
 /*탭 부분*/
-.step-tab {
+#home .step-tab {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -164,7 +162,7 @@ input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
     justify-content: space-around;
     border-bottom: 1px solid #ddd;
 }
-.step-tab ul {
+#home .step-tab ul {
     width: calc(100% / 9);
     padding: 10px 0;
     display: flex;
@@ -175,19 +173,19 @@ input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
     text-align: center;
     font-size: 20px;
 }
-.step-tab ul li {
+#home .step-tab ul li {
     color: #767676;
 }
-ul.focus-step {
+#home ul.focus-step {
     border-bottom: 3px solid #555;
 }
-ul.focus-step li {
+#home ul.focus-step li {
     color: #222 !important;
     font-weight: 600;
 }
 
 /*작성칸 추가 버튼 스타일*/
-button.add-field {
+#home button.add-field {
     width: 100%;
     max-width: 108px;
     display: flex;
@@ -202,23 +200,23 @@ button.add-field {
     font-weight: 400;
     border-radius: 4px;
 }
-button.add-field > span {
+#home button.add-field > span {
     display: inline-block;
     color: #777;
 }
-button.add-field img {
+#home button.add-field img {
     margin-left: 6px;
 }
 
 /* 모바일 전용 br */
-span.br{
+#home span.br{
     /* display: block; */
 }
 
 
 /* 상단 부분 (지원신청 박스) */
 
-details {
+#home details {
     width: 100%;
     height: auto;
     background-color: #FAFAFA;
@@ -227,7 +225,7 @@ details {
     padding: 50px;
     margin: 50px 0;
 }
-summary {
+#home summary {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -236,11 +234,11 @@ summary {
     justify-content: center;
     font-weight: 600;
 }
-summary::-webkit-details-marker {
+#home summary::-webkit-details-marker {
     display: none;
 }
 /* 접기/펼치기 이미지 아이콘 */ 
-summary .toggle-icon {
+#home summary .toggle-icon {
     width: 20px; /* 아이콘 크기 */
     height: 20px;
     background-size: contain; /* 이미지가 비율에 맞게 조정 */
@@ -251,30 +249,30 @@ summary .toggle-icon {
     background-image: url('../img/home/form-toggle1.png'); /* 펼쳤을 때 사용할 이미지 */
 }
 /* 펼쳤을 때 이미지 변경 */
-details[open] summary .toggle-icon {
+#home details[open] summary .toggle-icon {
     background-image: url('../img/home/form-toggle1.png'); /* 접었을 때 사용할 이미지 */
     transform: rotate(180deg); /* 기호 회전 효과 */
 }
 
-details .text-wrap {
+#home details .text-wrap {
 
 }
-details .text-wrap p{
+#home details .text-wrap p{
     margin-bottom: 35px;
 }
-details .text-wrap ul{
+#home details .text-wrap ul{
     border-top: 1px solid #ddd;
     padding-top: 32px;
     width: fit-content;
     margin: auto;
     text-align: center;
 }
-details .text-wrap h4{
+#home details .text-wrap h4{
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 20px;
 }
-details p {
+#home details p {
     font-size: 16px;
     margin-top: 10px;
     padding: 10px;
@@ -287,30 +285,30 @@ details p {
 
 /* resize */
 @media (max-width: 1200px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 37%;
     }
 }
 @media (max-width: 1070px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 34%;
     }
 }
 @media (max-width: 900px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 34%;
     }
 }
 @media (max-width: 810px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 30%;
     }
 }
 @media (max-width: 767px) {
-    div.step-tab {
+    #home div.step-tab {
         border-bottom: none !important;
     }
-    .step-tab ul {
+    #home .step-tab ul {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -320,78 +318,78 @@ details p {
         justify-content: space-between;
         font-size: 15px;
     }
-    .step-tab ul:not(.focus-step){
+    #home .step-tab ul:not(.focus-step){
         display: block;
         border-radius: 50%;
         padding-top: 4px;
         text-align: center;
     }
-    ul.focus-step {
+    #home ul.focus-step {
         width: 54px;
         border: none;
         justify-content: center;
         background: #21A5C8;
         border-radius: 20px;
     }
-    ul.focus-step li{
+    #home ul.focus-step li{
         color: #fff !important;
     }
-    li.stepKo {
+    #home li.stepKo {
         display: none;
     }
 
     /*작성칸 추가 버튼*/
-    button.add-field {
+    #home button.add-field {
         max-width: 32px;
     }
-    button.add-field > span {
+    #home button.add-field > span {
         display: none !important;
     }
-    button.add-field img {
+    #home button.add-field img {
         margin: 0;
     }
 }
 @media (max-width: 740px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 25%;
     }
 }
 @media (max-width: 630px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 20%;
     }
 }
 @media (max-width: 550px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 15%;
     }
 }
 @media (max-width: 500px) {
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 9%;
     }
 }
 @media (max-width: 445px) {
-    summary {
+    #home summary {
         padding-right: 15%;
     }
-    summary .toggle-icon {
+    #home summary .toggle-icon {
         right: 9%;
     }
 }
 @media (max-width: 430px) {
-    .step-tab ul {
+    #home .step-tab ul {
         width: 28px;
         height: 28px;
         font-size: 14px;
     }
-    ul.focus-step {
+    #home ul.focus-step {
         width: 48px;
     }
-    details { 
+    #home details { 
         padding: 20px; 
     }
-    span.br {
+    #home span.br {
         display: block;
     }
 }

@@ -1,5 +1,1433 @@
+/* 1단계 */
+main.form_01 #form01 .red { color: #DF2A2A; font-size: 14px; }
+main.form_01 #form01 .gray_btn { border: 1px solid #D1D1D1; border-radius: 3px;background-color: #F7F7F8; color: #222; padding: 3px 10px; }
+
+
+main.form_01 #form01 div.inner-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 0; */
+    border: 1px solid #ACC7D4;
+    background: #E0EBF0;
+}
+/* 왼쪽 공통스타일 */
+main.form_01 #form01 label.ad_left, label.blue-box {
+    flex: 0 0 180px;
+    background: #E0EBF0;
+    text-align: center; 
+    color: #222;
+    font-weight: 600;
+    padding: 14px;
+    font-size: 18px;
+    /* display: block; */
+}
+main.form_01 #form01 label.blue-box-inner {
+    flex: 0 0 100px;
+    background: #EFF5F7;
+    text-align: center; 
+    color: #222;
+    font-weight: 600;
+    padding: 14px 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+/* 입력칸 공통스타일 */
+main.form_01 #form01 div.top_left>div>div, 
+main.form_01 #form01 div.top_right>div>div, 
+main.form_01 #form01 div.bottom>div>div, 
+main.form_01 #form01 div.ad_right, 
+main.form_01 #form01 .tl_inner>div{
+    flex: 1;
+    padding: 14px;
+    font-size: 18px;
+    background: #fff;
+}
+/* 상단 */
+main.form_01 #form01 .top {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main.form_01 #form01 .top_left, main.form_01 #form01 .top_right {
+    width: 50%;
+}
+
+/* 1. */
+main.form_01 #form01 div.inner-contain-box {
+    padding: 0 !important;
+}
+main.form_01 #form01 .tl_inner {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background: yellow;
+}
+main.form_01 #form01 .tl_inner>div {
+    width: 100%;
+}
+main.form_01 #form01 .name {
+    /* height: 20vh !important; */
+}
+/* 3. 하단 */
+main.form_01 #form01 .ad_left {
+    /* height: 116px; */
+}
+
+/*2단계*/
+main.form_02 #form02 fieldset {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    margin-top: 32px;
+}
+main.form_02 #form02 h4.list-title{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+main.form_02 #form02 h4.list-title > span {
+    display: block;
+    float: left;
+    margin-top: 6px;
+}
+main.form_02 #form02 input {
+    width: 90%;
+    height: 34px; 
+    margin: 0 auto;
+    padding: 8px 16px;
+    line-height: normal !important;
+    box-sizing: border-box;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+main.form_02 #form02 button.add-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+main.form_02 #form02 button.add-field > span {
+    display: inline-block;
+    color: #777;
+}
+/*목록 타이틀 및 목록*/
+main.form_02 #form02 .input-wrap .out-box {
+    margin-bottom: 70px;
+}
+main.form_02 #form02 .item-title , main.form_02 #form02 .input-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 0;
+}
+main.form_02 #form02 .item-title  {
+    align-items: center;
+    border-top: 1px solid #ACC7D4;
+    border-right: 1px solid #ACC7D4;
+    font-size: 18px;
+    font-weight: 500;
+    background: #E0EBF0;
+}
+main.form_02 #form02 .item {
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-left: 1px solid #ACC7D4;
+}
+main.form_02 #form02 span.br {
+    display: block;
+    margin-top: -8px;
+}
+/* 목록 */
+main.form_02 #form02 .item-title .item {
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .list_box .list {
+    border-top: none;
+}
+main.form_02 #form02 .input-container label:not(.radio-container label){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-right: none;
+}
+main.form_02 #form02 .input-container span.mob-title {
+    display: none;
+}
+/* 각 항목에 대해 비율을 다르게 설정 */
+main.form_02 #form02 .delete-item {
+    flex: 0.31;
+}
+main.form_02 #form02 .item01 {
+    border-right: none;
+}
+main.form_02 #form02 .item02 {
+    border-right: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .item03:not(.out-box01 .list_box .item03) { 
+    border-left: none;
+}
+main.form_02 #form02 .item04 {
+    border-right: none;
+}
+main.form_02 #form02 .item05 {
+    border-right: none;
+}
+main.form_02 #form02 .item06 {
+    border-right: none;
+}
+/* 학력사항 */
+main.form_02 #form02 .out-box01 .item01 {
+    flex: 2;
+}
+main.form_02 #form02 .list_box .item01 {
+    border-bottom: none;
+    border-top: none;
+}
+main.form_02 #form02 .out-box01 .item02 {
+    flex: 1;
+    border-right: 1px solid #ACC7D4;
+}
+
+main.form_02 #form02 .out-box01 .item03 {
+    flex: 1; 
+}
+
+main.form_02 #form02 .out-box01 .item04 {
+    flex: 0.5;
+}
+
+main.form_02 #form02 .out-box01 .item05 {
+    flex: 0.5;
+}
+/* 외국어능력 */
+main.form_02 #form02 .ft-400 {
+    font-weight: 400;
+    font-size: 16px;
+}
+main.form_02 #form02 .out-box02 .item-title {
+    border-left: 1px solid #ACC7D4;
+    align-items: stretch;
+    justify-content: center;
+}
+main.form_02 #form02 .out-box02 .item-title .item {
+    padding: 0;
+    line-height: 160%;
+}
+main.form_02 #form02 .out-box02 .item-title .item:not(.item02) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.form_02 #form02 .out-box02 .item-title .item01 {
+    border-left: none;
+}
+main.form_02 #form02 .out-box02 .item > span {
+    display: block;
+    padding: 6px 0;
+    line-height: 120%;
+}
+main.form_02 #form02 .out-box02 .item01 {
+    flex: 1;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box02 .item02 {
+    flex: 2.5;
+    border-right: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box02 .item03 {
+    flex: 1; 
+}
+main.form_02 #form02 .out-box02 .item04 {
+    flex: 0.8;
+}
+main.form_02 #form02 .item02-sub-title {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-top: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .item02-sub-title li {
+    flex: 1;
+    padding: 14px 0;
+}
+main.form_02 #form02 .item02-sub-title li:not(:last-child) {
+    border-right: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box02 .select {
+    display: flex;
+    align-items: center;
+}
+main.form_02 #form02 .out-box02 .select li {
+    flex: 1;
+    padding: 0 8px;
+}
+main.form_02 #form02 .out-box02 .select li:not(:last-child) {
+    border-right: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box02 .select li select {
+    width: 100%;
+    padding: 6px 16px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    font-size: 15px;
+}
+main.form_02 #form02 .out-box02 label {
+    padding: 0;
+}
+/* 경력사항 */
+main.form_02 #form02 .out-box03 .item01 {
+    flex: 1;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box03 .item02 {
+    flex: 2;
+}
+main.form_02 #form02 .out-box03 .item02:not(.item-title .item02){
+    border-bottom: none;
+}
+main.form_02 #form02 .out-box03 .item03 {
+    flex: 0.5; 
+}
+main.form_02 #form02 .out-box03 .item04 {
+    flex: 1;
+}
+main.form_02 #form02 .out-box03 .item05 {
+    flex: 0.5;
+}
+/* 전문기술・자격증 */
+main.form_02 #form02 .out-box04 .item01 {
+    flex: 1;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box04 .item02 {
+    flex: 1; 
+}
+main.form_02 #form02 .out-box04 .item02:not(.item-title .item02) {
+    border-bottom: none;
+}
+main.form_02 #form02 .out-box04 .item03 {
+    flex: 1; 
+}
+main.form_02 #form02 .out-box04 .item04 {
+    flex: 1.2;
+}
+main.form_02 #form02 .out-box04 .list .calendar-wrap {
+    display: flexbox;
+    flex: 1;
+}
+main.form_02 #form02 .out-box04 .calendar-wrap:first-child::after {
+    content: none !important;
+}
+main.form_02 #form02 .out-box04 .calendar-wrap input {
+    width: 75%;
+}
+main.form_02 #form02 .out-box04 .item04 .radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main.form_02 #form02 input[type='radio'] {
+    width: 13px;
+    height: 13px;
+    appearance: radio;
+    -webkit-appearance: radio; 
+    -moz-appearance: radio; 
+    margin: 0;
+    margin-right: 8px;
+    padding: 0;
+}
+/* 병역 */
+main.form_02 #form02 .out-box05 .list_box .item01 {
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .out-box05 .item01 {
+    flex: 0.5;
+}
+main.form_02 #form02 .out-box05 .item02 {
+    flex: 0.5;
+    border-right: 1px solid #ACC7D4 !important;
+}
+main.form_02 #form02 .out-box05 .item03 {
+    flex: 0.5;
+}
+main.form_02 #form02 .out-box05 .item04 {
+    flex: 2;
+}
+main.form_02 #form02 .out-box05 .list_box .item04 {
+    border-bottom: none;
+}
+main.form_02 #form02 .out-box05 .item05 {
+    flex: 1;
+}
+main.form_02 #form02 .out-box05 .item06 {
+    flex: 0.5;
+}
+
+
+/* 달력 */
+main.form_02 #form02 .list .calendar-area {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_02 #form02 .list .calendar-area label {
+    display: flex;
+    flex-direction: row !important;
+}
+main.form_02 #form02 .list .calendar-wrap  {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+main.form_02 #form02 .list .calendar-wrap:first-child::after {
+    content: ' - ';
+    position: absolute;
+    right: -2%;
+    color: #222;
+}
+main.form_02 #form02 .calendar-wrap input {
+    width: 72%;
+    margin: 0;
+}
+main.form_02 #form02 .calendar-wrap img {
+    margin-right: 8px;
+}
+main.form_02 #form02 .calendar-wrap input::-webkit-calendar-picker-indicator, 
+main.form_02 #form02 .list.item03 input::-webkit-inner-spin-button {  
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 5%;
+}
+/* 삭제 버튼 */
+main.form_02 #form02 .list.item06 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.form_02 #form02 button.delete { /* 추가되는 칸부터 생기는 삭제 스타일 */
+    padding: 2px 4px;
+    font-size: 16px;
+    border: 1px solid #FF9393;
+    color: #EF2626 !important;
+    border-radius: 4px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main.form_02 #form02 button.delete > span{
+    color: #EF2626;
+}
+main.form_02 #form02 button.n-delete {
+    display: none;
+}
+/* 두 번째 박스 ~ */
+main.form_02 #form02 .add-box label, .form02 .add-box .list.item06{
+    border-top: none;
+}
+main.form_02 #form02 .no-border-top {
+    border-top: none !important;
+}
+
+/* resize */
+@media (max-width: 976px) { 
+    main.form_02 #form02 input {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+    }
+    /* 목록 타이틀 */
+    main.form_02 #form02 .item-title {
+        display: none;
+    }
+    main.form_02 #form02 .input-container span.mob-title {
+        display: block;
+        width: 100%;
+        padding: 6px 0;
+        font-size: 18px;
+        font-weight: 500;
+        background: #E0EBF0;
+        border-bottom: 1px solid #ACC7D4;
+    }
+    /* 목록 공통 */
+    main.form_02 #form02 .input-container {
+        display: block;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ACC7D4;
+        position: relative;
+    }
+    main.form_02 #form02 .input-container label {
+        display: block;
+        padding: 0;
+    }
+    main.form_02 #form02 .input-container label:not(.radio-container label) {
+        padding: 0;
+    }
+    /* 학력사항 */
+    main.form_02 #form02 .out-box01 .list:not(.out-box01 .item01) {
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+    /* 외국어능력 */
+    main.form_02 #form02 .out-box02 .input-container span.mob-title {
+        padding-top: 6px;
+        padding-bottom: 0;
+        line-height: 140%;
+    }
+    main.form_02 #form02 .out-box02 .input-container .item01 span.mob-title ,
+    main.form_02 #form02 .out-box02 .input-container .item03 span.mob-title ,
+    main.form_02 #form02 .out-box02 .input-container .item04 span.mob-title {
+        padding-bottom: 6px;
+    }
+    main.form_02 #form02 .out-box02 .input-container .item03 span.mob-title ,
+    main.form_02 #form02 .out-box02 .input-container .item04 span.mob-title {
+        border-top: 1px solid #ACC7D4;
+    }
+
+    main.form_02 #form02 .out-box02 .list_box .mob-sub-title {
+        display: flex;
+        margin-top: 6px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    main.form_02 #form02 .out-box02 .list_box .mob-sub-title li {
+        width: 100%;
+        padding: 6px 0;
+    }
+    main.form_02 #form02 .out-box02 .select li {
+        padding: 10px 8px;
+    }
+    main.form_02 #form02 .out-box02 .list_box .mob-sub-title li:not(:last-child) {
+        border-right: 1px solid #ACC7D4;
+    }
+    main.form_02 #form02 .out-box02 .item03 , .main.form_02 #form02 .out-box02 .item04 {
+        width: 50%;
+        float: left;
+    }
+    /* 경력사항 */
+    main.form_02 #form02 .out-box03 .item01 , main.form_02 #form02 .out-box03 .item03 {
+        width: 30%;
+        float: left;
+    }
+    main.form_02 #form02 .out-box03 .item02 , main.form_02 #form02 .out-box03 .item04{
+        width: 70%;
+        float: left;
+    }
+    main.form_02 #form02 .out-box03 .item05 {
+        clear: both;
+    }
+    /* 전문기술・자격증 */
+    main.form_02 #form02 .out-box04 .list {
+        width: 50%;
+        float: left;
+    }
+    main.form_02 #form02 .out-box04 .list .calendar-wrap {
+        width: 100%;
+    }
+    main.form_02 #form02 .out-box04 .item04 .radio-container {
+        position: static;
+        padding: 15px 0;
+        transform: none;
+    }
+    main.form_02 #form02 .out-box04 .item04 .radio-container {
+        gap: 30px;
+    }
+    /* 병역 */
+    main.form_02 #form02 .out-box05 .item01, 
+    main.form_02 #form02 .out-box05 .item02, 
+    main.form_02 #form02 .out-box05 .item03 {
+        width: calc(100% / 3);
+        float: left;
+    }
+    main.form_02 #form02 .out-box05 .item02 {
+        border-right: none !important;
+    }
+    main.form_02 #form02 .out-box05 .item04 {
+        clear: both;
+    }
+    main.form_02 #form02 .out-box05 .item05 , 
+    main.form_02 #form02 .out-box05 .item06 {
+        width: 50%;
+        float: left;
+    }
+    main.form_02 #form02 .out-box05 .item06 {
+        display: block !important;
+    }
+    /* 달력 */
+    main.form_02 #form02 .list .calendar-area {
+        padding: 10px 0;
+    }
+    main.form_02 #form02 .calendar-wrap input::-webkit-calendar-picker-indicator, 
+    main.form_02 #form02 .list input::-webkit-inner-spin-button {  
+        left: 1.5%;
+    }
+    main.form_02 #form02 .list .calendar-wrap:first-child::after {
+        right: -1%;
+    }
+    main.form_02 #form02 .calendar-wrap input {
+        width: calc(100% - 50px) !important;
+    }
+    /* 삭제 버튼 */
+    main.form_02 #form02 .delete-item {
+        width: fit-content !important;
+        border: none !important;
+        position: absolute;
+        top: 0px;
+        right: 0;
+    }
+    main.form_02 #form02 .delete-item button {
+        position: static;
+        transform: none;
+    }
+    /* border 스타일 */
+    main.form_02 #form02 .list_box .list:not(.delete-item) {
+        border: none;
+        border-left: 1px solid #ACC7D4 !important;
+    }
+    main.form_02 #form02 .out-box02 .list_box .item04 {
+        border-right: 1px solid #ACC7D4 !important;
+    }
+    main.form_02 #form02 .out-box01 .list_box .item05 {
+        border-right: 1px solid #ACC7D4 !important;
+    }
+    main.form_02 #form02 .out-box01 .item01 , main.form_02 #form02 .out-box01 .item04 , 
+    main.form_02 #form02 .out-box01 .item05 , main.form_02 #form02 .out-box02 .item01 , 
+    main.form_02 #form02 .out-box02 .item02 , main.form_02 #form02 .out-box02 .list_box .mob-sub-title ,
+    main.form_02 #form02 .out-box03 .item01 , main.form_02 #form02 .out-box03 .item02 , 
+    main.form_02 #form02 .out-box03 .item03 , main.form_02 #form02 .out-box03 .item05 ,
+    main.form_02 #form02 .out-box04 .item01 , main.form_02 #form02 .out-box04 .item02 , 
+    main.form_02 #form02 .out-box04 .item03 , main.form_02 #form02 .out-box05 .item01 , 
+    main.form_02 #form02 .out-box05 .item02 , main.form_02 #form02 .out-box05 .item03 , 
+    main.form_02 #form02 .out-box05 .item04 {
+        border-top: 1px solid #ACC7D4 !important;
+    }
+    main.form_02 #form02 .out-box01 .item01 , main.form_02 #form02 .out-box02 .item01 ,
+    main.form_02 #form02 .out-box01 .item03 , .main.form_02 #form02 .out-box01 .item05 , 
+    main.form_02 #form02 .out-box02 .item02 , .main.form_02 #form02 .out-box02 .item04 ,
+    main.form_02 #form02 .out-box03 .item02 , main.form_02 #form02 .out-box03 .item04 , 
+    main.form_02 #form02 .out-box03 .item05 , main.form_02 #form02 .out-box04 .item02 , 
+    main.form_02 #form02 .out-box04 .item04 , main.form_02 #form02 .out-box05 .item03 , 
+    main.form_02 #form02 .out-box05 .item04 , main.form_02 #form02 .out-box05 .item06 {
+        border-right: 1px solid #ACC7D4 !important;
+    }
+}
+@media (max-width: 767px) {
+    /* 경력사항 */
+    main.form_02 #form02 .out-box03 .item01 , main.form_02 #form02 .out-box03 .item02{
+        width: 100%;
+    }
+    main.form_02 #form02 .out-box03 .item01 {
+        border-right: 1px solid #ACC7D4 !important;
+    }
+    main.form_02 #form02 .out-box03 .item03 {
+        border-top: none !important;
+    }
+    /* 모바일 버튼 스타일 */
+    main.form_02 #form02 button.delete {
+        padding: 9px;
+    }
+    main.form_02 #form02 button.delete > span{
+        display: block;
+        width: 12px;
+        height: 3px;
+        background: #EF2626;
+        text-indent: -9999px;
+    }
+}
+@media (max-width: 482px) {
+    main.form_02 #form02 input {
+        padding: 8px;
+        font-size: 15px;
+    }
+    main.form_02 #form02 legend.step {
+        font-size: 22px;
+    }
+    /* 외국어 능력 */
+    main.form_02 #form02 .out-box02 .select li select {
+        padding: 6px 8px;
+    }
+    /* 전문기술・자격증 */
+    main.form_02 #form02 .out-box04 .list.item01 , 
+    main.form_02 #form02 .out-box04 .list.item02 {
+        width: 100%;
+    }
+    main.form_02 #form02 .out-box04 .item04 .radio-container {
+        font-size: 15px;
+        gap: 14px;
+    }
+    /* bordee 스타일 */
+    main.form_02 #form02 .out-box04 .item03 {
+        border-top: none !important;
+    }
+    main.form_02 #form02 .out-box04 .list.item01 {
+        border-right: 1px solid #ACC7D4;
+    }
+    /* 폰트 사이즈 */
+    main.form_02 #form02 .input-container span.mob-title {
+        font-size: 15px;
+    }
+    main.form_02 #form02 .out-box02 .select li select {
+        font-size: 15px;
+    }
+}
+/* 3단계 */
+main.form_03 #form03 fieldset {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    margin-top: 32px;
+}
+main.form_03 #form03 h4.list-title{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+main.form_03 #form03 h4.list-title > span {
+    display: block;
+    float: left;
+    margin-top: 6px;
+}
+main.form_03 #form03 input[type='text'] {
+    width: 90%;
+    height: 34px; 
+    margin: 0 auto;
+    padding: 8px 16px;
+    line-height: normal !important;
+    box-sizing: border-box;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+main.form_03 #form03 button.add-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+main.form_03 #form03 button.add-field > span {
+    display: inline-block;
+    color: #777;
+}
+/*목록 타이틀 및 목록*/
+main.form_03 #form03 .input-wrap .out-box {
+    margin-bottom: 70px;
+}
+main.form_03 #form03 .item-title , main.form_03 #form03 .input-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 0;
+}
+main.form_03 #form03 .item-title  {
+    align-items: center;
+    border-top: 1px solid #ACC7D4;
+    border-right: 1px solid #ACC7D4;
+    font-size: 18px;
+    font-weight: 500;
+    background: #E0EBF0;
+}
+main.form_03 #form03 .item {
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-left: 1px solid #ACC7D4;
+}
+main.form_03 #form03 span.br {
+    display: block;
+    margin-top: -8px;
+}
+/* 목록 */
+main.form_03 #form03 .item-title .item {
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .list_box .list {
+    border-top: none;
+}
+main.form_03 #form03 .input-container label{
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-right: none;
+}
+main.form_03 #form03 .input-container span.mob-title {
+    display: none;
+}
+main.form_03 #form03 .delete-item { /* 삭제 버튼 비율 */
+    flex: 0.31;
+}
+main.form_03 #form03 .list_box .item01 {
+    border-bottom: none;
+    border-top: none;
+}
+main.form_03 #form03 .out-box01 .list_box .item02 {
+    border-bottom: none;
+    border-right: none;
+}
+main.form_03 #form03 .out-box01 .list_box .item05 {
+    border-right: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box02 .list_box .item03 {
+    border-bottom: none;
+    border-right: none;
+}
+main.form_03 #form03 .out-box03 .item01 {
+    border-left: none;
+}
+main.form_03 #form03 .out-box03 .item02 {
+    border-right: none;
+    border-left: none;
+}
+/* 각 항목에 대해 비율을 다르게 설정 */
+/* 교회등록 */
+main.form_03 #form03 .out-box01 .item01 {
+    flex: 2;
+    border-right: none;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box01 .item02 {
+    flex: 2;
+}
+main.form_03 #form03 .out-box01 .item03 {
+    flex: 1; 
+}
+main.form_03 #form03 .out-box01 .item04 {
+    flex: 2;
+    border-right: none;
+}
+main.form_03 #form03 .out-box01 .item05 {
+    flex: 0.8;
+}
+main.form_03 #form03 .out-box01 .list .text-area {
+    display: flex;
+}
+main.form_03 #form03 .out-box01 .list .text-area .text-wrap {
+    display: block;
+    flex: 1;
+    position: relative;
+}
+main.form_03 #form03 .out-box01 .item02 .calendar-wrap:first-child::after {
+    content: none !important;
+}
+main.form_03 #form03 .out-box01 .calendar-wrap input::-webkit-calendar-picker-indicator, .list.item03 input::-webkit-inner-spin-button {  
+    left: 8%;
+}
+/* 사역활동 */
+main.form_03 #form03 .out-box02 .item-title {
+    border-left: 1px solid #ACC7D4;
+    align-items: stretch;
+    justify-content: center;
+}
+main.form_03 #form03 .out-box02 .item-title .item:not(.item02) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.form_03 #form03 .out-box02 .item-title .item01 {
+    border-left: none;
+}
+main.form_03 #form03 .out-box02 .item01 {
+    flex: 1;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box02 .item02 {
+    flex: 1;
+}
+main.form_03 #form03 .out-box02 .item03 {
+    flex: 2; 
+}
+main.form_03 #form03 .out-box02 .item04 {
+    flex: 0.8;
+}
+/* 1:1 제자양육 */
+main.form_03 #form03 .out-box03 .list-title {
+    justify-content: flex-start !important;
+    gap: 20px;
+}
+main.form_03 #form03 .out-box03 h4.list-title > span {
+    margin-top: 0;
+}
+main.form_03 #form03 .out-box03 .list-title label.radio-container {
+    font-size: 16px !important;
+    font-weight: 400;
+    cursor: pointer;
+}
+main.form_03 #form03 input[type='radio'] {
+    margin: 0;
+    margin-right: 8px;
+    padding: 0;
+}
+main.form_03 #form03 .out-box03 .input-container {
+    display: block !important;
+}
+/* 상단 컨테이너 */
+main.form_03 #form03 .ft-400 {
+    font-weight: 400;
+    font-size: 16px;
+}
+main.form_03 #form03 .out-box03 .top-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box03 .list {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+main.form_03 #form03 .out-box03 .list .box03-title {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ACC7D4;
+    background: #E0EBF0;
+    font-size: 18px;
+    font-weight: 500;
+}
+main.form_03 #form03 .out-box03 .top-container .sub-box {
+    flex: 1;
+}
+main.form_03 #form03 .out-box03 label{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+main.form_03 #form03 .out-box03 .top-container .sub-box .sub-title {
+    flex: 0 0 100px;
+    padding: 14px 0;
+    background: #EFF5F7;
+    border-right: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box03 .top-container .sub-box label:nth-child(1) {
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box03 input {
+    margin: 0 10px;
+}
+main.form_03 #form03 .out-box03 .item02:not(.item-title .item02){
+    border-bottom: none;
+}
+/* 하단 컨테이너 */
+main.form_03 #form03 .out-box03 .bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-right: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box03 .bottom-container .list {
+    align-items: center;
+}
+main.form_03 #form03 .bottom-container .list .box03-title {
+    flex: 0 0 260px;
+    padding: 14px 0;
+    background : #E0EBF0;
+}
+/* 신앙 훈련 (교회 내・외부 각종 훈련 포함) */
+main.form_03 #form03 .out-box04 .item01 {
+    flex: 0.8;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box04 .item02 {
+    flex: 2; 
+    border-right: none;
+}
+main.form_03 #form03 .out-box04 .item02:not(.item-title .item02) {
+    border-bottom: none;
+}
+main.form_03 #form03 .out-box04 .item03 {
+    flex: 1; 
+}
+main.form_03 #form03 .out-box04 .item04 {
+    flex: 1;
+}
+main.form_03 #form03 .out-box04 .item05 {
+    flex: 0.7;
+}
+/* 단기 선교・아웃리치 경험 */
+main.form_03 #form03 .out-box05 .list_box .item01 {
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box05 .item01 {
+    flex: 0.8;
+}
+main.form_03 #form03 .out-box05 .item02 {
+    flex: 2;
+}
+main.form_03 #form03 .out-box05 .item03 {
+    flex: 1;
+}
+main.form_03 #form03 .out-box05 .item04 {
+    flex: 1;
+}
+main.form_03 #form03 .out-box05 .item05 {
+    flex: 0.7;
+}
+main.form_03 #form03 .out-box05 .list_box .item02 {
+    border-bottom: none;
+    border-right: none;
+}
+
+/* 파송 희망 지역 (택1) */
+main.form_03 #form03 .out-box06 .input-container {
+    display: block;
+}
+main.form_03 #form03 .out-box06 .item01 {
+    padding: 6px 0;
+    border: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .out-box06 .item01 .radio-container {
+    padding: 0 16px;
+}
+main.form_03 #form03 .out-box06 .item01 .radio-area {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+main.form_03 #form03 .radio-etc label{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+main.form_03 #form03 .radio-etc label input[type='text'] {
+    width: fit-content;
+    margin: 0;
+    margin-left: 16px
+}
+main.form_03 #form03 .out-box06 .item01 .radio-area label {
+    cursor: pointer;
+}
+main.form_03 #form03 .out-box06 .bottom-container {
+    display: flex;
+}
+main.form_03 #form03 .out-box06 .bottom-container label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0;
+}
+main.form_03 #form03 .out-box06 .bottom-container label .box06-title {
+    padding: 14px 0;
+    flex: 0 0 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E0EBF0;
+    border-right: 1px solid #ACC7D4;
+    font-size: 18px;
+    font-weight: 500;
+}
+main.form_03 #form03 .out-box06 .bottom-container label input {
+    margin: 0 10px;
+}
+main.form_03 #form03 .out-box06 .item04 {
+    border-right: 1px solid #ACC7D4;
+}
+
+/* 달력 */
+main.form_03 #form03 .list .calendar-area {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #ACC7D4;
+}
+main.form_03 #form03 .list .calendar-wrap  {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+main.form_03 #form03 .list .calendar-wrap:first-child::after {
+    content: ' - ';
+    position: absolute;
+    right: -2%;
+    color: #222;
+}
+main.form_03 #form03 .calendar-wrap input {
+    width: 72%;
+    margin: 0;
+}
+main.form_03 #form03 .calendar-wrap img {
+    margin-right: 8px;
+}
+main.form_03 #form03 .calendar-wrap input::-webkit-calendar-picker-indicator, .list.item03 input::-webkit-inner-spin-button {  
+    /* opacity: 0; */
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 5%;
+    cursor: pointer;
+}
+/* 삭제 버튼 */
+main.form_03 #form03 .list.item06 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.form_03 #form03 button.delete { /* 추가되는 칸부터 생기는 삭제 스타일 */
+    padding: 2px 4px;
+    font-size: 16px;
+    border: 1px solid #FF9393;
+    color: #EF2626 !important;
+    border-radius: 4px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main.form_03 #form03 button.delete > span{
+    color: #EF2626;
+}
+main.form_03 #form03 button.n-delete {
+    display: none;
+}
+/* 4단계 */
+main.form_04 #form04 fieldset {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    margin-top: 32px;
+}
+main.form_04 #form04 h4.list-title{
+    width: 100%;
+    overflow: hidden;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+main.form_04 #form04 h4.list-title > span {
+    display: block;
+    float: left;
+    margin-top: 6px;
+}
+main.form_04 #form04 input {
+    width: 82%;
+    height: 34px; 
+    margin: 0 auto;
+    padding: 8px 16px;
+    line-height: normal !important;
+    box-sizing: border-box;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+main.form_04 #form04 button.add-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+main.form_04 #form04 button.add-field > span {
+    display: inline-block;
+    color: #777;
+}
+/*목록 타이틀 및 목록*/
+main.form_04 #form04 .item-title , 
+main.form_04 #form04 .input-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 0;
+}
+main.form_04 #form04 .item-title  {
+    height: 46px;
+    align-items: center;
+    border-top: 1px solid #ACC7D4;
+    border-right: 1px solid #ACC7D4;
+    font-size: 18px;
+    font-weight: 500;
+    background: #E0EBF0;
+}
+main.form_04 #form04 .item {
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 1px solid #ACC7D4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main.form_04 #form04 span.br {
+    display: block;
+    margin-top: -8px;
+}
+/* 각 항목에 대해 비율을 다르게 설정 */
+main.form_04 #form04 .item01 {
+    flex: 1;
+}
+
+main.form_04 #form04 .item02 {
+    flex: 1.5; 
+}
+
+main.form_04 #form04 .item03 {
+    flex: 2; 
+}
+
+main.form_04 #form04 .item04 {
+    flex: 2;
+}
+
+main.form_04 #form04 .item05 {
+    flex: 1;
+}
+
+main.form_04 #form04 .item06 {
+    flex: 1; 
+}
+
+main.form_04 #form04 .item07 {
+    flex: 2; 
+}
+
+main.form_04 #form04 .item08 {
+    flex: 1; 
+}
+
+main.form_04 #form04 .item09 {
+    flex: 0.5; 
+}
+
+main.form_04 #form04 .item10 {
+    flex: 0.5; 
+}
+/* 목록 */
+main.form_04 #form04 .list {
+    box-sizing: border-box;
+}
+main.form_04 #form04 .input-container label{
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-right: none;
+}
+main.form_04 #form04 .input-container label > span {
+    display: none;
+}
+/* 달력 */
+main.form_04 #form04 .list .calendar-wrap  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+main.form_04 #form04 .calendar-wrap input {
+    width: 72%;
+    margin: 0;
+}
+main.form_04 #form04 .calendar-wrap svg {
+    margin-right: 8px;
+}
+main.form_04 #form04 .calendar-wrap input::-webkit-calendar-picker-indicator, 
+main.form_04 #form04 .list.item03 input::-webkit-inner-spin-button {  
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 8px;
+}
+/* 체크 박스 */
+main.form_04 #form04 .checkBox-wrap {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* 삭제 버튼 */
+main.form_04 #form04 .list.item10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.form_04 #form04 button.delete { /* 추가되는 칸부터 생기는 삭제 스타일 */
+    padding: 2px 4px;
+    font-size: 16px;
+    border: 1px solid #FF9393;
+    color: #EF2626 !important;
+    border-radius: 4px;
+}
+main.form_04 #form04 button.delete > span{
+    color: #EF2626;
+}
+main.form_04 #form04 button.n-delete {
+    display: none;
+}
+
+/* 두 번째 박스 ~ */
+main.form_04 #form04 .add-box label, 
+main.form_04 #form04 .add-box .list.item10{
+    border-top: none;
+}
+
+/* resize */
+@media (max-width: 1120px) {
+    main.form_04 #form04 .list_box {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    main.form_04 #form04 .border_b {
+        border: none;
+    }
+    main.form_04 #form04 .item-title {
+        display: none;
+    }
+    main.form_04 #form04 .input-container {
+        display: block;
+        overflow: hidden;
+    }
+    main.form_04 #form04 .input-container label {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        border:  1px solid #ACC7D4;
+        border-top: none;
+        font-size: 18px;
+    }
+    main.form_04 #form04 .list.item01, 
+    main.form_04 #form04 .list.item02 {
+        border-top: 1px solid #ACC7D4;
+    }
+    main.form_04 #form04 .b_none_r {
+        border-right: none !important;
+    }
+    main.form_04 #form04 .input-container label > span {
+        display: block;
+        padding: 12px 0;
+        flex: 0 0 112px;
+        background: #E0EBF0;
+        border-right:  1px solid #ACC7D4;
+        font-weight: 500;
+    }
+    main.form_04 #form04 .input-container label input {
+        flex: 1;
+        margin: 0 16px;
+    }
+    main.form_04 #form04 .list .calendar-wrap {
+        flex: 1;
+    }
+    main.form_04 #form04 .calendar-wrap svg {
+        margin: 0;
+        margin-left: 16px;
+    }
+    main.form_04 #form04 .calendar-wrap input::-webkit-calendar-picker-indicator, main.form_04 #form04 .list.item03 input::-webkit-inner-spin-button { 
+        left: 12px;
+    }
+    main.form_04 #form04 .list .checkBox-wrap {
+        flex: 1;
+        position: static;
+        transform: none;
+    }
+    main.form_04 #form04 .item01, main.form_04 #form04 .item02, 
+    main.form_04 #form04 .item06, main.form_04 #form04 .item07, 
+    main.form_04 #form04 .item08, main.form_04 #form04 .item09 {
+        width: 50% !important;
+        float: left;
+    }
+    main.form_04 #form04 .list.item10 {
+        width: fit-content;
+        display: block;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    /* 두 번째 박스 ~ */
+    main.form_04 #form04 .add-box {
+        position: relative;
+    }
+}
+@media (max-width: 767px) {
+    main.form_04 #form04 button.add-field {
+        margin-top: 10px;
+    }
+    main.form_04 #form04 .input-container label > span {
+        flex: 0 0 80px !important;
+    }
+    main.form_04 #form04 .input-container label input {
+        flex: 1;
+        margin: 0 8px;
+    }
+    main.form_04 #form04 button.delete {
+        padding: 9px;
+    }
+    main.form_04 #form04 button.delete > span{
+        display: block;
+        width: 12px;
+        height: 3px;
+        background: #EF2626;
+        text-indent: -9999px;
+        
+    }
+}
+@media (max-width: 482px) {
+    main.form_04 #form04 legend.step {
+        font-size: 22px;
+    }
+    main.form_04 #form04 .input-container label > span {
+        flex: 0 0 64px !important;
+        font-size: 15px;
+    }
+    main.form_04 #form04 input-container label input {
+        margin: 0 4px !important;
+        font-size: 15px !important;
+    }
+    main.form_04 #form04 input {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
 /* 5단계 */
-main.form_05 div.item04 .space_mob {
+main.form_05 #form05 div.item04 .space_mob {
     display: none;
 }
 main.form_05 #form05 fieldset {
@@ -82,7 +1510,10 @@ main.form_05 #form05 .item01 > ul li label{
     font-size: 18px;
 }
 main.form_05 #form05 .item01 input[type='radio'] {
+    width: 13px;
+    height: 13px;
     padding: 0;
+    margin: 0;
     background: #F2F2F2;
     border-color: #C5C5C5;
 }
@@ -182,8 +1613,6 @@ main.form_05 #form05 .item04 .sub-box label {
 main.form_05 #form05 .item04 .sub-box label input {
     margin: 0;
 }
-
-
 /* resize */
 @media (max-width: 974px) {
     main.form_05 #form05 .item01 > .item-title {
@@ -319,6 +1748,7 @@ main.form_05 #form05 .item04 .sub-box label input {
         padding: 8px;
     }
 }
+
 /* 6단계 */
 main.form #form06 br.space_m {
     display: none;
@@ -386,10 +1816,10 @@ main.form #form06 label.list > span {
     font-weight: 500;
     border-right: 1px solid #ACC7D4;
 }
-main.form #form06 .item01 , .item02 {
+main.form #form06 .item01 , main.form #form06 .item02 {
     border-bottom: 1px solid #ACC7D4;
 }
-main.form #form06 .item01 , .item03 {
+main.form #form06 .item01 , main.form #form06 .item03 {
     border-right: 1px solid #ACC7D4;
 } 
 /* resize */
