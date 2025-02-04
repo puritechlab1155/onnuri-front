@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/sub-header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/common02.css">
-
     <!-- 해당html 연결css -->
     <link rel="stylesheet" href="css/form.css">
 </head>
@@ -312,7 +311,7 @@
                                         <div class="list item02 border_b">
                                             <span class="mob-title">교적등록 연월일</span>
                                             <div class="calendar-area">
-                                                <label for="start-date01" class="calendar-wrap">
+                                                <label for="date01" class="calendar-wrap">
                                                     <span style="display: none;">교적등록 연월일</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
                                                     <input id="date01" type="date" required class="input-field" oninput="updateProgress()">                                         
@@ -413,7 +412,7 @@
                                 <h4 class="list-title">
                                     <span>1:1 제자양육</span>
                                     <label class="radio-container">
-                                        <input type="radio" name="not">해당없음
+                                        <input id="not" type="radio" name="not">해당없음
                                     </label>
                                 </h4>
                                 <!-- 목록 -->
@@ -440,7 +439,8 @@
                                             
                                             <div class="list item02 border_b b_none_r">
                                                 <span class="box03-title">
-                                                    동반자반 수료연월<br>(양육자이름)
+                                                    동반자반 수료연월<br>
+                                                    <span class="ft-400">(양육자이름)</span>
                                                 </span>
                                                 <div class="sub-box">
                                                     <label for="completion-date02">
@@ -630,7 +630,7 @@
                                                 </div>
                                                 <div class="radio-etc">
                                                     <label>
-                                                        <input id="other-regions" type="radio" name="area" required> 기타 희망 지역
+                                                        <input id="other-regions" type="radio" name="area" required> <span>기타 희망 지역</span>
                                                         <input type="text" placeholder=" - " required>
                                                     </label>
                                                 </div>
@@ -1018,7 +1018,7 @@
                 const windowWidth = window.innerWidth;
 
                 // 윈도우 너비가 976px 이하일 때만 패딩 설정
-                if (windowWidth <= 976) {
+                if (windowWidth <= 984) {
                     newContainer.style.paddingTop = '40px';
                 }
 
@@ -1048,18 +1048,6 @@
 
                 // 새로운 input-container를 list_box에 추가
                 parentBox.querySelector('.list_box').appendChild(newContainer);
-            });
-        });
-
-        // 윈도우 리사이즈 이벤트 핸들러
-        window.addEventListener('resize', function() {
-            const newContainers = document.querySelectorAll('.list_box .input-container:not(:first-child)'); // 첫 번째 컨테이너 제외
-            newContainers.forEach(container => {
-                if (window.innerWidth <= 976) {
-                    container.style.paddingTop = '40px';
-                } else {
-                    container.style.paddingTop = ''; // 기본값으로 되돌리기
-                }
             });
         });
 
