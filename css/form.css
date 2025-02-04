@@ -1,6 +1,17 @@
 /* 1단계 */
-main.form_01 #form01 .red { color: #DF2A2A; font-size: 14px; }
-main.form_01 #form01 .gray_btn { border: 1px solid #D1D1D1; border-radius: 3px;background-color: #F7F7F8; color: #222; padding: 3px 10px; }
+main.form_01 #form01 {
+    margin-bottom: 60px;
+}
+main.form_01 #form01 .red { 
+    color: #DF2A2A; font-size: 14px; 
+}
+main.form_01 #form01 .gray_btn { 
+    border: 1px solid #D1D1D1; 
+    border-radius: 3px;
+    background-color: #F7F7F8; 
+    color: #222; 
+    padding: 3px 10px; 
+}
 main.form_01 #form01 div.inner-box {
     display: flex;
     width: 100%;
@@ -1121,6 +1132,7 @@ main.form_04 #form04 fieldset {
     overflow: hidden;
     border: none;
     margin-top: 32px;
+    margin-bottom: 60px;
 }
 main.form_04 #form04 h4.list-title{
     width: 100%;
@@ -1433,6 +1445,7 @@ main.form_05 #form05 fieldset {
     overflow: hidden;
     border: none;
     margin-top: 32px;
+    margin-bottom: 60px;
 }
 main.form_05 #form05 h4.list-title{
     width: 100%;
@@ -1756,6 +1769,7 @@ main.form #form06 fieldset {
     overflow: hidden;
     border: none;
     margin-top: 32px;
+    margin-bottom: 60px;
 }
 main.form #form06 h4.list-title{
     width: 100%;
@@ -2034,10 +2048,10 @@ main.form_09 .n3-sub04 span {
     margin-top: 8px;
 }
 
-/*7단계, 8단계 신청서 영역*/
+/*7단계, 8단계 , 9단계 신청서 영역*/
 main.form_09 #form07 .input-wrap {
     border: none; 
-    padding: 16px 0;
+    padding-top: 16px;
 }
 main.form_09 #form07 .step-n label {
     color: #00A8D3;
