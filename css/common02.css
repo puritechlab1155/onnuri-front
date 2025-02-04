@@ -81,27 +81,6 @@
     border-bottom: none !important;
 }
 
-/* 버튼 */
-#home .next-container {
-    width: 100%;
-    text-align: center;
-}
-#home button.next {
-    width: 120px;     
-    height: 47px;
-    background: #33B9DC;
-    border: 1px solid #2AA6C6;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 15px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: -0.36px;
-    margin: 50px 0 200px;
-    line-height: 0;
-}
-
 /* 섹션별 내부 메인 설정값 */
 #home .inner {
     width: 100%;
@@ -267,10 +246,6 @@
     background-image: url('../img/home/form-toggle1.png'); /* 접었을 때 사용할 이미지 */
     transform: rotate(180deg); /* 기호 회전 효과 */
 }
-
-#home details .text-wrap {
-
-}
 #home details .text-wrap p{
     margin-bottom: 35px;
 }
@@ -292,11 +267,42 @@
     padding: 10px;
     text-align: center;
 }
-
-
-
-
-
+/* 버튼 스타일 */
+#home .finish-bnt-wrap {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+#home button.temporaryBtn {
+    width: 120px;     
+    height: 47px;
+    border: 3px solid #33B9DC;
+    border-radius: 10px;
+    color: #33B9DC;
+    font-size: 18px;
+    font-weight: 700;
+    background: #fff;
+}
+#home .form_09 button.temporaryBtn {
+    margin: 40px 0;
+}
+#home .next-container , #home .temporary {
+    text-align: center;
+}
+#home button.next {
+    width: 120px;     
+    height: 47px;
+    background: #33B9DC;
+    border: 1px solid #2AA6C6;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 0;
+}
 /* resize */
 @media (max-width: 1200px) {
     #home summary .toggle-icon {
@@ -350,6 +356,10 @@
     }
     #home li.stepKo {
         display: none;
+    }
+    #home .step-tab ul .progress-indicator {
+        font-size: 10px;
+        top: -24px;
     }
 
     /*작성칸 추가 버튼*/
