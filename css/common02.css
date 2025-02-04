@@ -153,6 +153,11 @@
     font-size: 20px;
     position: relative;
 }
+#home .step-tab ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #home .step-tab ul .progress-indicator {
     width: fit-content;
     padding: 0 6px;
