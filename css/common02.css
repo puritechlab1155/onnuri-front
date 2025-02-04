@@ -172,6 +172,20 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 20px;
+    position: relative;
+}
+#home .step-tab ul .progress-indicator {
+    width: fit-content;
+    padding: 0 6px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: block;
 }
 #home .step-tab ul li {
     color: #767676;

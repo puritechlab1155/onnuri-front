@@ -1,8 +1,6 @@
 /* 1단계 */
 main.form_01 #form01 .red { color: #DF2A2A; font-size: 14px; }
 main.form_01 #form01 .gray_btn { border: 1px solid #D1D1D1; border-radius: 3px;background-color: #F7F7F8; color: #222; padding: 3px 10px; }
-
-
 main.form_01 #form01 div.inner-box {
     display: flex;
     width: 100%;

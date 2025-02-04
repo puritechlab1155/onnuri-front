@@ -211,38 +211,47 @@
                     <ul>
                         <li class="stepNumb">1</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-1">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-2">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">3</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-3">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">4</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-4">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">5</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-5">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-6">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">7</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-7">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">8</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-8">0%</div>
                     </ul>
                     <ul class="focus-step">
-                        <li>9</li>
-                        <li>단계</li>
+                        <li >9</li>
+                        <li >단계</li>
+                        <div class="progress-indicator" id="progress-9">0%</div>
                     </ul>
                 </div>
 
@@ -257,21 +266,21 @@
                             <div class="n1-sub01 step-n">
                                 <label>
                                     1. 선교사로의 부르심은 언제, 어떻게 이루어졌습니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n1-sub02 step-n">
                                 <label>
                                     2. 단/장기 선교 훈련을 알게 된 경로와 지원 동기를 상세히 기술해 주십시오.
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n1-sub03 step-n">
                                 <label>
                                     3. 각 지원한 선교 단체에 대해 기대하는 바는 무엇입니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -280,18 +289,18 @@
                                 <label>
                                     <div>
                                         <span>(1) 지역 :</span>
-                                        <input type="text" placeholder="-" required>
+                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
                                     </div>
                                 <label>
                                     <div>
                                         <span>(2) 지역 선정 동기 :</span>
-                                        <input type="text" placeholder="-" required>
+                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 사역 분야/내용 :</span>
-                                        <input type="text" placeholder="-" required>
+                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
                                     </div>
                                 </label>
                             </div>
@@ -301,19 +310,19 @@
                                 <label>
                                     <div>
                                         <span>(1) 사역자로서 하나님께서 주신 은사는 무엇입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(2) 선교사역을 위해 특별히 기도하며 구하고 계신 은사에는 어떤 것이 있습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 경험 사역 활동을 토대로 본인의 사역자로서 능력을 평가해 보십시오.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -323,25 +332,25 @@
                                 <label>
                                     <div>
                                         <span>(1) 전도훈련을 받은 경험이 있으십니까? 훈련명과 훈련기간, 훈련자명을 써 주시기 바랍니다.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(2) 실제로 전도하신 적이 있으십니까? - ‘예’로 답하신 경우, 몇 명을 전도하셨습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 본인만의 전도 전략이 있다면, 구체적으로 설명해 주시기 바랍니다.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(4) 어떤 방법을 통해 전도 대상자를 지속적으로 관리/케어 하셨습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -351,37 +360,37 @@
                                 <label>
                                     <div>
                                         <span>(1) 복음</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(2) 구원</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 믿음</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(4) 거룩</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(5) 순종</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(6) 헌신 - 헌신자로서 포기한 것은 무엇입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -399,7 +408,7 @@
                                     1. 본인의 어린 시절은 행복하셨습니까?
                                     <span class="caption m-top">‘예'로 답하신 경우, 간단하게 소개해 주십시오.</span>
                                     <span class="caption minus-top">‘아니오'로 답하신 경우, 어린 시절이 행복하지 않았다고 여기는 이유는 무엇입니까?</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -407,7 +416,7 @@
                                 <label>
                                     2. 본인의 성격 또는 기질 중 변화되길 바라는 부분이 있으십니까? <br>
                                     변화를 소망하는 이유는 무엇이며, 변화를 위해 어떠한 구체적으로 어떻게 노력하고 계십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -415,7 +424,7 @@
                                 <label>
                                     3. 본인이 생각하는 본인의 장점은 무엇입니까? <br>
                                     타인이 말하는 본인의 장점은 무엇입니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -423,7 +432,7 @@
                                 <label>
                                     4. 본인이 생각하는 본인의 단점은 무엇입니까? <br>
                                     타인이 말하는 본인의 단점은 무엇입니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -431,7 +440,7 @@
                                 <label>
                                     5. 성취감 또는 만족감을 느끼게 하는 일에는 어떤 것이 있습니까? <br>
                                     실패/좌절감을 느낄 경우, 어떻게 극복하십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -439,16 +448,16 @@
                                 <label>6. 생활영성
                                     <div>
                                         <span>(1) 하나님과의 교제는 어떻 게 갖고 계십니까? 시간, 장소, 교제 방법 등을 구체적으로 기술해 주십시오.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(2) 삶 속에서 하나님의 인도하심을 어떻게 받고 있으며, 이를 확신하는 방법은 무엇입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(3) 현재 선교사적 삶을 구체적으로 어떻게 실천하고 계십니까?</span>
                                         <span class="caption">(음식, 건강관리, 외국인과의 접촉을 통한 문화훈련, 물질 사용 등)</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -461,18 +470,18 @@
                                             (1) 일상생활 중 심각한 죄책감을 자주 느끼는 경험이 있으셨습니까? <br>
                                             ‘예'로 답하신 경우, 그 원인이 되는 문제는 무엇이었으며, 어떻게 극복하셨습니까?
                                         </span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(2) 일상생활 중 우울감을 느끼게 되는 원인은 무엇이며, 이를 어떻게 해결하십니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>
                                             (3) 일상생활 중 스트레스를 받을 때 주로 어떤 반응을 보이십니까? <br>
                                             스트레스를 해소하기 위해 개인적으로 활용하고 있는 방법은 무엇입니까?
                                         </span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -484,11 +493,11 @@
                                             (1) 지금까지 알고 지낸 사람들 중 자신과 가장 마음이 통한 사람에 대해 서술하되 특별히 어떤 면에서 그랬는지 잘 설명하십시오.
                                         </span>
                                         <span class="caption">(학교, 직장, 교회 친구들)</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(2) 대인관계에서의 심리적 상처에 대해 어떻게 반응/해결하십니까? 구체적인 예를 들어 주세요.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -500,15 +509,15 @@
                                             (1) 특별히 심각한 갈등관계를 경험하신 적이 있습니까? <br>
                                             ‘예'로 답하신 경우, 그러한 갈등관계의 대상과 상황에 대해 간단히 설명해 주십시오.
                                         </span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(2) 갈등 형성 요인 중 본인의 문제점은 무엇이었습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(3) 그 문제를 어떻게 해결하셨습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -520,23 +529,23 @@
                                         <span>
                                             (1) 대중매체(TV, 신문, 라디오, 도서, 인터넷 등) 중 정보를 획등하는 주된 채널은 무엇입니까?
                                         </span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(2) 관심분야 정보에는 어떤 것들이 있습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 자신의 정서 및 교양 함양을 위한 취미활동이 있으십니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                     <div>
                                         <span>(4) 신체 단련 또는 건강 증진을 위한 개인적 방법은 무엇입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -554,7 +563,7 @@
                                     (1) 현재 교제중인 사람이 있습니까? <br>
                                     <span class="inline-cap">‘예'로 답하신 경우 교제 중인 분에 대해 자세히 기술해 주십시오.</span>
                                     <span class="caption inline-cap">(성명, 교제 기간, 결혼 계획 등)</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -562,7 +571,7 @@
                                 <label>
                                     (2) 결혼에 대해 어떻게 생각하십니까? <br>
                                     본인이 생각하는 결혼의 정의, 결혼과 사역과의 관계 등에 대해 간략하게 써 주시기 바랍니다.
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -570,7 +579,7 @@
                                 <label>
                                     (3) 결혼하지 않고 독신으로 선교지에서 사역하게 되실 경우, 정서적 고독감 등 정서적 어려움을 겪을 수 있습니다.<br>
                                     이에 대해 어떠한 각오를 하고 계십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                         </div>
@@ -585,14 +594,14 @@
                             <div class="n4-sub01 step-n">
                                 <label>
                                     <span>(1) 선교에 대한 부부의 소명, 사역방향, 사역지 등이 일치하십니까?</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n4-sub02 step-n">
                                 <label>
                                     <span>(2) 부부와 가족을 위한 경건 생활은 어떻게 이루고 계십니까?</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -601,44 +610,44 @@
                                 <label>
                                     <div class="en-list">
                                         <span>a. 부부간의 의견 충돌이 발생하는 문제에는 어떤 것들이 있습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div class="en-list">
                                         <span>b. 결혼생활 중 심각한 갈등에 처한 적이 있었습니까? ‘예'로 답하신 경우, 갈등의 원인이 무엇이었습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div class="en-list">
                                         <span>c. 갈등상황을 어떻게 해결하셨습니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
 
                             <div class="n4-sub04 step-n">
                                 <label>(4) 부부 중 자녀 양육에 적극적이고 주도적이셨던 분은 어느 분이십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n4-sub04 step-n">
                                 <label>(5) 자녀 양육에 대한 부부의 원칙이 있다면 소개해 주십시오.
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n4-sub04 step-n">
                                 <label>(6) 선교지에서의 자녀 양육 또는 교육에 대해 어떠한 계획을 세우셨습니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n4-sub04 step-n">
                                 <label>(7) 가족(배우자, 자녀)을 위한 시간을 따로 구별하여 보내고 계십니까? 어떠한 활동을 하고 계십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                         </div>
@@ -653,28 +662,28 @@
                             <div class="n5-sub01 step-n">
                                 <label>
                                     1. 부모님의 신앙 성숙정도(신앙 훈련 및 경험 내용 포함), 교회 사역 활동 내용 및 정도, 선교 관심도는 어떠하십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n5-sub02 step-n">
                                 <label>
                                     2. 선교사가 되는 것에 대하여 가족들은 어떻게 생각하십니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
                             <div class="n5-sub02 step-n">
                                 <label>
                                     3. 부정적인 경우, 그 이유는 무엇입니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                             
                             <div class="n5-sub02 step-n">
                                 <label>
                                     4. 파송 이후 부모님의 부양은 어떻게 이루어집니까?
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                         </div>
@@ -698,11 +707,11 @@
                                 </div>
                                 <label class="en-list">
                                     <span>‘예'로 답하신 경우, <br> (1) 채무의 사유는 무엇이며, 금액은 얼마입니까?</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                                 <label class="en-list">
                                     <span>(2) 어떻게 변제하실 계획입니까?</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
 
@@ -719,15 +728,15 @@
                                     </div>
                                     <label class="en-list">
                                         <span>‘예'로 답하신 경우, <br> (1) 재정 후원자가 총 몇 명입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </label>
                                     <label class="en-list">
                                         <span>(2) 재정 후원금은 총 얼마입니까?</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </label>
                                     <label class="en-list">
                                         <span>‘아니오'로 답하신 경우, <br>(1) 선교사 허입 후 어떻게 필요 재정을 충당실 계획이십니까? 구체적으로 기술하여 주십시오.</span>
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </label>
                                 </div>
                             </div>
@@ -736,7 +745,7 @@
                                 <div class="n6-sub01 step-n">
                                     <label>
                                         3. 선교사로의 부르심 이전, 신청자의 재정 원칙을 무엇이었습니까?
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </label>
                                 </div>
                             </div>
@@ -745,7 +754,7 @@
                                 <div class="n6-sub01 step-n">
                                     <label>
                                         4. 선교사로서 본인이 직접 수립하고 실천하실 재정 원칙에는 어떤 것이 있으십니까?
-                                        <textarea required></textarea>
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </label>
                                 </div>
                             </div>
@@ -770,18 +779,18 @@
                                 <label class="en-list">
                                     <span>‘예'로 답하신 경우, 아래에 대해 자세히 기술하여 주십시오.</span>
                                     <span>(1) 중독물질</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                                 <label class="en-list">
                                     <span>(2) 증상</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                                 <label class="en-list">
                                     <span>(3) 치료 기간</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label><label class="en-list">
                                     <span>(4) 완치 여부</span>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                             <div class="n7-sub01 step-n">
@@ -790,7 +799,7 @@
                                     (영적, 신체적, 정서적, 정신적 영역 모두 포함)
                                 </span>
                                 <label>
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                     </fieldset>
@@ -1163,50 +1172,83 @@
             });
         });
 
-        //-- 인풋 데이터 확인후 페이지 이동 구현 필요 
-        // >> 모든 인풋 타입 박스 값이 있어야함
-        // >> 텍스트에어리어의 경우 사용자의 답변에 맞춰서 (라디오 버튼, 아니오의 경우 예 관련 텍스트에어리어는 입력하지 않아도 넘어가고.
-        // 예의 경우, 아니오 관련 텍스트에어리어는 입력하지 않아도 넘어가도록 함)
+        // ---- 프로그래스 % 업데이트
+        function updateProgress() {
+            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
+            const inputs = document.querySelectorAll('.input-field'); 
+            const radios = document.querySelectorAll('input[name="health-status"]'); // 라디오 버튼 선택
+            const textareas = document.querySelectorAll('textarea'); // 텍스트 에어리어 선택
 
+            // 총 필드 수 (입력 필드 + 텍스트 에어리어 + 라디오 버튼)
+            const totalFields = inputs.length + radios.length + textareas.length; 
+            let filledFields = 0;
 
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-        document.getElementById('sitemap-modal').style.display = "block";
-        }
+            // 입력 필드 체크
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+            // 텍스트 에어리어 체크
+            textareas.forEach(textarea => {
+                if (textarea.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            // 라디오 버튼 체크
+            if (Array.from(radios).some(radio => radio.checked)) {
+                filledFields++; // 하나의 라디오 버튼이 선택된 경우
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
+
+            // 진행률 계산
+            let percentage = 0;
+            if (totalFields > 0) {
+                percentage = (filledFields / totalFields) * 100;
             }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
+
+            // 진행률 표시 업데이트
+            const progressIndicator = document.getElementById('progress-9'); // 단계의 진행률 표시
+            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+
+            // 색상 변경 및 텍스트 숨김 처리
+            if (percentage === 100) {
+                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else if (percentage > 0) {
+                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else {
+                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
+
+        // 페이지 로드 시 퍼센트를 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+        });
+
+        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
+        const radioButtons = document.querySelectorAll('input[name="health-status"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+
+        // 입력 필드에서 입력이 있을 때마다 진행률 업데이트
+        const inputFields = document.querySelectorAll('.input-field');
+        inputFields.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
+
+        // 텍스트 에어리어에서 입력이 있을 때마다 진행률 업데이트
+        const textareas = document.querySelectorAll('textarea');
+        textareas.forEach(textarea => {
+            textarea.addEventListener('input', updateProgress);
+        });
     </script>
 </body>
 </html>

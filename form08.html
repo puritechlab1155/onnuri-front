@@ -203,43 +203,52 @@
                             </div>
                         </details>
                 </div>
-                <!-- 탭 부분(****** 단계별 focus-step 수정필요****) -->
+                <!-- 탭 부분( 단계별 focus-step 수정필요**** ) -->
                 <div class="step-tab">
                     <ul>
                         <li class="stepNumb">1</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-1">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-2">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">3</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-3">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">4</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-4">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">5</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-5">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-6">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">7</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-7">0%</div>
                     </ul>
                     <ul class="focus-step">
-                        <li>8</li>
-                        <li>단계</li>
+                        <li >8</li>
+                        <li >단계</li>
+                        <div class="progress-indicator" id="progress-8">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">9</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-9">0%</div>
                     </ul>
                 </div>
 <!-- ********** form id="form01" 해당 폼 넘버로 변경 / JS에서도 변경필요 ************************** -->
@@ -251,7 +260,7 @@
                             <div class="n1-sub01 step-n">
                                 <label>
                                     선교비전을 6하 원칙에 의거해서 간결하게 기록하세요.
-                                    <textarea required></textarea>
+                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
                         </div>
@@ -620,44 +629,83 @@
             });
         });
 
-                // 모달 팝업 열기/닫기 이벤트
-                document.getElementById('sitemap-btn').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "block";
-        }
+        // ---- 프로그래스 % 업데이트
+        function updateProgress() {
+            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
+            const inputs = document.querySelectorAll('.input-field'); 
+            const radios = document.querySelectorAll('input[name="health-status"]'); // 라디오 버튼 선택
+            const textareas = document.querySelectorAll('textarea'); // 텍스트 에어리어 선택
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+            // 총 필드 수 (입력 필드 + 텍스트 에어리어 + 라디오 버튼)
+            const totalFields = inputs.length + radios.length + textareas.length; 
+            let filledFields = 0;
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
+            // 입력 필드 체크
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
+            // 텍스트 에어리어 체크
+            textareas.forEach(textarea => {
+                if (textarea.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            // 라디오 버튼 체크
+            if (Array.from(radios).some(radio => radio.checked)) {
+                filledFields++; // 하나의 라디오 버튼이 선택된 경우
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
+
+            // 진행률 계산
+            let percentage = 0;
+            if (totalFields > 0) {
+                percentage = (filledFields / totalFields) * 100;
             }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
+
+            // 진행률 표시 업데이트
+            const progressIndicator = document.getElementById('progress-8'); // 단계의 진행률 표시
+            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+
+            // 색상 변경 및 텍스트 숨김 처리
+            if (percentage === 100) {
+                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else if (percentage > 0) {
+                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else {
+                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
+
+        // 페이지 로드 시 퍼센트를 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+        });
+
+        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
+        const radioButtons = document.querySelectorAll('input[name="health-status"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+
+        // 입력 필드에서 입력이 있을 때마다 진행률 업데이트
+        const inputFields = document.querySelectorAll('.input-field');
+        inputFields.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
+
+        // 텍스트 에어리어에서 입력이 있을 때마다 진행률 업데이트
+        const textareas = document.querySelectorAll('textarea');
+        textareas.forEach(textarea => {
+            textarea.addEventListener('input', updateProgress);
+        });
     </script>
 </body>
 </html>

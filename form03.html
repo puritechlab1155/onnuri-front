@@ -211,38 +211,47 @@
                     <ul>
                         <li class="stepNumb">1</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-1">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-2">0%</div>
                     </ul>
                     <ul class="focus-step">
                         <li>3</li>
                         <li>단계</li>
+                        <div class="progress-indicator" id="progress-3">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">4</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-4">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">5</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-5">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-6">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">7</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-7">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">8</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-8">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">9</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-9">0%</div>
                     </ul>
                 </div>
 
@@ -273,11 +282,11 @@
                                             <div class="text-area">
                                                 <label for="church-name01" class="text-wrap">
                                                     <span style="display: none;">교회 이름</span>
-                                                    <input id="church-name01" type="text" placeholder=" - " required>                                         
+                                                    <input id="church-name01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                                 <label for="pastor-name01" class="text-wrap">
                                                     <span style="display: none;">담임목사명</span>
-                                                    <input id="pastor-name01" type="text" placeholder=" - " required>
+                                                    <input id="pastor-name01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
@@ -288,14 +297,14 @@
                                                 <label for="start-date01" class="calendar-wrap">
                                                     <span style="display: none;">교적등록 연월일</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="date01" type="date" required>                                         
+                                                    <input id="date01" type="date" required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                             </div>
                                         </div>
                                         
                                         <label for="position01" class="list item03 border_b">
                                             <span class="mob-title">직분</span>
-                                            <input id="position01" type="text" placeholder=" - " required>
+                                            <input id="position01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
 
                                         <div class="list item04 border_b">
@@ -303,18 +312,18 @@
                                             <div class="text-area">
                                                 <label for="church-name02" class="text-wrap">
                                                     <span style="display: none;">교회 이름</span>
-                                                    <input id="church-name02" type="text" placeholder=" - " required>                                         
+                                                    <input id="church-name02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                                 <label for="year" class="text-wrap">
                                                     <span style="display: none;">연도</span>
-                                                    <input id="year" type="text" placeholder=" - "  required>
+                                                    <input id="year" type="text" placeholder=" - "  required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
                                         
                                         <label for="officiating-pastor" class="list item05 border_b">
                                             <span class="mob-title">집례목사</span>
-                                            <input id="officiating-pastor" type="text" placeholder=" - " required>
+                                            <input id="officiating-pastor" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                     </div>
                                 </div>
@@ -341,12 +350,12 @@
                                     <div class="input-container">
                                         <label for="department" class="list item01 border_b b_none_r">
                                             <span class="mob-title">소속기관(부서)</span>
-                                            <input id="department" type="text" placeholder=" - " required>
+                                            <input id="department" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <label for="detail01" class="list item02 border_b">
                                             <span class="mob-title">내용</span>
-                                            <input id="detail01" type="text" placeholder=" - " required>
+                                            <input id="detail01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <div class="list item03 border_b b_none_r">
@@ -355,19 +364,19 @@
                                                 <label for="start-date01" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date01" type="date" required>                                         
+                                                    <input id="start-date01" type="date" required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                                 <label for="finish-date01" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date01" type="date" required>
+                                                    <input id="finish-date01" type="date" required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
                                         
                                         <label for="note01" class="list item04 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="note01" type="text" placeholder=" - " required>
+                                            <input id="note01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -402,11 +411,11 @@
                                                 <div class="sub-box">
                                                     <label for="completion-date01">
                                                         <span class="sub-title">수료연월</span>
-                                                        <input id="completion-date01" type="text" placeholder=" - " required>
+                                                        <input id="completion-date01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="rearer01">
                                                         <span class="sub-title">양육자</span>
-                                                        <input id="rearer01" type="text" placeholder=" - " required>
+                                                        <input id="rearer01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                 </div>
                                             </div>
@@ -418,11 +427,11 @@
                                                 <div class="sub-box">
                                                     <label for="completion-date02">
                                                         <span class="sub-title">수료연월</span>
-                                                        <input id="completion-date02" type="text" placeholder=" - " required>
+                                                        <input id="completion-date02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="rearer02">
                                                         <span class="sub-title">양육자</span>
-                                                        <input id="rearer02" type="text" placeholder=" - " required>
+                                                        <input id="rearer02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                 </div>
                                             </div>
@@ -431,12 +440,12 @@
                                         <div class="bottom-container">
                                             <label for="bible-count" class="list item03 border_b">
                                                 <span class="box03-title">성경통독 횟수 (구약, 신약)</span>
-                                                <input id="bible-count" type="text" placeholder=" - " required>
+                                                <input id="bible-count" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                             </label>
                                             
                                             <label for="foster-children-count" class="list item04 border_b">
                                                 <span class="box03-title">양육명수</span>
-                                                <input id="foster-children-count" type="text" placeholder=" - " required>
+                                                <input id="foster-children-count" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                             </label>
                                         </div>
                                     </div>
@@ -465,7 +474,7 @@
                                     <div class="input-container">
                                         <label for="training-name" class="list item01 border_b">
                                             <span class="mob-title">훈련명</span>
-                                            <input id="training-name" type="text" placeholder=" - " required>
+                                            <input id="training-name" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <div class="list item02 border_b">
@@ -474,29 +483,29 @@
                                                 <label for="start-date02" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date02" type="date" required>                                         
+                                                    <input id="start-date02" type="date" required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                                 <label for="finish-date02" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date02" type="date" required>
+                                                    <input id="finish-date02" type="date" required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
                                     
                                         <label for="organ01" class="list item03 border_b">
                                             <span class="mob-title">담당기관</span>
-                                            <input id="organ01" type="text" placeholder=" - " required>
+                                            <input id="organ01" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <label for="detail02" class="list item04 border_b">
                                             <span class="mob-title">훈련내용</span>
-                                            <input id="detail02" type="text" placeholder=" - " required>
+                                            <input id="detail02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
 
                                         <label for="note02" class="list item05 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="note02" type="text" placeholder=" - " required>
+                                            <input id="note02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -532,7 +541,7 @@
                                     <div class="input-container">
                                         <label for="nation" class="list item01 border_b">
                                             <span class="mob-title">국가</span>
-                                            <input id="nation" type="text" placeholder=" - " required>
+                                            <input id="nation" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <div class="list item02 border_b">
@@ -541,29 +550,29 @@
                                                 <label for="start-date03" class="calendar-wrap">
                                                     <span style="display: none;">시작 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="start-date03" type="date" required>                                         
+                                                    <input id="start-date03" type="date" required class="input-field" oninput="updateProgress()">                                         
                                                 </label>
                                                 <label for="finish-date03" class="calendar-wrap">
                                                     <span style="display: none;">끝나는 기간</span>
                                                     <img src="img/form/calendar.svg" alt="달력 아이콘">
-                                                    <input id="finish-date03" type="date" required>
+                                                    <input id="finish-date03" type="date" required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
                                     
                                         <label for="organ02" class="list item03 border_b">
                                             <span class="mob-title">담당기관</span>
-                                            <input id="organ02" type="text" placeholder=" - " required>
+                                            <input id="organ02" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <label for="ministry-detail" class="list item04 border_b">
                                             <span class="mob-title">사역내용</span>
-                                            <input id="ministry-detail" type="text" placeholder=" - " required>
+                                            <input id="ministry-detail" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
 
                                         <label for="note03" class="list item05 border_b">
                                             <span class="mob-title">비고</span>
-                                            <input id="note03" type="text" placeholder=" - " required>
+                                            <input id="note03" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                         
                                         <!-- 삭제 버튼 -->
@@ -613,12 +622,12 @@
                                         <div class="bottom-container">
                                             <label for="sending-organization" class="list item03 border_b b_none_r">
                                                 <span class="box06-title">파송선교단체</span>
-                                                <input id="sending-organization" type="text" placeholder=" - " required>
+                                                <input id="sending-organization" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                             </label>
 
                                             <label for="sending-church" class="list item04 border_b b_none_r">
                                                 <span class="box06-title">파송교회</span>
-                                                <input id="sending-church" type="text" placeholder=" - " required>
+                                                <input id="sending-church" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                             </label>
                                         </div>
                                     </div>
@@ -1081,44 +1090,70 @@
             checkFormCompletion(); // 페이지가 로드될 때 입력 필드의 상태를 체크하여 버튼 활성화 여부 결정
         });
 
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-        document.getElementById('sitemap-modal').style.display = "block";
-        }
+        // ---- 프로그래스 % 업데이트
+        function updateProgress() {
+            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
+            const inputs = document.querySelectorAll('.input-field'); 
+            const selects = document.querySelectorAll('.select-field');
+            const radios = document.querySelectorAll('input[name="area"]'); // 라디오 버튼 선택
+            const totalFields = inputs.length + selects.length + radios.length; // 총 필드 수
+            let filledFields = 0;
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+            // 입력 필드 체크
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
+            // 셀렉트 박스 체크
+            selects.forEach(select => {
+                if (select.value !== '') {
+                    filledFields++;
+                }
+            });
 
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            // 라디오 버튼 체크
+            if (Array.from(radios).some(radio => radio.checked)) {
+                filledFields++; // 하나의 라디오 버튼이 선택된 경우
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
+
+            // 진행률 계산
+            let percentage = 0;
+            if (totalFields > 0) {
+                percentage = (filledFields / totalFields) * 100;
             }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
+
+            // 진행률 표시 업데이트
+            const progressIndicator = document.getElementById('progress-3'); // 2단계의 진행률 표시
+            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+
+            // 색상 변경 및 텍스트 숨김 처리
+            if (percentage === 100) {
+                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else if (percentage > 0) {
+                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else {
+                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
+
+        // 페이지 로드 시 퍼센트를 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+        });
+
+        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
+        const radioButtons = document.querySelectorAll('input[name="area"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+
     </script>
 </body>
 </html>

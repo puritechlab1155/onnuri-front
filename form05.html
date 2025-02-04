@@ -211,38 +211,47 @@
                     <ul>
                         <li class="stepNumb">1</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-1">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-2">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">3</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-3">0%</div>
                     </ul>
-                    <ul>
+                    <ul >
                         <li class="stepNumb">4</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-4">0%</div>
                     </ul>
                     <ul class="focus-step">
                         <li>5</li>
                         <li>단계</li>
+                        <div class="progress-indicator" id="progress-5">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-6">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">7</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-7">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">8</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-8">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">9</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-9">0%</div>
                     </ul>
                 </div>
 
@@ -297,15 +306,15 @@
                                                 <div class="past-input input-box">
                                                     <label for="past-disease">
                                                         <span>병명: </span>
-                                                        <input id="past-disease" type="text" placeholder=" - " required>
+                                                        <input id="past-disease" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="past-treatment">
                                                         <span>치료방법: </span>
-                                                        <input id="past-treatment" type="text" placeholder=" - " required>
+                                                        <input id="past-treatment" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="past-condition">
                                                         <span>완치 여부 및 현재상태: </span>
-                                                        <input id="past-condition" type="text" placeholder=" - " required>
+                                                        <input id="past-condition" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                 </div>
                                             </div>
@@ -314,15 +323,15 @@
                                                 <div class="past-input input-box">
                                                     <label for="current-disease">
                                                         <span>병명: </span>
-                                                        <input id="current-disease" type="text" placeholder=" - " required>
+                                                        <input id="current-disease" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="current-treatment">
                                                         <span>치료방법: </span>
-                                                        <input id="current-treatment" type="text" placeholder=" - " required>
+                                                        <input id="current-treatment" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                     <label for="current-condition">
                                                         <span>완치 여부 및 현재상태: </span>
-                                                        <input id="current-condition" type="text" placeholder=" - " required>
+                                                        <input id="current-condition" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                     </label>
                                                 </div>
                                             </div>
@@ -333,7 +342,7 @@
                                         <span class="item-title">건강 관리방법</span>
                                         <label for="health-management">
                                             <span style="display: none;">건강 관리방법</span>
-                                            <input id="health-management" type="text" placeholder=" - " required>
+                                            <input id="health-management" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                         </label>
                                     </div>
 
@@ -343,21 +352,21 @@
                                             <div class="sub-box">
                                                 <span>최종 종합검진<br class="pc_space"> 연월/병원명</span>
                                                 <label for="final-checkup">
-                                                    <input id="final-checkup" type="text" placeholder=" - " required>
+                                                    <input id="final-checkup" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                             
                                             <div class="sub-box">
                                                 <span>특이사항 <br class="pc_space"> (의사 소견 참조)</span>
                                                 <label for="special-notes">
-                                                    <input id="special-notes" type="text" placeholder=" - ">
+                                                    <input id="special-notes" type="text" placeholder=" - " class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                             
                                             <div class="sub-box">
                                                 <span>종합검진<br class="pc_space"> 예정일/병원명</span>
                                                 <label for="scheduled-checkup">
-                                                    <input id="scheduled-checkup" type="text" placeholder=" - " required>
+                                                    <input id="scheduled-checkup" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                                 </label>
                                             </div>
                                         </div>
@@ -729,44 +738,67 @@
             });
         });
 
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-        document.getElementById('sitemap-modal').style.display = "block";
-        }
+        // ---- 프로그래스 % 업데이트
+        function updateProgress() {
+            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
+            const inputs = document.querySelectorAll('.input-field'); 
+            const radios = document.querySelectorAll('input[name="health-status"]'); // 라디오 버튼 선택
+            const totalFields = inputs.length + radios.length; // 총 필드 수 (셀이 필요할 경우 추가)
+            let filledFields = 0;
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+            // 입력 필드 체크
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            // 라디오 버튼 체크
+            if (Array.from(radios).some(radio => radio.checked)) {
+                filledFields++; // 하나의 라디오 버튼이 선택된 경우
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
+
+            // 진행률 계산
+            let percentage = 0;
+            if (totalFields > 0) {
+                percentage = (filledFields / totalFields) * 100;
             }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
+
+            // 진행률 표시 업데이트
+            const progressIndicator = document.getElementById('progress-5'); // 단계의 진행률 표시
+            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+
+            // 색상 변경 및 텍스트 숨김 처리
+            if (percentage === 100) {
+                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else if (percentage > 0) {
+                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else {
+                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
+
+        // 페이지 로드 시 퍼센트를 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+        });
+
+        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
+        const radioButtons = document.querySelectorAll('input[name="health-status"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+
+        // 입력 필드에서 입력이 있을 때마다 진행률 업데이트
+        const inputFields = document.querySelectorAll('.input-field');
+        inputFields.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
 
     </script>
 </body>

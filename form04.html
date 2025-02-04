@@ -211,38 +211,47 @@
                     <ul>
                         <li class="stepNumb">1</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-1">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">2</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-2">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">3</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-3">0%</div>
                     </ul>
                     <ul class="focus-step">
                         <li>4</li>
                         <li>단계</li>
+                        <div class="progress-indicator" id="progress-4">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">5</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-5">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">6</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-6">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">7</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-7">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">8</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-8">0%</div>
                     </ul>
                     <ul>
                         <li class="stepNumb">9</li>
                         <li class="stepKo">단계</li>
+                        <div class="progress-indicator" id="progress-9">0%</div>
                     </ul>
                 </div>
 
@@ -277,12 +286,12 @@
                                 <div class="input-container">
                                     <label for="relation" class="list item01 border_b b_none_r">
                                         <span>관계</span>
-                                        <input id="relation" type="text" placeholder=" - " required>
+                                        <input id="relation" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="name" class="list item02 border_b">
                                         <span>성명</span>
-                                        <input id="name" type="text" placeholder=" - " required>
+                                        <input id="name" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="birthdate" class="list item03 border_b">
@@ -300,33 +309,33 @@
                                                 <path d="M9.83398 15.5H10.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 <path d="M14.834 15.5H15.834" stroke="#1E7196" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                            <input id="birthdate" type="date" required>
+                                            <input id="birthdate" type="date" required class="input-field" oninput="updateProgress()">
                                         </div>
                                     </label>
                                     
                                     <label for="educate" class="list item04 border_b">
                                         <span>최종학력</span>
-                                        <input id="educate" type="text" placeholder=" - " required>
+                                        <input id="educate" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="job" class="list item05 border_b">
                                         <span>직업</span>
-                                        <input id="job" type="text" placeholder=" - ">
+                                        <input id="job" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="religion" class="list item06 border_b b_none_r">
                                         <span>종교</span>
-                                        <input id="religion" type="text" placeholder=" - " required>
+                                        <input id="religion" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="church" class="list item07 border_b">
                                         <span>출석교회</span>
-                                        <input id="church" type="text" placeholder=" - " required>
+                                        <input id="church" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="position" class="list item08 border_b b_none_r">
                                         <span>직분</span>
-                                        <input id="position" type="text" placeholder=" - " required>
+                                        <input id="position" type="text" placeholder=" - " required class="input-field" oninput="updateProgress()">
                                     </label>
                                     
                                     <label for="admission" class="list item09 border_b">
@@ -803,44 +812,69 @@
             });
         });
 
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-        document.getElementById('sitemap-modal').style.display = "block";
-        }
+        // ---- 프로그래스 % 업데이트
+        function updateProgress() {
+            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
+            const inputs = document.querySelectorAll('.input-field'); 
+            const selects = document.querySelectorAll('.select-field');
+            const radios = document.querySelectorAll('input[name="area"]'); // 라디오 버튼 선택
+            const totalFields = inputs.length + selects.length + radios.length; // 총 필드 수
+            let filledFields = 0;
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+            // 입력 필드 체크
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
+            // 셀렉트 박스 체크
+            selects.forEach(select => {
+                if (select.value !== '') {
+                    filledFields++;
+                }
+            });
 
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            // 라디오 버튼 체크
+            if (Array.from(radios).some(radio => radio.checked)) {
+                filledFields++; // 하나의 라디오 버튼이 선택된 경우
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
+
+            // 진행률 계산
+            let percentage = 0;
+            if (totalFields > 0) {
+                percentage = (filledFields / totalFields) * 100;
             }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
+
+            // 진행률 표시 업데이트
+            const progressIndicator = document.getElementById('progress-4'); // 단계의 진행률 표시
+            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+
+            // 색상 변경 및 텍스트 숨김 처리
+            if (percentage === 100) {
+                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else if (percentage > 0) {
+                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 보이도록 설정
+            } else {
+                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
+
+        // 페이지 로드 시 퍼센트를 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+        });
+
+        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
+        const radioButtons = document.querySelectorAll('input[name="area"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
 
     </script>
 </body>

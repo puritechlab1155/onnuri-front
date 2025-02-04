@@ -275,3 +275,42 @@ document.addEventListener('DOMContentLoaded', function() {
     //     });
     // });
 });
+
+//-- 모달 팝업 열기/닫기 이벤트
+document.getElementById('sitemap-btn').onclick = function() {
+    document.getElementById('sitemap-modal').style.display = "block";
+    }
+
+    document.getElementById('terms-btn').onclick = function() {
+        document.getElementById('terms-modal').style.display = "block";
+    }
+
+    document.getElementById('privacy-btn').onclick = function() {
+        document.getElementById('privacy-modal').style.display = "block";
+    }
+
+    // 모달 닫기 버튼 클릭 시 닫기
+    document.getElementById('close-sitemap').onclick = function() {
+        document.getElementById('sitemap-modal').style.display = "none";
+    }
+
+    document.getElementById('close-terms').onclick = function() {
+        document.getElementById('terms-modal').style.display = "none";
+    }
+
+    document.getElementById('close-privacy').onclick = function() {
+        document.getElementById('privacy-modal').style.display = "none";
+    }
+
+    // 모달 외부 클릭 시 닫기
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('sitemap-modal')) {
+            document.getElementById('sitemap-modal').style.display = "none";
+        }
+        if (event.target === document.getElementById('terms-modal')) {
+            document.getElementById('terms-modal').style.display = "none";
+        }
+        if (event.target === document.getElementById('privacy-modal')) {
+            document.getElementById('privacy-modal').style.display = "none";
+        }
+    }
