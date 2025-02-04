@@ -2,6 +2,11 @@
 main.form_01 #form01 {
     margin-bottom: 60px;
 }
+main.form_01 #form01 input:not([type="radio"]) {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+}
 main.form_01 #form01 .red { 
     color: #DF2A2A; font-size: 14px; 
 }
@@ -17,29 +22,37 @@ main.form_01 #form01 div.inner-box {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* gap: 0; */
     border: 1px solid #ACC7D4;
     background: #E0EBF0;
 }
-/* 왼쪽 공통스타일 */
-main.form_01 #form01 label.ad_left, label.blue-box {
+main.form_01 #form01 .input-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 상단왼쪽 공통스타일 */
+main.form_01 #form01 .ad_left, .blue-box {
     flex: 0 0 180px;
     background: #E0EBF0;
     text-align: center; 
     color: #222;
     font-weight: 600;
-    padding: 14px;
+    /* padding: 27px; */
     font-size: 18px;
     /* display: block; */
 }
 main.form_01 #form01 label.blue-box-inner {
     flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #EFF5F7;
     text-align: center; 
     color: #222;
-    font-weight: 600;
+    font-weight: 500;
     padding: 14px 5px;
     font-size: 16px;
+    border-right: 1px solid #ACC7D4;
     box-sizing: border-box;
 }
 /* 입력칸 공통스타일 */
@@ -58,12 +71,14 @@ main.form_01 #form01 .top {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background: lightcyan ;
 }
 main.form_01 #form01 .top_left, main.form_01 #form01 .top_right {
-    width: 50%;
+    flex: 0 0 50%;
+    height: 100%;
 }
 
-/* 1. */
+/* 상단왼쪽 */
 main.form_01 #form01 div.inner-contain-box {
     padding: 0 !important;
 }
@@ -71,19 +86,69 @@ main.form_01 #form01 .tl_inner {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background: yellow;
 }
 main.form_01 #form01 .tl_inner>div {
     width: 100%;
 }
-main.form_01 #form01 .name {
-    /* height: 20vh !important; */
+/* out-box01 성명*/
+main.form_01 #form01 .out-box01 .blue-box ,
+main.form_01 #form01 .out-box07 .blue-box {
+    flex: 0 0 180px;
+    padding: 10px;
+    background: #E0EBF0;
 }
-/* 3. 하단 */
-main.form_01 #form01 .ad_left {
-    /* height: 116px; */
+main.form_01 #form01 .out-box01 .tl_inner:not(:last-child) {
+    border-bottom: 1px solid #ACC7D4;
 }
 
+/* out-box02 생년월일 */
+main.form_01 #form01 .out-box02 .check {
+    flex: 0 0 64px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+}
+/* 상단오른쪽 */
+main.form_01 #form01 .top_right .inner-box {
+    padding: 0 !important;
+}
+main.form_01 #form01 .top_right div.inner-box .blue-box{
+    padding: 20.5px 0;
+    border-right: 1px solid #ACC7D4;
+    background: #E0EBF0;
+}
+main.form_01 #form01 .out-box05 .blue-box ,
+main.form_01 #form01 .out-box07 .blue-box{
+    flex: 0 0 180px;
+    background: #E0EBF0;
+}
+main.form_01 #form01 .top_right .radio-box {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 18px;
+}
+main.form_01 #form01 .top_right .radio-box li{
+    flex: 1;
+    text-align: center;
+    padding: 20px 0;
+    background: #fff;
+}
+/* 하단 */
+main.form_01 #form01 .middle-wrap {
+    display: flex;
+}
+main.form_01 #form01 .middle-wrap .middle-box {
+    padding: 0 !important;
+}
+main.form_01 #form01 .middle-box div.inner-box .input-wrap{
+    flex: 1;
+    padding: 14px;
+    background: #fff;
+    border-left: 1px solid #ACC7D4;
+}
 /*2단계*/
 main.form_02 #form02 fieldset {
     width: 100%;
