@@ -7,6 +7,19 @@ main.form_01 #form01 input:not([type="radio"]) {
     font-size: 16px;
     border-radius: 8px;
 }
+main.form_01 #form01 input[type="file"] {
+    background: none;
+    border: none;
+    font-size: 16px;
+    display: none;
+}
+main.form_01 #form01 .custom-file-upload {
+    display: inline-block;
+    cursor: pointer;
+}
+main.form_01 #form01 legend.step {
+    margin-bottom: 24px;
+}
 main.form_01 #form01 .red { 
     color: #DF2A2A; font-size: 14px; 
 }
@@ -205,6 +218,31 @@ main.form_01 #form01 .out-box10 .ad_right .input-wrap:first-child input {
 main.form_01 #form01 .out-box10 .ad_right .input-wrap:nth-child(2) {
     padding: 14px 0;
 }
+main.form_01 #form01 .out-box10 .input-wrap {
+    flex-wrap: wrap;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: start;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address input {
+    background: #f0f0f0;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address-detaile {
+    width: 100%;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address-detaile > div:first-child {
+    margin-bottom: 14px;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address-detaile input {
+    width: 100% !important;
+    text-align: left !important;
+}
+main.form_01 #form01 .out-box10 .input-wrap .address-detaile input#roadAddress {
+    background: #f0f0f0;
+}
 main.form_01 #form01 .out-box10 .gray_btn {
     display: flex;
     align-items: center;
@@ -317,6 +355,9 @@ main.form_01 #form01 .out-box11 .ad_right .input-wrap label{
     }
     main.form_01 #form01 .space_mpb {
         display: block;
+    }
+    main.form_01 #form01 input {
+        padding: 6px 8px !important;
     }
 }
 
