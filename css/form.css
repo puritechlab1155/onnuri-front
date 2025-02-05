@@ -1308,7 +1308,7 @@ main.form_03 #form03 .out-box06 .item01 .radio-area {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-    gap: 0 30px;
+    gap: 10px 30px;
     align-items: center;
     justify-content: flex-start;
 }
@@ -1523,6 +1523,9 @@ main.form_03 #form03 button.n-delete {
         border-left: 1px solid #ACC7D4;
         border-right: 1px solid #ACC7D4;
     }
+    main.form_03 #form03 .out-box01 .item01 span.mob-title {
+        border-left: 1px solid #ACC7D4;
+    }
     main.form_03 #form03 .input-container span.mob-title {
         border: 1px solid #ACC7D4;
         border-left: none;
@@ -1638,6 +1641,9 @@ main.form_03 #form03 button.n-delete {
     }
     main.form_03 #form03 .out-box06 .item01 .radio-area {
         display: block;
+    }
+    main.form_03 #form03 .out-box06 .item01 .radio-area label:not(:last-child) {
+        margin-bottom: 10px;
     }
     main.form_03 #form03 .list .calendar-area {
         display: block;
