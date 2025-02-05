@@ -2400,6 +2400,16 @@ main.form #form06 .item01 , main.form #form06 .item03 {
 
 
 /*9단계 신청서 영역*/
+main.form_09 .field-title {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+main.form_09 .field-title .write-whether {
+    font-size: 20px;
+    font-weight: 500;
+    display: none;
+}
 main.form_09 input {
     border: 1px solid #BABABA;
     font-size: 16px;
@@ -2434,8 +2444,6 @@ main.form_09 .caption.minus-top {
 main.form_09 .inline-cap {
     display: inline-block;
 }
-
-
 /*전체 문항 스타일*/
 main.form_09 fieldset {
     border: none;
@@ -2557,7 +2565,6 @@ main.form_09 .step-n .checkBox input::before {
 main.form_09 .check > label:first-child {
     margin-top: 16px;
 }
-
 /*문항 개별 스타일*/
 main.form_09 .n1-sub04 div {
     margin-bottom: 8px;
@@ -2573,8 +2580,7 @@ main.form_09 .n1-sub05 label, .n1-sub06 label, .n1-sub07 label{
 main.form_09 .n3-sub04 span {
     margin-top: 8px;
 }
-
-/*7단계, 8단계 , 9단계 신청서 영역*/
+/*7단계, 8단계 */
 main.form_09 #form07 .input-wrap {
     border: none; 
     padding-top: 16px;

@@ -277,7 +277,10 @@
                     <!-- 9단계 신청서 영역  -->
                     <fieldset>
                         <legend>
-                            I.단/장기 선교 부르심 <!-- 문항 숨기기 토글 버튼 -->
+                            <div class="field-title">
+                                I.단/장기 선교 부르심 
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -413,16 +416,20 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            II.자신에 대하여 <!-- 문항 숨기기 토글 버튼 -->
+                            <div class="field-title">
+                                II.자신에 대하여
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
+                        
                         <div class="input-wrap"> 
                             <div class="n2-sub01 step-n">
                                 <label>
@@ -571,14 +578,17 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            III.-1 결혼관 - 미혼 작성 <!-- 문항 숨기기 토글 버튼 -->
+                             <div class="field-title">
+                                III.-1 결혼관 - 미혼 작성
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -607,14 +617,17 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            III.-2 결혼관 - 기혼 작성 <!-- 문항 숨기기 토글 버튼 -->
+                             <div class="field-title">
+                                III.-2 결혼관 - 기혼 작성
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -678,14 +691,17 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            IV. 가족 <!-- 문항 숨기기 토글 버튼 -->
+                             <div class="field-title">
+                                IV. 가족
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -717,14 +733,17 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            V. 재정 <!-- 문항 숨기기 토글 버튼 -->
+                            <div class="field-title">
+                                V. 재정
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -791,14 +810,18 @@
                                     </label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
 
                     <fieldset>
                         <legend>
-                            VI. 기타 <!-- 문항 숨기기 토글 버튼 -->
+                             <div class="field-title">
+                                VI. 기타
+                                <span class="write-whether">(작성중)</span>
+                            </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
@@ -838,10 +861,11 @@
                                     <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                 </label>
                             </div>
+                        </div>
+                        <div class="temporary">
+                            <button class="temporaryBtn">임시저장</button>
+                        </div>
                     </fieldset>
-                    <div class="temporary">
-                        <button class="temporaryBtn">임시저장</button>
-                    </div>
                     
                     <!--버튼 랩핑-->
                     <div class="finish-bnt-wrap" style="margin-top: 120px;">
@@ -1290,6 +1314,46 @@
         textareas.forEach(textarea => {
             textarea.addEventListener('input', updateProgress);
         });
+
+        // -- 9단계 각각 필드셋 작성중, 작성완료 여부
+        document.addEventListener("DOMContentLoaded", function () {
+            const temporaryButtons = document.querySelectorAll(".temporaryBtn");
+
+            temporaryButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const fieldset = this.closest("fieldset"); // 현재 버튼이 속한 필드셋 찾기
+                    const writeWhether = fieldset.querySelector(".write-whether"); // 상태 표시 요소
+                    const inputs = fieldset.querySelectorAll("input, textarea, select"); // 모든 입력 요소 가져오기
+                    const inputBox = fieldset.querySelector(".input-wrap"); // 현재 필드셋의 입력 영역
+
+                    let isCompleted = true; // 모든 필드가 작성되었는지 체크
+
+                    inputs.forEach((input) => {
+                        if ((input.type === "radio" || input.type === "checkbox")) {
+                            const name = input.name;
+                            const checkedRadio = fieldset.querySelector(`input[name="${name}"]:checked`);
+                            if (!checkedRadio) isCompleted = false;
+                        } else if (!input.value.trim()) {
+                            isCompleted = false;
+                        }
+                    });
+
+                    if (writeWhether) {
+                        writeWhether.style.display = "inline"; // 텍스트 표시
+                        if (isCompleted) {
+                            writeWhether.textContent = "(작성완료)";
+                            writeWhether.style.color = "#007AFF"; // 파란색으로 변경
+                            if (inputBox) inputBox.style.display = "none"; // 입력 필드 숨기기
+                        } else {
+                            writeWhether.textContent = "(작성중)";
+                            writeWhether.style.color = "#E72929"; // 기본색 유지
+                            if (inputBox) inputBox.style.display = "block"; // 다시 보이도록 설정
+                        }
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 </html>
