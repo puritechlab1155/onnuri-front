@@ -412,7 +412,7 @@
                                 <h4 class="list-title">
                                     <span>1:1 제자양육</span>
                                     <label class="radio-container">
-                                        <input id="not" type="radio" name="not">해당없음
+                                        <input id="not" type="checkbox" name="not">해당없음
                                     </label>
                                 </h4>
                                 <!-- 목록 -->
@@ -1109,9 +1109,9 @@
 
             // 체크할 라디오 그룹들 (name="lunar" 제외)
             const radioGroups = new Set();
-            document.querySelectorAll('input[type="radio"]').forEach(radio => {
-                if (radio.name !== "not") { // "lunar" 제외
-                    radioGroups.add(radio.name);
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.name !== "not") { // "lunar" 제외
+                    radioGroups.add(checkbox.name);
                 }
             });
 

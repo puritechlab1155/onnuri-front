@@ -854,9 +854,9 @@
 
             // 체크할 라디오 그룹들 (name="lunar" 제외)
             const radioGroups = new Set();
-            document.querySelectorAll('input[type="radio"]').forEach(radio => {
-                if (radio.name !== "lunar") { // "lunar" 제외
-                    radioGroups.add(radio.name);
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.name !== "lunar") { // "lunar" 제외
+                    radioGroups.add(checkbox.name);
                 }
             });
 
