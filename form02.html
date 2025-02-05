@@ -1138,67 +1138,65 @@
 
         // ---- 프로그래스 % 업데이트
         function updateProgress() {
-            // 현재 페이지에서 모든 입력 필드와 셀렉트 박스 선택
             const inputs = document.querySelectorAll('.input-field'); 
             const selects = document.querySelectorAll('.select-field');
-            const radios = document.querySelectorAll('input[name="attachment"]'); // 라디오 버튼 선택
-            const totalFields = inputs.length + selects.length + radios.length; // 총 필드 수
+
+            // 체크할 라디오 그룹들 (name="lunar" 제외)
+            const radioGroups = new Set();
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                if (radio.name !== "lunar") { // "lunar" 제외
+                    radioGroups.add(radio.name);
+                }
+            });
+
+            const totalFields = inputs.length + selects.length + radioGroups.size; 
             let filledFields = 0;
 
-            // 입력 필드 체크
             inputs.forEach(input => {
                 if (input.value.trim() !== '') {
                     filledFields++;
                 }
             });
 
-            // 셀렉트 박스 체크
             selects.forEach(select => {
                 if (select.value !== '') {
                     filledFields++;
                 }
             });
 
-            // 라디오 버튼 체크
-            if (Array.from(radios).some(radio => radio.checked)) {
-                filledFields++; // 하나의 라디오 버튼이 선택된 경우
-            }
+            radioGroups.forEach(name => {
+                if (document.querySelector(`input[name="${name}"]:checked`)) {
+                    filledFields++;
+                }
+            });
 
-            // 진행률 계산
-            let percentage = 0;
-            if (totalFields > 0) {
-                percentage = (filledFields / totalFields) * 100;
-            }
+            let percentage = totalFields > 0 ? (filledFields / totalFields) * 100 : 0;
 
-            // 진행률 표시 업데이트
-            const progressIndicator = document.getElementById('progress-2'); // 2단계의 진행률 표시
-            progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+            const progressIndicator = document.getElementById('progress-2'); // 필요에 따라 변경
 
-            // 색상 변경 및 텍스트 숨김 처리
             if (percentage === 100) {
-                progressIndicator.style.color = '#007AFF'; // 진행률이 100%일 때 파란색
+                progressIndicator.textContent = "완료";
+                progressIndicator.style.color = '#007AFF';
                 progressIndicator.style.borderColor = '#007AFF';
-                progressIndicator.style.display = 'block'; // 보이도록 설정
+                progressIndicator.style.display = 'block'; // 표시
             } else if (percentage > 0) {
-                progressIndicator.style.color = '#E72929'; // 진행률이 0% 이상일 때 회색
+                progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+                progressIndicator.style.color = '#E72929';
                 progressIndicator.style.borderColor = '#E72929';
-                progressIndicator.style.display = 'block'; // 보이도록 설정
+                progressIndicator.style.display = 'block'; // 표시
             } else {
-                progressIndicator.style.color = '#ccc'; // 기본 색상으로 되돌리기
                 progressIndicator.style.display = 'none'; // 0%일 때 숨김
             }
         }
 
-        // 페이지 로드 시 퍼센트를 초기화
         document.addEventListener('DOMContentLoaded', () => {
             updateProgress();
         });
 
-        // 라디오 버튼의 상태가 변경될 때마다 진행률 업데이트
-        const radioButtons = document.querySelectorAll('input[name="attachment"]');
-        radioButtons.forEach(radio => {
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', updateProgress);
         });
+
 
     </script>
 </body>

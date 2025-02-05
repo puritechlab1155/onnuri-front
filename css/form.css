@@ -634,6 +634,9 @@ main.form_02 #form02 .out-box04 .item04 .radio-container {
     top: 50%;
     transform: translateY(-50%);
 }
+main.form_02 #form02 .out-box04 .item04 .radio-container label {
+    cursor: pointer;
+}
 main.form_02 #form02 input[type='radio'] {
     width: 13px;
     height: 13px;
@@ -2550,6 +2553,7 @@ main.form_09 .step-n .checkBox {
 main.form_09 .step-n .checkBox label {
     margin: 0;
     font-weight: 400;
+    cursor: pointer;
 }
 main.form_09 .step-n .checkBox input::before {
     content: '/';

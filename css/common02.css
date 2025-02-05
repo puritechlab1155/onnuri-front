@@ -363,6 +363,7 @@
         display: none;
     }
     #home .step-tab ul .progress-indicator {
+        width: 32px;
         font-size: 10px;
         top: -24px;
     }
