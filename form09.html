@@ -583,114 +583,123 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset> <!-- 결혼관 문항 >> 수정중 -->
                         <legend>
-                             <div class="field-title">
-                                III.-1 결혼관 - 미혼 작성
+                            <div class="field-title">
+                                III. 결혼관
                                 <span class="write-whether">(작성중)</span>
                             </div>
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
-                        <div class="input-wrap"> 
-                            <div class="n3-sub01 step-n">
-                                <label>
-                                    (1) 현재 교제중인 사람이 있습니까? <br>
-                                    <span class="inline-cap">‘예'로 답하신 경우 교제 중인 분에 대해 자세히 기술해 주십시오.</span>
-                                    <span class="caption inline-cap">(성명, 교제 기간, 결혼 계획 등)</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
+                        <div class="input-wrap">
+                            <div class="marry-whether">
+                                <h3>신청인은 현재 결혼을 하였습니까?</h3>
+                                <div class="checkBox">
+                                    <label>
+                                        <input class="yes" type="radio" name="yesNo01" value="yes" required> 예
+                                    </label>
+                                    <label>
+                                        <input class="no" type="radio" name="yesNo01" value="no" required> 아니오
+                                    </label>
+                                </div>
                             </div>
+                            <!-- 미혼 작성 // 라디오 버튼 클릭에 따라 나타나고 사라짐-->
+                            <div class="single-wrap">
+                                <h4 class="whether-title">미혼 작성</h4>
+                                <div class="single-container"> 
+                                    <div class="n3-sub01 step-n">
+                                        <label>
+                                            (1) 현재 교제중인 사람이 있습니까? <br>
+                                            <span class="inline-cap">‘예'로 답하신 경우 교제 중인 분에 대해 자세히 기술해 주십시오.</span>
+                                            <span class="caption inline-cap">(성명, 교제 기간, 결혼 계획 등)</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
 
-                            <div class="n3-sub02 step-n">
-                                <label>
-                                    (2) 결혼에 대해 어떻게 생각하십니까? <br>
-                                    본인이 생각하는 결혼의 정의, 결혼과 사역과의 관계 등에 대해 간략하게 써 주시기 바랍니다.
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
+                                    <div class="n3-sub02 step-n">
+                                        <label>
+                                            (2) 결혼에 대해 어떻게 생각하십니까? <br>
+                                            본인이 생각하는 결혼의 정의, 결혼과 사역과의 관계 등에 대해 간략하게 써 주시기 바랍니다.
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+
+                                    <div class="n3-sub03 step-n">
+                                        <label>
+                                            (3) 결혼하지 않고 독신으로 선교지에서 사역하게 되실 경우, 정서적 고독감 등 정서적 어려움을 겪을 수 있습니다.<br>
+                                            이에 대해 어떠한 각오를 하고 계십니까?
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="n3-sub03 step-n">
-                                <label>
-                                    (3) 결혼하지 않고 독신으로 선교지에서 사역하게 되실 경우, 정서적 고독감 등 정서적 어려움을 겪을 수 있습니다.<br>
-                                    이에 대해 어떠한 각오를 하고 계십니까?
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
+                            <!-- 기혼 작성 // 라디오 버튼 클릭에 따라 나타나고 사라짐 -->
+                            <div class="married-wrap">
+                                <div class="married-container"> 
+                                    <h4 class="whether-title">기혼 작성</h4>
+                                    <div class="n4-sub01 step-n">
+                                        <label>
+                                            <span>(1) 선교에 대한 부부의 소명, 사역방향, 사역지 등이 일치하십니까?</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub02 step-n">
+                                        <label>
+                                            <span>(2) 부부와 가족을 위한 경건 생활은 어떻게 이루고 계십니까?</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub03 step-n mult-q">
+                                        <span>(3) 부부관계</span>
+                                        <label>
+                                            <div class="en-list">
+                                                <span>a. 부부간의 의견 충돌이 발생하는 문제에는 어떤 것들이 있습니까?</span>
+                                                <textarea required class="" oninput="updateProgress()"></textarea>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <div class="en-list">
+                                                <span>b. 결혼생활 중 심각한 갈등에 처한 적이 있었습니까? ‘예'로 답하신 경우, 갈등의 원인이 무엇이었습니까?</span>
+                                                <textarea required class="" oninput="updateProgress()"></textarea>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <div class="en-list">
+                                                <span>c. 갈등상황을 어떻게 해결하셨습니까?</span>
+                                                <textarea required class="input-field" oninput="updateProgress()"></textarea>
+                                            </div>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub04 step-n">
+                                        <label>(4) 부부 중 자녀 양육에 적극적이고 주도적이셨던 분은 어느 분이십니까?
+                                            <textarea required class="input-field" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub04 step-n">
+                                        <label>(5) 자녀 양육에 대한 부부의 원칙이 있다면 소개해 주십시오.
+                                            <textarea required class="input-field" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub04 step-n">
+                                        <label>(6) 선교지에서의 자녀 양육 또는 교육에 대해 어떠한 계획을 세우셨습니까?
+                                            <textarea required class="input-field" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+        
+                                    <div class="n4-sub04 step-n">
+                                        <label>(7) 가족(배우자, 자녀)을 위한 시간을 따로 구별하여 보내고 계십니까? 어떠한 활동을 하고 계십니까?
+                                            <textarea required class="input-field" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="temporary">
-                            <button class="temporaryBtn">임시저장</button>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>
-                             <div class="field-title">
-                                III.-2 결혼관 - 기혼 작성
-                                <span class="write-whether">(작성중)</span>
-                            </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
-                        </legend>
-                        <div class="input-wrap"> 
-                            <div class="n4-sub01 step-n">
-                                <label>
-                                    <span>(1) 선교에 대한 부부의 소명, 사역방향, 사역지 등이 일치하십니까?</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub02 step-n">
-                                <label>
-                                    <span>(2) 부부와 가족을 위한 경건 생활은 어떻게 이루고 계십니까?</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub03 step-n mult-q">
-                                <span>(3) 부부관계</span>
-                                <label>
-                                    <div class="en-list">
-                                        <span>a. 부부간의 의견 충돌이 발생하는 문제에는 어떤 것들이 있습니까?</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </div>
-                                </label>
-                                <label>
-                                    <div class="en-list">
-                                        <span>b. 결혼생활 중 심각한 갈등에 처한 적이 있었습니까? ‘예'로 답하신 경우, 갈등의 원인이 무엇이었습니까?</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </div>
-                                </label>
-                                <label>
-                                    <div class="en-list">
-                                        <span>c. 갈등상황을 어떻게 해결하셨습니까?</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub04 step-n">
-                                <label>(4) 부부 중 자녀 양육에 적극적이고 주도적이셨던 분은 어느 분이십니까?
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub04 step-n">
-                                <label>(5) 자녀 양육에 대한 부부의 원칙이 있다면 소개해 주십시오.
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub04 step-n">
-                                <label>(6) 선교지에서의 자녀 양육 또는 교육에 대해 어떠한 계획을 세우셨습니까?
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="n4-sub04 step-n">
-                                <label>(7) 가족(배우자, 자녀)을 위한 시간을 따로 구별하여 보내고 계십니까? 어떠한 활동을 하고 계십니까?
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                            </div>
-                        </div>
+                        <!-- 임시저장 버튼 -->
                         <div class="temporary">
                             <button class="temporaryBtn">임시저장</button>
                         </div>
@@ -738,7 +747,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset> <!-- 재정 문항 --> 
                         <legend>
                             <div class="field-title">
                                 V. 재정
@@ -747,49 +756,58 @@
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
-                            <div class="n6-sub01 step-n check">
+                            <div class="n6-sub01 step-n check check-outbox">
                                 <span>1. 신청인은 금전적 채무가 있으십니까?</span>
                                 <div class="checkBox">
                                     <label>
-                                        <input class="yes" type="radio" name="yesNo01" value="yes" required> 예
+                                        <input class="yes" type="radio" name="yesNo02" value="yes" required> 예
                                     </label>
                                     <label>
-                                        <input class="no" type="radio" name="yesNo01" value="no" required> 아니오
+                                        <input class="no" type="radio" name="yesNo02" value="no" required> 아니오
                                     </label>
                                 </div>
-                                <label class="en-list">
-                                    <span>‘예'로 답하신 경우, <br> (1) 채무의 사유는 무엇이며, 금액은 얼마입니까?</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                                <label class="en-list">
-                                    <span>(2) 어떻게 변제하실 계획입니까?</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
+                                <!-- 재정 서브 1 > 예 박스 -->
+                                <div class="n6-sub01-yes-box n6-sub02-sub-box">
+                                    <label class="en-list">
+                                        <span>‘예'로 답하신 경우, <br> (1) 채무의 사유는 무엇이며, 금액은 얼마입니까?</span>
+                                        <textarea required class="" oninput="updateProgress()"></textarea>
+                                    </label>
+                                    <label class="en-list">
+                                        <span>(2) 어떻게 변제하실 계획입니까?</span>
+                                        <textarea required class="" oninput="updateProgress()"></textarea>
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="n6-sub02 step-n">
-                                <div class="n6-sub01 step-n check">
+                                <div class="n6-sub01 step-n check check-outbox">
                                     <span>2. 신청인은 정기적 재정 후원자가 있으십니까?</span>
                                     <div class="checkBox">
                                         <label>
-                                            <input class="yes" type="radio" name="yesNo02" value="yes" required> 예
+                                            <input class="yes" type="radio" name="yesNo03" value="yes" required> 예
                                         </label>
                                         <label>
-                                            <input class="no" type="radio" name="yesNo02" value="no" required> 아니오
+                                            <input class="no" type="radio" name="yesNo03" value="no" required> 아니오
                                         </label>
                                     </div>
-                                    <label class="en-list">
-                                        <span>‘예'로 답하신 경우, <br> (1) 재정 후원자가 총 몇 명입니까?</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </label>
-                                    <label class="en-list">
-                                        <span>(2) 재정 후원금은 총 얼마입니까?</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </label>
-                                    <label class="en-list">
-                                        <span>‘아니오'로 답하신 경우, <br>(1) 선교사 허입 후 어떻게 필요 재정을 충당실 계획이십니까? 구체적으로 기술하여 주십시오.</span>
-                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                    </label>
+                                    <!-- 재정 서브 2 > 예 박스 -->
+                                    <div class="n6-sub02-yes-box n6-sub02-sub-box">
+                                        <label class="en-list">
+                                            <span>‘예'로 답하신 경우, <br> (1) 재정 후원자가 총 몇 명입니까?</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                        <label class="en-list">
+                                            <span>(2) 재정 후원금은 총 얼마입니까?</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
+                                    <!-- 재정 서브 2 > 아니오 박스 -->
+                                    <div class="n6-sub02-no-box n6-sub02-sub-box">
+                                        <label class="en-list">
+                                            <span>‘아니오'로 답하신 경우, <br>(1) 선교사 허입 후 어떻게 필요 재정을 충당실 계획이십니까? 구체적으로 기술하여 주십시오.</span>
+                                            <textarea required class="" oninput="updateProgress()"></textarea>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -816,7 +834,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset> <!-- 기타 문항 -->
                         <legend>
                              <div class="field-title">
                                 VI. 기타
@@ -825,32 +843,34 @@
                             <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
-                            <div class="n7-sub01 step-n check">
+                            <div class="n7-sub01 step-n check check-outbox">
                                 <span>1. 과거 또는 현재에 약물, 알코올, 니코틴 등에 의한 중독 경험이 있으십니까?</span>
                                 <div class="checkBox">
                                     <label>
-                                        <input class="yes" type="radio" name="yesNo03" value="yes" required> 예
+                                        <input class="yes" type="radio" name="yesNo04" value="yes" required> 예
                                     </label>
                                     <label>
-                                        <input class="no" type="radio" name="yesNo03" value="no" required> 아니오
+                                        <input class="no" type="radio" name="yesNo04" value="no" required> 아니오
                                     </label>
                                 </div>
-                                <label class="en-list">
-                                    <span>‘예'로 답하신 경우, 아래에 대해 자세히 기술하여 주십시오.</span>
-                                    <span>(1) 중독물질</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                                <label class="en-list">
-                                    <span>(2) 증상</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
-                                <label class="en-list">
-                                    <span>(3) 치료 기간</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label><label class="en-list">
-                                    <span>(4) 완치 여부</span>
-                                    <textarea required class="input-field" oninput="updateProgress()"></textarea>
-                                </label>
+                                <div class="n7-sub01-yes-box n7-sub01-sub-box">
+                                    <label class="en-list">
+                                        <span>‘예'로 답하신 경우, 아래에 대해 자세히 기술하여 주십시오.</span>
+                                        <span>(1) 중독물질</span>
+                                        <textarea required class="input-field answer-yes" oninput="updateProgress()"></textarea>
+                                    </label>
+                                    <label class="en-list">
+                                        <span>(2) 증상</span>
+                                        <textarea required class="input-field answer-yes" oninput="updateProgress()"></textarea>
+                                    </label>
+                                    <label class="en-list">
+                                        <span>(3) 치료 기간</span>
+                                        <textarea required class="input-field answer-yes" oninput="updateProgress()"></textarea>
+                                    </label><label class="en-list">
+                                        <span>(4) 완치 여부</span>
+                                        <textarea required class="input-field answer-yes" oninput="updateProgress()"></textarea>
+                                    </label>
+                                </div>
                             </div>
                             <div class="n7-sub01 step-n">
                                 <span>
@@ -1237,9 +1257,135 @@
             });
         });
 
-        // -- 9단계 각각 필드셋 작성중, 작성완료 여부
-        document.addEventListener("DOMContentLoaded", function () {
-            const temporaryButtons = document.querySelectorAll(".temporaryBtn");
+        // -- 라디오 버튼 예 / 아니오 클릭 시 
+        document.addEventListener("DOMContentLoaded", function() {
+            function toggleBox(radioName, yesBox, noBox) {
+                const radios = document.querySelectorAll(`input[name=${radioName}]`);
+                const yesElement = document.querySelector(yesBox);
+                const noElement = document.querySelector(noBox);
+
+                if (!yesElement || !noElement) return;
+
+                radios.forEach(function(radio) {
+                    radio.addEventListener("change", function() {
+                        if (this.value === "yes") {
+                            yesElement.style.display = "block";
+                            noElement.style.display = "none";
+                            yesElement.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
+                            noElement.querySelectorAll("textarea").forEach(textarea => {
+                                textarea.classList.remove("input-field");
+                                textarea.value = "";
+                            });
+                        } else {
+                            noElement.style.display = "block";
+                            yesElement.style.display = "none";
+                            noElement.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
+                            yesElement.querySelectorAll("textarea").forEach(textarea => {
+                                textarea.classList.remove("input-field");
+                                textarea.value = "";
+                            });
+                        }
+                        updateProgress();
+                    });
+                });
+            }
+
+            function toggleSingleBox(radioName, yesBox) {
+                const radios = document.querySelectorAll(`input[name=${radioName}]`);
+                const yesElement = document.querySelector(yesBox);
+
+                if (!yesElement) return;
+
+                radios.forEach(function(radio) {
+                    radio.addEventListener("change", function() {
+                        if (this.value === "yes") {
+                            yesElement.style.display = "block";
+                            yesElement.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
+                        } else {
+                            yesElement.style.display = "none";
+                            yesElement.querySelectorAll("textarea").forEach(textarea => {
+                                textarea.classList.remove("input-field");
+                                textarea.value = "";
+                            });
+                        }
+                        updateProgress();
+                    });
+                });
+            }
+
+            toggleSingleBox('yesNo02', '.n6-sub01-yes-box');
+            toggleBox('yesNo03', '.n6-sub02-yes-box', '.n6-sub02-no-box');
+            toggleSingleBox('yesNo04', '.n7-sub01-yes-box');
+            toggleBox('yesNo01', '.married-wrap', '.single-wrap');
+
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener("change", function() {
+                    const name = this.name;
+                    const value = this.value;
+                    const yesBox = document.querySelector(`.${name}-yes-box`);
+                    const noBox = document.querySelector(`.${name}-no-box`);
+
+                    if (yesBox && noBox) {
+                        if (value === "yes") {
+                            yesBox.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
+                            noBox.querySelectorAll("textarea").forEach(textarea => textarea.classList.remove("input-field"));
+                        } else {
+                            noBox.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
+                            yesBox.querySelectorAll("textarea").forEach(textarea => textarea.classList.remove("input-field"));
+                        }
+                    }
+                    updateProgress();
+                });
+            });
+        });
+
+        // 페이지 로드 시 progressIndicator 숨기기
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const progressIndicator = document.getElementById('progress-9');
+            progressIndicator.style.display = 'none'; // 초기에는 숨김
+        });
+        
+        // 프로그래스 업데이트 함수
+        function updateProgress() {
+            const inputs = document.querySelectorAll('.input-field');
+            const selects = document.querySelectorAll('.select-field');
+
+            const totalFields = inputs.length + selects.length ; 
+            let filledFields = 0;
+
+            inputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
+
+            selects.forEach(select => {
+                if (select.value !== '') {
+                    filledFields++;
+                }
+            });
+
+            let percentage = totalFields > 0 ? (filledFields / totalFields) * 100 : 0;
+
+            const progressIndicator = document.getElementById('progress-9'); // 필요에 따라 변경
+
+            if (percentage === 100) {
+                progressIndicator.textContent = "완료";
+                progressIndicator.style.color = '#007AFF';
+                progressIndicator.style.borderColor = '#007AFF';
+                progressIndicator.style.display = 'block'; // 표시
+            } else if (percentage > 0) {
+                progressIndicator.textContent = `${percentage.toFixed(0)}%`;
+                progressIndicator.style.color = '#E72929';
+                progressIndicator.style.borderColor = '#E72929';
+                progressIndicator.style.display = 'block'; // 표시
+            } else {
+                progressIndicator.style.display = 'none'; // 0%일 때 숨김
+            }
+        }
+
+        // 임시저장 버튼
+        const temporaryButtons = document.querySelectorAll(".temporaryBtn");
 
             temporaryButtons.forEach((button) => {
                 button.addEventListener("click", function () {
@@ -1276,76 +1422,83 @@
                     }
                 });
             });
-        });
 
-        // ---- 프로그래스 % 업데이트
-        function updateProgress() {
-            const inputs = document.querySelectorAll('.input-field'); 
-            const selects = document.querySelectorAll('.select-field');
-
-            // 체크할 라디오 그룹들 (name="lunar" 제외)
-            const radioGroups = new Set();
-            document.querySelectorAll('input[type="radio"]').forEach(radio => {
-                if (radio.name !== "") { // "lunar" 제외
-                    radioGroups.add(radio.name);
-                }
-            });
-
-            const totalFields = inputs.length + selects.length + radioGroups.size; 
-            let filledFields = 0;
-
-            inputs.forEach(input => {
-                if (input.value.trim() !== '') {
-                    filledFields++;
-                }
-            });
-
-            selects.forEach(select => {
-                if (select.value !== '') {
-                    filledFields++;
-                }
-            });
-
-            radioGroups.forEach(name => {
-                if (document.querySelector(`input[name="${name}"]:checked`)) {
-                    filledFields++;
-                }
-            });
-
-            let percentage = totalFields > 0 ? (filledFields / totalFields) * 100 : 0;
-
-            const progressIndicator = document.getElementById('progress-9'); // 필요에 따라 변경
-
-            if (percentage === 100) {
-                progressIndicator.textContent = "완료";
-                progressIndicator.style.color = '#007AFF';
-                progressIndicator.style.borderColor = '#007AFF';
-                progressIndicator.style.display = 'block'; // 표시
-            } else if (percentage > 0) {
-                progressIndicator.textContent = `${percentage.toFixed(0)}%`;
-                progressIndicator.style.color = '#E72929';
-                progressIndicator.style.borderColor = '#E72929';
-                progressIndicator.style.display = 'block'; // 표시
-            } else {
-                progressIndicator.style.display = 'none'; // 0%일 때 숨김
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgress();
-        });
-
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', updateProgress);
-        });
-
-        // -- 최종제출 버튼 클릭 시 페이지 이동 (완료 상태여야 버튼 활성화)
+        // 최종 제출 버튼 클릭 시 페이지 이동 (완료 상태여야 버튼 활성화)
         document.getElementById("submit-btn").addEventListener("click", function() {
             if (document.getElementById('progress-9').textContent === "완료") {
                 window.location.href = "https://puritechlab1155.github.io/onnuri-front/myInfo-history.html";
             }
         });
 
+
+
+
+
+
+
+
+
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        // // -- 라디오 버튼 예 / 아니오 클릭 시 
+        //     // 라디오 버튼 클릭 시 해당 박스 내의 텍스트 영역 클래스 변경
+        //     const yesRadioButtons = document.querySelectorAll('input[type="radio"].yes');
+        //     const noRadioButtons = document.querySelectorAll('input[type="radio"].no');
+
+        //     // '예' 라디오 클릭 시 해당하는 .check-outbox 내의 textarea에 input-field 클래스 추가
+        //     yesRadioButtons.forEach((radio) => {
+        //         radio.addEventListener("click", function () {
+        //             // 해당 라디오 버튼의 부모 .check-outbox 요소 찾기
+        //             const checkOutbox = this.closest('.check-outbox');
+
+        //             // 예 라디오 클릭 시 해당하는 .answer-yes 텍스트 영역에 input-field 클래스 추가
+        //             const answerYesTextareas = checkOutbox.querySelectorAll('.answer-yes');
+        //             answerYesTextareas.forEach(textarea => {
+        //                 textarea.classList.add('input-field');  // 예를 선택하면 input-field 추가
+        //             });
+
+        //             // 아니오 라디오 클릭 시 해당하는 .answer-no 텍스트 영역에서 input-field 클래스 제거
+        //             const answerNoTextareas = checkOutbox.querySelectorAll('.answer-no');
+        //             answerNoTextareas.forEach(textarea => {
+        //                 textarea.classList.remove('input-field');  // 아니오를 선택하면 input-field 제거
+        //             });
+
+        //             // 프로그래스 갱신
+        //             updateProgress();
+        //         });
+        //     });
+
+        //     // '아니오' 라디오 클릭 시 해당하는 .check-outbox 내의 textarea에 input-field 클래스 추가
+        //     noRadioButtons.forEach((radio) => {
+        //         radio.addEventListener("click", function () {
+        //             // 해당 라디오 버튼의 부모 .check-outbox 요소 찾기
+        //             const checkOutbox = this.closest('.check-outbox');
+
+        //             // 아니오 라디오 클릭 시 해당하는 .answer-no 텍스트 영역에 input-field 클래스 추가
+        //             const answerNoTextareas = checkOutbox.querySelectorAll('.answer-no');
+        //             answerNoTextareas.forEach(textarea => {
+        //                 textarea.classList.add('input-field');  // 아니오를 선택하면 input-field 추가
+        //             });
+
+        //             // 예 라디오 클릭 시 해당하는 .answer-yes 텍스트 영역에서 input-field 클래스 제거
+        //             const answerYesTextareas = checkOutbox.querySelectorAll('.answer-yes');
+        //             answerYesTextareas.forEach(textarea => {
+        //                 textarea.classList.remove('input-field');  // 예를 선택하면 input-field 제거
+        //             });
+
+        //             // 프로그래스 갱신
+        //             updateProgress();
+        //         });
+        //     });
+
+        //     // 프로그래스 갱신 (페이지 로드 후 즉시 실행)
+        //     updateProgress();
+
+        //     // 라디오 버튼 변화 감지하여 프로그래스 갱신
+        //     document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        //         radio.addEventListener('change', updateProgress);
+        //     });
+        // });
     </script>
 </body>
 </html>

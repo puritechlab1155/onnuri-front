@@ -128,6 +128,8 @@ main.form_01 #form01 .out-box02 .check {
     display: flex;
     align-items: center;
 }
+/*위 코드에서 input이 value="no"인 라디오 버튼을 클릭한다면 answer-yes클래스를 가진 태그의 input-field 클래스를 제거하고, 
+value="yes" 인 라디오 버튼을 클릭한다면 answer-no클래스를 가진 태그의 input-field클래스를 제거하도록 하여 예, 아니오 버튼 클릭에 따른 퍼센트를 실행하고 싶어*/
 /* 상단오른쪽 */
 main.form_01 #form01 .top_right .inner-box {
     height: calc(100% / 4);
@@ -2587,10 +2589,68 @@ main.form_09 .n1-sub04 div {
 main.form_09 .n1-sub05 label, .n1-sub06 label, .n1-sub07 label{
     margin-bottom: 12px;
 }
-/*n3*/
 main.form_09 .n3-sub04 span {
     margin-top: 8px;
 }
+main.form_09 #form09 .marry-whether {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 4px 16px;
+}
+main.form_09 #form09 .marry-whether h3 {
+    font-weight: 500;
+}
+main.form_09 #form09 .whether-title {
+    margin: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+main.form_09 #form09 .single-wrap ,
+main.form_09 #form09 .married-wrap {
+    display: none;
+}
+main.form_09 #form09 .marry-whether label {
+    cursor: pointer;
+}
+main.form_09 #form09 .marry-whether label:first-child {
+    margin-right: 30px;
+    position: relative;
+}
+main.form_09 #form09 .marry-whether label:first-child::after {
+    content: '/';
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #222;
+}
+main.form_09 #form09 .n6-sub02-sub-box ,
+main.form_09 #form09 .n7-sub01-sub-box {
+    margin-top: 16px;
+    display: none;
+}
+/* -------
+.n6-sub01 .checkBox .yes 라디오 버튼 클릭
+>> .n6-sub01-yes-box 나타남 
+(아니오 클릭시 .n6-sub01-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨)
+
+.n6-sub02 .checkBox .yes 라디오 버튼 클릭시
+>> n6-sub02-yes-box 나타나고, .n6-sub02-no-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨
+.n6-sub02 .checkBox .no 라디오 버튼 클릭시
+>> n6-sub02-no-box 나타나고, .n6-sub02-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨
+
+
+.n7-sub01 .checkBox .yes 라디오 버튼 클릭
+>> .n7-sub01-yes-box 나타남
+(아니오 클릭시 .n7-sub01-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨)
+
+현재 서브 예스 박스와 서브 노 박스는 display: none; 처리가 되어 있음.
+
+-------- */
+
 /*7단계, 8단계 */
 main.form_09 #form07 .input-wrap {
     border: none; 
