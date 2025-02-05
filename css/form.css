@@ -130,6 +130,7 @@ main.form_01 #form01 .out-box02 .check {
 }
 /* 상단오른쪽 */
 main.form_01 #form01 .top_right .inner-box {
+    height: calc(100% / 4);
     padding: 0 !important;
     align-items: stretch;
 }
