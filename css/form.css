@@ -10,6 +10,9 @@ main.form_01 #form01 input:not([type="radio"]) {
 main.form_01 #form01 .red { 
     color: #DF2A2A; font-size: 14px; 
 }
+main.form_01 #form01 .space_mpb {
+    display: none;
+}
 main.form_01 #form01 .gray_btn { 
     border: 1px solid #D1D1D1; 
     border-radius: 3px;
@@ -17,12 +20,18 @@ main.form_01 #form01 .gray_btn {
     color: #222; 
     padding: 3px 10px; 
 }
+main.form_01 #form01 .input_containner {
+    border-left: 1px solid #ACC7D4;
+    border-bottom: 1px solid #ACC7D4;
+}
 main.form_01 #form01 div.inner-box {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #ACC7D4;
+    border-bottom: none;
+    border-left: none;
     background: #E0EBF0;
 }
 main.form_01 #form01 .input-wrap {
@@ -30,16 +39,13 @@ main.form_01 #form01 .input-wrap {
     justify-content: center;
     align-items: center;
 }
-/* 상단왼쪽 공통스타일 */
 main.form_01 #form01 .ad_left, .blue-box {
-    flex: 0 0 180px;
+    flex: 0 0 170px;
     background: #E0EBF0;
     text-align: center; 
     color: #222;
     font-weight: 600;
-    /* padding: 27px; */
     font-size: 18px;
-    /* display: block; */
 }
 main.form_01 #form01 label.blue-box-inner {
     flex: 0 0 100px;
@@ -62,7 +68,7 @@ main.form_01 #form01 div.bottom>div>div,
 main.form_01 #form01 div.ad_right, 
 main.form_01 #form01 .tl_inner>div{
     flex: 1;
-    padding: 14px;
+    padding: 12.6px;
     font-size: 18px;
     background: #fff;
 }
@@ -70,12 +76,15 @@ main.form_01 #form01 .tl_inner>div{
 main.form_01 #form01 .top {
     width: 100%;
     display: flex;
+    align-items: stretch;
     flex-wrap: wrap;
-    background: lightcyan ;
+    background: lightblue;
 }
 main.form_01 #form01 .top_left, main.form_01 #form01 .top_right {
     flex: 0 0 50%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 /* 상단왼쪽 */
@@ -90,18 +99,16 @@ main.form_01 #form01 .tl_inner {
 main.form_01 #form01 .tl_inner>div {
     width: 100%;
 }
-/* out-box01 성명*/
 main.form_01 #form01 .out-box01 .blue-box ,
-main.form_01 #form01 .out-box07 .blue-box {
-    flex: 0 0 180px;
+main.form_01 #form01 .out-box07 .blue-box ,
+main.form_01 #form01 .out-box10 .ad_left {
+    flex: 0 0 170px;
     padding: 10px;
     background: #E0EBF0;
 }
 main.form_01 #form01 .out-box01 .tl_inner:not(:last-child) {
     border-bottom: 1px solid #ACC7D4;
 }
-
-/* out-box02 생년월일 */
 main.form_01 #form01 .out-box02 .check {
     flex: 0 0 64px;
     margin-left: 6px;
@@ -111,30 +118,48 @@ main.form_01 #form01 .out-box02 .check {
 /* 상단오른쪽 */
 main.form_01 #form01 .top_right .inner-box {
     padding: 0 !important;
+    align-items: stretch;
 }
 main.form_01 #form01 .top_right div.inner-box .blue-box{
-    padding: 20.5px 0;
     border-right: 1px solid #ACC7D4;
     background: #E0EBF0;
 }
-main.form_01 #form01 .out-box05 .blue-box ,
-main.form_01 #form01 .out-box07 .blue-box{
-    flex: 0 0 180px;
-    background: #E0EBF0;
-}
-main.form_01 #form01 .top_right .radio-box {
+main.form_01 #form01 .inner-box .right-tit {
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
-    padding: 0;
+}
+main.form_01 #form01 .top_right .radio-box {
+    padding: 0 14px;
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
     font-size: 18px;
+    background: #fff;
 }
 main.form_01 #form01 .top_right .radio-box li{
-    flex: 1;
-    text-align: center;
     padding: 20px 0;
     background: #fff;
+}
+main.form_01 #form01 .out-box04 .input-wrap{
+    justify-content: start;
+    gap: 8px;
+}
+main.form_01 #form01 .out-box04 .input-wrap input {
+    width: 60px;
+    text-align: center;
+}
+main.form_01 #form01 .out-box05 .blue-box ,
+main.form_01 #form01 .out-box07 .blue-box ,
+main.form_01 #form01 .out-box11 .ad_left ,
+main.form_01 #form01 .out-box12 .ad_left {
+    flex: 0 0 170px;
+    background: #E0EBF0;
+}
+main.form_01 #form01 .out-box06 .input-wrap input{
+    flex: 0 0 60px;
 }
 /* 하단 */
 main.form_01 #form01 .middle-wrap {
@@ -143,12 +168,158 @@ main.form_01 #form01 .middle-wrap {
 main.form_01 #form01 .middle-wrap .middle-box {
     padding: 0 !important;
 }
+main.form_01 #form01 .middle-wrap .middle-box > div {
+    align-items: stretch !important;
+}
+main.form_01 #form01 .top_right .middle-box .inner-box {
+    display: flex;
+    padding: 0 !important;
+}
 main.form_01 #form01 .middle-box div.inner-box .input-wrap{
     flex: 1;
     padding: 14px;
     background: #fff;
     border-left: 1px solid #ACC7D4;
 }
+main.form_01 #form01 .out-box10 .ad_right ,
+main.form_01 #form01 .out-box12 .input-wrap {
+    border-left: 1px solid #ACC7D4;
+}
+main.form_01 #form01 .out-box10 .ad_right .input-wrap , 
+main.form_01 #form01 .out-box12 .input-wrap ,
+main.form_01 #form01 .out-box06 .input-wrap  {
+    justify-content: start;
+    gap: 16px;
+}
+main.form_01 #form01 .out-box08 .blue-box ,
+main.form_01 #form01 .out-box09 .blue-box {
+    flex: 0 0 169px;
+}
+main.form_01 #form01 .out-box10 .ad_right .input-wrap:first-child {
+    position: relative;
+}
+main.form_01 #form01 .out-box10 .ad_right .input-wrap:first-child input {
+    width: 110px;
+    text-align: center;
+}
+main.form_01 #form01 .out-box10 .ad_right .input-wrap:nth-child(2) {
+    padding: 14px 0;
+}
+main.form_01 #form01 .out-box10 .gray_btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+}
+main.form_01 #form01 .out-box11 .ad_right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 32px;
+    align-items: center;
+    border-left: 1px solid #ACC7D4;
+}
+main.form_01 #form01 .out-box11 .ad_right .input-wrap {
+    gap: 16px;
+}
+main.form_01 #form01 .out-box11 .ad_right .input-wrap:first-child input{
+    width: 90px;
+    text-align: center;
+}
+main.form_01 #form01 .out-box11 .ad_right .input-wrap:nth-child(2) input{
+    width: 60px;
+    text-align: center;
+}
+main.form_01 #form01 .out-box11 .ad_right .input-wrap label{
+    display: block;
+    flex: 0 0 auto;
+}
+@media (max-width: 940px) {
+    main.form_01 #form01 .top {
+        display: block;
+    }
+    main.form_01 #form01 .middle-wrap {
+        display: block;
+    }
+    main.form_01 #form01 .ad_left, .blue-box {
+        flex: 0 0 120px;
+    }
+    main.form_01 #form01 .out-box01 .blue-box ,
+    main.form_01 #form01 .out-box07 .blue-box ,
+    main.form_01 #form01 .out-box10 .ad_left {
+        flex: 0 0 120px;
+    }
+    main.form_01 #form01 .top_right .blue-box {
+        flex: 0 0 121px !important;
+    }
+    main.form_01 #form01 .out-box05 .blue-box ,
+    main.form_01 #form01 .out-box07 .blue-box ,
+    main.form_01 #form01 .out-box11 .ad_left ,
+    main.form_01 #form01 .out-box12 .ad_left {
+        flex: 0 0 120px;
+    }
+    main.form_01 #form01 .out-box08 .blue-box, main.form_01 #form01 .out-box09 .blue-box {
+        flex: 0 0 120px;
+    }
+    main.form_01 #form01 .out-box10 .ad_right .input-wrap:first-child {
+        flex-wrap: wrap;
+    }
+    .gray_btn-container {
+        width: 100%;
+    }
+    main.form_01 #form01 .out-box11 .ad_right span {
+        width: 100%;
+    }
+}
+@media (max-width: 482px) {
+    main.form_01 #form01 input {
+        font-size: 15px !important;
+    }
+    main.form_01 #form01 div.top_left>div>div, main.form_01 #form01 div.top_right>div>div, main.form_01 #form01 div.bottom>div>div, main.form_01 #form01 div.ad_right, main.form_01 #form01 .tl_inner>div {
+        font-size: 15px;
+    }
+    main.form_01 #form01 .ad_left, .blue-box {
+        font-size: 15px;
+    }
+    main.form_01 #form01 label.blue-box-inner {
+        font-size: 14px;
+    }
+    main.form_01 #form01 .top_right .radio-box {
+        font-size: 15px;
+    }
+    main.form_01 #form01 .out-box10 .gray_btn {
+        font-size: 14px;
+    }
+    main.form_01 #form01 .ad_left, .blue-box {
+        flex: 0 0 80px;
+    }
+    main.form_01 #form01 .out-box01 .blue-box ,
+    main.form_01 #form01 .out-box07 .blue-box ,
+    main.form_01 #form01 .out-box10 .ad_left {
+        flex: 0 0 80px;
+    }
+    main.form_01 #form01 .top_right .blue-box {
+        flex: 0 0 81px !important;
+    }
+    main.form_01 #form01 .out-box05 .blue-box ,
+    main.form_01 #form01 .out-box07 .blue-box ,
+    main.form_01 #form01 .out-box11 .ad_left ,
+    main.form_01 #form01 .out-box12 .ad_left {
+        flex: 0 0 80px;
+    }
+    main.form_01 #form01 .out-box08 .blue-box, main.form_01 #form01 .out-box09 .blue-box {
+        flex: 0 0 80px;
+    }
+    main.form_01 #form01 label.blue-box-inner {
+        flex: 0 0 80px;
+    }
+    main.form_01 #form01 .out-box10 .ad_right .input-wrap:first-child input {
+        width: 80px;
+    }
+    main.form_01 #form01 .space_mpb {
+        display: block;
+    }
+}
+
 /*2단계*/
 main.form_02 #form02 fieldset {
     width: 100%;

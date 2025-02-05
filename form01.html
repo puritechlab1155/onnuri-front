@@ -311,45 +311,57 @@
                             <!-- 상단오른쪽 -->
                             <div class="top_right" style="background-color: pink;">
                                 <div class="inner-box out-box04">
-                                    <label for="age" class="blue-box bt_n">나이</label>
+                                    <label for="age" class="blue-box bt_n right-tit">
+                                        <span>나이</span>
+                                    </label>
                                     <div class="input-wrap">
                                         만 <input class="border_g" type="text" placeholder="00"> 세
                                     </div>
                                 </div>
                                 <div class="inner-box out-box05">
-                                    <div class="blue-box bt_n">성별</div>
+                                    <div class="blue-box bt_n right-tit">
+                                        <span>성별</span>
+                                    </div>
                                     <ul class="radio-box">
                                         <li>
-                                            <label for="" style="display: none;">성별(남)</label>
-                                            <input class="border_g" type="radio" placeholder=""> 남
+                                            <label style="cursor: pointer;">
+                                                <input name="gender" class="border_g" type="radio"> 
+                                                <span>남</span>
+                                            </label>
                                         </li>
                                         <li>
-                                            <label for="" style="display: none;">성별(여)</label>
-                                            <input class="border_g" type="radio" placeholder=""> 여
+                                            <label style="cursor: pointer;">
+                                                <input name="gender" class="border_g" type="radio"> 
+                                                <span>여</span>
+                                            </label>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="inner-box out-box06">
-                                    <label for="" class="blue-box bt_n">혈액형</label>
+                                    <label for="" class="blue-box bt_n right-tit">
+                                        <span>혈액형</span>
+                                    </label>
                                     <div class="input-wrap">
                                         <input class="border_g" type="text" placeholder="-"> 형
                                     </div>
                                 </div>
                                 <div class="inner-box out-box07">
-                                    <div for="" class="blue-box bt_n">결혼여부</div>
+                                    <div for="" class="blue-box bt_n right-tit">
+                                        <span>결혼여부</span>
+                                    </div>
                                     <ul class="radio-box">
                                         <li>
-                                            <label>
+                                            <label style="cursor: pointer;">
                                                 <input name="marry" class="border_g" type="radio" placeholder=""> 미혼
                                             </label>
                                         </li>
                                         <li>
-                                            <label>
+                                            <label style="cursor: pointer;">
                                                 <input name="marry" class="border_g" type="radio" placeholder=""> 기혼
                                             </label>
                                         </li>
                                         <li>
-                                            <label>
+                                            <label style="cursor: pointer;">
                                                 <input name="marry" class="border_g" type="radio" placeholder=""> 기타
                                             </label>
                                         </li>
@@ -364,18 +376,23 @@
                             <div class="middle-wrap">
                                 <div class="middle-box">
                                     <div class="inner-box out-box02">
-                                        <label class="blue-box bt_n">생년월일</label>
+                                        <label class="blue-box bt_n right-tit">
+                                            <span>생년월일</span>
+                                        </label>
                                         <div class="input-wrap">
                                             <label for="" style="display: none;">생년월일</label>
                                             <input class="border_g" type="text" placeholder="0000-00-00">
                                             <div class="check">
-                                                <label for="" style="display: none;">음력</label>
-                                                <input type="radio"> <span>음력</span>
+                                                <label style="cursor: pointer;">
+                                                    <input name="lunar" type="radio"><span>음력</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="inner-box out-box03">
-                                        <label class="blue-box bt_n">이메일</label>
+                                        <label for="" class="blue-box bt_n right-tit">
+                                            <span>이메일</span>
+                                        </label>
                                         <div class="input-wrap">
                                             <input class="border_g" type="email" placeholder="gmail을 지원합니다.">
                                         </div>
@@ -383,13 +400,17 @@
                                 </div>
                                 <div class="middle-box">
                                     <div class="inner-box out-box08">
-                                        <label for="residence" class="blue-box bt_n">거주증번호</label>
+                                        <label for="residence" class="blue-box bt_n right-tit">
+                                            <span>거주증번호</span>
+                                        </label>
                                         <div class="input-wrap">
                                             <input class="border_g" type="text" placeholder="0123456789">
                                         </div>
                                     </div>
                                     <div class="inner-box out-box09">
-                                        <label for="hp" class="blue-box bt_n">핸드폰</label>
+                                        <label for="hp" class="blue-box bt_n right-tit">
+                                            <span>핸드폰</span>
+                                        </label>
                                         <div class="input-wrap">
                                             <input class="border_g" type="text" placeholder="000-0000-0000">
                                         </div>
@@ -398,32 +419,37 @@
                             </div>
                             <!--  현주소 거주지 , 비상연락처 , 사진 -->
                             <div class="inner-box out-box10">
-                                <div class="ad_left">현주소 거주지</div>
+                                <div class="ad_left">현주소<br class="space_mpb"> 거주지</div>
                                 <div class="ad_right">
                                     <div class="input-wrap">
                                         <div>
                                             <label for="" style="display: none;">우편번호</label>
-                                            <input class="border_g" type="text">
+                                            <input class="border_g" type="text" placeholder=" 000 ">
                                         </div>
+                                        <div>-</div>
                                         <div>
                                             <label for="" style="display: none;">우편번호</label>
-                                            <input class="border_g" type="text">
+                                            <input class="border_g" type="text" placeholder=" ">
                                         </div>
-                                        <button class="gray_btn">우편변호 찾기 <img src="" alt="돋보기"></button>
+                                        <div class="gray_btn-container">
+                                            <button class="gray_btn">우편번호 찾기 
+                                                <img src="img/form/search.png" alt="돋보기">
+                                            </button>
+                                        </div>
                                     </div>
                                     <div class="input-wrap">
                                         <label for="" style="display: none;">주소</label>
-                                        <input class="border_g" type="text" placeholder=" - ">
+                                        <input class="border_g" type="text" placeholder=" 주소 ">
                                     </div>
                                     <div class="input-wrap">
                                         <label for="" style="display: none;">상세주소</label>
-                                        <input class="border_g" type="text" placeholder=" - ">
+                                        <input class="border_g" type="text" placeholder="상세주소 ">
                                     </div>
                                 </div>
                             </div>
                             <div class="inner-box out-box11">
-                                <div class="ad_left">비상연락처</div>
-                                <div class="bl_n">
+                                <div class="ad_left">비상<br class="space_mpb">연락처</div>
+                                <div class="ad_right">
                                     <div class="input-wrap">
                                         <label for="" >성명</label>
                                         <input class="border_g" type="text" placeholder="홍길동">
@@ -435,12 +461,12 @@
                                     <div class="input-wrap">
                                         <label for="">전화번호</label>
                                         <input class="border_g" type="text" placeholder="000-0000-0000">
-                                        <span class="red">가급적 국내(대한민국)에 거주중인 분으로 작성 바랍니다.</span>
                                     </div>
+                                    <span class="red">가급적 국내(대한민국)에 거주중인 분으로 작성 바랍니다.</span>
                                 </div>
                             </div>
                             <div class="inner-box out-box12">
-                                <div class="blue-box bt_n">사진</div>
+                                <div class="ad_left bt_n">사진</div>
                                 <div class="input-wrap">
                                     <button class="gray_btn">파일선택</button> 
                                     <span>선택된 파일 없음</span>
