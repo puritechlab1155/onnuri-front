@@ -1321,6 +1321,8 @@
 
             temporaryButtons.forEach((button) => {
                 button.addEventListener("click", function () {
+                    event.preventDefault();
+                    
                     const fieldset = this.closest("fieldset"); // 현재 버튼이 속한 필드셋 찾기
                     const writeWhether = fieldset.querySelector(".write-whether"); // 상태 표시 요소
                     const inputs = fieldset.querySelectorAll("input, textarea, select"); // 모든 입력 요소 가져오기
