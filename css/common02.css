@@ -11,11 +11,17 @@
 }
 /* 사파리 input아이콘 초기화 */
 @supports (-webkit-appearance:none) {
-    input {
+    input:not([type='checkbox']) {
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
       appearance: none !important;
     }
+}
+#home input[type='checkbox'] {
+    width: 13px !important;
+    height: 13px !important;
+    cursor: pointer;
+    margin-right: 6px;
 }
 #home input::-webkit-contacts-auto-fill-button {
 	visibility:hidden !important;
