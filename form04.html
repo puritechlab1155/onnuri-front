@@ -388,7 +388,7 @@
                     </div>
                     
                     <div class="next-container">
-                        <button class="next" type="button" id="submit-btn" disabled>제출하기</button>
+                        <button class="next" ttype="button" onclick="window.open('https://puritechlab1155.github.io/onnuri-front/form05.html')">다음</button>
                     </div>
                 </div>
             </div>
@@ -734,31 +734,6 @@
                 }
             });
 
-            // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
-            const form = document.getElementById('form04');
-            const submitBtn = document.getElementById('submit-btn');
-
-            const getAllInputs = () => form.querySelectorAll('input[required], .list_box input');
-
-            function checkFormCompletion() {
-                const inputs = getAllInputs(); 
-                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-                submitBtn.disabled = !allFilled; 
-            }
-
-            // 초기 입력 필드에 이벤트 리스너 추가
-            const inputs = getAllInputs(); 
-            inputs.forEach(input => {
-                input.addEventListener('input', checkFormCompletion);
-            });
-
-            // 확인 버튼 클릭 시 페이지 이동
-            submitBtn.addEventListener('click', function () {
-                if (!submitBtn.disabled) {
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form05.html';
-                }
-            });
-
             // 페이지 로드 시 초기 상태 체크
             checkFormCompletion(); 
 
@@ -897,6 +872,31 @@
         document.querySelectorAll('input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', updateProgress);
         });
+
+        // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
+            // const form = document.getElementById('form04');
+            // const submitBtn = document.getElementById('submit-btn');
+
+            // const getAllInputs = () => form.querySelectorAll('input[required], .list_box input');
+
+            // function checkFormCompletion() {
+            //     const inputs = getAllInputs(); 
+            //     const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            //     submitBtn.disabled = !allFilled; 
+            // }
+
+            // // 초기 입력 필드에 이벤트 리스너 추가
+            // const inputs = getAllInputs(); 
+            // inputs.forEach(input => {
+            //     input.addEventListener('input', checkFormCompletion);
+            // });
+
+            // // 확인 버튼 클릭 시 페이지 이동
+            // submitBtn.addEventListener('click', function () {
+            //     if (!submitBtn.disabled) {
+            //         window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form05.html';
+            //     }
+            // });
 
     </script>
 </body>

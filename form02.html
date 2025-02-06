@@ -683,7 +683,7 @@
                     </div>
                     
                     <div class="next-container">
-                        <button class="next" type="button" id="submit-btn" disabled>제출하기</button>
+                        <button class="next" ttype="button" onclick="window.open('https://puritechlab1155.github.io/onnuri-front/form03.html')">다음</button>
                     </div>
                 </div>
             </div>
@@ -1100,42 +1100,6 @@
             });
         });
 
-        // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
-        // >> 복제된 박스 경우 값이 존재해도 버튼 활성화 안되는 오류 *******************************
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('form02');
-            const submitBtn = document.getElementById('submit-btn');
-            
-            // 모든 필수 input과 복제된 박스의 input 가져오기
-            const getAllInputs = () => form.querySelectorAll('input[required], .input-container input');
-
-            // 각 input 입력 필드에 변화가 있을 때마다 체크하는 함수
-            function checkFormCompletion() {
-                const inputs = getAllInputs(); 
-                const allFilled = Array.from(inputs).every(input => input.value.trim() !== ''); 
-                submitBtn.disabled = !allFilled; // 모든 입력이 채워지면 버튼 활성화
-            }
-
-            // 초기 입력 필드에 이벤트 리스너 추가
-            const inputs = getAllInputs(); 
-            inputs.forEach(input => {
-                input.addEventListener('input', checkFormCompletion);
-            });
-
-            // 확인 버튼 클릭 시 다음 HTML로 넘어가도록 설정
-            submitBtn.addEventListener('click', function () {
-                const allInputs = getAllInputs(); 
-                const allFilled = Array.from(allInputs).every(input => input.value.trim() !== '');
-                
-                if (allFilled) { 
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form03.html';
-                }
-            });
-
-            // 페이지 로드 시 초기 상태 체크 (버튼 활성화 상태 초기화)
-            checkFormCompletion(); // 페이지가 로드될 때 입력 필드의 상태를 체크하여 버튼 활성화 여부 결정
-        });
-
         // ---- 프로그래스 % 업데이트
         function updateProgress() {
             const inputs = document.querySelectorAll('.input-field'); 
@@ -1196,6 +1160,41 @@
         document.querySelectorAll('input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', updateProgress);
         });
+
+        // --- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 다음 페이지로 넘어가게 설정
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const form = document.getElementById('form02');
+        //     const submitBtn = document.getElementById('submit-btn');
+            
+        //     // 모든 필수 input과 복제된 박스의 input 가져오기
+        //     const getAllInputs = () => form.querySelectorAll('input[required], .input-container input');
+
+        //     // 각 input 입력 필드에 변화가 있을 때마다 체크하는 함수
+        //     function checkFormCompletion() {
+        //         const inputs = getAllInputs(); 
+        //         const allFilled = Array.from(inputs).every(input => input.value.trim() !== ''); 
+        //         submitBtn.disabled = !allFilled; // 모든 입력이 채워지면 버튼 활성화
+        //     }
+
+        //     // 초기 입력 필드에 이벤트 리스너 추가
+        //     const inputs = getAllInputs(); 
+        //     inputs.forEach(input => {
+        //         input.addEventListener('input', checkFormCompletion);
+        //     });
+
+        //     // 확인 버튼 클릭 시 다음 HTML로 넘어가도록 설정
+        //     submitBtn.addEventListener('click', function () {
+        //         const allInputs = getAllInputs(); 
+        //         const allFilled = Array.from(allInputs).every(input => input.value.trim() !== '');
+                
+        //         if (allFilled) { 
+        //             window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form03.html';
+        //         }
+        //     });
+
+        //     // 페이지 로드 시 초기 상태 체크 (버튼 활성화 상태 초기화)
+        //     checkFormCompletion(); // 페이지가 로드될 때 입력 필드의 상태를 체크하여 버튼 활성화 여부 결정
+        // });
 
 
     </script>

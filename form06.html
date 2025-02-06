@@ -434,7 +434,7 @@
                     </div>
                     
                     <div class="next-container">
-                        <button class="next" type="button" id="submit-btn" disabled>제출하기</button>
+                        <button class="next" ttype="button" onclick="window.open('https://puritechlab1155.github.io/onnuri-front/form07.html')">다음</button>
                     </div>
                 </div>
             </div>
@@ -764,61 +764,32 @@
 
     <script src="js/script.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // 모든 전화번호 입력 필드를 선택
-    const telInputs = document.querySelectorAll('input[id^="tel"]');
-
-    telInputs.forEach(telInput => {
-        telInput.addEventListener('input', function () {
-            // 입력 값에서 하이픈을 제거
-            let inputValue = telInput.value.replace(/-/g, '');
-
-            // 전화번호 형식에 맞게 하이픈 추가
-            if (inputValue.length === 11) {
-                // 010-xxxx-xxxx 형식으로 변환 (휴대전화)
-                inputValue = inputValue.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
-            } else if (inputValue.length === 10) {
-                // 0xx-xxx-xxxx 형식으로 변환 (서울 외 지역)
-                inputValue = inputValue.replace(/^(\d{3})(\d{3})(\d{4})$/, '$1-$2-$3');
-            } else if (inputValue.length === 9) {
-                // 0x-xxx-xxxx 형식으로 변환 (서울 지역)
-                inputValue = inputValue.replace(/^(\d{2})(\d{3})(\d{})$/, '$1-$2-$3');
-            }
-
-            // 수정된 값을 입력 필드에 설정
-            telInput.value = inputValue;
-        });
-    });
-});        // -- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
         document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('form06');
-            const submitBtn = document.getElementById('submit-btn');
-            
-            // 모든 input입력 필드를 가져오기
-            const inputs = form.querySelectorAll('input[required]');
+            // 모든 전화번호 입력 필드를 선택
+            const telInputs = document.querySelectorAll('input[id^="tel"]');
 
-            // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
-            function checkFormCompletion() {
-                // 모든 input입력 필드가 채워졌는지 확인
-                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-                
-                // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
-                submitBtn.disabled = !allFilled;
-            }
+            telInputs.forEach(telInput => {
+                telInput.addEventListener('input', function () {
+                    // 입력 값에서 하이픈을 제거
+                    let inputValue = telInput.value.replace(/-/g, '');
 
-            // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
-            inputs.forEach(input => {
-                input.addEventListener('input', checkFormCompletion);
+                    // 전화번호 형식에 맞게 하이픈 추가
+                    if (inputValue.length === 11) {
+                        // 010-xxxx-xxxx 형식으로 변환 (휴대전화)
+                        inputValue = inputValue.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1-$2-$3');
+                    } else if (inputValue.length === 10) {
+                        // 0xx-xxx-xxxx 형식으로 변환 (서울 외 지역)
+                        inputValue = inputValue.replace(/^(\d{3})(\d{3})(\d{4})$/, '$1-$2-$3');
+                    } else if (inputValue.length === 9) {
+                        // 0x-xxx-xxxx 형식으로 변환 (서울 지역)
+                        inputValue = inputValue.replace(/^(\d{2})(\d{3})(\d{})$/, '$1-$2-$3');
+                    }
+
+                    // 수정된 값을 입력 필드에 설정
+                    telInput.value = inputValue;
+                });
             });
-
-            // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
-            submitBtn.addEventListener('click', function () {
-                if (!submitBtn.disabled) {
-                    // 폼이 모두 채워졌을 때만 이동
-                    window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form07.html';
-                }
-            });
-        });
+        });       
 
         // ---- 프로그래스 % 업데이트
         function updateProgress() {
@@ -880,6 +851,37 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', updateProgress);
         });
+
+         // -- 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const form = document.getElementById('form06');
+        //     const submitBtn = document.getElementById('submit-btn');
+            
+        //     // 모든 input입력 필드를 가져오기
+        //     const inputs = form.querySelectorAll('input[required]');
+
+        //     // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
+        //     function checkFormCompletion() {
+        //         // 모든 input입력 필드가 채워졌는지 확인
+        //         const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+                
+        //         // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
+        //         submitBtn.disabled = !allFilled;
+        //     }
+
+        //     // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
+        //     inputs.forEach(input => {
+        //         input.addEventListener('input', checkFormCompletion);
+        //     });
+
+        //     // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
+        //     submitBtn.addEventListener('click', function () {
+        //         if (!submitBtn.disabled) {
+        //             // 폼이 모두 채워졌을 때만 이동
+        //             window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form07.html';
+        //         }
+        //     });
+        // });
 
     </script>
 </body>

@@ -359,7 +359,7 @@ main.form_01 #form01 .out-box11 .ad_right .input-wrap label{
     main.form_01 #form01 .space_mpb {
         display: block;
     }
-    main.form_01 #form01 input {
+    main.form_01 #form01 input:not([type='radio']) {
         padding: 6px 8px !important;
     }
 }
