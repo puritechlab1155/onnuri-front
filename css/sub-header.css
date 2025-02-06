@@ -185,14 +185,21 @@ button {
     }
     .header {
         background: #fff;
+        position: fixed;
     }
+    
     /*mobile*/
+    .header .content .logo {
+        position: absolute;
+        z-index: 999;
+    }
     .mobile_display {
         width: 100%;
         overflow: hidden;
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 888;
     }
     .header .offcanvas-open {
         width: 27px;
