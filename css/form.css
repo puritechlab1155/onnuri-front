@@ -2652,6 +2652,14 @@ main.form_09 .n1-sub04 label > div textarea {
 main.form_09 .n1-sub04 label > div textarea:focus {
     height: 64px;
 }
+/* 최종제출 버튼 */
+#home main.form_09 button.next {
+    background: transparent;
+    color: #aaa;
+    border: 3px solid #aaa;
+    transition: 0.1s linear;
+}
+
 /*7단계, 8단계 */
 main.form_09 #form07 .input-wrap {
     border: none; 

@@ -890,7 +890,7 @@
                     <!--버튼 랩핑-->
                     <div class="finish-bnt-wrap" style="margin-top: 120px;">
                         <div class="next-container">
-                            <button class="next" type="button" id="submit-btn">최종제출하기</button>
+                            <button class="next" type="button" id="submit-btn" disabled onclick="window.open('https://puritechlab1155.github.io/onnuri-front/myInfo-history.html')">최종제출하기</button>
                         </div>
                     </div>
                 </form>
@@ -1425,12 +1425,30 @@
         });
 
         // -- 최종 제출 버튼 클릭 시 페이지 이동 (완료 상태여야 버튼 활성화)
-        document.getElementById("submit-btn").addEventListener("click", function() {
-            if (document.getElementById('progress-9').textContent === "완료") {
-                window.location.href = "https://puritechlab1155.github.io/onnuri-front/myInfo-history.html";
-            }
-        });
+        const submitBtn = document.getElementById('submit-btn');
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitBtn = document.getElementById("submit-btn");
+            const progressElement = document.getElementById("progress-9");
+
+            // MutationObserver 설정
+            const observer = new MutationObserver(() => {
+                if (progressElement.textContent.trim() === "완료") {
+                    submitBtn.style.color = '#fff';
+                    submitBtn.style.backgroundColor = '#33B9DC';
+                    submitBtn.style.borderColor = '#33B9DC';
+                    submitBtn.disabled = false; // 버튼 활성화
+                } else {
+                    submitBtn.style.color = '#aaa';
+                    submitBtn.style.backgroundColor = 'transparent';
+                    submitBtn.style.borderColor = '#aaa';
+                    submitBtn.disabled = true; // 버튼 비활성화
+                }
+            });
+
+            // progressElement의 변화 감지 시작
+            observer.observe(progressElement, { childList: true, subtree: true });
+        });
 
     </script>
 </body>
