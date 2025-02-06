@@ -310,18 +310,18 @@
                                 <label>
                                     <div>
                                         <span>(1) 지역 :</span>
-                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 <label>
                                     <div>
                                         <span>(2) 지역 선정 동기 :</span>
-                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                                 <label>
                                     <div>
                                         <span>(3) 사역 분야/내용 :</span>
-                                        <input type="text" placeholder="-" required class="input-field" oninput="updateProgress()">
+                                        <textarea required class="input-field" oninput="updateProgress()"></textarea>
                                     </div>
                                 </label>
                             </div>
@@ -583,7 +583,7 @@
                         </div>
                     </fieldset>
 
-                    <fieldset> <!-- 결혼관 문항 >> 수정중 -->
+                    <fieldset> <!-- 결혼관 문항 -->
                         <legend>
                             <div class="field-title">
                                 III. 결혼관
@@ -604,7 +604,7 @@
                                 </div>
                             </div>
                             <!-- 미혼 작성 // 라디오 버튼 클릭에 따라 나타나고 사라짐-->
-                            <div class="single-wrap">
+                            <div class="single-wrap yesNo01-no-box">
                                 <h4 class="whether-title">미혼 작성</h4>
                                 <div class="single-container"> 
                                     <div class="n3-sub01 step-n">
@@ -634,7 +634,7 @@
                                 </div>
                             </div>
                             <!-- 기혼 작성 // 라디오 버튼 클릭에 따라 나타나고 사라짐 -->
-                            <div class="married-wrap">
+                            <div class="married-wrap n4-sub01-yes-box">
                                 <div class="married-container"> 
                                     <h4 class="whether-title">기혼 작성</h4>
                                     <div class="n4-sub01 step-n">
@@ -791,7 +791,7 @@
                                         </label>
                                     </div>
                                     <!-- 재정 서브 2 > 예 박스 -->
-                                    <div class="n6-sub02-yes-box n6-sub02-sub-box">
+                                    <div class="n6-sub02-yes-box n6-sub02-sub-box show-hide-box">
                                         <label class="en-list">
                                             <span>‘예'로 답하신 경우, <br> (1) 재정 후원자가 총 몇 명입니까?</span>
                                             <textarea required class="" oninput="updateProgress()"></textarea>
@@ -802,7 +802,7 @@
                                         </label>
                                     </div>
                                     <!-- 재정 서브 2 > 아니오 박스 -->
-                                    <div class="n6-sub02-no-box n6-sub02-sub-box">
+                                    <div class="n6-sub02-no-box n6-sub02-sub-box show-hide-box">
                                         <label class="en-list">
                                             <span>‘아니오'로 답하신 경우, <br>(1) 선교사 허입 후 어떻게 필요 재정을 충당실 계획이십니까? 구체적으로 기술하여 주십시오.</span>
                                             <textarea required class="" oninput="updateProgress()"></textarea>
@@ -1257,8 +1257,9 @@
             });
         });
 
-        // -- 라디오 버튼 예 / 아니오 클릭 시 
+        // -- 임시저장 버튼 및 라디오 버튼 클릭 
         document.addEventListener("DOMContentLoaded", function() {
+            // 라디오 버튼 선택 시 박스 토글
             function toggleBox(radioName, yesBox, noBox) {
                 const radios = document.querySelectorAll(`input[name=${radioName}]`);
                 const yesElement = document.querySelector(yesBox);
@@ -1285,19 +1286,20 @@
                                 textarea.value = "";
                             });
                         }
-                        updateProgress();
+                        updateProgress();  
                     });
                 });
             }
 
+            // 라디오 버튼 선택 시 입력 필드 클래스 추가 및 제거
             function toggleSingleBox(radioName, yesBox) {
                 const radios = document.querySelectorAll(`input[name=${radioName}]`);
                 const yesElement = document.querySelector(yesBox);
 
                 if (!yesElement) return;
 
-                radios.forEach(function(radio) {
-                    radio.addEventListener("change", function() {
+                radios.forEach(function (radio) {
+                    radio.addEventListener("change", function () {
                         if (this.value === "yes") {
                             yesElement.style.display = "block";
                             yesElement.querySelectorAll("textarea").forEach(textarea => textarea.classList.add("input-field"));
@@ -1308,16 +1310,55 @@
                                 textarea.value = "";
                             });
                         }
-                        updateProgress();
                     });
                 });
             }
 
+            // 라디오 버튼에 따른 박스 토글 실행
             toggleSingleBox('yesNo02', '.n6-sub01-yes-box');
             toggleBox('yesNo03', '.n6-sub02-yes-box', '.n6-sub02-no-box');
             toggleSingleBox('yesNo04', '.n7-sub01-yes-box');
             toggleBox('yesNo01', '.married-wrap', '.single-wrap');
 
+            // 임시 저장 버튼 클릭 시 필드셋 검사 및 상태 변경
+            document.querySelectorAll(".temporaryBtn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const fieldset = button.closest("fieldset");
+                    const writeWhether = fieldset.querySelector(".write-whether");
+                    const inputBox = fieldset.querySelector(".input-wrap");
+                    const textareas = inputBox ? inputBox.querySelectorAll("textarea") : [];
+                    
+                    let textFilled = true;
+
+                    // 필드셋의 inputBox가 보이는 상태일 때만 검사
+                    if (inputBox && inputBox.offsetParent !== null) {
+                        textareas.forEach(textarea => {
+                            // 부모 div가 display none이 아닌 경우에만 체크
+                            const divElement = textarea.closest("div");
+                            if (divElement && divElement.offsetParent !== null && !textarea.value.trim()) {
+                                textFilled = false;
+                            }
+                        });
+                    } else {
+                        textFilled = false;
+                    }
+
+                    // 모든 텍스트 필드가 채워졌을 때 작성완료 상태로 변경
+                    if (textFilled) {
+                        writeWhether.style.display = "inline";
+                        writeWhether.textContent = "(작성완료)";
+                        writeWhether.style.color = "#007AFF"; // 파란색
+                        if (inputBox) inputBox.style.display = "none"; // 입력 필드 숨기기
+                    } else {
+                        writeWhether.style.display = "inline";
+                        writeWhether.textContent = "(작성중)";
+                        writeWhether.style.color = "#E72929"; // 빨간색
+                        if (inputBox) inputBox.style.display = "block"; // 입력 필드 보이기
+                    }
+                });
+            });
+
+            // 라디오 버튼 상태 변화 시 업데이트 (입력필드 클래스 추가 및 제거)
             document.querySelectorAll('input[type="radio"]').forEach(radio => {
                 radio.addEventListener("change", function() {
                     const name = this.name;
@@ -1339,13 +1380,7 @@
             });
         });
 
-        // 페이지 로드 시 progressIndicator 숨기기
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const progressIndicator = document.getElementById('progress-9');
-            progressIndicator.style.display = 'none'; // 초기에는 숨김
-        });
-        
-        // 프로그래스 업데이트 함수
+        // -- 프로그래스 업데이트 함수
         function updateProgress() {
             const inputs = document.querySelectorAll('.input-field');
             const selects = document.querySelectorAll('.select-field');
@@ -1383,46 +1418,13 @@
             }
         }
 
-        // 임시저장 버튼
-        const temporaryButtons = document.querySelectorAll(".temporaryBtn");
+        // 페이지 로드 시 작성중 여부 숨기기
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const progressIndicator = document.getElementById('progress-9');
+            progressIndicator.style.display = 'none'; // 초기에는 숨김
+        });
 
-            temporaryButtons.forEach((button) => {
-                button.addEventListener("click", function () {
-                    event.preventDefault();
-                    
-                    const fieldset = this.closest("fieldset"); // 현재 버튼이 속한 필드셋 찾기
-                    const writeWhether = fieldset.querySelector(".write-whether"); // 상태 표시 요소
-                    const inputs = fieldset.querySelectorAll("input, textarea, select"); // 모든 입력 요소 가져오기
-                    const inputBox = fieldset.querySelector(".input-wrap"); // 현재 필드셋의 입력 영역
-
-                    let isCompleted = true; // 모든 필드가 작성되었는지 체크
-
-                    inputs.forEach((input) => {
-                        if ((input.type === "radio" || input.type === "checkbox")) {
-                            const name = input.name;
-                            const checkedRadio = fieldset.querySelector(`input[name="${name}"]:checked`);
-                            if (!checkedRadio) isCompleted = false;
-                        } else if (!input.value.trim()) {
-                            isCompleted = false;
-                        }
-                    });
-
-                    if (writeWhether) {
-                        writeWhether.style.display = "inline"; // 텍스트 표시
-                        if (isCompleted) {
-                            writeWhether.textContent = "(작성완료)";
-                            writeWhether.style.color = "#007AFF"; // 파란색으로 변경
-                            if (inputBox) inputBox.style.display = "none"; // 입력 필드 숨기기
-                        } else {
-                            writeWhether.textContent = "(작성중)";
-                            writeWhether.style.color = "#E72929"; // 기본색 유지
-                            if (inputBox) inputBox.style.display = "block"; // 다시 보이도록 설정
-                        }
-                    }
-                });
-            });
-
-        // 최종 제출 버튼 클릭 시 페이지 이동 (완료 상태여야 버튼 활성화)
+        // -- 최종 제출 버튼 클릭 시 페이지 이동 (완료 상태여야 버튼 활성화)
         document.getElementById("submit-btn").addEventListener("click", function() {
             if (document.getElementById('progress-9').textContent === "완료") {
                 window.location.href = "https://puritechlab1155.github.io/onnuri-front/myInfo-history.html";
@@ -1430,74 +1432,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        // // -- 라디오 버튼 예 / 아니오 클릭 시 
-        //     // 라디오 버튼 클릭 시 해당 박스 내의 텍스트 영역 클래스 변경
-        //     const yesRadioButtons = document.querySelectorAll('input[type="radio"].yes');
-        //     const noRadioButtons = document.querySelectorAll('input[type="radio"].no');
-
-        //     // '예' 라디오 클릭 시 해당하는 .check-outbox 내의 textarea에 input-field 클래스 추가
-        //     yesRadioButtons.forEach((radio) => {
-        //         radio.addEventListener("click", function () {
-        //             // 해당 라디오 버튼의 부모 .check-outbox 요소 찾기
-        //             const checkOutbox = this.closest('.check-outbox');
-
-        //             // 예 라디오 클릭 시 해당하는 .answer-yes 텍스트 영역에 input-field 클래스 추가
-        //             const answerYesTextareas = checkOutbox.querySelectorAll('.answer-yes');
-        //             answerYesTextareas.forEach(textarea => {
-        //                 textarea.classList.add('input-field');  // 예를 선택하면 input-field 추가
-        //             });
-
-        //             // 아니오 라디오 클릭 시 해당하는 .answer-no 텍스트 영역에서 input-field 클래스 제거
-        //             const answerNoTextareas = checkOutbox.querySelectorAll('.answer-no');
-        //             answerNoTextareas.forEach(textarea => {
-        //                 textarea.classList.remove('input-field');  // 아니오를 선택하면 input-field 제거
-        //             });
-
-        //             // 프로그래스 갱신
-        //             updateProgress();
-        //         });
-        //     });
-
-        //     // '아니오' 라디오 클릭 시 해당하는 .check-outbox 내의 textarea에 input-field 클래스 추가
-        //     noRadioButtons.forEach((radio) => {
-        //         radio.addEventListener("click", function () {
-        //             // 해당 라디오 버튼의 부모 .check-outbox 요소 찾기
-        //             const checkOutbox = this.closest('.check-outbox');
-
-        //             // 아니오 라디오 클릭 시 해당하는 .answer-no 텍스트 영역에 input-field 클래스 추가
-        //             const answerNoTextareas = checkOutbox.querySelectorAll('.answer-no');
-        //             answerNoTextareas.forEach(textarea => {
-        //                 textarea.classList.add('input-field');  // 아니오를 선택하면 input-field 추가
-        //             });
-
-        //             // 예 라디오 클릭 시 해당하는 .answer-yes 텍스트 영역에서 input-field 클래스 제거
-        //             const answerYesTextareas = checkOutbox.querySelectorAll('.answer-yes');
-        //             answerYesTextareas.forEach(textarea => {
-        //                 textarea.classList.remove('input-field');  // 예를 선택하면 input-field 제거
-        //             });
-
-        //             // 프로그래스 갱신
-        //             updateProgress();
-        //         });
-        //     });
-
-        //     // 프로그래스 갱신 (페이지 로드 후 즉시 실행)
-        //     updateProgress();
-
-        //     // 라디오 버튼 변화 감지하여 프로그래스 갱신
-        //     document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        //         radio.addEventListener('change', updateProgress);
-        //     });
-        // });
     </script>
 </body>
 </html>

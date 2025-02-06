@@ -2503,8 +2503,9 @@ main.form_09 .step-n textarea {
     display: block;
     width: 100%;
     height: 94px;
+    line-height: 160%;
     margin-top: 8px;
-    padding: 16px;
+    padding: 8px 16px;
     box-sizing: border-box;
     font-size: 16px;
     color: #222;
@@ -2521,7 +2522,6 @@ main.form_09 .step-n span {
     font-size: 16px;
     font-weight: 600;
 }
-
 
 /* 공통 클래스 스타일 */
 main.form_09 .mult-q div input {
@@ -2632,25 +2632,26 @@ main.form_09 #form09 .n7-sub01-sub-box {
     margin-top: 16px;
     display: none;
 }
-/* -------
-.n6-sub01 .checkBox .yes 라디오 버튼 클릭
->> .n6-sub01-yes-box 나타남 
-(아니오 클릭시 .n6-sub01-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨)
-
-.n6-sub02 .checkBox .yes 라디오 버튼 클릭시
->> n6-sub02-yes-box 나타나고, .n6-sub02-no-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨
-.n6-sub02 .checkBox .no 라디오 버튼 클릭시
->> n6-sub02-no-box 나타나고, .n6-sub02-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨
-
-
-.n7-sub01 .checkBox .yes 라디오 버튼 클릭
->> .n7-sub01-yes-box 나타남
-(아니오 클릭시 .n7-sub01-yes-box 사라지면서 textarea 태그 .input-field 클래스도 제거됨)
-
-현재 서브 예스 박스와 서브 노 박스는 display: none; 처리가 되어 있음.
-
--------- */
-
+main.form_09 .n1-sub04 label > div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+main.form_09 .n1-sub04 label > div span {
+    flex: 0 0 130px;
+    margin: 0;
+}
+main.form_09 .n1-sub04 label > div textarea {
+    padding: 0px 16px;
+    height: 36px;
+    margin: 0;
+    padding-top: 4px;
+}
+main.form_09 .n1-sub04 label > div textarea:focus {
+    height: 64px;
+}
 /*7단계, 8단계 */
 main.form_09 #form07 .input-wrap {
     border: none; 
