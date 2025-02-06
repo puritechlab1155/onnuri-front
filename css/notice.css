@@ -329,9 +329,6 @@ span.focusNumb {
     } */
 }
 @media (max-width: 767px) {
-    .inner {
-        padding: 0 4px;
-    }
     #home .section01 .content {
         padding: 0;
         padding-bottom: 10vw;
