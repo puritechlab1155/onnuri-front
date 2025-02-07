@@ -1309,11 +1309,15 @@ letter-spacing: -0.8px;
 #home .noticeD .notice-content .notice-title {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 10px 16px;
   border-top: 2px solid;
   border-bottom: 1px solid;
   border-color: #BEBEBE;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 #home .noticeD .notice-title .text {
   width: fit-content;
