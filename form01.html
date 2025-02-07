@@ -856,6 +856,25 @@
                     formatBirthDate(this);
                 });
             }
+
+            // -- 이메일 형식(gmail만 지원)
+            function validateGmail() {
+                const emailInput = document.getElementById('email');
+                const email = emailInput.value;
+
+                // Gmail 주소만 허용하는 정규식
+                const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+                if (!gmailRegex.test(email)) {
+                    emailInput.setCustomValidity("유효한 Gmail 주소를 입력해주세요.");
+                    emailInput.reportValidity(); // 브라우저의 기본 검증 메시지를 표시
+                } else {
+                    emailInput.setCustomValidity(""); // 유효한 이메일이면 customValidity 초기화
+                }
+            }
+
+            // 이메일 입력 필드에 이벤트 리스너 추가
+            document.getElementById('email').addEventListener('input', validateGmail);
         });
 
         // ---- 프로그래스 % 업데이트
