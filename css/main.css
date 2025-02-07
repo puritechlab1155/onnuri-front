@@ -115,15 +115,15 @@
 }
 
 /* 섹션별 내부 메인 설정값 */
-.inner {
+#home.mainCommon .inner {
     width: 100%;
     max-width: 1248px;
     padding: 0 24px;
     margin: 0 auto;
 }
-.mt-120{ margin-top: 120px !important;}
+#home.mainCommon .mt-120{ margin-top: 120px !important;}
 /* 타이틀 */
-.title {
+#home.mainCommon .title {
     color: #222;
     font-size: 40px;
     font-weight: 700;
@@ -132,7 +132,7 @@
 }
 
 /* 모바일 전용 br */
-span.br{
+#home.mainCommon span.br{
     /* display: block; */
 }
 

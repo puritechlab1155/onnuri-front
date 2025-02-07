@@ -1,3 +1,437 @@
+@charset "UTF-8";
+/* --- common02.css --- */
+/* 프리텐다드 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+*{
+    font-family: 'Pretendard Variable' !important;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    letter-spacing: -0.36px;
+    line-height: 1.6;
+}
+/* 사파리 input아이콘 초기화 */
+@supports (-webkit-appearance:none) {
+    input:not([type='checkbox']) {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+    }
+}
+#home input[type='checkbox'] {
+    width: 13px !important;
+    height: 13px !important;
+    cursor: pointer;
+    margin-right: 6px;
+}
+#home input::-webkit-contacts-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home input::-webkit-credentials-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home ul, ol {
+    list-style: none;
+    padding-inline-start: 0; 
+}
+#home a{
+    color: inherit;
+    text-decoration: none;  
+}
+#home .mt-120{ margin-top: 120px !important;}
+#home h2,h3,h4,li,p,span { color: #222; }
+#home legend.step {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 42px;
+}
+
+
+#home form {
+    width: 100%;
+    margin: 0 auto;
+}
+/* border 공통 */
+#home .border_b {
+    border: 1px solid #ACC7D4;
+}
+#home .b_l {
+    border-left: 1px solid #ACC7D4;
+}
+#home .b_r {
+    border-right: 1px solid #ACC7D4;
+}
+#home .border_g {
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    width: 100%;
+}
+#home .bl_n {
+    border-left: none !important;
+}
+#home .br_n {
+    border-right: none !important;
+}
+#home .bt_n {
+    border-top: none !important;
+}
+#home .bb_n {
+    border-bottom: none !important;
+}
+
+/* 섹션별 내부 메인 설정값 */
+#home .inner {
+    width: 100%;
+    max-width: 1248px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+/* 타이틀 */
+#home .title {
+    color: #222;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+    text-align: center;
+}
+/* 셀렉트박스 초기화설정 */
+#home select { /* select 기본 스타일 제거 */
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    /*화살표 배경 넣기*/
+    background: #fff url('../img/home/register-arrow.png') no-repeat 95% center;
+}
+#home select::-ms-expand{ /* 익스플로러 select 화살표 제거 */
+    display:none;  /* 화살표 없애기 for IE10, 11*/ 
+}
+
+
+/* 여기부터 라디오 설정(공통) */
+#home input[type='radio'] {
+    margin-right: 8px;
+}
+#home input[type='radio'] { /* 기본스타일 제거, 버튼 모양 재설정 */
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ccc; 
+  border-radius: 50%;
+  outline: none; 
+  cursor: pointer;
+}
+#home input[type='radio']:checked {  /* 체크 시 버튼 모양 스타일 */
+  background-color: #004BBA; /* 체크 시 내부 원 색상 */
+  border: 3px solid #fff; /* 라인이 아닌, 라인과 원 사이 색상 */
+  box-shadow: 0 0 0 1px #004BBA; /* 라인 */
+}
+
+/*탭 부분*/
+#home .step-tab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+}
+#home .step-tab ul {
+    width: calc(100% / 9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+#home .step-tab ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home .step-tab ul .progress-indicator {
+    width: fit-content;
+    padding: 0 6px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: block;
+}
+#home .step-tab ul li {
+    color: #767676;
+}
+#home ul.focus-step {
+    border-bottom: 3px solid #555;
+}
+#home ul.focus-step li {
+    color: #222 !important;
+    font-weight: 600;
+}
+
+/*작성칸 추가 버튼 스타일*/
+#home button.add-field {
+    width: 100%;
+    max-width: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    padding: 6px 0;
+    background: #F7F7F8;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #777;
+    font-weight: 400;
+    border-radius: 4px;
+}
+#home button.add-field > span {
+    display: inline-block;
+    color: #777;
+}
+#home button.add-field img {
+    margin-left: 6px;
+}
+
+/* 모바일 전용 br */
+#home span.br{
+    /* display: block; */
+}
+
+
+/* 상단 부분 (지원신청 박스) */
+
+#home details {
+    width: 100%;
+    height: auto;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 50px 0;
+}
+#home summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+    justify-content: center;
+    font-weight: 600;
+}
+#home summary::-webkit-details-marker {
+    display: none;
+}
+/* 접기/펼치기 이미지 아이콘 */ 
+#home summary .toggle-icon {
+    width: 20px; /* 아이콘 크기 */
+    height: 20px;
+    background-size: contain; /* 이미지가 비율에 맞게 조정 */
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 400px; /* 오른쪽 끝으로 위치 */
+    transition: transform 0.3s ease;
+    background-image: url('../img/home/form-toggle1.png'); /* 펼쳤을 때 사용할 이미지 */
+}
+/* 펼쳤을 때 이미지 변경 */
+#home details[open] summary .toggle-icon {
+    background-image: url('../img/home/form-toggle1.png'); /* 접었을 때 사용할 이미지 */
+    transform: rotate(180deg); /* 기호 회전 효과 */
+}
+#home details .text-wrap p{
+    margin-bottom: 35px;
+}
+#home details .text-wrap ul{
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+#home details .text-wrap h4{
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+#home details p {
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+/* 버튼 스타일 */
+#home .finish-bnt-wrap {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+#home button.temporaryBtn {
+    width: 120px;     
+    height: 47px;
+    border: 3px solid #33B9DC;
+    border-radius: 10px;
+    color: #33B9DC;
+    font-size: 18px;
+    font-weight: 700;
+    background: #fff;
+}
+#home .form_09 button.temporaryBtn {
+    margin: 40px 0;
+}
+#home .next-container , #home .temporary {
+    text-align: center;
+}
+#home button.next {
+    width: 120px;     
+    height: 47px;
+    background: #33B9DC;
+    border: 1px solid #2AA6C6;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 0;
+}
+/* resize */
+@media (max-width: 1200px) {
+    #home summary .toggle-icon {
+        right: 37%;
+    }
+}
+@media (max-width: 1070px) {
+    #home summary .toggle-icon {
+        right: 34%;
+    }
+}
+@media (max-width: 900px) {
+    #home summary .toggle-icon {
+        right: 34%;
+    }
+}
+@media (max-width: 810px) {
+    #home summary .toggle-icon {
+        right: 30%;
+    }
+}
+@media (max-width: 767px) {
+    #home div.step-tab {
+        border-bottom: none !important;
+    }
+    #home .step-tab ul {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        overflow: hiddens;
+        padding: 0;
+        background: #D9D9D9;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+    #home .step-tab ul:not(.focus-step){
+        display: block;
+        border-radius: 50%;
+        padding-top: 4px;
+        text-align: center;
+    }
+    #home ul.focus-step {
+        width: 54px;
+        border: none;
+        justify-content: center;
+        background: #21A5C8;
+        border-radius: 20px;
+    }
+    #home ul.focus-step li{
+        color: #fff !important;
+    }
+    #home li.stepKo {
+        display: none;
+    }
+    #home .step-tab ul .progress-indicator {
+        width: 32px;
+        font-size: 10px;
+        top: -24px;
+    }
+
+    /*작성칸 추가 버튼*/
+    #home button.add-field {
+        max-width: 32px;
+    }
+    #home button.add-field > span {
+        display: none !important;
+    }
+    #home button.add-field img {
+        margin: 0;
+    }
+}
+@media (max-width: 740px) {
+    #home summary .toggle-icon {
+        right: 25%;
+    }
+}
+@media (max-width: 630px) {
+    #home summary .toggle-icon {
+        right: 20%;
+    }
+}
+@media (max-width: 550px) {
+    #home summary .toggle-icon {
+        right: 15%;
+    }
+}
+@media (max-width: 500px) {
+    #home summary .toggle-icon {
+        right: 9%;
+    }
+}
+@media (max-width: 445px) {
+    #home summary {
+        padding-right: 15%;
+    }
+    #home summary .toggle-icon {
+        right: 9%;
+    }
+}
+@media (max-width: 430px) {
+    #home .step-tab ul {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    #home ul.focus-step {
+        width: 48px;
+    }
+    #home details { 
+        padding: 20px; 
+    }
+    #home span.br {
+        display: block;
+    }
+}
+
+
 /* 1단계 */
 main.form_01 #form01 {
     margin-bottom: 60px;
