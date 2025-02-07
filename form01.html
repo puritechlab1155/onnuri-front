@@ -487,7 +487,7 @@
                     </div>
                     
                     <div class="next-container">
-                        <button class="next" ttype="button" onclick="window.open('https://puritechlab1155.github.io/onnuri-front/form02.html')">다음</button>
+                        <button class="next" type="button" onclick="location.href='https://puritechlab1155.github.io/onnuri-front/form02.html'" >다음</button>
                     </div>
                 </div>
             </div>
@@ -816,36 +816,47 @@
     </section>
 
     <script>
-        // 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const form = document.getElementById('form01');
-        //     const submitBtn = document.getElementById('submit-btn');
-            
-        //     // 모든 input입력 필드를 가져오기
-        //     const inputs = form.querySelectorAll('input[required]');
-
-        //     // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
-        //     function checkFormCompletion() {
-        //         // 모든 input입력 필드가 채워졌는지 확인
-        //         const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        // -- 전화번호 및 생년월일 형식
+        document.addEventListener("DOMContentLoaded", function () {
+            function formatPhoneNumber(input) {
+                let value = input.value.replace(/\D/g, ""); // 숫자만 남김
                 
-        //         // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
-        //         submitBtn.disabled = !allFilled;
-        //     }
+                if (value.length > 3 && value.length <= 7) {
+                    value = value.replace(/(\d{3})(\d{1,4})/, "$1-$2");
+                } else if (value.length > 7) {
+                    value = value.replace(/(\d{3})(\d{4})(\d{1,4})/, "$1-$2-$3");
+                }
+                
+                input.value = value;
+            }
 
-        //     // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
-        //     inputs.forEach(input => {
-        //         input.addEventListener('input', checkFormCompletion);
-        //     });
+            function formatBirthDate(input) {
+                let value = input.value.replace(/\D/g, ""); // 숫자만 남김
 
-        //     // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
-        //     submitBtn.addEventListener('click', function () {
-        //         if (!submitBtn.disabled) {
-        //             // 폼이 모두 채워졌을 때만 이동
-        //             window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form02.html';
-        //         }
-        //     });
-        // });
+                if (value.length > 4 && value.length <= 6) {
+                    value = value.replace(/(\d{4})(\d{1,2})/, "$1-$2");
+                } else if (value.length > 6) {
+                    value = value.replace(/(\d{4})(\d{2})(\d{1,2})/, "$1-$2-$3");
+                }
+                
+                input.value = value;
+            }
+
+            document.querySelectorAll('input[type="tel"]').forEach(input => {
+                console.log("전화번호 입력 필드 감지:", input); // 디버깅용
+                input.addEventListener("input", function () {
+                    formatPhoneNumber(this);
+                });
+            });
+
+            const birthInput = document.querySelector('#birth');
+            if (birthInput) {
+                console.log("생년월일 입력 필드 감지:", birthInput); // 디버깅용
+                birthInput.addEventListener("input", function () {
+                    formatBirthDate(this);
+                });
+            }
+        });
 
         // ---- 프로그래스 % 업데이트
         function updateProgress() {
@@ -922,32 +933,61 @@
         }
         }
 
-    // -- 우편번호
-    document.addEventListener("DOMContentLoaded", function () {
-        const elZonecode = document.querySelector("#zonecode");
-        const elRoadAddress = document.querySelector("#roadAddress");
-        const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
-        const searchBtn = document.querySelector("#search-btn");
+        // -- 우편번호
+        document.addEventListener("DOMContentLoaded", function () {
+            const elZonecode = document.querySelector("#zonecode");
+            const elRoadAddress = document.querySelector("#roadAddress");
+            const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
+            const searchBtn = document.querySelector("#search-btn");
 
-        const onClickSearch = () => {
-            new daum.Postcode({
-                oncomplete: function (data) {
-                    console.log(elZonecode, elRoadAddress);
-                    
-                    if (elZonecode && elRoadAddress) {
-                        elZonecode.value = data.zonecode; 
-                        elRoadAddress.value = data.address; 
-                    }
-                },
-            }).open();
-        };
+            const onClickSearch = () => {
+                new daum.Postcode({
+                    oncomplete: function (data) {
+                        console.log(elZonecode, elRoadAddress);
+                        
+                        if (elZonecode && elRoadAddress) {
+                            elZonecode.value = data.zonecode; 
+                            elRoadAddress.value = data.address; 
+                        }
+                    },
+                }).open();
+            };
 
-        if (searchBtn) {
-            searchBtn.addEventListener("click", onClickSearch);
-        }
-    });
+            if (searchBtn) {
+                searchBtn.addEventListener("click", onClickSearch);
+            }
+        });
         
+        // 폼태그 안의 입력이 모두 채워지면 확인버튼이 활성화되고 **다음페이지**로 넘어가게 설정
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const form = document.getElementById('form01');
+        //     const submitBtn = document.getElementById('submit-btn');
+            
+        //     // 모든 input입력 필드를 가져오기
+        //     const inputs = form.querySelectorAll('input[required]');
 
+        //     // 각 input입력 필드에 변화가 있을 때마다 체크하는 함수
+        //     function checkFormCompletion() {
+        //         // 모든 input입력 필드가 채워졌는지 확인
+        //         const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+                
+        //         // 모든 input입력 필드가 채워졌다면 버튼 활성화, 그렇지 않으면 비활성화
+        //         submitBtn.disabled = !allFilled;
+        //     }
+
+        //     // 각 input입력 필드에 이벤트 리스너 추가 (입력 변경 시마다 체크하는 코드)
+        //     inputs.forEach(input => {
+        //         input.addEventListener('input', checkFormCompletion);
+        //     });
+
+        //     // 확인 버튼 클릭 시 **다음html**로 넘어가도록 설정
+        //     submitBtn.addEventListener('click', function () {
+        //         if (!submitBtn.disabled) {
+        //             // 폼이 모두 채워졌을 때만 이동
+        //             window.location.href = 'https://puritechlab1155.github.io/onnuri-front/form02.html';
+        //         }
+        //     });
+        // });
     </script>
     <script src="js/script.js"></script>
 </body>
