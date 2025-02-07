@@ -1943,7 +1943,7 @@ letter-spacing: -0.8px;
 
 /* --- contact.html 스타일  --- */ 
 /*main*/
-#main.contact {
+#main.contact , #main.worship_wrap{
   padding-top: 80px;
 }
 /*channel 클래스 >> noice.html과 동일한 스타일*/
@@ -2076,10 +2076,10 @@ letter-spacing: -0.8px;
       font-size: 1rem;
   }
 }
-/* ------------------ 여기까지가 onnuri-place 필요스타일 ------------------ */
+/* ------- !!!!!!!!여기까지 onnuri-place 필요스타일 ------- */
 
 
-
+/* ------- !!!!!!!!여기부터 onnuri-front 필요스타일 ------- */
 /* --- about-us.html 스타일 --- */
 #home .about_us .pt_16{ padding-top: 16px; }
 #home .about_us .pt_50{ padding-top: 50px; }
@@ -2991,4 +2991,201 @@ pasword-reset03.html 스타일
       width: 33px;
       height: 5px;
   }    
+}
+
+/* -- worship.html 스타일 -- */
+/*예배 소개*/
+#home .worship_wrap .worship {
+  margin-top: 10px;
+}
+#home .worship_wrap .worship > h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  color: #222;
+}
+#home .worship_wrap .worship .photo_container {
+  margin-top: 40px;
+}
+#home .worship_wrap .photo_container > .ImgBox {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+#home .worship_wrap .photo_container > .ImgBox img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: right;
+}
+#home .worship_wrap .photo_container .worship_informate {
+  width: 100%;
+  height: 470px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: url(../img/worship/worship_img02.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  margin-top: 32px;
+}
+#home .worship_wrap .worship_informate .text_area {
+  width: 100%;
+  max-width: 895px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: -0.36px;
+}
+#home .worship_wrap .text_area .informate {
+  width: 55%;
+  text-align: center;
+}
+#home .worship_wrap .informate > h3 {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding: 6px 18px;
+  background: #FF9000;
+  color: #fff;
+  font-weight: 700;
+}
+#home .worship_wrap .informate p {
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: #222;
+  line-height: 160%;
+}
+#home .worship_wrap .informate span {
+  font-size: 16px;
+  color: #FF9000;
+}
+#home .worship_wrap .text_area .shuttle {
+  width: 45%;
+  padding-left: 5vw;
+}
+#home .worship_wrap .text_area .shuttle > h3 {
+  height: 57px;
+  line-height: 57px;
+  text-align: center;
+  background: #FF9000;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+#home .worship_wrap .shuttle ul {
+  border: 1px solid #E7DAB3;
+  border-top: none;
+  border-bottom: none;
+}
+#home .worship_wrap .shuttle ul:first-child {
+  border-right: none;
+}
+#home .worship_wrap .shuttle ul li {
+  width: 50%;
+  height: 69px;
+  line-height: 69px;
+  padding: 0 16px;
+  float: left;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px solid #E7DAB3;
+  position: relative;
+}
+#home .worship_wrap .shuttle ul li:first-child {
+  text-align: right;
+}
+#home .worship_wrap .shuttle ul li:first-child::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 25%;
+  background: #DDDDDD;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*section-box >> 달력*/
+#home .worship_wrap .section03 {
+  background: none;
+}
+#home .worship_wrap .title-area h3 {
+  padding: 24px 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #777;
+}
+#home .worship_wrap .section03 .calendar-top {
+  justify-content: center;
+}
+#home .worship_wrap .section03 .calendar-bottom {
+  padding-top: 40px;
+}
+/*resize*/
+@media (max-width: 1000px) {
+  #home .worship_wrap .worship_informate .text_area {
+      display: block;
+      transform: translateY(-60%);
+  }
+  #home .worship_wrap .text_area .informate {
+      width: 100%;
+  }
+  #home .worship_wrap .text_area .shuttle {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+  }
+  #home .worship_wrap .section03 .inner {
+      padding: 0;
+  }
+  #home .worship_wrap .shuttle ul {
+      width: calc(100% / 3);
+      float: left;
+  }
+}
+@media (max-width: 767px) {
+  #home .worship_wrap .photo_container .worship_informate {
+      height: 540px;
+  }
+  #home .worship_wrap .worship_informate .text_area {
+      transform: translateY(-63%);
+  }
+  #home .worship_wrap br.d-none {
+      display: block;
+  }
+  #home .worship_wrap .shuttle ul:nth-child(3) {
+      border-left: none;
+      border-right: none;
+  }
+  #home .worship_wrap .shuttle ul li {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      float: none;
+      text-align: center !important;
+  }
+  #home .worship_wrap .shuttle ul li:first-child::after {
+      display: none;
+  }
+}
+@media (max-width: 524px) {
+  #home .worship_wrap .informate p {
+      font-size: 14px;
+  }
+  #home .worship_wrap .informate span {
+      font-size: 14px;
+  }
+  #home .worship_wrap .shuttle ul li {
+      font-size: 14px;
+  }
 }
