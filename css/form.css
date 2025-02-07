@@ -2653,7 +2653,7 @@ main.form_09 .n1-sub04 label > div textarea:focus {
     height: 64px;
 }
 /* 최종제출 버튼 */
-#home main.form_09 button.next {
+#home main.form_09 #form09 button.next {
     background: transparent;
     color: #aaa;
     border: 3px solid #aaa;
