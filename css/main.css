@@ -67,6 +67,78 @@
   font-weight: normal;
   font-style: normal;
 }
+*{
+  font-family: 'Pretendard Variable' !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -0.36px;
+}
+/* 사파리 input아이콘 초기화 */
+@supports (-webkit-appearance:none) {
+    input {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+    }
+}
+#home.mainCommon input::-webkit-contacts-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home.mainCommon input::-webkit-credentials-auto-fill-button {
+	visibility:hidden !important;
+	display:none !important;
+	pointer-events:none !important;
+	position:absolute !important;
+	right:0 !important;
+}
+#home.mainCommon ul, ol {
+    list-style: none;
+    padding-inline-start: 0;
+}
+#home.mainCommon a{
+    color: inherit;
+    text-decoration: none;  
+}
+#home.mainCommon button {
+    background: transparent;
+    cursor: pointer;
+}
+#home.mainCommon .btn_700 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+}
+
+/* 섹션별 내부 메인 설정값 */
+.inner {
+    width: 100%;
+    max-width: 1248px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.mt-120{ margin-top: 120px !important;}
+/* 타이틀 */
+.title {
+    color: #222;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+}
+
+/* 모바일 전용 br */
+span.br{
+    /* display: block; */
+}
+
+
+
+/* --- 소개 페이지 index.html 스타일   --- */
 #home .mainIndex .blind {
   position: absolute;
   clip: rect(0 0 0 0);
