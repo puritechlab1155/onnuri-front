@@ -2174,7 +2174,7 @@ letter-spacing: -0.8px;
     }
 }
 
-/* --- id-reset01.html 스타일 --- */
+/* --- id-reset01.html , id-reset02.html 스타일 --- */
 #main.id_reset {
   padding-top: 80px;
 }
@@ -2340,4 +2340,236 @@ letter-spacing: -0.8px;
   }
 }
 
-/* --- id-reset02.html 스타일 --- */
+/* --- 
+pasword-change.html 스타일 
+pasword-reset01.html 스타일 
+--- */
+#main.pw {
+    padding-top: 80px;
+}
+#home .pw fieldset {
+    border: none;  
+    padding: 0;   
+    margin: 0;    
+}
+#home .pw .bg {
+    width: 100%;
+    background: #FAFAFA;
+    border: 1px solid #EBEBEB;
+    border-radius: 50px;
+    padding: 50px;
+}
+#home .pw .btn_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap : 50px;
+}
+#home .pw button.nextBtn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: -0.36px;
+}
+#main.pw_chage .mt-10 { margin-top: 10px; }
+#home .pw_chage .btn_wrap button {
+  display: block;
+  padding: 23px 0;
+  margin-bottom: 12px;
+  border-color: #074F99;
+  background: #074F99;
+  padding: 18px 0;
+  color: #fff;
+  margin-top: 62px;
+}
+#home .pw_chage .pw_wrap , 
+#home .pw_reset01 .pw_wrap {
+  width: 100%;
+  max-width: 636px;
+  margin: 0 auto;
+  margin-top: 6vw;
+  margin-bottom: 238px;
+  text-align: center;
+}
+#home .pw_chage .pw_wrap h3 , 
+#home .pw_reset01 .pw_wrap > h3 ,
+#home .pw_reset03 .id_wrap h3 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  margin-bottom: 80px;
+}
+#home .pw_chage .input_wrap h4 , 
+#home .pw_reset01 .input_wrap h4 {
+    text-align: left;
+    line-height: 1.5;
+}
+#home .pw_chage .red {
+    color: #E72929;
+    display: block;
+}
+#home .pw_chage .input_wrap .input_container,
+#home .pw_reset01 .input_wrap .input_container {
+    margin-top: 20px;
+}
+#home .pw_chage .input_wrap .input_container input ,
+#home .pw_reset01 .input_wrap .input_container input {
+    width: 100%;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    border: 1px solid #E9EBED;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: -0.36px;
+    border-radius: 7px;
+}
+#home .pw_chage .input_wrap .input_container input:focus ,
+#home .pw_reset01 .input_wrap .input_container input:focus {
+    outline: none;
+}
+#home .pw_chage .input_wrap .input_container input::placeholder ,
+#home .pw_reset01 .input_wrap .input_container input::placeholder {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ccc;
+}
+#home .pw_chage .numbtn {
+    color: #074F99;
+    background-color: #E6EDF5;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+#home .pw_complete .id_wrap ,
+#home .pw_reset03 .id_wrap {
+  width: 100%;
+  max-width: 636px;
+  margin: 0 auto;
+  margin-top: 6vw;
+  margin-bottom: 238px;
+  text-align: center;
+}
+#home .pw_complete .id_wrap > h3 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  margin-bottom: 80px;
+}
+#home .pw_complete .input_wrap h4 {
+  line-height: 1.5;
+}
+#home .pw_complete .btn_wrap button {
+  display: block;
+  margin-bottom: 12px;
+  border-color: #074F99;
+  background: #074F99;
+  padding: 10px 0;
+  color: #fff;
+  margin-top: 62px;
+  width: 172px !important;
+}
+#home .pw_complete .nextBtn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: -0.36px;
+}
+#home .pw_reset01 .input_container .flex-box {
+  width: 100%;
+  display: flex;
+  gap : 10px;
+  margin-bottom: 10px;
+}
+#home .pw_reset01 .numbtn {
+  width: 50% !important;
+  color: #074F99;
+  background-color: #E6EDF5;
+  padding: 15px;
+}
+#home .pw_reset01 .btn_wrap button {
+  display: block;
+  padding: 23px 0;
+  margin-bottom: 12px;
+  border-color: #074F99;
+  background: #074F99;
+  padding: 18px 0;
+  color: #fff;
+  margin-top: 62px;
+}
+#home .pw_reset01 button.nextBtn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: -0.36px;
+}
+#home .pw_reset01 ul.user_account {
+  margin-top: 30px;
+}
+#home .pw_reset01 ul.user_account li {
+  text-align: right;
+}
+#home .pw_reset01 ul.user_account a{
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+}
+/*resize*/
+@media (max-width: 834px) {
+  #home .pw_chage .pw_wrap ,
+  #home .pw_reset01 .pw_wrap {
+        margin-top: 70px;
+    }
+  #home .pw_chage .myHistory_wrap ,
+  #home .pw_reset01 .myHistory_wrap {
+      padding-bottom: 356px;
+  }
+  #home .pw_complete .id_wrap {
+      margin-top: 70px;
+  }
+  #home .pw_complete .myHistory_wrap {
+      padding-bottom: 356px;
+  }
+}
+@media (max-width: 576px) {
+    #home .pw_chage form {
+        padding: 50px 20px;
+    }
+    #home .pw_chage .input_wrap h4 {
+        text-align: center;
+    }
+    #home .pw_chage .br {
+        display: block;
+    }
+    #home .pw_chage .input_wrap h4 {
+        text-align: center;
+    }
+    #home .pw_chage .btn_wrap {
+        flex-wrap: wrap;
+        gap: 0px !important;
+    }
+    #home .pw_chage .btn_wrap button {
+        padding: 10px 0;
+        width: 100% !important;
+    }
+    #home .pw_chage .btn_wrap button {
+        margin-top: 10px;
+    }
+    #home .pw_chage .btn_wrap {
+        margin-top: 62px;
+    }
+    #home .pw_chage .br {
+        display: block;
+    }
+    #home .pw_reset01 .input_container .flex-box {
+      flex-wrap: wrap;
+    }
+    #home .pw_reset01 .numbtn {
+      width: 100% !important;
+    }
+}
