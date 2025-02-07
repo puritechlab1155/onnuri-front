@@ -2173,3 +2173,171 @@ letter-spacing: -0.8px;
         margin-bottom: 400px;
     }
 }
+
+/* --- id-reset01.html 스타일 --- */
+#main.id_reset {
+  padding-top: 80px;
+}
+#home .id_reset fieldset {
+  border: none;  
+  padding: 0;   
+  margin: 0;    
+}
+#home .id_reset .id_wrap {
+  width: 100%;
+  max-width: 636px;
+  margin: 0 auto;
+  margin-top: 6vw;
+  margin-bottom: 238px;
+  text-align: center;
+}
+#home .id_reset .id_wrap > h3 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  margin-bottom: 80px;
+}
+#home .id_reset .bg {
+  width: 100%;
+  background: #FAFAFA;
+  border: 1px solid #EBEBEB;
+  border-radius: 50px;
+  padding: 50px;
+}
+#home .id_reset .input_wrap h4 {
+  text-align: left;
+  line-height: 1.5;
+}
+#home .id_reset01 .input_wrap .input_container {
+  margin-top: 20px;
+}
+#home .id_reset01 .input_wrap .input_container input {
+  width: 100%;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  border: 1px solid #E9EBED;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: -0.36px;
+  border-radius: 7px;
+}
+#home .id_reset01 .input_wrap .input_container input:focus {
+  outline: none;
+}
+#home .id_reset01 .input_wrap .input_container input::placeholder {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ccc;
+}
+#home .id_reset01 .input_container .flex-box {
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap : 10px;
+  margin-bottom: 10px;
+}
+#home .id_reset01 .numbtn {
+  width: 50% !important;
+  color: #074F99;
+  background-color: #E6EDF5;
+  padding: 15px;
+}
+#home .id_reset01 .btn_wrap button {
+  display: block;
+  padding: 23px 0;
+  margin-bottom: 12px;
+  border-color: #074F99;
+  background: #074F99;
+  padding: 18px 0;
+  color: #fff;
+  margin-top: 62px;
+}
+#home .id_reset01 button.nextBtn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: -0.36px;
+}
+#home .id_reset01 ul.user_account {
+  margin-top: 30px;
+}
+#home .id_reset01 ul.user_account li {
+  text-align: right;
+}
+#home .id_reset01 ul.user_account a{
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+}
+#home .id_reset02 .numbtn {
+  color: #074F99;
+  background-color: #E6EDF5;
+  padding: 15px;
+  margin-top: 50px;
+}
+#home .id_reset02 .btn_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap : 50px;
+}
+#home .id_reset02 .btn_wrap button {
+  display: block;
+  margin-bottom: 12px;
+  border-color: #074F99;
+  background: #074F99;
+  padding: 10px 0;
+  color: #fff;
+  margin-top: 62px;
+  width: 172px !important;
+}
+#home .id_reset02 .nextBtn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 7px;
+  letter-spacing: -0.36px;
+}
+/*resize*/
+@media (max-width: 834px) {
+  #home .id_reset .id_wrap {
+      margin-top: 70px;
+  }
+  #home .id_reset .myHistory_wrap {
+      padding-bottom: 356px;
+  }
+}
+@media (max-width: 576px) {
+  #home .id_reset01 .input_container .flex-box {
+      flex-wrap: wrap;
+  }
+  #home .id_reset01 .numbtn {
+      width: 100% !important;
+  }
+  #home .id_reset02 .input_wrap h4 {
+    text-align: center;
+  }
+  #home .id_reset02 .btn_wrap {
+      flex-wrap: wrap;
+      gap: 0px !important;
+  }
+  #home .id_reset02 .btn_wrap button {
+      padding: 10px 0;
+      width: 100% !important;
+  }
+  #home .id_reset02 .btn_wrap button {
+      margin-top: 10px;
+  }
+  #home .id_reset02 .btn_wrap {
+      margin-top: 62px;
+  }
+  #home .id_reset02 .br {
+      display: block;
+  }
+}
+
+/* --- id-reset02.html 스타일 --- */
