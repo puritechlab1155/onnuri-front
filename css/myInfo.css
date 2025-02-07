@@ -1,15 +1,14 @@
 /*main*/
-#main {
+#main.myInfo {
     padding-top: 80px;
 }
-
-fieldset {
+.myInfo fieldset {
     border: none;  /* 테두리 제거 */
     padding: 0;    /* 패딩 제거 */
     margin: 0;     /* 마진 제거 */
 }
 /*html : my info >> 내 정보*/
-.myInfo_wrap {
+.myInfo .myInfo_wrap {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -17,16 +16,16 @@ fieldset {
     margin-bottom: 238px;
     text-align: center;
 }
-.myInfo_wrap > h3 {
+.myInfo .myInfo_wrap > h3 {
     font-size: 32px;
     font-weight: 500;
     letter-spacing: -0.36px;
 }
-.myInfo_wrap .profile {
+.myInfo .myInfo_wrap .profile {
     margin-top: 66px;
     position: relative;
 }
-.profile .my_img {
+.myInfo .profile .my_img {
     width: 180px;
     height: 180px;
     overflow: hidden;
@@ -34,24 +33,24 @@ fieldset {
     border-radius: 50%;
     box-shadow: 1px 1px 8px #90909065;
 }
-.my_img img {
+.myInfo .my_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     float: left;
 }
-.profile .name {
+.myInfo .profile .name {
     display: block;
     margin-top: 12px;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: -0.36px;
 }
-.myInfo_wrap .btn_wrap {
+.myInfo .myInfo_wrap .btn_wrap {
     margin-top: 62px;
 }
-.btn_wrap button {
+.myInfo .btn_wrap button {
     display: block;
     width: 100%;
     padding: 23px 0;
@@ -66,14 +65,14 @@ fieldset {
     transition: all 0.1s linear;
     box-shadow: 1px 1px 6px #00000010;
 }
-.btn_wrap button:hover {
+.myInfo .btn_wrap button:hover {
     background: #004BBA;
     color: #fff;
     border-color: #004BBA;
 }
 
 /*html : my info - edit >> 내 정보 수정*/
-.profile .editBtn {
+.myInfo .profile .editBtn {
     width: 95px;
     position: absolute;
     bottom: -20px;
@@ -81,7 +80,7 @@ fieldset {
     transform: translateX(-50%);
     box-sizing: border-box;
 }
-.editBtn button {
+.myInfo .editBtn button {
     width: 100%;
     padding: 8px 0;
     background: #fff;
@@ -91,28 +90,31 @@ fieldset {
     letter-spacing: -0.36px;
     box-shadow: 0px 2px 5px #00000025;
 }
-.editBtn button img {
+.myInfo .editBtn button img {
     vertical-align: -4px;
     margin-right: 2px;
 }
-.editBtn input[type="file"] {
+.myInfo .editBtn input[type="file"] {
     display: none;
 }
-.myInfo_wrap .input_wrap {
+.myInfo .myInfo_wrap .input_wrap {
     margin-top: 52px;
 }
-.input_wrap .input_container {
+.myInfo .input_wrap .input_container {
     margin-bottom: 16px;
     text-align: left;
 }
-.input_wrap label.input_title {
+.myInfo .input_wrap label.input_title {
+    width: 100%;
+    text-align: left;
+    display: block;
     margin-bottom: 8px;
     font-size: 16px;
     font-weight: 500;
     color: #777;
     letter-spacing: -0.36px;
 }
-.input_wrap .input_container input {
+.myInfo .input_wrap .input_container input {
     width: 100%;
     padding: 15px 16px;
     box-sizing: border-box;
@@ -124,100 +126,32 @@ fieldset {
     letter-spacing: -0.36px;
     border-radius: 7px;
 }
-.input_wrap .input_container input:focus {
+.myInfo .input_wrap .input_container input:focus {
     outline: none;
 }
-.input_wrap .input_container input::placeholder {
+.myInfo .input_wrap .input_container input::placeholder {
     font-size: 16px;
     font-weight: 300;
     color: #ccc;
 }
-button.finishBtn {
+.myInfo button.finishBtn {
     border-color: #004BBA;
     background: #004BBA;
     color: #fff;
 }
 
-
-/*hrml: login >> 내 정보 로그인*/
-.input_wrap label.input_title {
-    display: block;
-    margin-bottom: 8px;
-}
-.input_wrap .password_container {
-    position: relative;
-}
-.password_container .eyeBtn {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-.keep_login {
-    width: fit-content;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: -0.36px;
-    color: #999;
-}
-.keep_login input[type="checkbox"] {
-    display: none;
-}
-.keep_login input[type="checkbox"]:checked + label span.checkBox rect {
-    fill: #0A387C; 
-}
-label[for="keepLogin"] {
-    cursor: pointer;
-}
-.keep_login span.checkBox {
-    display: inline-block;
-    vertical-align: -5px;
-    margin-right: 9px;
-    cursor: pointer;
-}
-button.loginBtn {
-    padding: 18px 0;
-}
-ul.user_account {
-    margin-top: 30px;
-}
-ul.user_account li {
-    display: inline-block;
-}
-ul.user_account li::after {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    background: #EEEEEE;
-    margin: 0 10px;
-}
-ul.user_account li:last-child::after {
-    content: "";
-    display: none;
-}
-ul.user_account a{
-    font-size: 16px;
-    color: #777;
-    font-weight: 500;
-    letter-spacing: -0.36px;
-}
-
-
 /*hrml: my info - history  >> 내 신청 내역*/
-.myHistory_wrap {
+.myInfo .myHistory_wrap {
     max-width: 588px !important;
     padding-bottom: 442px;
 }
 /*탭 부분*/
-.tabBtn_wrap {
+.myInfo .tabBtn_wrap {
     width: 100%;
     overflow: hidden;
     margin-top: 66px;
 }
-.tabBtn_wrap > button {
+.myInfo .tabBtn_wrap > button {
     width: 50%;
     padding: 12px 0;
     float: left;
@@ -227,19 +161,19 @@ ul.user_account a{
     letter-spacing: -0.36px;
     color: #222;
 }
-.historyFocus {
+.myInfo .historyFocus {
     border-bottom: 2px solid #000;
 }
-.historyNone {
+.myInfo .historyNone {
     border: none;
 }
 /*프로그램 신청 내역*/
-.element_wrap {
+.myInfo .element_wrap {
     width: 100%;
     height: 144px;
     position: relative;
 }
-.history_element {
+.myInfo .history_element {
     width: 100%;
     box-sizing: border-box;
     position: absolute;
@@ -247,21 +181,21 @@ ul.user_account a{
     left: 0;
     display: none;
 }
-.history_element > div {
+.myInfo .history_element > div {
     float: left;
     white-space: nowrap;
     overflow: hidden;
 }
-.program_element > div {
+.myInfo .program_element > div {
     width: calc(100% / 3);
 }
-.plant_element > .reservation{
+.myInfo .plant_element > .reservation{
     width: 46%;
 }
-.plant_element > .step,.status{
+.myInfo .plant_element > .step,.status{
     width: 27%;
 }
-h4.historyName {
+.myInfo h4.historyName {
     height: 48px;
     line-height: 48px;
     color: #224F5B;
@@ -270,7 +204,7 @@ h4.historyName {
     letter-spacing: -0.36px;
     background: #ddd;
 }
-.history_element li {
+.myInfo .history_element li {
     height: 48px;
     line-height: 48px;
     padding: 0 4px;
@@ -280,49 +214,111 @@ h4.historyName {
     color: #222;
     letter-spacing: -0.36px;
 }
-.status li {
+.myInfo .status li {
     color: #007AFF;
 }
-.status li.history-red {
+.myInfo .status li.history-red {
     color: #E72929;
+}
+
+/*hrml: login >> 내 정보 로그인*/
+.myInfo .input_wrap .password_container {
+    position: relative;
+}
+.myInfo .password_container .eyeBtn {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.myInfo .keep_login {
+    width: fit-content;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    color: #999;
+}
+.myInfo .keep_login input[type="checkbox"] {
+    display: none;
+}
+.myInfo .keep_login input[type="checkbox"]:checked + label span.checkBox rect {
+    fill: #0A387C; 
+}
+.myInfo label[for="keepLogin"] {
+    cursor: pointer;
+}
+.myInfo .keep_login span.checkBox {
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+.myInfo button.loginBtn {
+    padding: 18px 0;
+}
+.myInfo ul.user_account {
+    margin-top: 30px;
+}
+.myInfo ul.user_account li {
+    display: inline-block;
+}
+.myInfo ul.user_account li::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #EEEEEE;
+    margin: 0 10px;
+}
+.myInfo ul.user_account li:last-child::after {
+    content: "";
+    display: none;
+}
+.myInfo ul.user_account a{
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+    letter-spacing: -0.36px;
 }
 
 /*resize*/
 @media (max-width: 834px) {
-    .myInfo_wrap {
+    .myInfo .myInfo_wrap {
         margin-top: 70px;
     }
-    .myHistory_wrap {
+    .myInfo .myHistory_wrap {
         padding-bottom: 356px;
     }
 }
 @media (max-width: 522px) {
     /*html : myInfo - history*/
-    .program_element > .program {
+    .myInfo .program_element > .program {
         width: 52%;
     }
-    .program_element > .generation {
+    .myInfo .program_element > .generation {
         width: 24%;
     }
-    .program_element > .status {
+    .myInfo .program_element > .status {
         width: 24%;
     }
-    .plant_element > .reservation {
+    .myInfo .plant_element > .reservation {
         width: 56%;
         box-sizing: border-box;
     }
-    .plant_element > .step {
+    .myInfo .plant_element > .step {
         width: 20%;
     }
-    .plant_element > .status {
+    .myInfo .plant_element > .status {
         width: 24%;
     }
 }
 @media (max-width: 390px) {
-    .myInfo_wrap {
+    .myInfo .myInfo_wrap {
         margin-bottom: 120px;
     }
-    .history_element li {
+    .myInfo .history_element li {
         font-size: 14px;
     }
 }
