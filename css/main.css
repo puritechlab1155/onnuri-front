@@ -225,6 +225,7 @@
 #home .mainIndex .section01 .tab-cont.active {
   display: block;
 }
+/* notice 클래스 스타일은 >> 메인 페이지와 공지사항 페이지 공통 적용 */
 #home .mainIndex .section01 .notice-area {
   padding: 40px 102px;
   background: #fff;
@@ -239,7 +240,7 @@
 #home .mainIndex .section01 .notice-list-item:not(:last-child) {
   border-bottom: 1px solid #ddd;
 }
-#home .mainIndex .section01 .notice-list-link {
+#home .notice-list-link {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -247,12 +248,12 @@
   gap: 24px;
   padding: 24px 0;
 }
-#home .mainIndex .section01 .notice-list-link > img {
+#home .notice-list-link > img {
   width: 100%;
   max-width: 79px;
   display: block;
 }
-#home .mainIndex .section01 .notice-category {
+#home .notice-category {
   color: #222;
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -260,7 +261,7 @@
   line-height: 160%; /* 25.6px */
   letter-spacing: -0.32px;
 }
-#home .mainIndex .section01 .notice-title {
+#home .notice-title {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -268,7 +269,7 @@
   align-items: center;
   gap: 8px;
 }
-#home .mainIndex .section01 .notice-title .text {
+#home .notice-title .text {
   white-space: nowrap;
   color: #222;
   font-family: "Pretendard-Regular";
@@ -279,11 +280,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#home .mainIndex .section01 .notice-title .notice-badge {
+#home .notice-title .notice-badge {
   width: 22px;
   height: 22px;
 }
-#home .mainIndex .section01 .notice-date {
+#home .notice-date { 
   color: #777;
   font-family: "Pretendard-Regular";
   font-size: 18px;
@@ -356,25 +357,26 @@
 #home .mainIndex .section02 .img-area .name img {
   width: 100%;
 }
-#home .mainIndex .section03 {
+/* section03 클래스 스타일은 >> 메인 페이지와 예배 페이지 공통 적용 */
+#home .section03 {
   padding: 220px 0;
   background: #fff url(../img/home/section-box-bg.png) no-repeat;
   background-size: cover;
   background-position: right center;
 }
-#home .mainIndex .section03 .calendar-top {
+#home .section03 .calendar-top {
   display: flex;
   gap: 20px;
   align-items: center;
   margin: 40px 0 20px;
 }
-#home .mainIndex .section03 .calendar-top .last-month-arrow, 
-#home .mainIndex .section03 .calendar-top .next-month-arrow {
+#home .section03 .calendar-top .last-month-arrow, 
+#home .section03 .calendar-top .next-month-arrow {
   width: 40px;
   height: 40px;
   display: block;
 }
-#home .mainIndex .section03 .calendar-top .calendar-date {
+#home .section03 .calendar-top .calendar-date {
   color: #222;
   font-family: "Pretendard-ExtraBold";
   font-size: 24px;
@@ -382,26 +384,26 @@
   line-height: 160%; /* 38.4px */
   letter-spacing: -0.48px;
 }
-#home .mainIndex .section03 .calendar-bottom {
+#home .section03 .calendar-bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 24px;
 
 }
-#home .mainIndex .section03 .calendar-board {
+#home .section03 .calendar-board {
   width: 65%;
   box-sizing: border-box;
   border-collapse: collapse;
   border: 1px solid #ddd;
 }
-#home .mainIndex .section03 .calendar-board colgroup col {
+#home .section03 .calendar-board colgroup col {
   width: 14%;
 }
-#home .mainIndex .section03 .calendar-board thead {
+#home .section03 .calendar-board thead {
   height: 49px;
 }
-#home .mainIndex .section03 .calendar-board thead th {
+#home .section03 .calendar-board thead th {
   background: #1C3C6B;
   color: #eee;
   font-family: "Pretendard-Medium";
@@ -410,10 +412,10 @@
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
-#home .mainIndex .section03 .calendar-board thead .sunday {
+#home .section03 .calendar-board thead .sunday {
   background: #2A6ACA;
 }
-#home .mainIndex .section03 .calendar-board tbody td {
+#home .section03 .calendar-board tbody td {
   min-width: 48px;
   height: 100px;
   background: #fff;
@@ -428,20 +430,20 @@
   letter-spacing: -0.36px;
   cursor: pointer;
 }
-#home .mainIndex .schedule-text { /*현재 일정에 추가*/
+#home  .schedule-text { /*현재 일정에 추가*/
   color: #222;
   font-size: 16px;
   font-weight: 300 !important;
   font-family: "Pretendard-Regular";
 }
-#home .mainIndex .focusDay { /*일정 클릭시 추가되는 포커스 스타일*/
+#home .focusDay { /*일정 클릭시 추가되는 포커스 스타일*/
   background: #1C3C6B !important;
   color: #fff !important;
 }
-#home .mainIndex .focusDay .schedule-text { /*포커스 시 모든 텍스트 색상 변경*/
+#home .focusDay .schedule-text { /*포커스 시 모든 텍스트 색상 변경*/
   color: #fff !important;
 }
-#home .mainIndex .section03 .calendar-board tbody td ul li {
+#home .section03 .calendar-board tbody td ul li {
   color: #222;
   font-family: "Pretendard-Regular";
   font-size: 16px;
@@ -450,13 +452,13 @@
   letter-spacing: -0.32px;
   word-break: break-all;
 }
-#home .mainIndex .section03 .calendar-board tbody td:first-child {
+#home .section03 .calendar-board tbody td:first-child {
   background: #E9F2FF;
 }
-#home .mainIndex .section03 .calendar-board tbody td.sunday {
+#home .section03 .calendar-board tbody td.sunday {
   color: #777;
 }
-#home .mainIndex .section03 .calendar-board tbody td.today {
+#home .section03 .calendar-board tbody td.today {
   color: #007AFF;
   font-family: "Pretendard-ExtraBold";
   font-size: 18px;
@@ -464,11 +466,11 @@
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
-#home .mainIndex .section03 .calendar-board tbody td.today ul li {
+#home .section03 .calendar-board tbody td.today ul li {
   font-family: "Pretendard-SemiBold";
 }
-#home .mainIndex .section03 .calendar-board tbody td.prev-month, 
-#home .mainIndex .section03 .calendar-board tbody td.next-month {
+#home .section03 .calendar-board tbody td.prev-month, 
+#home .section03 .calendar-board tbody td.next-month {
   color: #bbb;
   font-family: "Pretendard-Medium";
   font-size: 18px;
@@ -476,14 +478,14 @@
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
 }
-#home .mainIndex .section03 .calendar-board tbody td.prev-month ul li, 
-#home .mainIndex .section03 .calendar-board tbody td.next-month ul li {
+#home .section03 .calendar-board tbody td.prev-month ul li, 
+#home .section03 .calendar-board tbody td.next-month ul li {
   color: #bbb;
 }
-#home .mainIndex .section03 .schedule {
+#home .section03 .schedule {
   width: 35%;
 }
-#home .mainIndex .section03 .schedule ul {
+#home .section03 .schedule ul {
   overflow: hidden;
   margin-bottom: 10px;
   border: 1px solid #1C3C6B;
@@ -492,16 +494,16 @@
   font-weight: 700;
   letter-spacing: -0.36px;
 }
-#home .mainIndex .section03 .schedule ul li.time {
+#home .section03 .schedule ul li.time {
   padding: 13px 16px;
   background: #1C3C6B;
   color: #fff;
 }
-#home .mainIndex .section03 .schedule ul li.time img {
+#home .section03 .schedule ul li.time img {
   vertical-align: -7px;
   margin-right: 10px;
 }
-#home .mainIndex .section03 .schedule ul li.detail {
+#home .section03 .schedule ul li.detail {
   height: 77px;
   line-height: 77px;
   padding: 0 16px;
@@ -698,18 +700,18 @@
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #home .mainIndex .section03 .calendar-bottom {
+  #home .section03 .calendar-bottom {
     display: block;
   }
-  #home .mainIndex .section03 .calendar-board {
+  #home .section03 .calendar-board {
     width: 100%;
   }
-  #home .mainIndex .section03 .calendar-board tbody td {
+  #home .section03 .calendar-board tbody td {
     min-width: 40px;
     height: 11.9vw;
     min-height: 49px;
   }
-  #home .mainIndex .section03 .schedule {
+  #home .section03 .schedule {
     width: 100%;
     margin-top: 33px;
   }
@@ -778,24 +780,24 @@
   #home .mainIndex .section01 .notice-area {
     padding: 40px 40px;
   }
-  #home .mainIndex .section01 .notice-list-item:not(:first-child) {
+  #home .notice-list-item:not(:first-child) {
     margin-top: 24px;
   }
-  #home .mainIndex .section01 .notice-list-link {
+  #home .notice-list-link {
     display: block;
   }
-  #home .mainIndex .section01 .notice-title {
+  #home .notice-title {
     width: 100%;
   }
-  #home .mainIndex .section01 .notice-category {
+  #home .notice-category {
     margin: 4px 0;
   }
-  #home .mainIndex .section01 .notice-date {
+  #home .notice-date {
     position: absolute;
     top: 0;
     left: 0;
   }
-  #home .mainIndex .section01 .notice-list-link > img {
+  #home .notice-list-link > img {
     position: absolute;
     top: 0;
     right: 0;
@@ -805,7 +807,7 @@
     padding: 73px 0 0;
   }
   /*section-box*/
-  #home .mainIndex .schedule-text {
+  #home .schedule-text {
     width: 1.5vw;
     margin: 0 auto;
     margin-top: 0.5vw;
