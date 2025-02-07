@@ -2342,7 +2342,10 @@ letter-spacing: -0.8px;
 
 /* --- 
 pasword-change.html 스타일 
+pasword-complate.html 스타일 
 pasword-reset01.html 스타일 
+pasword-reset02.html 스타일 
+pasword-reset03.html 스타일 
 --- */
 #main.pw {
     padding-top: 80px;
@@ -2572,4 +2575,420 @@ pasword-reset01.html 스타일
     #home .pw_reset01 .numbtn {
       width: 100% !important;
     }
+}
+
+/* --- ragister.html 스타일 --- */
+#home .register .fs-18 { font-size: 18px !important; }
+#home .register .fw-6 { font-weight: 600px; }
+#home .register .mt-4 { margin-top: 4px !important; }
+#home .register .mt-18 { margin-top: 18px; }
+#home .register .mt-25 { margin-top: 25px !important; }
+#home .register .mt-50 { margin-top: 50px; }
+#home .register .mt-65 { margin-top: 65px !important; }
+#home .register .mb-150 { margin-bottom: 150px; }
+#home .register .mr-40 { margin-right: 40px; }
+#home .register .w-486 { max-width: 486px !important; width: 100%; }
+#home .register .w-180 { max-width: 180px; width: 100%; }
+#home .register .t-c { text-align: center; }
+#home .register div.br { display: inline; }
+#home .register h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+#home .register h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+#home .register .red { color: #E72929;}
+
+#home .register main.register {
+    width: 100%;
+    padding: 0 20px;
+}
+#home .register main.register .register-containner {
+    margin: 0 auto;
+}
+#home .register .tabs {
+    max-width: 792px;
+    margin: 50px auto;
+}
+#home .register .tab-titles {
+    width: 180px;
+    margin: auto;
+    display: flex;
+    gap: 6px;
+}
+#home .register .tab-titles li {
+    width: 56px;
+    height: 5px;
+    background: #EAEAEA;
+    border-radius: 5px;
+}
+#home .register .tab-titles li.active {
+    background-color: #007AFF;
+}
+/* 여기서부터 탭 컨텐츠 부분 */
+#home .register .tab-pane {
+    display: none;
+}
+#home .register .tab-pane>p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    line-height: 1.6;
+    margin-top: 8px;
+    text-align: center;
+}
+#home .register .tab-pane.active {
+    display: block;
+}
+#home .register .terms-content {
+    height: 242px;
+    max-width: 792px;
+    overflow-y: auto;
+    background: #F3F5F6;
+    padding: 30px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#home .register fieldset {
+    border: none;
+    margin-top: 30px;
+}
+/* 체크박스 커스텀 */
+#home .register .keep_agree input[type="checkbox"] {
+    display: none;
+}
+#home .register .keep_agree input[type="checkbox"]:checked + label span.checkBox rect {
+    fill: #0A387C; 
+}
+#home .register .keep_agree span.checkBox {
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+#home .register .keep_agree label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+#home .register .terms-content p {
+    color: #444;
+    font-weight: 400;
+    line-height: 1.6;
+}
+#home .register .tab-content .tab-pane .btn-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 200px;
+}
+#home .register .btn-box button, .tab-pane button {
+    max-width: 384px;
+    width: 100%;
+    height: 62px;
+    padding: 10px 100px;
+    background-color: #F3F5F6;
+    color: #777;
+    font-size: 20px;
+    font-weight: 800;
+    border: 1px solid #E9EBED;
+    border-radius: 7px;
+}
+#home .register .tab-content button.r-btn {
+    background-color: #004BBA;
+    color: #fff;
+}
+/* 두번째 탭 컨텐츠 */
+#home .register  .profile {
+    margin-top: 66px;
+    position: relative;
+}
+/* 여기서부터 이미지 편집 */
+#home .register .profile .my_img {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px #90909065;
+}
+#home .register .my_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+}
+#home .register .profile .name {
+    display: block;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.36px;
+}
+#home .register .profile .editBtn {
+    width: 95px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+#home .register .editBtn button {
+    width: 100%;
+    height: 40px;
+    padding: 8px 0;
+    background: #fff;
+    border-radius: 80px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.36px;
+    box-shadow: 0px 2px 5px #00000025;
+    color: #222;
+}
+#home .register .editBtn button img {
+    vertical-align: -4px;
+    margin-right: 2px;
+}
+#home .register .editBtn input[type="file"] {
+    display: none;
+} 
+/* 여기까지 이미지 편집 */
+#home .register #personal-info-form {
+    max-width: 486px;
+    width: 100%;
+    margin: auto;
+}
+#home .register #personal-info-form label{
+    display: block;
+    color: #222;
+}
+#home .register #personal-info-form .border {
+    max-width: 486px;
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #E9EBED;
+    font-size: 18px;
+    color: #222;
+    font-weight: 400;
+    padding: 15px;
+    margin-top: 10px;
+}
+#home .register input[type='radio'] {
+    margin-right: 8px;
+}
+    /* 기본스타일 제거, 버튼 모양 재설정 */
+#home .register input[type='radio'] {
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ccc; 
+  border-radius: 50%;
+  outline: none; 
+  cursor: pointer;
+}
+/* 체크 시 버튼 모양 스타일 */
+#home .register input[type='radio']:checked {
+  background-color: #004BBA; /* 체크 시 내부 원 색상 */
+  border: 3px solid #fff; /* 라인이 아닌, 라인과 원 사이 색상 */
+  box-shadow: 0 0 0 1px #004BBA; /* 라인 */
+}
+/* 주소 */
+#home .register .el_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: unset;
+    border: unset;
+    padding: 10px;
+    background: #333333;
+    border-radius: 5px;
+    color: #ffffff;
+    width: fit-content;
+    word-break: keep-all;
+  }
+#home .register .el_input::placeholder {
+  color: #d4d4d4;
+}
+#home .register .el_input:disabled {
+    background-color: #f0f0f0;
+}
+#home .register .bl_stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+#home .register .bl_stack--row {
+  flex-direction: row;
+}
+#home .register .bl_stack button {
+  max-width: 150px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 10px;
+  background-color: #fff;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  border-color: #222;
+}
+#home .register .bl_stack button img {
+    margin-left: 10px;
+}
+/* 생년월일 */
+#home .register .info#info__birth {
+  display: flex;
+  gap: 4px;
+}
+/* select 커스텀 */
+#home .register select {
+  /* select 기본 스타일 제거 */
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+  /*화살표 배경 넣기*/
+  background: #fff url('../img/home/register-arrow.png') no-repeat 95% center;
+  }
+  /* 익스플로러 select 화살표 제거 */
+  select::-ms-expand{
+  /* 화살표 없애기 for IE10, 11*/ 
+  display:none;
+}
+#home .register .info#info__birth select {
+    width: 159px;
+    height: 50px;
+    border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #E9EBED;
+    font-size: 18px;
+    color: #777;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 10px;
+}/* 생년월일 끝 */
+
+/* 세번째 탭 컨텐츠 */
+#home .register .tab-content div.t-c img {
+    margin: 50px 0;
+}
+#home .register #next-btn-third {
+   padding: 0; 
+}
+
+@media (max-width: 424px) {
+  #home .register span.br{
+        display: block;
+  }
+  #home .register div.br{
+      display: inline-block;
+      width: 33px;
+      height: 5px;
+  }    
+}
+
+/* --- ragister-complete.html 스타일 --- */
+#home .registComplete .fs-18 { font-size: 18px !important; }
+#home .registComplete .fw-6 { font-weight: 600px; }
+#home .registComplete .mt-4 { margin-top: 4px !important; }
+#home .registComplete .mt-18 { margin-top: 18px; }
+#home .registComplete .mt-25 { margin-top: 25px !important; }
+#home .registComplete .mt-50 { margin-top: 50px; }
+#home .registComplete .mt-65 { margin-top: 65px !important; }
+#home .registComplete .mb-150 { margin-bottom: 150px; }
+#home .registComplete .mr-40 { margin-right: 40px; }
+#home .registComplete .w-486 { max-width: 486px !important; width: 100%; }
+#home .registComplete .w-180 { max-width: 180px; width: 100%; }
+#home .registComplete .t-c { text-align: center; }
+#home .registComplete div.br { display: inline; }
+#home .registComplete h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+#home .registComplete h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+#home .registComplete .red { color: #E72929;}
+
+#home .registComplete main.register {
+    width: 100%;
+    padding: 0 20px;
+}
+#home .registComplete main.register .register-containner {
+    margin: 0 auto;
+}
+#home .registComplete .tabs {
+    max-width: 792px;
+    margin: 50px auto;
+}
+#home .registComplete .tab-titles {
+    width: 180px;
+    margin: auto;
+    display: flex;
+    gap: 6px;
+}
+#home .registComplete .tab-titles li {
+    width: 56px;
+    height: 5px;
+    background: #007AFF;
+    border-radius: 5px;
+}
+#home .registComplete .tab-pane>p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    line-height: 1.6;
+    margin-top: 8px;
+    text-align: center;
+}
+#home .registComplete .btn-box button, 
+#home .registComplete .tab-pane button {
+    max-width: 384px;
+    width: 100%;
+    height: 62px;
+    padding: 10px 100px;
+    background-color: #F3F5F6;
+    color: #777;
+    font-size: 20px;
+    font-weight: 800;
+    border: 1px solid #E9EBED;
+    border-radius: 7px;
+}
+#home .registComplete .tab-content button.r-btn {
+    background-color: #004BBA;
+    color: #fff;
+}
+/* 세번째 탭 컨텐츠 */
+#home .registComplete .tab-content div.t-c img {
+    margin: 50px 0;
+}
+#next-btn-third {
+   padding: 0; 
+}
+@media (max-width: 424px) {
+  #home .registComplete span.br{
+        display: block;
+    }
+  #home .registComplete div.br{
+      display: inline-block;
+      width: 33px;
+      height: 5px;
+  }    
 }
