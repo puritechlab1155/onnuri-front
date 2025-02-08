@@ -529,233 +529,233 @@
     <script src="js/script.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const allAgreeCheckbox = document.getElementById('all-agree');
-            const individualAgreeCheckboxes = document.querySelectorAll('.individual-agree');
-            const nextBtn = document.getElementById('next-btn');
-            const nextBtnSecond = document.getElementById('next-btn-second');
-            const tabs = document.querySelectorAll('.tab-titles li'); // 탭 버튼
-            const tabPanes = document.querySelectorAll('.tab-pane'); // 탭 내용
-            const personalInfoForm = document.getElementById('personal-info-form');
-            const formFields = personalInfoForm.querySelectorAll('input');
+        //document.addEventListener('DOMContentLoaded', function() {
+        //     const allAgreeCheckbox = document.getElementById('all-agree');
+        //     const individualAgreeCheckboxes = document.querySelectorAll('.individual-agree');
+        //     const nextBtn = document.getElementById('next-btn');
+        //     const nextBtnSecond = document.getElementById('next-btn-second');
+        //     const tabs = document.querySelectorAll('.tab-titles li'); // 탭 버튼
+        //     const tabPanes = document.querySelectorAll('.tab-pane'); // 탭 내용
+        //     const personalInfoForm = document.getElementById('personal-info-form');
+        //     const formFields = personalInfoForm.querySelectorAll('input');
             
-            // 첫 번째 탭: 이용약관 동의 체크박스 상태에 따라 '다음' 버튼 활성화/비활성화
-            allAgreeCheckbox.addEventListener('change', function() {
-                individualAgreeCheckboxes.forEach(function(checkbox) {
-                    checkbox.checked = allAgreeCheckbox.checked;
-                });
-                toggleNextButton();
-            });
+        //     // 첫 번째 탭: 이용약관 동의 체크박스 상태에 따라 '다음' 버튼 활성화/비활성화
+        //     allAgreeCheckbox.addEventListener('change', function() {
+        //         individualAgreeCheckboxes.forEach(function(checkbox) {
+        //             checkbox.checked = allAgreeCheckbox.checked;
+        //         });
+        //         toggleNextButton();
+        //     });
     
-            individualAgreeCheckboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', toggleNextButton);
-            });
+        //     individualAgreeCheckboxes.forEach(function(checkbox) {
+        //         checkbox.addEventListener('change', toggleNextButton);
+        //     });
     
-            function toggleNextButton() {
-                const allChecked = Array.from(individualAgreeCheckboxes).every(checkbox => checkbox.checked);
-                if (allChecked) {
-                    nextBtn.disabled = false; // '다음' 버튼 활성화
-                } else {
-                    nextBtn.disabled = true; // '다음' 버튼 비활성화
-                }
-            }
+        //     function toggleNextButton() {
+        //         const allChecked = Array.from(individualAgreeCheckboxes).every(checkbox => checkbox.checked);
+        //         if (allChecked) {
+        //             nextBtn.disabled = false; // '다음' 버튼 활성화
+        //         } else {
+        //             nextBtn.disabled = true; // '다음' 버튼 비활성화
+        //         }
+        //     }
     
-            // 첫 번째 탭: '다음' 버튼 클릭 시 두 번째 탭으로 이동
-            nextBtn.addEventListener('click', function() {
-                tabPanes[0].classList.remove('active');
-                tabPanes[1].classList.add('active');
-                tabs[1].classList.add('active');
-            });
+        //     // 첫 번째 탭: '다음' 버튼 클릭 시 두 번째 탭으로 이동
+        //     nextBtn.addEventListener('click', function() {
+        //         tabPanes[0].classList.remove('active');
+        //         tabPanes[1].classList.add('active');
+        //         tabs[1].classList.add('active');
+        //     });
     
-            // 두 번째 탭: 개인 정보 입력이 완료되면 '다음' 버튼 활성화
-            formFields.forEach(function(field) {
-                field.addEventListener('input', toggleNextButtonSecond);
-            });
+        //     // 두 번째 탭: 개인 정보 입력이 완료되면 '다음' 버튼 활성화
+        //     formFields.forEach(function(field) {
+        //         field.addEventListener('input', toggleNextButtonSecond);
+        //     });
     
-            function toggleNextButtonSecond() {
-                const allFilled = Array.from(formFields).every(function(field) {
-                    return field.value.trim() !== ''; // 모든 입력 필드가 비어있지 않으면
-                });
+        //     function toggleNextButtonSecond() {
+        //         const allFilled = Array.from(formFields).every(function(field) {
+        //             return field.value.trim() !== ''; // 모든 입력 필드가 비어있지 않으면
+        //         });
     
-                if (allFilled) {
-                    nextBtnSecond.disabled = false; // '다음' 버튼 활성화
-                } else {
-                    nextBtnSecond.disabled = true; // '다음' 버튼 비활성화
-                }
-            }
+        //         if (allFilled) {
+        //             nextBtnSecond.disabled = false; // '다음' 버튼 활성화
+        //         } else {
+        //             nextBtnSecond.disabled = true; // '다음' 버튼 비활성화
+        //         }
+        //     }
     
-            // 두 번째 탭: '다음' 버튼 클릭 시 세 번째 탭으로 이동
-            // nextBtnSecond.addEventListener('click', function() {
-            //     tabPanes[1].classList.remove('active');
-            //     tabPanes[2].classList.add('active');
-            //     tabs[2].classList.add('active');
-            // });
+        //     // 두 번째 탭: '다음' 버튼 클릭 시 세 번째 탭으로 이동
+        //     // nextBtnSecond.addEventListener('click', function() {
+        //     //     tabPanes[1].classList.remove('active');
+        //     //     tabPanes[2].classList.add('active');
+        //     //     tabs[2].classList.add('active');
+        //     // });
     
-            // 두번째 탭 시작
-            document.getElementById('editButton').addEventListener('click', function() {
-                document.getElementById('fileInput').click(); // 파일 입력 클릭
-            });
+        //     // 두번째 탭 시작
+        //     document.getElementById('editButton').addEventListener('click', function() {
+        //         document.getElementById('fileInput').click(); // 파일 입력 클릭
+        //     });
     
-            document.getElementById('fileInput').addEventListener('change', function(event) {
-                const file = event.target.files[0]; // 선택된 파일
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        document.querySelector('.my_img > img').src = e.target.result;
-                    }
-                    reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
-                }
-            });
+        //     document.getElementById('fileInput').addEventListener('change', function(event) {
+        //         const file = event.target.files[0]; // 선택된 파일
+        //         if (file) {
+        //             const reader = new FileReader();
+        //             reader.onload = function(e) {
+        //                 document.querySelector('.my_img > img').src = e.target.result;
+        //             }
+        //             reader.readAsDataURL(file); // 파일을 데이터 URL로 읽기
+        //         }
+        //     });
     
-            // 2. 항목별 형식검사
-            document.getElementById('next-btn-second').addEventListener('click', function(event) {
-                event.preventDefault(); // 폼의 기본 동작을 막고, 직접 유효성 검사 진행
+        //     // 2. 항목별 형식검사
+        //     document.getElementById('next-btn-second').addEventListener('click', function(event) {
+        //         event.preventDefault(); // 폼의 기본 동작을 막고, 직접 유효성 검사 진행
     
-                let email = document.getElementById('email').value;
-                let password = document.getElementById('password').value;
-                let passwordConfirm = document.getElementById('password_confirm').value;
-                let errorMessage = "";
+        //         let email = document.getElementById('email').value;
+        //         let password = document.getElementById('password').value;
+        //         let passwordConfirm = document.getElementById('password_confirm').value;
+        //         let errorMessage = "";
     
-                // 이메일 형식 검사
-                let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                if (!emailRegex.test(email)) {
-                    errorMessage += "이메일 형식이 잘못되었습니다.\n";
-                }
+        //         // 이메일 형식 검사
+        //         let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        //         if (!emailRegex.test(email)) {
+        //             errorMessage += "이메일 형식이 잘못되었습니다.\n";
+        //         }
     
-                // 비밀번호 유효성 검사
-                let passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
-                if (!passwordRegex.test(password)) {
-                    errorMessage += "비밀번호는 특수문자를 포함한 8자리 이상이어야 합니다.\n";
-                }
+        //         // 비밀번호 유효성 검사
+        //         let passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+        //         if (!passwordRegex.test(password)) {
+        //             errorMessage += "비밀번호는 특수문자를 포함한 8자리 이상이어야 합니다.\n";
+        //         }
     
-                // 비밀번호 확인 검사
-                if (password !== passwordConfirm) {
-                    errorMessage += "비밀번호와 비밀번호 확인이 일치하지 않습니다.\n";
-                }
+        //         // 비밀번호 확인 검사
+        //         if (password !== passwordConfirm) {
+        //             errorMessage += "비밀번호와 비밀번호 확인이 일치하지 않습니다.\n";
+        //         }
     
-                // 오류 메시지 표시
-                if (errorMessage !== "") {
-                    alert(errorMessage);
-                } else {
-                    // 유효성 검사 통과 시 폼 제출
-                    document.getElementById('personal-info-form').submit();
-                }
-            });
+        //         // 오류 메시지 표시
+        //         if (errorMessage !== "") {
+        //             alert(errorMessage);
+        //         } else {
+        //             // 유효성 검사 통과 시 폼 제출
+        //             document.getElementById('personal-info-form').submit();
+        //         }
+        //     });
     
-            // 전화번호 포맷
-            document.getElementById('phone').addEventListener('input', function(event) {
-                let phone = event.target.value;
-                phone = phone.replace(/[^\d]/g, ''); // 숫자만 남기고 다른 문자는 제거
+        //     // 전화번호 포맷
+        //     document.getElementById('phone').addEventListener('input', function(event) {
+        //         let phone = event.target.value;
+        //         phone = phone.replace(/[^\d]/g, ''); // 숫자만 남기고 다른 문자는 제거
     
-                // 전화번호 포맷: 010-1234-5678
-                if (phone.length <= 3) {
-                    phone = phone.replace(/(\d{1,3})/, '$1');
-                } else if (phone.length <= 7) {
-                    phone = phone.replace(/(\d{3})(\d{1,4})/, '$1-$2');
-                } else {
-                    phone = phone.replace(/(\d{3})(\d{4})(\d{1,4})/, '$1-$2-$3');
-                }
+        //         // 전화번호 포맷: 010-1234-5678
+        //         if (phone.length <= 3) {
+        //             phone = phone.replace(/(\d{1,3})/, '$1');
+        //         } else if (phone.length <= 7) {
+        //             phone = phone.replace(/(\d{3})(\d{1,4})/, '$1-$2');
+        //         } else {
+        //             phone = phone.replace(/(\d{3})(\d{4})(\d{1,4})/, '$1-$2-$3');
+        //         }
     
-                event.target.value = phone;
-            });
+        //         event.target.value = phone;
+        //     });
     
     
-            // 생년월일 셀렉트 박스
-            const birthYearEl = document.querySelector('#birth-year');
-            const birthMonthEl = document.querySelector('#birth-month');
-            const birthDayEl = document.querySelector('#birth-day');
+        //     // 생년월일 셀렉트 박스
+        //     const birthYearEl = document.querySelector('#birth-year');
+        //     const birthMonthEl = document.querySelector('#birth-month');
+        //     const birthDayEl = document.querySelector('#birth-day');
     
-            // 옵션 목록을 생성하는 함수
-            const createOptions = (el, start, end, formatter) => {
-                for (let i = start; i <= end; i++) {
-                    const option = document.createElement('option');
-                    option.setAttribute('value', i);
-                    option.innerText = formatter ? formatter(i) : i;
-                    el.appendChild(option);
-                }
-            };
+        //     // 옵션 목록을 생성하는 함수
+        //     const createOptions = (el, start, end, formatter) => {
+        //         for (let i = start; i <= end; i++) {
+        //             const option = document.createElement('option');
+        //             option.setAttribute('value', i);
+        //             option.innerText = formatter ? formatter(i) : i;
+        //             el.appendChild(option);
+        //         }
+        //     };
     
-            // 생년월일 셀렉트 박스 초기화
-            createOptions(birthYearEl, 1940, 2022);
-            createOptions(birthMonthEl, 1, 12, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
-            createOptions(birthDayEl, 1, 31, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
+        //     // 생년월일 셀렉트 박스 초기화
+        //     createOptions(birthYearEl, 1940, 2022);
+        //     createOptions(birthMonthEl, 1, 12, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
+        //     createOptions(birthDayEl, 1, 31, i => (i < 10 ? `0${i}` : i)); // 두 자릿수로 표시
     
-            // 월 변경 시 일수 조정
-            birthYearEl.addEventListener('change', updateDays);
-            birthMonthEl.addEventListener('change', updateDays);
+        //     // 월 변경 시 일수 조정
+        //     birthYearEl.addEventListener('change', updateDays);
+        //     birthMonthEl.addEventListener('change', updateDays);
     
-            function updateDays() {
-                const selectedYear = birthYearEl.value;
-                const selectedMonth = birthMonthEl.value;
-                const daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
+        //     function updateDays() {
+        //         const selectedYear = birthYearEl.value;
+        //         const selectedMonth = birthMonthEl.value;
+        //         const daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
     
-                // 기존 옵션 제거 후 새로운 일 옵션 추가
-                birthDayEl.innerHTML = '';
-                createOptions(birthDayEl, 1, daysInMonth, i => (i < 10 ? `0${i}` : i));
-            }
+        //         // 기존 옵션 제거 후 새로운 일 옵션 추가
+        //         birthDayEl.innerHTML = '';
+        //         createOptions(birthDayEl, 1, daysInMonth, i => (i < 10 ? `0${i}` : i));
+        //     }
             
-            // 우편번호 검색 기능
-            const elZonecode = document.querySelector("#zonecode");
-            const elRoadAddress = document.querySelector("#roadAddress");
-            const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
+        //     // 우편번호 검색 기능
+        //     const elZonecode = document.querySelector("#zonecode");
+        //     const elRoadAddress = document.querySelector("#roadAddress");
+        //     const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
     
-            const onClickSearch = () => {
-                new daum.Postcode({
-                    oncomplete: function (data) {
-                        elZonecode.setAttribute("value", data.zonecode);
-                        elRoadAddress.setAttribute("value", data.address);
-                    },
-                }).open();
-            };
+        //     const onClickSearch = () => {
+        //         new daum.Postcode({
+        //             oncomplete: function (data) {
+        //                 elZonecode.setAttribute("value", data.zonecode);
+        //                 elRoadAddress.setAttribute("value", data.address);
+        //             },
+        //         }).open();
+        //     };
     
-            const register = () => {
-                console.log(`우편번호: ${elZonecode.value}`);
-                console.log(`주소: ${elRoadAddress.value}`);
-                console.log(`상세주소: ${elRoadAddressDetail.value}`);
-            };
+        //     const register = () => {
+        //         console.log(`우편번호: ${elZonecode.value}`);
+        //         console.log(`주소: ${elRoadAddress.value}`);
+        //         console.log(`상세주소: ${elRoadAddressDetail.value}`);
+        //     };
     
-            document.querySelector("#search-btn").addEventListener("click", onClickSearch);
-            document.querySelector("#register-btn").addEventListener("click", register);
-        });
+        //     document.querySelector("#search-btn").addEventListener("click", onClickSearch);
+        //     document.querySelector("#register-btn").addEventListener("click", register);
+        // });
 
-                // 모달 팝업 열기/닫기 이벤트
-                document.getElementById('sitemap-btn').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "block";
-        }
+        //         // 모달 팝업 열기/닫기 이벤트
+        //         document.getElementById('sitemap-btn').onclick = function() {
+        //     document.getElementById('sitemap-modal').style.display = "block";
+        // }
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+        // document.getElementById('terms-btn').onclick = function() {
+        //     document.getElementById('terms-modal').style.display = "block";
+        // }
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
+        // document.getElementById('privacy-btn').onclick = function() {
+        //     document.getElementById('privacy-modal').style.display = "block";
+        // }
 
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
+        // // 모달 닫기 버튼 클릭 시 닫기
+        // document.getElementById('close-sitemap').onclick = function() {
+        //     document.getElementById('sitemap-modal').style.display = "none";
+        // }
 
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
+        // document.getElementById('close-terms').onclick = function() {
+        //     document.getElementById('terms-modal').style.display = "none";
+        // }
 
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
+        // document.getElementById('close-privacy').onclick = function() {
+        //     document.getElementById('privacy-modal').style.display = "none";
+        // }
 
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
-            }
-        }
+        // // 모달 외부 클릭 시 닫기
+        // window.onclick = function(event) {
+        //     if (event.target === document.getElementById('sitemap-modal')) {
+        //         document.getElementById('sitemap-modal').style.display = "none";
+        //     }
+        //     if (event.target === document.getElementById('terms-modal')) {
+        //         document.getElementById('terms-modal').style.display = "none";
+        //     }
+        //     if (event.target === document.getElementById('privacy-modal')) {
+        //         document.getElementById('privacy-modal').style.display = "none";
+        //     }
+        // }
 
     </script>
 
