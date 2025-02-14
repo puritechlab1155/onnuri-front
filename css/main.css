@@ -346,7 +346,6 @@
 #home .notice-title .text {
   white-space: nowrap;
   color: #222;
-  font-family: "Pretendard-Regular";
   font-size: 18px;
   font-weight: 400;
   line-height: 160%; /* 28.8px */
@@ -360,8 +359,6 @@
 }
 #home .notice-date { 
   color: #777;
-  font-family: "Pretendard-Regular";
-  font-size: 18px;
   font-weight: 400;
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
@@ -1447,7 +1444,7 @@ letter-spacing: -0.8px;
   padding: 8px 16px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px 24px;
   float: right;
 }
 #home .noticeD .information-posit ul {
@@ -1478,10 +1475,12 @@ letter-spacing: -0.8px;
 
 /*공지 텍스트 영역-*/
 #home .noticeD .attachment-area .notice-text-wrap {
+  padding: 0 16px !important;
   padding-top: 32px;
 }
 #home .noticeD .notice-text-wrap p {
   line-height: 160%;
+  white-space: pre-line;
 }
 
 /*신청하기 버튼 >> 훈련 공지에만 나타남, 일반 공지에는 X*/
@@ -1573,8 +1572,8 @@ letter-spacing: -0.8px;
   }
   #home .noticeD .attachment-area .notice-information {
       order: 3; 
-      margin-top: 120px;
-      margin-bottom: 50px;
+      margin-top: 15%;
+      margin-bottom: 70px;
   }
   #home .noticeD .attachment-area .notice-text-wrap {
       order: 2;
@@ -1587,9 +1586,10 @@ letter-spacing: -0.8px;
       font-size: 14px;
   }
   #home .noticeD .information-posit {
-      display: block;
+      flex-direction: column;
+      align-items: start;
       float: left;
-      padding: 8px 0;
+      padding: 8px 16px;
   }
 }
 @media (max-width: 548px) {

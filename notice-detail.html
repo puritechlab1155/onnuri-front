@@ -303,9 +303,9 @@
                                     <!--공지 텍스트 영역-->
                                     <div class="notice-text-wrap">
                                         <p> <!--업로드 시 입력한 텍스트로 변경되어야 함 // height 값은 텍스트 길이에 맞춰서 늘어나야함-->
-                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
-                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
-                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. <br>
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다.
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다. 
+                                            각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다.  
                                             각 기관별 담당자는 구역장 보고서 양식을 받아서 기관 보고할 때 기관 내에서 알맞게 사용하시면 됩니다.
                                         </p>
                                     </div>
@@ -318,6 +318,7 @@
                                         -->
                                     </div>
                                 </div>
+
                                 <!-- 세부내용 변경 페이지네이션-->
                                 <div class="notice-detail-change">
                                     <a class="detail-pre" href="#">
@@ -671,45 +672,6 @@
                 $('.attachment-list').slideToggle(200);
             });
         });
-
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-        document.getElementById('sitemap-modal').style.display = "block";
-        }
-
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
-
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
-            }
-        }
 
     </script>
 </body>
