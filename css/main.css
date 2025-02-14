@@ -1286,9 +1286,13 @@ letter-spacing: -0.8px;
 }
 #home .noticeD .title-area .title span.cap-text {
   display: block;
+  line-height: 140%;
   margin-top: 16px;
   font-size: 18px;
   font-weight: 400;
+}
+#home .noticeD .title span.cap-text .mob_br {
+  display: none;
 }
 #home .noticeD .title {
   position: relative;
@@ -1552,6 +1556,9 @@ letter-spacing: -0.8px;
 
 /* resize */
 @media (max-width: 768px) {
+  #home .noticeD .title span.cap-text .mob_br {
+    display: block;
+  }
   #home .noticeD .notice-title .appliDate-wrap {
       clear: both;
       width: fit-content;
