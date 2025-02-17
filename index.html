@@ -1100,43 +1100,33 @@
             
         });
 
-        // --  팝업 닫기
+        // --  팝업 하루동안 보지 않기 (아래 코드로 변경)
+        document.addEventListener("DOMContentLoaded", function () {
         const popup = document.querySelector(".pop-container");
-        const buttons = document.querySelectorAll(".finishBtn, .closeBtn");
+        const finishBtn = document.querySelector(".finishBtn");
+        const closeBtn = document.querySelector(".closeBtn");
 
-        buttons.forEach(button => {
-            button.addEventListener("click", function () {
-                popup.style.display = "none";
-            });
+        // 1. 로컬스토리지 확인 (하루 동안 유지)
+        const hidePopup = localStorage.getItem("hidePopup");
+        if (hidePopup && new Date().getTime() < parseInt(hidePopup, 10)) {
+            popup.style.display = "none"; // 하루 동안 팝업 숨김
+        }
+
+        // 2. 닫기 버튼 (단순히 숨김)
+        finishBtn.addEventListener("click", function () {
+            popup.style.display = "none";
         });
 
-        // 팝업 하루동안 보자 않기 (아래 코드로 변경)
-        // document.addEventListener("DOMContentLoaded", function () {
-        // const popup = document.querySelector(".pop-container");
-        // const finishBtn = document.querySelector(".finishBtn");
-        // const closeBtn = document.querySelector(".closeBtn");
+        // 3. 하루 동안 보지 않기 버튼
+        closeBtn.addEventListener("click", function () {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setHours(23, 59, 59, 999); // 오늘 자정까지 만료 시간 설정
 
-        // // 1. 로컬스토리지 확인 (하루 동안 유지)
-        // const hidePopup = localStorage.getItem("hidePopup");
-        // if (hidePopup && new Date().getTime() < parseInt(hidePopup, 10)) {
-        //     popup.style.display = "none"; // 하루 동안 팝업 숨김
-        // }
-
-        // // 2. 닫기 버튼 (단순히 숨김)
-        // finishBtn.addEventListener("click", function () {
-        //     popup.style.display = "none";
-        // });
-
-        // // 3. 하루 동안 보지 않기 버튼
-        // closeBtn.addEventListener("click", function () {
-        //     const now = new Date();
-        //     const tomorrow = new Date(now);
-        //     tomorrow.setHours(23, 59, 59, 999); // 오늘 자정까지 만료 시간 설정
-
-        //     localStorage.setItem("hidePopup", tomorrow.getTime()); // 로컬스토리지 저장
-        //     popup.style.display = "none"; // 팝업 숨기기
-        // });
-    // });
+            localStorage.setItem("hidePopup", tomorrow.getTime()); // 로컬스토리지 저장
+            popup.style.display = "none"; // 팝업 숨기기
+        });
+    });
 
     </script>
 
