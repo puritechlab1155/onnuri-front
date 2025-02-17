@@ -731,6 +731,80 @@
       transform: translateX(-50%); /* 끝 위치 */
   }
 }
+/* 팝업창 */
+#home .pop-container {
+  width: fit-content;
+  padding: 0 20px;
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  transform: none !important;
+  z-index: 1000;
+}
+#home .pop-inner {
+  height: auto;
+  overflow: hidden;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #fafafa;
+  box-shadow: 2px 2px 10px #00000044;
+}
+#home .pop-content-wrap {
+  padding: 0 20px;
+}
+#home .pop-title {
+  margin-top: 40px;
+  line-height: 150%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+#home .pop-content {
+  text-align: center;
+  white-space: pre-line;
+  margin-top: 20px;
+  color: #333;
+}
+#home .pop-content input {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #bdbfc2;
+  border-radius: 6px;
+  text-align: center;
+}
+#home .pop-content input::placeholder {
+  font-size: 15px;
+}
+#home .popup-button-wrap {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .popup-button-wrap .btn-item-container {
+  flex: 0 0 50%;
+}
+#home .popup-button-wrap .btn-item {
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+#home .popup-button-wrap .finishBtn {
+  color: #fff;
+  background-color: #144974;
+}
+#home .popup-button-wrap .closeBtn {
+  color: #777;
+  background-color: #ddd;
+}
+#home .pop-content .space_mob {
+  display: none !important;
+}
 
 
 /*resize*/
@@ -906,6 +980,24 @@
     width: calc(100% / 2) !important;
     float: left;
   }
+  /* 팝업창 */
+  #home .pop-container {
+    width: 100%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
+  #home .pop-content-wrap .space_mob {
+    display: block;
+  }
+  #home .pop-title {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  #home .popup-button-wrap .btn-item {
+    font-size: 15px !important;
+  }
 }
 @media (max-width: 524px) { /*모바일 폰트 사이즈로 줄기*/
   /*main_visual*/
@@ -924,6 +1016,14 @@
   /*section title 아래 글*/
   #home .mainIndex .title-area .title-text {
     font-size: 16px;
+  }
+  /* 팝업창 */
+  #home .pop-content {
+    font-size: 14px !important;
+    white-space: inherit;
+  }
+  #home .pop-content .space_mob {
+    display: block !important;
   }
 }
 
