@@ -2374,7 +2374,7 @@ letter-spacing: -0.8px;
 #home .about_us .pt_50{ padding-top: 50px; }
 #home .about_us .mt_50{ margin-top: 50px; }
 #home .about_us {
-  margin-top: 80px !important;
+    margin-top: 80px !important;
     margin-bottom: 1028px;
 }
 #home .about_us .containner {
@@ -2382,6 +2382,7 @@ letter-spacing: -0.8px;
 }
 #home .about_us .channel {
     display: flex;
+    padding-top: 40px;
 }
 #home .about_us .channel li {
     color: #777;
