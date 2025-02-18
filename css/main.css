@@ -1526,16 +1526,10 @@ letter-spacing: -0.8px;
 }
 #home .noticeD .attachment-list {
   width: 100%;
-  /* max-width: 563px; */
   padding: 16px;
-  /* border: 1px solid #F0F0F0; */
+  padding-bottom: 0;
   border-top: none;
   background: #fff;
-  /* position: absolute;
-  top: 51px;
-  left: 0;
-  z-index: 500;
-  display: none; */
 }
 #home .noticeD .attachment-item a{
   display: block;
