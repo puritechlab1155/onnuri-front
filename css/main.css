@@ -1088,21 +1088,6 @@
   font-weight: 300;
   letter-spacing: -0.36px;
 }
-#home .myInfo .myInfo_wrap .manager_text {
-  margin-top: 40px;
-  margin-bottom: -22px;
-}
-#home .myInfo .myInfo_wrap .manager_text a {
-  font-size: 20px;
-  color: #63c478;
-  font-weight: 500;
-  border-bottom: 2px solid #83d795;
-  transition: all 0.1s;
-}
-#home .myInfo .myInfo_wrap .manager_text a:hover {
-  color: #007e3d;
-  border-color: #007e3d;
-}
 #home .myInfo .myInfo_wrap .btn_wrap {
   margin-top: 62px;
 }
@@ -1125,6 +1110,16 @@
   background: #004BBA;
   color: #fff;
   border-color: #004BBA;
+}
+#home .myInfo .myInfo_wrap .btn_wrap .managerBtn{
+  background: transparent;
+  border: 2px solid #83d795;
+  color: #63c478;
+}
+#home .myInfo .myInfo_wrap .btn_wrap .managerBtn:hover {
+  background: #007e3d;
+  color: #fff;
+  border-color: #007e3d;
 }
 
 /*html : my info - edit >> 내 정보 수정*/
