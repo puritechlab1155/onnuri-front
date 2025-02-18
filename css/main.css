@@ -160,6 +160,20 @@
   padding: 0 24px;
   margin: 0 auto;
 }
+/* 메인비주얼 텍스트 위치별 박스 */
+#home .mainIndex .main_visual .text-box .text-left-box {
+  text-align: left;
+  /* display: none; */
+}
+#home .mainIndex .main_visual .text-box .text-middle-box {
+  display: none;
+  text-align: center;
+}
+#home .mainIndex .main_visual .text-box .text-right-box {
+  display: none;
+  text-align: right;
+}
+
 #home .mainIndex .main_visual .text-box .text-box-inner .text span {
   color: #fff;
   font-family: "Elice DX Neolli";
