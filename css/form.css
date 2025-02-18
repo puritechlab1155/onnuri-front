@@ -2920,8 +2920,8 @@ main.form_09 fieldset legend span.foldBtn {
     line-height: 0;
     cursor: pointer;
     font-size: 18px;
-    color: #515151;
-    border: 2px solid #999;
+    color: #fff;
+    background: #6eb1d8;
 }
 main.form_09 fieldset legend span.foldBtn img {
     margin-left: 8px;
