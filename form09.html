@@ -14,9 +14,6 @@
     <!-- 공통css -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/common02.css">
-
-    <!-- 해당html 연결css -->
     <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
@@ -275,7 +272,7 @@
                                 I.단/장기 선교 부르심 
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 접기<img src="img/home/form-toggle2.png" alt="문항 접기"></span>
                         </legend>
                         <div class="input-wrap"> 
                             <div class="n1-sub01 step-n">
@@ -421,7 +418,7 @@
                                 II.자신에 대하여
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 펼치기<img src="img/home/form-toggle2.png" alt="문항 펼치기"></span>
                         </legend>
                         
                         <div class="input-wrap"> 
@@ -583,7 +580,7 @@
                                 III. 결혼관
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 펼치기<img src="img/home/form-toggle2.png" alt="문항 펼치기"></span>
                         </legend>
                         <div class="input-wrap">
                             <div class="marry-whether">
@@ -705,7 +702,7 @@
                                 IV. 가족
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 펼치기<img src="img/home/form-toggle2.png" alt="문항 펼치기"></span>
                         </legend>
                         <div class="input-wrap"> 
                             <div class="n5-sub01 step-n">
@@ -747,7 +744,7 @@
                                 V. 재정
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 펼치기<img src="img/home/form-toggle2.png" alt="문항 펼치기"></span>
                         </legend>
                         <div class="input-wrap"> 
                             <div class="n6-sub01 step-n check check-outbox">
@@ -834,7 +831,7 @@
                                 VI. 기타
                                 <span class="write-whether">(작성중)</span>
                             </div>
-                            <span class="foldBtn"><img src="img/home/form-toggle2.png" alt="문항 접기"></span>
+                            <span class="foldBtn">문항 펼치기<img src="img/home/form-toggle2.png" alt="문항 펼치기"></span>
                         </legend>
                         <div class="input-wrap"> 
                             <div class="n7-sub01 step-n check check-outbox">
@@ -1217,10 +1214,9 @@
             let $foldBtn = $('.foldBtn');
             let $inputBox = $('.input-wrap');
 
-            //초기값
+            // 초기값 설정
             $inputBox.hide();
             $inputBox.first().show();
-
 
             // 첫 번째 버튼을 제외한 나머지 foldImg를 180도로 설정
             $foldBtn.each(function(index) {
@@ -1232,15 +1228,14 @@
 
             $foldBtn.click(function() {
                 let $foldImg = $(this).children('img');
-
-                // 현재 클릭한 버튼의 input-wrap 찾기
                 let $currentInputBox = $(this).closest('fieldset').find('.input-wrap');
 
-                // input-wrap의 보이는 상태에 따라 이미지 회전
                 if ($currentInputBox.is(':visible')) {
                     $foldImg.css({ transform: 'rotate(180deg)' });
+                    $(this).contents().first().replaceWith('문항 펼치기'); // 텍스트 변경
                 } else {
                     $foldImg.css({ transform: 'none' });
+                    $(this).contents().first().replaceWith('문항 접기'); // 텍스트 변경
                 }
 
                 // input-wrap 보이기/숨기기
@@ -1333,19 +1328,42 @@
                     } else {
                         textFilled = false;
                     }
-
+                    
                     // 모든 텍스트 필드가 채워졌을 때 작성완료 상태로 변경
                     if (textFilled) {
                         writeWhether.style.display = "inline";
                         writeWhether.textContent = "(작성완료)";
                         writeWhether.style.color = "#007AFF"; // 파란색
-                        if (inputBox) inputBox.style.display = "none"; // 입력 필드 숨기기
+                        if (inputBox) {
+                            inputBox.style.display = "none"; // 입력 필드 숨기기
+
+                            // 문항 펼치기 버튼으로 변경 (이미지 유지)
+                            let foldBtn = inputBox.closest('fieldset').querySelector('.foldBtn');
+                            if (foldBtn) {
+                                let foldImg = foldBtn.querySelector("img"); // 이미지 요소 가져오기
+                                foldBtn.innerHTML = `문항 펼치기`;
+                                foldBtn.appendChild(foldImg); // 이미지 다시 추가
+                                foldImg.style.transform = "rotate(180deg)"; // 이미지 180도 회전 (접힌 상태)
+                            }
+                        }
                     } else {
                         writeWhether.style.display = "inline";
                         writeWhether.textContent = "(작성중)";
                         writeWhether.style.color = "#E72929"; // 빨간색
-                        if (inputBox) inputBox.style.display = "block"; // 입력 필드 보이기
+                        if (inputBox) {
+                            inputBox.style.display = "block"; // 입력 필드 보이기
+
+                            // 문항 접기 버튼으로 변경 (이미지 유지)
+                            let foldBtn = inputBox.closest('fieldset').querySelector('.foldBtn');
+                            if (foldBtn) {
+                                let foldImg = foldBtn.querySelector("img"); // 이미지 요소 가져오기
+                                foldBtn.innerHTML = `문항 접기`;
+                                foldBtn.appendChild(foldImg); // 이미지 다시 추가
+                                foldImg.style.transform = "rotate(0deg)"; // 이미지 원래대로 (펼친 상태)
+                            }
+                        }
                     }
+
                 });
             });
 
