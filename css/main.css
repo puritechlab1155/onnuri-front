@@ -862,6 +862,9 @@
 }
 @media (max-width: 767px) {
   /*main_visual*/
+  #home .mainIndex .main_visual .mob-slide-img {
+    content: url("../img/home/mv_slide_img01.jpg");
+  }
   #home .mainIndex .main_visual .swiper-button-next, 
   #home .mainIndex .main_visual .swiper-button-prev {
     display: none;
@@ -1026,7 +1029,7 @@
 #main.myInfo {
   padding-top: 80px;
 }
-.myInfo fieldset {
+#home .myInfo fieldset {
   border: none;  /* 테두리 제거 */
   padding: 0;    /* 패딩 제거 */
   margin: 0;     /* 마진 제거 */
