@@ -2145,6 +2145,7 @@ letter-spacing: -0.8px;
 /*channel 클래스 >> notice.html과 동일한 스타일*/
 #home .channel {
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 #home .channel {
   display: flex;
@@ -2383,6 +2384,7 @@ letter-spacing: -0.8px;
 #home .about_us .channel {
     display: flex;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 #home .about_us .channel li {
     color: #777;
