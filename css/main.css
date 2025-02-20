@@ -3423,23 +3423,6 @@ pasword-reset03.html 스타일
   font-weight: 600;
   color: #222;
 }
-#home .mainwrap .trn-wrap .cont .cont-text {
-  max-width: 590px;
-  margin: 0 auto;
-}
-#home .mainwrap .trn-wrap .cont .cont-text li {
-  width: 100%;
-  padding: 18px;
-  line-height: 160%;
-  font-size: 18px;
-  font-weight: 300;
-  color: #111;
-  border-radius: 10px;
-  background: #EFEFEF;
-}
-#home .mainwrap .trn-wrap .cont .cont-text li:not(:last-child){
-  margin-bottom: 16px;
-}
 #home .mainwrap .trn-wrap .cont .cont-img {
   display: flex;
   justify-content: center;
@@ -3483,8 +3466,5 @@ pasword-reset03.html 스타일
   }
   #home .mainwrap .trn-wrap > h2 {
     font-size: 26px;
-  }
-  #home .mainwrap .trn-wrap .cont .cont-text li {
-    font-size: 14px;
   }
 }
