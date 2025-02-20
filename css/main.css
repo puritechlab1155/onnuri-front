@@ -2137,7 +2137,7 @@ letter-spacing: -0.8px;
 
 /* --- contact.html 스타일  --- */ 
 /*main*/
-#main.contact , #main.worship_wrap{
+#main.contact , #main.mainwrap{
   padding-top: 80px;
 }
 /*channel 클래스 >> notice.html과 동일한 스타일*/
@@ -3191,27 +3191,30 @@ pasword-reset03.html 스타일
   }    
 }
 
-/* -- worship.html 스타일 -- */
+/* -- worship.html 스타일 (.mainwrap 클래스 훈련 상세페이지와 동일한 클래스)-- */
+#home .mainwrap .channel img { 
+  float: left;
+}
 /*예배 소개*/
-#home .worship_wrap .worship {
+#home .mainwrap .worship {
   margin-top: 10px;
 }
-#home .worship_wrap .worship > h2 {
+#home .mainwrap .worship > h2 {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
   letter-spacing: -0.36px;
   color: #222;
 }
-#home .worship_wrap .worship .photo_container {
+#home .mainwrap .worship .photo_container {
   margin-top: 40px;
 }
-#home .worship_wrap .photo_container > .ImgBox {
+#home .mainwrap .photo_container > .ImgBox {
   width: 100%;
   height: 300px;
   position: relative;
 }
-#home .worship_wrap .photo_container > .ImgBox img{
+#home .mainwrap .photo_container > .ImgBox img{
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3220,7 +3223,7 @@ pasword-reset03.html 스타일
   object-fit: cover;
   object-position: right;
 }
-#home .worship_wrap .photo_container .worship_informate {
+#home .mainwrap .photo_container .worship_informate {
   width: 100%;
   height: 470px;
   padding: 0 10px;
@@ -3230,7 +3233,7 @@ pasword-reset03.html 스타일
   background-position: center center;
   margin-top: 32px;
 }
-#home .worship_wrap .worship_informate .text_area {
+#home .mainwrap .worship_informate .text_area {
   width: 100%;
   max-width: 895px;
   margin: 0 auto;
@@ -3242,11 +3245,11 @@ pasword-reset03.html 스타일
   transform: translateY(-50%);
   letter-spacing: -0.36px;
 }
-#home .worship_wrap .text_area .informate {
+#home .mainwrap .text_area .informate {
   width: 55%;
   text-align: center;
 }
-#home .worship_wrap .informate > h3 {
+#home .mainwrap .informate > h3 {
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 16px;
@@ -3255,21 +3258,21 @@ pasword-reset03.html 스타일
   color: #fff;
   font-weight: 700;
 }
-#home .worship_wrap .informate p {
+#home .mainwrap .informate p {
   margin-bottom: 24px;
   font-size: 18px;
   color: #222;
   line-height: 160%;
 }
-#home .worship_wrap .informate span {
+#home .mainwrap .informate span {
   font-size: 16px;
   color: #FF9000;
 }
-#home .worship_wrap .text_area .shuttle {
+#home .mainwrap .text_area .shuttle {
   width: 45%;
   padding-left: 5vw;
 }
-#home .worship_wrap .text_area .shuttle > h3 {
+#home .mainwrap .text_area .shuttle > h3 {
   height: 57px;
   line-height: 57px;
   text-align: center;
@@ -3278,15 +3281,15 @@ pasword-reset03.html 스타일
   color: #fff;
   font-weight: 500;
 }
-#home .worship_wrap .shuttle ul {
+#home .mainwrap .shuttle ul {
   border: 1px solid #E7DAB3;
   border-top: none;
   border-bottom: none;
 }
-#home .worship_wrap .shuttle ul:first-child {
+#home .mainwrap .shuttle ul:first-child {
   border-right: none;
 }
-#home .worship_wrap .shuttle ul li {
+#home .mainwrap .shuttle ul li {
   width: 50%;
   height: 69px;
   line-height: 69px;
@@ -3297,10 +3300,10 @@ pasword-reset03.html 스타일
   border-bottom: 1px solid #E7DAB3;
   position: relative;
 }
-#home .worship_wrap .shuttle ul li:first-child {
+#home .mainwrap .shuttle ul li:first-child {
   text-align: right;
 }
-#home .worship_wrap .shuttle ul li:first-child::after {
+#home .mainwrap .shuttle ul li:first-child::after {
   content: '';
   display: block;
   width: 1px;
@@ -3312,10 +3315,10 @@ pasword-reset03.html 스타일
   transform: translateY(-50%);
 }
 /*section-box >> 달력*/
-#home .worship_wrap .section03 {
+#home .mainwrap .section03 {
   background: none;
 }
-#home .worship_wrap .title-area h3 {
+#home .mainwrap .title-area h3 {
   padding: 24px 0;
   font-size: 20px;
   font-weight: 600;
@@ -3323,67 +3326,142 @@ pasword-reset03.html 스타일
   border-top: 2px solid #222;
   border-bottom: 1px solid #777;
 }
-#home .worship_wrap .section03 .calendar-top {
+#home .mainwrap .section03 .calendar-top {
   justify-content: center;
 }
-#home .worship_wrap .section03 .calendar-bottom {
+#home .mainwrap .section03 .calendar-bottom {
   padding-top: 40px;
 }
 /*resize*/
 @media (max-width: 1000px) {
-  #home .worship_wrap .worship_informate .text_area {
+  #home .mainwrap .worship_informate .text_area {
       display: block;
       transform: translateY(-60%);
   }
-  #home .worship_wrap .text_area .informate {
+  #home .mainwrap .text_area .informate {
       width: 100%;
   }
-  #home .worship_wrap .text_area .shuttle {
+  #home .mainwrap .text_area .shuttle {
       width: 100%;
       padding-left: 0;
       margin-top: 20px;
   }
-  #home .worship_wrap .section03 .inner {
+  #home .mainwrap .section03 .inner {
       padding: 0;
   }
-  #home .worship_wrap .shuttle ul {
+  #home .mainwrap .shuttle ul {
       width: calc(100% / 3);
       float: left;
   }
 }
 @media (max-width: 767px) {
-  #home .worship_wrap .photo_container .worship_informate {
+  #home .mainwrap .photo_container .worship_informate {
       height: 540px;
   }
-  #home .worship_wrap .worship_informate .text_area {
+  #home .mainwrap .worship_informate .text_area {
       transform: translateY(-63%);
   }
-  #home .worship_wrap br.d-none {
+  #home .mainwrap br.d-none {
       display: block;
   }
-  #home .worship_wrap .shuttle ul:nth-child(3) {
+  #home .mainwrap .shuttle ul:nth-child(3) {
       border-left: none;
       border-right: none;
   }
-  #home .worship_wrap .shuttle ul li {
+  #home .mainwrap .shuttle ul li {
       width: 100%;
       height: 50px;
       line-height: 50px;
       float: none;
       text-align: center !important;
   }
-  #home .worship_wrap .shuttle ul li:first-child::after {
+  #home .mainwrap .shuttle ul li:first-child::after {
       display: none;
   }
 }
 @media (max-width: 524px) {
-  #home .worship_wrap .informate p {
+  #home .mainwrap .informate p {
       font-size: 14px;
   }
-  #home .worship_wrap .informate span {
+  #home .mainwrap .informate span {
       font-size: 14px;
   }
-  #home .worship_wrap .shuttle ul li {
+  #home .mainwrap .shuttle ul li {
       font-size: 14px;
+  }
+}
+
+/* -- training.h2r.html 스타일 -- */
+#home .mainwrap .trn-wrap .space-mob {
+  display: none;
+}
+#home .mainwrap .trn-wrap > h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.36px;
+  color: #222;
+}
+#home .mainwrap .trn-wrap .description {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  color: #111;
+  font-weight: 300;
+}
+#home .mainwrap .trn-wrap .cont_container {
+  margin-top: 80px;
+  text-align: center;
+}
+#home .mainwrap .trn-wrap .cont {
+  margin-bottom: 50px;
+}
+#home .mainwrap .trn-wrap .cont .sb-title {
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+#home .mainwrap .trn-wrap .cont .cont-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+#home .mainwrap .trn-wrap .cont-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#home .mainwrap .appliyBtn {
+  padding-bottom: 220px;
+}
+#home .mainwrap .appliyBtn a {
+  display: block;
+  width: 100%;
+  max-width: 242px;
+  text-align: center;
+  padding: 16px 0;
+  margin: 0 auto;
+  font-size: 18px;
+  background: #2A6ACA;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #home .mainwrap .trn-wrap > h2 > .space-mob {
+    display: block;
+  }
+  #home .mainwrap .trn-wrap > h2 {
+    font-size: 32px;
+  }
+  #home .mainwrap .trn-wrap .description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 440px) {
+  #home .mainwrap .trn-wrap .description > .space-mob {
+    display: block;
   }
 }
