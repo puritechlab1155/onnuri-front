@@ -3471,7 +3471,7 @@ pasword-reset03.html 스타일
     display: block;
   }
   #home .mainwrap .trn-wrap > h2 {
-    font-size: 26px;
+    font-size: 32px;
   }
   #home .mainwrap .trn-wrap .description {
     font-size: 15px;
@@ -3480,6 +3480,9 @@ pasword-reset03.html 스타일
 @media (max-width: 500px) {
   #home .mainwrap .trn-wrap .description > .space-mob {
     display: block;
+  }
+  #home .mainwrap .trn-wrap > h2 {
+    font-size: 26px;
   }
   #home .mainwrap .trn-wrap .cont .cont-text li {
     font-size: 14px;
