@@ -563,44 +563,26 @@
     <script src="js/script.js"></script>
 
     <script>
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "block";
-        }
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
+        window.addEventListener("scroll", function () {
+            let button = document.querySelector(".appliyBtn");
+            let footer = document.querySelector("footer");
+            let buttonHeight = button.offsetHeight;
+            let footerRect = footer.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
 
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
+            if (footerRect.top < windowHeight - buttonHeight - 20) {
+                button.style.position = "relative";
+                button.style.left = "0px";
+                button.style.transform = "none";
+                button.style.bottom = "70px";
+            } else {
+                button.style.position = "fixed";
+                button.style.bottom = "50px";
+                button.style.left = "50%";
+                button.style.transform = "translateX(-50%)";
             }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
-            }
-        }
+        });
 
     </script>
 

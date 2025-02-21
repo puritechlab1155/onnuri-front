@@ -3392,6 +3392,9 @@ pasword-reset03.html 스타일
 }
 
 /* -- training.~.html 스타일 -- */
+#home .mainwrap .trn-wrap {
+  padding-bottom: 120px;
+}
 #home .mainwrap .trn-wrap .space-mob {
   display: none;
 }
@@ -3436,12 +3439,15 @@ pasword-reset03.html 스타일
   object-fit: contain;
 }
 #home .mainwrap .appliyBtn {
-  padding-bottom: 220px;
+  width: fit-content;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #home .mainwrap .appliyBtn a {
   display: block;
-  width: 100%;
-  max-width: 242px;
+  width: 242px;
   text-align: center;
   padding: 16px 0;
   margin: 0 auto;
