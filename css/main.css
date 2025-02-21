@@ -3392,6 +3392,9 @@ pasword-reset03.html 스타일
 }
 
 /* -- training.~.html 스타일 -- */
+#home .mainwrap .trn-wrap .cont_container .mw_600 {
+  max-width: 590px;
+}
 #home .mainwrap .trn-wrap {
   padding-bottom: 120px;
 }
