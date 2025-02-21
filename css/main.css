@@ -3465,6 +3465,16 @@ pasword-reset03.html 스타일
   #home .mainwrap .trn-wrap .description {
     font-size: 15px;
   }
+  #home .mainwrap .trn-wrap .cont4 {
+    margin-bottom: 0px !important;
+  }
+  #home .mainwrap .appliyBtn {
+    width: 100%;
+    bottom: 0px !important;
+  }
+  #home .mainwrap .appliyBtn a {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   #home .mainwrap .trn-wrap .description > .space-mob {
