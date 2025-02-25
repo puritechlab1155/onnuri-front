@@ -291,7 +291,7 @@
   width: 100%;
   max-width: 136px;
   padding: 6px;
-  background: url(../img/home/tab-bg.png) no-repeat;
+  background: #eaecf2;
   background-size: 100% 100%;
   text-align: center;
   color: #96A7BD;
@@ -300,9 +300,10 @@
   font-weight: 700;
   line-height: 160%;
   cursor: pointer;
+  border-radius: 5px;
 }
 #home .mainIndex .section01 .tab.active {
-  background: url(../img/home/tab-bg-active.png) no-repeat;
+  background: #47557C;
   background-size: 100% 100%;
   color: #fff;
 }
@@ -408,7 +409,7 @@
   font-size: 40px;
   font-weight: 400;
   line-height: 140%;
-  background: url(../img/home/s2-main-text-bg.png) no-repeat;
+  background: #e5e5e5;
   background-size: 100% 100%;
   padding: 9px 60px;
 }
