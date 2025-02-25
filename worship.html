@@ -762,20 +762,22 @@
     <script src="js/script.js"></script>
 
     <script>
+        //-- 날짜 클릭시 스케줄 나타남
         document.addEventListener("DOMContentLoaded", function () {
-            const calendarCells = document.querySelectorAll(".calendar-board tbody td");
             const schedule = document.querySelector(".schedule");
             const calendarBoard = document.querySelector(".calendar-board");
             const calendarBotm = document.querySelector(".calendar-bottom");
 
-            // 날짜 클릭 시 스케줄 보이기 & 달력 크기 조정
-            calendarCells.forEach((cell) => {
-                cell.addEventListener("click", function (event) {
-                    event.stopPropagation(); // 이벤트 버블링 방지 (body 클릭 이벤트 영향 X)
+            // 이벤트 위임 방식 적용 (다음 달 이동 시에도 동작)
+            document.addEventListener("click", function (event) {
+                const target = event.target;
+
+                // 클릭한 요소가 `.calendar-board` 내부의 `td`인지 확인
+                if (target.closest(".calendar-board td")) {
                     schedule.style.display = "block";
                     calendarBoard.style.width = "62.5%";
                     calendarBotm.style.flexWrap = "nowrap";
-                });
+                }
             });
         });
 
