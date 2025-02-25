@@ -187,10 +187,95 @@
                         <a href="https://puritechlab1155.github.io/onnuri-front/worship.html">채플</a>
                     </li>
                 </ul>
-
+                
                 <!--예배 소개-->
                 <div class="worship">
-                    <h2>채플</h2>
+                    <h2>시안채플</h2>
+                    <!--공지-->
+                    <div class="tab-cont-list notice">
+                        <!--목록 타이틀-->
+                        <ul class="table-title">
+                            <li class="list-numb">번호</li>
+                            <li class="list-division">구분</li>
+                            <li class="list-title">제목</li>
+                            <li class="list-appliDate">신청일</li>
+                            <li class="list-appliGo">신청 바로가기</li>
+                            <li class="list-date">작성일</li>
+                        </ul>
+                        <!--공지 목록 랩핑-->
+                        <div class="notice-area section01">
+                            <!--전체-->
+                            <ul class="notice-list all-list">
+                                <!--목록01-->
+                                <li class="notice-list-item">
+                                    <a href="notice-detail.html" class="notice-list-link">
+                                        <!--번호-->
+                                        <div class="notice-numb">0000</div>
+                                        <!--구분-->
+                                        <div class="notice-division">일반</div>
+                                        <!--제목-->
+                                        <div class="notice-title">
+                                            <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                            <img src="img/home/notice-badge.svg" class="notice-badge" alt="new">
+                                        </div>
+                                        <!--신청일-->
+                                        <div class="notice-appliDate">-</div>
+                                        <!--신청 바로가기-->
+                                        <div class="notice-appliGo">
+                                            <button class="apply noneBtn"> - </button>
+                                        </div>
+                                        <!--작성일-->
+                                        <div class="notice-date">0000-00-00</div>
+                                    </a>
+                                </li>
+                                <!--목록02-->
+                                <li class="notice-list-item">
+                                    <a href="notice-detail.html" class="notice-list-link">
+                                        <!--번호-->
+                                        <div class="notice-numb">0000</div>
+                                        <!--구분-->
+                                        <div class="notice-division">훈련</div>
+                                        <!--제목-->
+                                        <div class="notice-title">
+                                            <p class="text">선교사 신청시 참조 서류입니다.</p>
+                                            <img src="img/notice/link-icon.png" class="notice-badge" alt="link">
+                                        </div>
+                                        <!--신청일-->
+                                        <div class="notice-appliDate">~ 0000-00-00</div>
+                                        <!--신청 바로가기-->
+                                        <div class="notice-appliGo">
+                                            <button class="apply apply-focus">즉시 신청</button>
+                                        </div>
+                                        <!--작성일-->
+                                        <div class="notice-date">0000-00-00</div>
+                                    </a>
+                                </li>
+                                <!--목록03-->
+                                <li class="notice-list-item">
+                                        <a href="notice-detail.html" class="notice-list-link">
+                                        <!--번호-->
+                                        <div class="notice-numb">0000</div>
+                                        <!--구분-->
+                                        <div class="notice-division">일반</div>
+                                        <!--제목-->
+                                        <div class="notice-title">
+                                            <p class="text">홈페이지가 리뉴얼 되었습니다!</p>
+                                            <img src="img/home/notice-badge.svg" class="notice-badge badge-none" alt="new">
+                                        </div>
+                                        <!--신청일-->
+                                        <div class="notice-appliDate">-</div>
+                                        <!--신청 바로가기-->
+                                        <div class="notice-appliGo">
+                                            <button class="apply noneBtn"> - </button>
+                                        </div>
+                                        <!--작성일-->
+                                        <div class="notice-date">0000-00-00</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="photo_container">
                         <div class="ImgBox">
                             <img src="img/worship/worship_img01.jpg" alt="예배 사진01">
@@ -677,44 +762,22 @@
     <script src="js/script.js"></script>
 
     <script>
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "block";
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const calendarCells = document.querySelectorAll(".calendar-board tbody td");
+            const schedule = document.querySelector(".schedule");
+            const calendarBoard = document.querySelector(".calendar-board");
+            const calendarBotm = document.querySelector(".calendar-bottom");
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
-
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
-            }
-        }
+            // 날짜 클릭 시 스케줄 보이기 & 달력 크기 조정
+            calendarCells.forEach((cell) => {
+                cell.addEventListener("click", function (event) {
+                    event.stopPropagation(); // 이벤트 버블링 방지 (body 클릭 이벤트 영향 X)
+                    schedule.style.display = "block";
+                    calendarBoard.style.width = "62.5%";
+                    calendarBotm.style.flexWrap = "nowrap";
+                });
+            });
+        });
 
     </script>
 

@@ -947,6 +947,7 @@
   }
   #home .notice-list-link {
     display: block;
+    border-bottom: 1px solid #eee;
   }
   #home .notice-title {
     width: 100%;
@@ -1949,7 +1950,7 @@ letter-spacing: -0.8px;
 }
 
 /* -------신청 바로가기 각각 버튼 스타일 */ 
-#home .notice button.apply {
+#home button.apply {
   display: block;
   padding: 6px 8px 4px;
   margin: 0 auto;
@@ -1957,11 +1958,11 @@ letter-spacing: -0.8px;
   font-size: 16px;
   border-radius: 5px;
 }
-#home .notice button.apply.apply-focus {
+#home button.apply.apply-focus {
   background: #FF9B01;
   color: #fff;
 }
-#home .notice button.apply.apply-finish {
+#home button.apply.apply-finish {
   background: #EBEBEB;
   color: #777;
   cursor: default;
@@ -2089,13 +2090,12 @@ letter-spacing: -0.8px;
       float: right;
       margin-top: 10px;
   }
-  #home .notice .section01 .notice-list-item:not(:first-child) {
-      margin-top: 0;
-  }
   #home .notice .section01 .notice-list-link {
       padding: 16px 0;
   }
   #home .notice .section01 .notice-title .text {
+      max-width: 380px;
+      text-align: left;
       margin: 6px 0;
       margin-top: 12px;
   }
@@ -2112,6 +2112,9 @@ letter-spacing: -0.8px;
 @media (max-width: 456px) {
   #home .notice .section01 .tab {
       font-size: 14px;
+  }
+  #home .notice .section01 .notice-title .text {
+    max-width: 180px;
   }
   #home .notice div.notice-division {
       font-size: 14px !important;
@@ -3218,8 +3221,28 @@ pasword-reset03.html 스타일
   letter-spacing: -0.36px;
   color: #222;
 }
-#home .mainwrap .worship .photo_container {
-  margin-top: 40px;
+#home .mainwrap .worship .table-title {
+  width: 100%;
+  padding: 12px 10px;
+  border-top: 2px solid;
+  border-bottom: 1px solid;
+  border-color: #777;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+#home .mainwrap .worship .notice-list-link {
+  padding: 24px 10px;
+}
+#home .mainwrap .worship .notice-list-link div {
+  text-align: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+} 
+#home .mainwrap .photo_container  {
+  margin-top: 50px;
 }
 #home .mainwrap .photo_container > .ImgBox {
   width: 100%;
@@ -3330,7 +3353,17 @@ pasword-reset03.html 스타일
 #home .mainwrap .section03 {
   background: none;
 }
+#home .mainwrap .section03 .calendar-board {
+  width: 100%; /*62.5%*/
+}
+#home .mainwrap .section03 .calendar-bottom {
+  flex-wrap: wrap;
+}
+#home .mainwrap .section03 .schedule {
+  display: none;
+}
 #home .mainwrap .title-area h3 {
+  text-align: center;
   padding: 24px 0;
   font-size: 20px;
   font-weight: 600;
@@ -3366,7 +3399,38 @@ pasword-reset03.html 스타일
       float: left;
   }
 }
+@media (max-width: 940px) {
+  #home .mainwrap .section03 .calendar-board {
+    width: 100% !important;
+  }
+}
 @media (max-width: 767px) {
+  #home .mainwrap .worship .notice-area {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+  }
+  #home .mainwrap .worship .notice-list-link {
+    padding: 16px 10px;
+  }
+  #home .notice-list-item:not(:first-child) {
+    margin-top: 0;
+  }
+  #home .mainwrap .worship .table-title {
+    display: none;
+  }
+  #home .mainwrap .worship .notice-title .text {
+    margin: 6px 0;
+    margin-top: 12px;
+  }
+  #home .mainwrap .worship .notice-date {
+    width: fit-content;
+    position: relative;
+    font-size: 14px !important;
+    color: #777 !important;
+  }
+  #home .mainwrap .worship div.notice-title img {
+      margin-top: 4px;
+  }
   #home .mainwrap .photo_container .worship_informate {
       height: 540px;
   }
