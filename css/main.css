@@ -1802,7 +1802,8 @@ letter-spacing: -0.8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 160px auto;
+  margin-top: 0;
 }
 #home .notice form.search input[type="text"]{
   max-width: 434px;
