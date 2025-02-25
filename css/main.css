@@ -3454,15 +3454,14 @@ pasword-reset03.html 스타일
   object-fit: contain;
 }
 #home .mainwrap .appliyBtn {
-  width: fit-content;
-  margin: 0 auto;
+  width: 100%;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
 }
 #home .mainwrap .appliyBtn a {
   display: block;
-  width: 242px;
+  width: 100%;
   text-align: center;
   padding: 16px 0;
   margin: 0 auto;
@@ -3482,13 +3481,6 @@ pasword-reset03.html 스타일
   }
   #home .mainwrap .trn-wrap .cont4 {
     margin-bottom: 0px !important;
-  }
-  #home .mainwrap .appliyBtn {
-    width: 100%;
-    bottom: 0px !important;
-  }
-  #home .mainwrap .appliyBtn a {
-    width: 100%;
   }
 }
 @media (max-width: 500px) {
