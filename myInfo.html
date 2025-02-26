@@ -192,6 +192,36 @@
                         <button type="button" onclick="location.href='https://puritechlab1155.github.io/onnuri-front/myInfo-edit.html'">내 정보 수정</button>
                         <button type="button" onclick="location.href='https://puritechlab1155.github.io/onnuri-front/myInfo-history.html'">내 신청 내역</button>
                         <button type="button" onclick="location.href='https://puritechlab1155.github.io/onnuri-front/password-change.html'">비밀번호 변경</button>
+                        <button class="secession" type="button">탈퇴하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 탈퇴 확인 팝업창 -->
+            <div class="pop-wrap">
+                <div class="pop-container">
+                    <div class="pop-inner">
+                        <div class="pop-content-wrap">
+                            <h4 class="pop-title">
+                                계정 탈퇴
+                            </h4>
+                            <p class="pop-paragraph">
+                                계정 탈퇴시 모든 내역이 삭제되어 복구가 불가능합니다.
+                                <span>정말로 탈퇴하시겠습니까?</span>
+                            </p>
+                            <!-- <form class="pop-content">
+                                <label for="password-pop">
+                                    <input type="password" id="password-pop" placeholder="비밀번호 4자리를 입력해주세요." required="">
+                                </label>
+                            </form> -->
+                        </div>
+                        <div class="popup-button-wrap">
+                            <div class="btn-item-container">
+                                <button class="finishBtn btn-item" onclick="location.href='index.html'">탈퇴</button>
+                            </div>
+                            <div class="btn-item-container">
+                                <button class="closeBtn btn-item">취소</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -517,100 +547,21 @@
     </section>
 
     <script src="js/script.js"></script>
-
-    <!--naver map-->
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g9boll7er1"></script>
-    <script id="code">
-        var elluce = new naver.maps.LatLng(37.249768, 127.317257)
-        var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.249768, 127.317257),
-        zoom: 17,
-        minZoom: 8, //지도의 최소 줌 레벨
-        zoomControl: true, //줌 컨트롤의 표시 여부
-        zoomControlOptions: { //줌 컨트롤의 옵션
-            position: naver.maps.Position.TOP_LEFT
-        }});
-        var marker = new naver.maps.Marker({
-            icon: {
-            url: "./img/contact/map.png",
-            scaledSize: new naver.maps.Size(25, 35),
-            origin: new naver.maps.Point(0, 0),
-            },
-            position: elluce,
-            map: map
-        });
-
-        var contentString = [
-        '<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 150px; height: 28px; text-align: center; ">',
-        '   <p style="foint-size: 2rem; margin: 0; font-weight: 600;">Acts29 비전빌리지</p>',
-        '</div>'
-        ].join('');
-
-        var infowindow = new naver.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200,
-            height: 50,
-            backgroundColor: "white",
-            borderColor: "black",
-            borderWidth: 2,
-            disableAnchor: true,
-            textAlign: "center",
-            margin: "auto",
-
-            pixelOffset: new naver.maps.Point(0, -5)
-        });
-
-        naver.maps.Event.addListener(marker, "click", function(e) {
-            if (infowindow.getMap()) {
-                infowindow.close();
-            } else {
-                infowindow.open(map, marker);
-            }
-        });
-
-        infowindow.open(map, marker);
-    </script>
-
+        
     <script>
-        // 모달 팝업 열기/닫기 이벤트
-        document.getElementById('sitemap-btn').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "block";
-        }
+        //-- 탈퇴 팝업창
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".secession").forEach(function (item) {
+                item.addEventListener("click", function () {
+                    document.querySelector(".pop-wrap").style.display = "block";
+                });
+            });
 
-        document.getElementById('terms-btn').onclick = function() {
-            document.getElementById('terms-modal').style.display = "block";
-        }
-
-        document.getElementById('privacy-btn').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "block";
-        }
-
-        // 모달 닫기 버튼 클릭 시 닫기
-        document.getElementById('close-sitemap').onclick = function() {
-            document.getElementById('sitemap-modal').style.display = "none";
-        }
-
-        document.getElementById('close-terms').onclick = function() {
-            document.getElementById('terms-modal').style.display = "none";
-        }
-
-        document.getElementById('close-privacy').onclick = function() {
-            document.getElementById('privacy-modal').style.display = "none";
-        }
-
-        // 모달 외부 클릭 시 닫기
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('sitemap-modal')) {
-                document.getElementById('sitemap-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('terms-modal')) {
-                document.getElementById('terms-modal').style.display = "none";
-            }
-            if (event.target === document.getElementById('privacy-modal')) {
-                document.getElementById('privacy-modal').style.display = "none";
-            }
-        }
-
+            // 팝업 닫기 버튼 이벤트 추가
+            document.querySelector(".closeBtn").addEventListener("click", function () {
+                document.querySelector(".pop-wrap").style.display = "none";
+            });
+        });
     </script>
 
 </body>
