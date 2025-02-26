@@ -1160,7 +1160,7 @@
 }
 #home .myInfo .myInfo_wrap .btn_wrap .secession {
   color: #a2a2a2;
-  font-weight: 300;
+  background: transparent;
 }
 #home .myInfo .myInfo_wrap .btn_wrap .secession:hover {
   color: #fff;
