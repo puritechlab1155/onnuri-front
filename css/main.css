@@ -3638,7 +3638,7 @@ pasword-reset03.html 스타일
     margin-bottom: 0;
   }
   #home .mainwrap .contain_R {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
   #home .mainwrap .cont h2 {
     margin-top: 30px;
@@ -3659,7 +3659,7 @@ pasword-reset03.html 스타일
   }
   #home .mainwrap .appliyBtn {
     left: 50%;
-    bottom: 0;
+    bottom: 60px;
   }
 }
 @media (max-width: 882px) {
@@ -3679,6 +3679,9 @@ pasword-reset03.html 스타일
   }
   #home .mainwrap .trn-wrap .description {
     font-size: 16px;
+  }
+  #home .mainwrap .contain_R {
+    margin-bottom: 60px;
   }
   #home .mainwrap .appliyBtn {
     width: calc(100% + 60px);
