@@ -3137,6 +3137,16 @@ main.form_09 #form08 .step-n textarea:focus {
 
 
 /*resize*/
+@media (max-width: 767px) {
+    main.form_09 fieldset legend span.foldBtn {
+        padding: 12px 12px;
+        font-size: 0px !important;
+        border-radius: 8px;
+    }
+    main.form_09 fieldset legend span.foldBtn img {
+        margin-left: 0;
+    }
+}
 @media (max-width: 482px) {
     main.form_09 fieldset legend {
         font-size: 22px;
