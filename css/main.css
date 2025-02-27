@@ -3658,10 +3658,7 @@ pasword-reset03.html 스타일
     height: 460px;
   }
   #home .mainwrap .appliyBtn {
-    width: calc(100% + 60px);
-    max-width: none;
-    transform: none;
-    left: -30px;
+    left: 50%;
     bottom: 0;
   }
 }
@@ -3682,6 +3679,12 @@ pasword-reset03.html 스타일
   }
   #home .mainwrap .trn-wrap .description {
     font-size: 16px;
+  }
+  #home .mainwrap .appliyBtn {
+    width: calc(100% + 60px);
+    max-width: none;
+    transform: none;
+    left: -30px;
   }
 }
 @media (max-width: 500px) {
