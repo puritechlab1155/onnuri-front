@@ -194,55 +194,45 @@
                     </li>
                 </ul>
                 <!--훈련 내용-->
-                <div class="trn-wrap">
-                    <h2>
-                        H2K<br>
-                        (Home to Kingdom):<br class="space-mob"> 안식년 선교사 리더십 훈련(4주)
-                    </h2>
-                    <p class="description">
-                        온누리교회 파송 장기선교사로 <br class="space-mob"> 현장에서 11년 이상 사역한 선교사를 대상으로 <br>
-                        4주간 공동체 생활을 통해 진행되는 선교사 재교육 훈련.
-                    </p>
-                    <div class="cont_container">
-                        <div class="cont">
-                            <div class="cont-img mw_600">
-                                <img src="img/trainning/trn-h2k-visual.jpg" alt="비주얼 이미지">
-                            </div>  
-                        </div>
-                        <div class="cont cont1">
-                            <h4 class="sb-title">훈련 목표</h4>
-                            <div class="cont-img">
-                                <img src="img/trainning/trn-h2k-goal.jpg" alt="훈련 목표 이미지">
+                <div class="section-wrap">
+                    <div class="trn-wrap">
+                        <div class="cont_container contain_L">
+                            <div class="cont">
+                                <div class="cont-img">
+                                    <img src="img/trainning/trn-h2k-visual.jpg" alt="비주얼 이미지">
+                                </div>  
                             </div>
                         </div>
-                        <div class="cont cont2">
-                            <h4 class="sb-title">커리큘럼</h4>
-                            <div class="cont-img">
-                                <img src="img/trainning/trn-h2r02.jpg" alt="커리큘럼 이미지">
-                            </div>                        
-                        </div>
-                        <div class="cont cont3">
-                            <h4 class="sb-title">주간 일정</h4>
-                            <div class="cont-img">
-                                <img src="img/trainning/trn-h2r03.jpg" alt="주간 일정 이미지">
-                            </div>                        
-                        </div>
-                        <div class="cont cont4">
-                            <h4 class="sb-title">
-                                훈련 지원<span>(국내 3주 합숙훈련)</span>
-                            </h4>
-                            <div class="cont-img">
-                                <img src="img/trainning/trn-h2r04.jpg" alt="훈련 지원 이미지">
-                                <!-- <a href="http:/visionvillage.org"> -->
-                                    <img src="img/trainning/trn-h2r05.jpg" alt="훈련 지원 이미지">
-                                <!-- </a>-->
-                            </div>                        
+                        <div class="cont_container contain_R">
+                            <div class="cont">
+                                <div class="cont_inner">
+                                    <h2>
+                                        H2K<br>
+                                        (Home to Kingdom):<br class="space-mob"> 안식년 선교사 리더십 훈련(4주)
+                                    </h2>
+                                    <p class="description">
+                                        온누리교회 파송 장기선교사로 현장에서<br class="space-mob"> 11년 이상 사역한 선교사를 대상으로<br>
+                                        4주간 공동체 생활을 통해<br class="space-mob"> 진행되는 선교사 재교육 훈련.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cont cont1">
+                                <div class="cont_inner">
+                                    <h4 class="sb-title">훈련 목표</h4>
+                                    <ul class="cont-goal">
+                                        <li>글로벌 선교 리더십을 개발한다.</li>
+                                        <li>팀 사역과 멤버 케어 훈련을 수행한다.</li> 
+                                        <li>선교 동향과 이슈에 대한 전략을 수립한다.</li>
+                                        <li>국제 선교 네트워크를 구축한다.</li> 
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="appliyBtn">
+                        <a href="https://puritechlab1155.github.io/onnuri-front/form01.html">신청하기</a>
+                    </div>
                 </div>
-            </div>
-            <div class="appliyBtn">
-                <a href="https://puritechlab1155.github.io/onnuri-front/form01.html">신청하기</a>
             </div>
         </main>
 
@@ -569,25 +559,41 @@
 
     <script>
         // 신청하기 버튼 스크롤 시 위치 변경
-        window.addEventListener("scroll", function () {
+        function handleScroll() {
             let button = document.querySelector(".appliyBtn");
             let footer = document.querySelector("footer");
+
+            if (!button || !footer) return; // 요소가 없으면 실행하지 않음
+
             let buttonHeight = button.offsetHeight;
             let footerRect = footer.getBoundingClientRect();
             let windowHeight = window.innerHeight;
 
-            if (footerRect.top < windowHeight - buttonHeight - 20) {
-                button.style.position = "relative";
-                button.style.left = "0px";
-                button.style.transform = "none";
-                button.style.bottom = "0";
+            if (window.innerWidth <= 767) { // 767px 이하에서만 실행
+                if (footerRect.top < windowHeight - buttonHeight - 20) {
+                    button.style.position = "relative";
+                    button.style.transform = "none";
+                    button.style.bottom = "0";
+                } else {
+                    button.style.position = "fixed";
+                    button.style.bottom = "0";
+                }
             } else {
-                button.style.position = "fixed";
-                button.style.bottom = "0";
-                // button.style.left = "50%";
-                // button.style.transform = "translateX(-50%)";
+                // 화면이 768px 이상일 때 기본 스타일로 되돌리기
+                button.style.position = "";
+                button.style.bottom = "";
+                button.style.transform = "";
             }
-        });
+        }
+
+        // 스크롤 이벤트 감지
+        window.addEventListener("scroll", handleScroll);
+
+        // 화면 크기 변경될 때도 다시 체크
+        window.addEventListener("resize", handleScroll);
+
+        // 초기 실행 (페이지 로드 후 적용)
+        handleScroll();
 
     </script>
 
