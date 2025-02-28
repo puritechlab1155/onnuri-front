@@ -379,6 +379,7 @@
 }
 #home .mainIndex .section02 {
   background: #fff;
+  display: none;
 }
 #home .mainIndex .section02 .content {
   padding: 146px 0 170px;
@@ -3597,7 +3598,7 @@ pasword-reset03.html 스타일
 }
 #home .mainwrap .trn-wrap .cont-img {
   width: 100%;
-  max-width: 460px;
+  max-width: 430px;
   height: 620px;
   overflow: hidden;
   display: flex;
