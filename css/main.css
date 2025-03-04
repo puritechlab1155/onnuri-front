@@ -1006,7 +1006,7 @@
   }
   #home .notice-list-link > img {
     position: absolute;
-    top: 0;
+    top: 28px;
     right: 0;
   }
   /*section02*/
