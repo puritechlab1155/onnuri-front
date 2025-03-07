@@ -176,7 +176,7 @@ button {
         gap: 24px;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 870px) {
     .pc_display {
         display: none;
     }

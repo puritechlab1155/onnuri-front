@@ -924,11 +924,13 @@
     margin-top: 33px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 870px) {
   /*main_visual*/
   #home .mainIndex .main_visual .mob-slide-img {
     content: url("../img/home/mv_slide_img01.jpg");
-  }
+  }}
+@media (max-width: 767px) {
+  /*main_visual*/
   #home .mainIndex .main_visual .swiper-button-next, 
   #home .mainIndex .main_visual .swiper-button-prev {
     display: none;
