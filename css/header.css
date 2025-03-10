@@ -134,10 +134,13 @@ button {
 }
 /* 로그인, 로그아윳 상태 시 나타나는 스타일 */
 .header .content .login-before { /* 로그아웃 상태 시 나타남 */
-    /* display: none; */
+    display: none;
 }
 .header .content .login-complete { /* 로그인 상태 시 나타남 */
     display: none;
+}
+.header .content .login-complete-manager { /* 관리자 로그인 상태 시 나타남 */
+    /* display: none; */
 }
 .mobile_display .login-link-m {
     display: flex;
@@ -148,7 +151,7 @@ button {
 .mobile_display .login-link-m li {
     position: relative;
 }
-.mobile_display .login-link-m li:first-child::after {
+.mobile_display .login-link-m li:first-child::after, .mobile_display .login-complete-manager li.my-info::after  {
     content: '';
     display: block;
     width: 1px;
